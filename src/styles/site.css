@@ -112,3 +112,6 @@ details.niv[open]{padding-bottom:16px}
 details.niv[open] .item-lecon:last-child a{border-bottom:0}
 .hero-min .barre{margin-bottom:20px}
 .hero-min{margin-bottom:24px}
+
+.msg-preuve{color:var(--rouge);font-weight:600;text-align:center;margin:0 0 12px}
+.item-lecon.verrouillee a{pointer-events:none;cursor:default}

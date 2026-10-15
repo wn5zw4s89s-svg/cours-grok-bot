@@ -22,8 +22,11 @@ C'est un collègue : un nom, un métier, une mémoire.
 
 ## Crée un bot d'essai
 
+Sur l'accueil : en haut à gauche, le rond à tes initiales (compte) ; en haut à droite, la loupe (recherche) et le **+** (créer). En dessous, tes bots par sections.
+
+
 <div class="schema">
-  <div class="etape"><b>1</b>Nouveau</div>
+  <div class="etape"><b>1</b>+</div>
   <div class="fleche">-></div>
   <div class="etape"><b>2</b>Nom : Essai</div>
   <div class="fleche">-></div>
@@ -33,25 +36,26 @@ C'est un collègue : un nom, un métier, une mémoire.
 <div class="box atoi" markdown="1">
 **À toi de jouer.** 1 message.
 
-1. Barre de gauche : crée un nouveau bot (`Cmd + N`).
-2. Nom : **Essai**.
-3. Envoie : « Bonjour, qui es-tu ? »
+1. Ouvre l'app **Grok Bot** sur ton iPhone.
+2. Touche le **+** en haut à droite pour créer un bot.
+3. Nom : **Essai**.
+4. Envoie : « Bonjour, qui es-tu ? »
 
 **C'est réussi si :**
 
-- un bot nommé Essai existe (étapes 1-2) ;
-- il t'a répondu (étape 3).
+- un bot nommé Essai existe (étapes 1-3) ;
+- il t'a répondu (étape 4).
 </div>
 
 <div class="box corrige" markdown="1">
-Bot « Essai » dans la barre de gauche. Une réponse à « Bonjour, qui es-tu ? ».
+Bot « Essai » dans la liste. Une réponse à « Bonjour, qui es-tu ? ».
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
 - Un bot = un collègue durable.
-- Nouveau -> Créer un bot.
+- Accueil : + en haut à droite pour créer.
 - Fil rouge : Marc et Le siphon.
 
 **Bravo !** Leçon 2 : donne un métier à Le siphon.

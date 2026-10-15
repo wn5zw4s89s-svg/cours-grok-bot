@@ -4,7 +4,7 @@
 
 ## Dicter ≠ appeler
 
-**Dicter :** voix -> texte. Tu relis. Tu envoies (ou pas). Réponse écrite. Mac : **Dictée** / `Cmd+D`.
+**Dicter :** voix -> texte. Tu relis. Tu envoies (ou pas). Réponse écrite. Sur iPhone : le micro du clavier. Sur ordinateur : la dictée (`Cmd+D`).
 
 **Appeler :** conversation en direct. Réponse à voix haute. Bouton **Appel vocal** : zone **vide**. Muet, Raccrocher, Transcription. Un seul bot à la fois.
 
@@ -15,7 +15,7 @@ Aucun message. Aucun appel. Bot principal en leçon 9.
 <div class="box atoi" markdown="1">
 **Exercice 1 : dicte sans envoyer.**
 
-1. Bot principal. Curseur dans la zone. `Cmd+D`.
+1. Bot principal. Curseur dans la zone. Dicte (micro du clavier ; sur ordinateur : `Cmd+D`).
 2. Dis : « Pendant l'appel, explique-moi en trois points comment tu te souviens. »
 3. Relis. Corrige. Copie dans Notes. Vide la zone. Pas d'Entrée.
 

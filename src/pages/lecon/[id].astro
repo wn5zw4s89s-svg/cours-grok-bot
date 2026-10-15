@@ -18,7 +18,7 @@ const { l, prev, suite } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base title={l.title} page="lecon">
-  <article class="lecon" data-lecon={l.id}>
+  <article class="lecon" data-lecon={l.id} data-num={l.num}>
     <a class="retour" href={base}>← Accueil</a>
     <p class="surtitre">Leçon {l.num}</p>
     <h1>{l.court}</h1>
@@ -29,7 +29,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     </div>
     <div class="contenu" set:html={l.html} />
     <div class="fin-lecon">
-      <a class="btn btn-large" data-terminer href={`${base}${suite.href}`}>{suite.label}</a>
+      <p class="msg-preuve" data-msg-preuve hidden>Ajoute d'abord ta preuve (texte + ✅ ou ❌).</p>
+      <button type="button" class="btn btn-large" data-terminer data-suite={`${base}${suite.href}`}>{suite.label}</button>
     </div>
   </article>
 </Base>

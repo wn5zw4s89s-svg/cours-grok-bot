@@ -169,3 +169,4 @@ Aucun. Cours complet.
 
 15/10 : mentions « à vérifier sur ton écran » retirées (demande d'Yvan). Sauvegarde : /workspace/backup-avant-libelles/.
 15/10 : noms de boutons anglais de Grok Bot remplacés par l'action en mots simples (Cursor : Restore Checkpoint / Open Folder gardés, expliqués). Sauvegarde : /workspace/backup-avant-boutons/.
+15/10 : L01 mobile (pas de Cmd+N) ; L02 modèle à coller + 4 étapes / 2 messages ; L08 dictée iPhone. Sauvegarde : /workspace/backup-avant-mobile-n1/.

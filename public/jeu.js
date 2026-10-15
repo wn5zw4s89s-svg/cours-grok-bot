@@ -1,4 +1,4 @@
-// Cours Grok Bot — progression anonyme (localStorage), niveaux, badges.
+// Cours Grok Bot — progression anonyme, une leçon à la fois, preuves, badges.
 (function () {
   const M = JSON.parse(document.getElementById('gb-meta').textContent);
   const K = 'gb2:progression';
@@ -8,13 +8,27 @@
   const L = M.lecons, idx = (id) => L.findIndex((l) => l.id === id);
   const lecNiv = (n) => L.filter((l) => l.niveau === n);
   const nivFini = (d, n) => lecNiv(n).every((l) => d.lecons[l.id]);
-  const debloquee = (d, i) => i <= 0 || !!d.lecons[L[i - 1].id] || !!d.lecons[L[i].id];
+  // Une seule leçon débloquée en avance : la suivante de la dernière terminée (les terminées restent accessibles).
+  const debloquee = (d, i) => {
+    if (i <= 0) return true;
+    if (d.lecons[L[i].id]) return true; // déjà faite : on peut la relire
+    // la précédente doit être terminée, et aucune autre « ouverte » au-delà
+    if (!d.lecons[L[i - 1].id]) return false;
+    return true;
+  };
   const nivCourant = (d) => M.niveaux.find((n) => !nivFini(d, n.id)) || null;
   const BADGES = [
-    ['🌱', 'Premier pas', (d) => L.some((l) => d.lecons[l.id])],
-    ...M.niveaux.map((n) => ['🏅', `Niveau ${n.id} · ${n.nom}`, (d) => nivFini(d, n.id)]),
+    ['🌱', 'Premier pas', (d) => !!d.lecons['lecon-01']],
+    ['🧪', 'Première preuve', (d) => Object.values(d.preuves).some((p) => p.resultat === 'ok' || p.resultat === 'ko')],
+    ...M.niveaux.map((n) => ['🏅', `Fin du niveau ${n.id}`, (d) => nivFini(d, n.id), n.id]),
     ['⭐', 'Quiz parfait', (d) => Object.values(d.quiz).some((q) => q.score === q.total)],
   ];
+  // Prochain badge : saute les badges « Fin du niveau N » du niveau encore en cours (déjà affiché en en-tête).
+  const prochainBadge = (d, cur) => BADGES.find((b) => {
+    if (b[2](d)) return false;
+    if (cur && b[3] === cur.id) return false;
+    return true;
+  });
 
   function rafraichir() {
     const d = etat(), cur = nivCourant(d);
@@ -26,23 +40,44 @@
       document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = `${f}/${ls.length} avant ${suiv ? suiv.nom : 'la fin du cours'}`));
       document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.width = Math.round((f / ls.length) * 100) + '%'));
       const next = ls.find((l) => !d.lecons[l.id]);
-      document.querySelectorAll('[data-continuer]').forEach((a) => { a.textContent = L.some((l) => d.lecons[l.id]) ? `Continuer · Leçon ${next.num}` : 'Commencer'; a.href = `${M.base}lecon/${next.id}/`; });
+      document.querySelectorAll('[data-continuer]').forEach((a) => {
+        a.textContent = L.some((l) => d.lecons[l.id]) ? `Continuer · Leçon ${next.num}` : 'Commencer';
+        a.href = `${M.base}lecon/${next.id}/`;
+      });
     } else {
       document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = 'Tout est terminé'));
       document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.width = '100%'));
       document.querySelectorAll('[data-continuer]').forEach((a) => { a.textContent = 'Revoir la leçon 1'; a.href = `${M.base}lecon/${L[0].id}/`; });
     }
-    const pb = BADGES.find((b) => !b[2](d));
-    document.querySelectorAll('[data-prochain-badge]').forEach((e) => e.replaceChildren(...(pb ? [$('span', { class: 'silhouette' }, pb[0]), ` Prochain badge : ${pb[1]}`] : ['🏆 Tous les badges'])));
+    const pb = prochainBadge(d, cur);
+    document.querySelectorAll('[data-prochain-badge]').forEach((e) => {
+      e.replaceChildren(...(pb ? [$('span', { class: 'silhouette' }, pb[0]), ` Prochain badge : ${pb[1]}`] : ['🏆 Tous les badges']));
+    });
     M.niveaux.forEach((n) => {
       const ls = lecNiv(n.id), f = ls.filter((l) => d.lecons[l.id]).length, fini = f === ls.length;
-      const ouvert = cur ? n.id <= cur.id : false;
-      document.querySelectorAll(`[data-niveau-bloc="${n.id}"]`).forEach((b) => { b.open = cur && n.id === cur.id; b.classList.toggle('verrouille', !ouvert && !fini); });
-      document.querySelectorAll(`[data-niv-etat="${n.id}"]`).forEach((e) => (e.textContent = fini ? `${ls.length} leçons ✓` : n.id === cur?.id ? `${f}/${ls.length}` : `${ls.length} leçons 🔒`));
+      const ouvert = cur ? n.id <= cur.id : true;
+      document.querySelectorAll(`[data-niveau-bloc="${n.id}"]`).forEach((b) => {
+        b.open = !!(cur && n.id === cur.id);
+        b.classList.toggle('verrouille', !ouvert && !fini);
+      });
+      document.querySelectorAll(`[data-niv-etat="${n.id}"]`).forEach((e) => {
+        e.textContent = fini ? `${ls.length} leçons ✓` : n.id === cur?.id ? `${f}/${ls.length}` : `${ls.length} leçons 🔒`;
+      });
     });
+    // Prochaine leçon unique (index de la première non faite)
+    const nextIdx = L.findIndex((l) => !d.lecons[l.id]);
     L.forEach((l, i) => document.querySelectorAll(`[data-lecon-carte="${l.id}"]`).forEach((c) => {
-      c.classList.toggle('fait', !!d.lecons[l.id]); c.classList.toggle('verrouillee', !debloquee(d, i));
-      c.querySelector('[data-etat]').textContent = d.lecons[l.id] ? '✓' : l.num;
+      const ok = debloquee(d, i);
+      c.classList.toggle('fait', !!d.lecons[l.id]);
+      c.classList.toggle('verrouillee', !ok);
+      c.classList.toggle('actuelle', i === nextIdx);
+      const et = c.querySelector('[data-etat]');
+      if (et) et.textContent = d.lecons[l.id] ? '✓' : String(l.num);
+      const a = c.querySelector('a');
+      if (a) {
+        if (!ok) { a.setAttribute('aria-disabled', 'true'); a.tabIndex = -1; }
+        else { a.removeAttribute('aria-disabled'); a.removeAttribute('tabindex'); }
+      }
     }));
     document.querySelectorAll('[data-quiz-lien]').forEach((a) => {
       const n = +a.dataset.quizNiv, ok = nivFini(d, n), q = d.quiz[a.dataset.quizLien];
@@ -51,13 +86,50 @@
     });
   }
 
-  document.querySelectorAll('[data-reset]').forEach((b) => b.addEventListener('click', () => { if (confirm('Effacer ta progression sur cet appareil ?')) { localStorage.removeItem(K); rafraichir(); } }));
+  document.querySelectorAll('[data-reset]').forEach((b) => b.addEventListener('click', () => {
+    if (confirm('Effacer ta progression sur cet appareil ?')) { localStorage.removeItem(K); rafraichir(); }
+  }));
+
+  // Bloquer clics sur leçons verrouillées
+  document.querySelectorAll('[data-lecon-carte]').forEach((c) => {
+    c.addEventListener('click', (ev) => {
+      if (c.classList.contains('verrouillee')) { ev.preventDefault(); ev.stopPropagation(); }
+    }, true);
+  });
+
+  function preuvesOk() {
+    const boxes = [...document.querySelectorAll('.box.preuve')];
+    if (!boxes.length) return true;
+    const d = etat();
+    return boxes.every((box) => {
+      const id = box.dataset.preuve;
+      const ta = box.querySelector('textarea');
+      const phrase = (ta?.value || d.preuves[id]?.phrase || '').trim();
+      const res = d.preuves[id]?.resultat;
+      // aussi lire l'état UI des boutons
+      const onOk = box.querySelector('.choix-preuve button.on');
+      const r = res || (onOk ? (onOk.textContent.includes('✅') ? 'ok' : 'ko') : null);
+      return phrase.length > 0 && (r === 'ok' || r === 'ko');
+    });
+  }
 
   document.querySelectorAll('.lecon').forEach((art) => {
-    const id = art.dataset.lecon;
-    if (!debloquee(etat(), idx(id))) { art.classList.add('bloquee'); art.querySelector('.verrou').hidden = false; }
+    const id = art.dataset.lecon, i = idx(id);
+    if (!debloquee(etat(), i)) { art.classList.add('bloquee'); art.querySelector('.verrou').hidden = false; }
     art.querySelector('[data-forcer]')?.addEventListener('click', () => { art.classList.remove('bloquee'); art.querySelector('.verrou').hidden = true; });
-    art.querySelector('[data-terminer]').addEventListener('click', () => ecrire((d) => (d.lecons[id] ??= { date: new Date().toISOString() })));
+    const btn = art.querySelector('[data-terminer]');
+    const msg = art.querySelector('[data-msg-preuve]');
+    btn?.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      if (!preuvesOk()) {
+        if (msg) { msg.hidden = false; msg.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        document.querySelector('.box.preuve')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      if (msg) msg.hidden = true;
+      ecrire((d) => { d.lecons[id] ??= { date: new Date().toISOString() }; });
+      location.href = btn.dataset.suite || M.base;
+    });
   });
 
   document.querySelectorAll('.box.preuve').forEach((box) => {
@@ -66,19 +138,35 @@
     const ta = $('textarea', { placeholder: 'Colle ici la phrase exacte de ton bot…' }); ta.value = cur.phrase || '';
     const bOk = $('button', { type: 'button' }, '✅ Ça passe'), bKo = $('button', { type: 'button' }, '❌ Ça rate');
     const aff = (r) => { bOk.classList.toggle('on', r === 'ok'); bKo.classList.toggle('on', r === 'ko'); };
-    const save = (r) => { ecrire((d) => (d.preuves[id] = { phrase: ta.value, resultat: r, date: new Date().toISOString() })); aff(r); };
+    const save = (r) => {
+      ecrire((d) => (d.preuves[id] = { phrase: ta.value, resultat: r, date: new Date().toISOString() }));
+      aff(r);
+      const msg = document.querySelector('[data-msg-preuve]');
+      if (msg && preuvesOk()) msg.hidden = true;
+    };
     bOk.onclick = () => save('ok'); bKo.onclick = () => save('ko');
-    ta.addEventListener('change', () => { const r = etat().preuves[id]?.resultat; if (r) save(r); });
+    ta.addEventListener('input', () => {
+      const r = etat().preuves[id]?.resultat;
+      if (r) ecrire((d) => { d.preuves[id] = { ...d.preuves[id], phrase: ta.value }; });
+    });
     w.append(ta, $('div', { class: 'choix-preuve' }, bOk, bKo)); aff(cur.resultat);
   });
 
   document.querySelectorAll('.quiz').forEach((el) => {
     const q = JSON.parse(el.dataset.quiz), N = q.questions.length, niv = +el.dataset.niveau;
+    const nb = +el.dataset.nb || lecNiv(niv).length;
     const d0 = etat();
     if (!nivFini(d0, niv)) {
-      const v = document.querySelector('[data-quiz-verrou]'); v.hidden = false;
+      const v = document.querySelector('[data-quiz-verrou]');
+      v.hidden = false;
+      const faites = lecNiv(niv).filter((l) => d0.lecons[l.id]).length;
       const next = lecNiv(niv).find((l) => !d0.lecons[l.id]);
-      const a = v.querySelector('[data-quiz-suite]'); a.href = `${M.base}lecon/${next.id}/`; a.textContent = `Leçon ${next.num}`;
+      const msg = v.querySelector('[data-quiz-msg]');
+      if (msg) msg.textContent = `Finis les ${nb} leçons de ce niveau pour débloquer le quiz (${faites}/${nb}).`;
+      const a = v.querySelector('[data-quiz-suite]');
+      if (next) { a.href = `${M.base}lecon/${next.id}/`; a.textContent = `Continuer · Leçon ${next.num}`; }
+      else { a.href = M.base; a.textContent = 'Accueil'; }
+      el.replaceChildren();
       return;
     }
     const fin = (score) => {
@@ -99,7 +187,9 @@
         btns.forEach((b) => (b.disabled = true));
         const ok = j === x.bonne_reponse; btns[x.bonne_reponse].classList.add('bon'); if (!ok) btns[j].classList.add('faux');
         const s = score + (ok ? 1 : 0);
-        fb.replaceChildren($('div', { class: 'q-fb' }, $('div', { class: ok ? 'ok' : 'ko' }, ok ? '✅ Bonne réponse' : '❌ Pas tout à fait'), $('div', {}, x.explication || ''),
+        fb.replaceChildren($('div', { class: 'q-fb' },
+          $('div', { class: ok ? 'ok' : 'ko' }, ok ? '✅ Bonne réponse' : '❌ Pas tout à fait'),
+          $('div', {}, x.explication || ''),
           $('button', { class: 'btn', on: { click: () => jouer(i + 1, s) } }, i + 1 === N ? 'Voir mon score' : 'Suivante →')));
         el.querySelector('.q-score').textContent = `${s}`;
       } } }, c));
