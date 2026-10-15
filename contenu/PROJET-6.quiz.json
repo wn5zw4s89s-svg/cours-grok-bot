@@ -1,0 +1,83 @@
+{
+  "id": "PROJET-6",
+  "titre": "Projet 6 : Mon premier euro gagné par un bot",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Un bon petit produit digital…",
+      "choix": [
+        "résout un seul problème",
+        "fait 200 pages",
+        "demande un stock"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Un problème, un PDF, ton savoir."
+    },
+    {
+      "id": "q2",
+      "question": "En France, vendre en ligne régulièrement demande…",
+      "choix": [
+        "rien sous 100 €",
+        "de déclarer une activité, par exemple en micro-entreprise",
+        "l'accord de ton bot"
+      ],
+      "bonne_reponse": 1,
+      "explication": "C'est une activité professionnelle. Source : Service Public Entreprendre."
+    },
+    {
+      "id": "q3",
+      "question": "Qui crée le compte de paiement ?",
+      "choix": [
+        "Le bot",
+        "Toi, à ton nom",
+        "Personne"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot n'ouvre aucun compte et ne touche jamais à ton argent."
+    },
+    {
+      "id": "q4",
+      "question": "Frais Stripe pour une carte standard de l'EEE (relevés le 15/10/2026) ?",
+      "choix": [
+        "1,5 % + 0,25 €",
+        "10 % + 0,50 $",
+        "Abonnement mensuel"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Pas d'abonnement. 10 % + 0,50 $, c'est Gumroad."
+    },
+    {
+      "id": "q5",
+      "question": "Pourquoi pas la page de vente sur GitHub Pages ?",
+      "choix": [
+        "C'est trop lent",
+        "GitHub Pages interdit les sites de vente",
+        "Ça ne marche pas sur iPhone"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le lien de paiement sert de page de vente."
+    },
+    {
+      "id": "q6",
+      "question": "Un acheteur demande son PDF. Que fait le bot ?",
+      "choix": [
+        "Il l'envoie tout seul",
+        "Il prépare un brouillon avec le PDF, tu vérifies la vente et tu envoies",
+        "Il le rembourse"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Chaque envoi passe par ton Send Email."
+    },
+    {
+      "id": "q7",
+      "question": "Version A contre version B, combien de changements ?",
+      "choix": [
+        "Un seul",
+        "Tous à la fois",
+        "Aucun"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Un seul changement, sinon tu ne sais pas ce qui a marché."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "PROJET-5",
+  "titre": "Projet 5 : 1 photo -> 1 pub TikTok",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Pourquoi 3 bots plutôt qu'un ?",
+      "choix": [
+        "C'est plus joli",
+        "Un métier par bot : message, montage, contrôle",
+        "Un bot ne sait pas faire de vidéo"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un bot qui fait tout fait tout moyennement."
+    },
+    {
+      "id": "q2",
+      "question": "Une bonne accroche TikTok…",
+      "choix": [
+        "commence par le nom de la marque",
+        "dit un problème ou une surprise",
+        "liste les prix"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Tu as trois secondes. Le problème arrête le pouce."
+    },
+    {
+      "id": "q3",
+      "question": "Comment Monteur fabrique-t-il la vidéo ?",
+      "choix": [
+        "Dans une appli de montage sur ton iPhone",
+        "En code, sur son ordinateur, au format 9:16",
+        "Il la télécharge sur internet"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Montage en code : photo, zoom, texte, vertical."
+    },
+    {
+      "id": "q4",
+      "question": "Pas de musique fournie. Que fait Monteur ?",
+      "choix": [
+        "Il prend un tube au hasard",
+        "Il laisse le silence",
+        "Il annule"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Musique dont tu as le droit d'usage, ou silence."
+    },
+    {
+      "id": "q5",
+      "question": "Juge trouve un texte trop bas. Qui corrige ?",
+      "choix": [
+        "Juge",
+        "Monteur",
+        "Personne"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Juge juge. Monteur corrige."
+    },
+    {
+      "id": "q6",
+      "question": "Qui poste la vidéo sur TikTok ?",
+      "choix": [
+        "Monteur",
+        "Toi",
+        "Juge, après le OK"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Aucun bot ne poste à ta place."
+    },
+    {
+      "id": "q7",
+      "question": "La méthode top 1 % ?",
+      "choix": [
+        "1 idée, montée vite",
+        "10 idées, 1 gardée par un critique, 3 tours de retouche",
+        "10 vidéos postées"
+      ],
+      "bonne_reponse": 1,
+      "explication": "La gagnante vient après la première idée."
+    }
+  ]
+}

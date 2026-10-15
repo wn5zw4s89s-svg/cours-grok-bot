@@ -9,7 +9,7 @@ Un service qui publie gratuitement une page à partir d'un dépôt public sur Gi
 Ton lien ressemblera à `ton-pseudo.github.io/lune-douce`.
 
 <div class="box attention" markdown="1">
-GitHub Pages interdit les sites de vente en ligne. Ta page présente ta marque et renvoie vers un email : pas de panier, pas de paiement.
+GitHub Pages interdit les sites de vente en ligne. Ta page présente ta marque et renvoie vers un email : pas de panier, pas de paiement. La page Pages reste une vitrine sans vente.
 </div>
 
 ## Qui fait quoi

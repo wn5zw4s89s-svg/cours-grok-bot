@@ -1,0 +1,83 @@
+{
+  "id": "PROJET-7",
+  "titre": "Projet 7 : Ma boîte en 3 jours 100 % bots",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Que fait le chef d'orchestre ?",
+      "choix": [
+        "Tout le travail",
+        "Il découpe et confie chaque étape à un seul spécialiste",
+        "Il poste sur X"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le chef découpe. Il ne fait pas."
+    },
+    {
+      "id": "q2",
+      "question": "Quelles lignes ajoutes-tu à chaque fiche de spécialiste ?",
+      "choix": [
+        "Je reçois de / Je rends à",
+        "Prix / Délai",
+        "Couleur / Police"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Sinon chacun te répond à toi."
+    },
+    {
+      "id": "q3",
+      "question": "Un bot écrit à un autre bot. Que se passe-t-il ?",
+      "choix": [
+        "Rien, impossible",
+        "L'autre se réveille, fait la tâche, répond plus tard",
+        "Tu dois copier-coller"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Les bots se passent le travail, et tu vois le relais."
+    },
+    {
+      "id": "q4",
+      "question": "Sur iPhone, comment crées-tu un groupe ?",
+      "choix": [
+        "+ puis New Group Chat",
+        "Le rond à tes initiales",
+        "Impossible sur iPhone"
+      ],
+      "bonne_reponse": 0,
+      "explication": "De 2 à 6 bots."
+    },
+    {
+      "id": "q5",
+      "question": "Où arrive un brouillon d'email demandé dans un groupe ?",
+      "choix": [
+        "Dans le groupe",
+        "Dans la conversation du bot, en tête-à-tête",
+        "Nulle part"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Brouillons et approbations ne s'affichent pas dans un groupe."
+    },
+    {
+      "id": "q6",
+      "question": "Une bonne routine d'équipe…",
+      "choix": [
+        "écoute tout",
+        "appartient à un seul bot, avec un but précis",
+        "tourne toutes les minutes"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Une routine trop large fait du bruit et consomme de l'usage."
+    },
+    {
+      "id": "q7",
+      "question": "Pourquoi une skill « goût maison » ?",
+      "choix": [
+        "Pour que chaque bot ait son style",
+        "Pour un seul style, partagé par toute l'équipe",
+        "Pour poster plus vite"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Tu corriges une fois, toute l'équipe suit."
+    }
+  ]
+}
