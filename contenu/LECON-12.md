@@ -1,59 +1,61 @@
-# Leçon 12 : Écris une recette réutilisable
+# Leçon 12 : Top 1 % : le ton qui sonne humain
 
-<p class="chapeau">Tu réexpliques la même méthode à chaque fois. Écris-la une fois. Le bot la rejoue.</p>
+<p class="chapeau">Tout le monde repère un email d'IA. Le tien, personne.</p>
 
-## Un skill, c'est une recette
+## Côte à côte
 
-Un **skill** = des instructions réutilisables pour faire une tâche.
+**Moyen :**
 
-Il sert à **tous tes bots** : une seule bibliothèque privée.
+> Bonjour, je vous remercie chaleureusement pour votre message ! Nous sommes ravis de vous informer que votre commande, soigneusement préparée, sera expédiée dans les meilleurs délais. N'hésitez surtout pas à revenir vers nous. Belle journée !
 
-D'abord une tâche réussie une fois. Ensuite le skill. Après seulement, l'automatisation.
+**Top 1 % :**
 
-## Les 6 rubriques de la doc
+> Bonjour Sophie, votre commande part demain matin. Je vous envoie le suivi dès qu'il arrive. Léa
 
-| Rubrique | Question |
-|---|---|
-| Quand | Dans quel cas l'utiliser ? |
-| Entrées et accès | De quoi a-t-il besoin ? |
-| Déroulé | Quelles étapes, dans quel ordre ? |
-| Vérification | Comment valider le résultat ? |
-| Sortie | Que rend-il ? |
-| Validation | Qu'est-ce qui demande ton OK ? |
+## Les tics à chasser
 
-**Exemple** (boulangerie) : skill `liste-prod`. Quand : chaque commande reçue avant 16 h. Vérification : chaque commande est dans le tableau ou dans « à confirmer ». Validation : toute confirmation au client.
+Bonne pratique, d'après la skill *unslop* :
+
+- formules de chatbot : « N'hésitez pas », « Je reste à votre disposition » ;
+- mots gonflés : « soigneusement », « ravis », « essentiel » ;
+- groupes de trois forcés ;
+- tirets longs, points d'exclamation en série ;
+- conclusion vide : « Belle journée à vous ! » après tout le reste.
+
+## La règle
+
+Dis ce qui se passe. Un fait par phrase. Signe comme toi.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** Sans le bot.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-Cas : Marc veut savoir quoi recommander. Fichier : `fournitures-test.csv` (télécharge-le depuis cette page, puis Fichiers sur ton iPhone).
+1. Envoie : « Prépare une réponse à un client qui demande où en est sa commande. » Garde le texte : version moyenne. Touche Discard.
+2. Ajoute à la description : « Ton : 3 phrases max. Jamais "n'hésitez pas", "ravi", "je reste à votre disposition". Pas de tiret long. Un fait par phrase. Signe Léa. » (ton prénom). Enregistre.
+3. Redemande la même réponse. Compare.
 
-1. Nom du skill : 2 ou 3 mots reliés par des tirets (ex. `liste-prod`).
-2. Remplis les 6 rubriques. Une ou deux phrases chacune.
-3. Écris la sortie attendue pour `fournitures-test.csv` : les articles sous leur seuil.
+**C'est réussi si :**
 
-**C'est réussi si :** nom + 6 rubriques (étapes 1-2) ; la sortie attendue liste les bons articles (étape 3).
+- tu as la version moyenne (étape 1) ;
+- la règle de ton est dans la fiche (étape 2) ;
+- la nouvelle version n'a aucun tic de la liste (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Nom :** `stock-a-commander`  
-**Quand :** Marc demande quoi recommander.  
-**Entrées et accès :** un fichier CSV de stock (colonnes quantité et seuil).  
-**Déroulé :** 1) lire chaque ligne 2) comparer stock et seuil 3) garder ce qui est sous le seuil.  
-**Vérification :** chaque article gardé a un stock plus petit que son seuil.  
-**Sortie :** une ligne par article : nom – stock / seuil – fournisseur.  
-**Validation :** aucune commande passée, aucun e-mail au fournisseur sans l'OK de Marc.  
-**Sortie attendue :** Joint fibre 1/2" (3/5) · Siphon évier PVC 40 mm (2/4) · Mitigeur lavabo (1/2).
+Avant : « Merci infiniment pour votre patience ! Nous mettons tout en œuvre… »  
+Après : « Bonjour, votre colis est parti hier. Le suivi arrive par email ce soir. Léa »
+</div>
+
+<div class="box attention" markdown="1">
+**Défi X.** Capture côte à côte des deux brouillons, ton adresse floutée si tu veux.  
+Phrase type : « Mon bot a son adresse email. Il trie, il prépare, je valide. Et il n'écrit plus comme un robot. »  
+C'est toi qui postes. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Skill = recette réutilisable, partagée par tous tes bots.
-- 6 rubriques : Quand, Entrées, Déroulé, Vérification, Sortie, Validation.
-- Tâche réussie d'abord, skill ensuite.
+- Un fait par phrase. Zéro formule de chatbot.
+- Projet 2 terminé : badge **Bureau ouvert**.
 
-**Bravo !** Leçon 13 : enregistre et lance ton skill.
+**Bravo !** Projet 3 : un bot qui prospecte la nuit.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/skills-routines-and-automations (lue le 15/10/2026).</small>

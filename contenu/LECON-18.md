@@ -1,53 +1,56 @@
-# Leçon 18 : Comprends l'ordinateur et le navigateur du bot
+# Leçon 18 : Top 1 % : des prospects ciblés
 
-<p class="chapeau">Ton bot a son propre ordinateur, dans le cloud. Il clique, remplit, lit. Tu peux prendre la main.</p>
+<p class="chapeau">Cinquante prospects moyens ou cinq vrais acheteurs ? Tout se joue dans les critères.</p>
 
-## Un ordinateur partagé
+## Côte à côte
 
-Tous tes bots partagent **le même** ordinateur : fichiers, sessions du navigateur.
+| Critères moyens | Critères top 1 % |
+|---|---|
+| « Des gens qui parlent de bougies. » | « Quelqu'un qui cherche un cadeau ou une déco, et le dit lui-même. » |
+| Pas de date | Post de moins de 24 h |
+| Pas d'exclusion | Exclus : vendeurs, concours, pannes de courant, gâteaux |
+| « Les meilleurs » | Note de 1 à 3 avec la raison |
 
-Chaque bot a son propre écran. Ton iPhone peut rester verrouillé.
+## Les cas pièges
 
-Depuis la conversation, ouvre l'ordinateur pour **regarder** : clics, frappe, navigation.
+Ils ressemblent à un prospect. Ils n'en sont pas.
 
-## Prends la main
+- Une concurrente qui fait sa pub.
+- Un concours « RT pour gagner une bougie ».
+- Une blague, une coupure de courant.
 
-Pour un mot de passe, un code, un CAPTCHA, un paiement :
-
-1. Reprends la main, depuis la demande ou dans l'ordinateur.
-2. Fais seulement l'étape bloquée.
-3. Rends la main au bot, puis dis-lui de continuer.
-
-<div class="box erreur" markdown="1">
-Coller un mot de passe dans le chat. Jamais. Tu prends la main et tu tapes toi-même.
-</div>
+Écris-les dans la fiche. Le bot apprend par les exemples.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** Sans le bot.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-Formulaire de test public : https://httpbin.org/forms/post (une fausse commande de pizza, fait pour les essais).
+1. Envoie : « Cherche 5 prospects sur X avec tes critères actuels. » Garde la liste : version moyenne.
+2. Réécris la rubrique Prospects : qui, quand, 3 exclusions, 3 cas pièges, une note de 1 à 3. Enregistre.
+3. Renvoie la même demande. Compare les deux listes.
 
-1. Écris la consigne. Forme : « Ouvre … . Remplis : … . N'envoie pas. Arrête-toi avant le bouton … . »
-2. Note ton usage de la semaine (… %).
-3. Écris quand tu prendras la main. Forme : « Je prends la main au champ … . »
+**C'est réussi si :**
 
-**C'est réussi si :** consigne avec « N'envoie pas » (1) ; usage noté (2) ; champ choisi (3).
+- tu as la liste d'avant (étape 1) ;
+- la rubrique contient qui, quand, exclusions, pièges, note (étape 2) ;
+- la nouvelle liste n'a aucun cas piège (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Consigne :** « Ouvre https://httpbin.org/forms/post. Remplis : Customer name = Marc Test, Telephone = 06 00 00 00 01, E-mail = test@exemple.invalid, Small, Mushroom. N'envoie pas. Arrête-toi avant Submit order. »  
-**Usage :** 22 %  
-**Prise de main :** au champ Preferred delivery time.
+Avant : 5 posts, dont un concours et une concurrente.  
+Après : 3 posts notés 3/3, tous des cadeaux cherchés aujourd'hui. Moins, mais tous vrais.
+</div>
+
+<div class="box attention" markdown="1">
+**Défi X.** Capture côte à côte des 2 listes, pseudos floutés.  
+Phrase type : « Mon bot prospecte pendant que je dors. Mêmes posts, critères différents : 5 prospects moyens ou 3 vrais acheteurs. »  
+C'est toi qui postes. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Un ordinateur cloud, partagé par tous tes bots.
-- Reprends la main -> étape sensible -> rends la main.
-- Mot de passe : jamais dans le chat.
+- Qui, quand, exclusions, pièges, note.
+- Projet 3 terminé : badge **Chasseur de nuit**.
 
-**Bravo !** Leçon 19 : regarde-le faire.
+**Bravo !** Projet 4 : ta marque en un week-end.
 </div>
-
-<small>Sources : docs.x.ai/grok-bot/computer-and-apps · docs.x.ai/grok-bot/approvals-security-and-privacy (lues le 15/10/2026).</small>

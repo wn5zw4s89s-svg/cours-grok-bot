@@ -1,45 +1,43 @@
-# Leçon 21 : Crée un skill par démonstration
+# Leçon 21 : Une offre en une phrase
 
-<p class="chapeau">Montre la tâche. Relis le brouillon. Ajoute une règle d'échec et une limite.</p>
+<p class="chapeau">Si tu ne peux pas la dire en une phrase, personne ne l'achètera.</p>
 
-## Le déroulé de la doc
+## La phrase
 
-1. Conversation seul à seul + ordinateur ouvert.
-2. Lance l'enregistrement : montre une tâche.
-3. Décris le résultat que tu vas montrer.
-4. Fais la tâche une fois.
-5. Arrête l'enregistrement. Relis le skill créé.
-6. Teste sur un exemple sans risque.
+« Pour ___ qui veulent ___, je propose ___. »
 
-<div class="box attention" markdown="1">
-3 messages au plus. Aucun secret à l'écran pendant l'enregistrement.
+Puis 3 preuves concrètes. Puis un seul bouton.
+
+<div class="box erreur" markdown="1">
+« Des bougies d'exception pour sublimer votre intérieur. » Vide.  
+« Des bougies qui sentent dès la première minute, coulées à la main à Ville-Test. » Concret.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.**
+**À toi de jouer.** 3 étapes. 2 messages.
 
-1. En montrant la tâche : étapes 1 à 5 ci-dessus. Plan B : fais remplir le formulaire au bot, puis « Crée un skill nommé formulaire-test à partir de la tâche qu'on vient de réussir. »
-2. Relis le brouillon. Ajoute : « Si le formulaire ne charge pas -> préviens-moi, n'essaie pas un autre site. »
-3. Ajoute : « Ne touche jamais Submit order. »
-4. Teste le skill avec d'autres valeurs (autre nom, Large, Onion). Regarde la réponse.
+1. Envoie : « Propose 5 versions de mon offre avec la phrase : Pour ___ qui veulent ___, je propose ___. »
+2. Garde la plus concrète. Envoie : « Ajoute 3 preuves vérifiables et un seul appel à l'action. »
+3. Fixe toi-même ton prix, ou écris « sur demande ». Le bot n'invente pas de prix.
 
-**C'est réussi si :** skill créé (1) ; règle d'échec (2) ; limite (3) ; test jugé des yeux (4).
+**C'est réussi si :**
+
+- une phrase complète, sans mot vide (étapes 1-2) ;
+- 3 preuves et un appel à l'action (étape 2) ;
+- le prix vient de toi (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-Skill `formulaire-test` : remplit les champs, choisit taille et garniture.  
-**+ Échec :** formulaire indisponible -> me prévenir.  
-**+ Limite :** jamais Submit order.  
-Test : Paul Test, Large, Onion -> rempli, pas envoyé ✅.
+« Pour celles et ceux qui offrent souvent, je propose des bougies au parfum choisi, coulées à la main. »  
+Preuves : cire végétale, parfum choisi parmi 6, emballage cadeau.  
+Bouton : « Écrire à Lune Douce ». Prix : sur demande.
 </div>
+
 <div class="fin" markdown="1">
 ## En résumé
 
-- Montrer ou plan B -> skill brouillon.
-- Toujours ajouter un cas d'échec et une limite.
-- Teste avec d'autres valeurs.
+- Pour qui, quoi, comment. Une phrase.
+- 3 preuves, un bouton, ton prix.
 
-**Bravo !** Leçon 22 : les routines.
+**Bravo !** Leçon 22 : la page.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/skills-routines-and-automations (lue le 15/10/2026).</small>

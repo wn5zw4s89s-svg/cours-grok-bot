@@ -1,0 +1,83 @@
+{
+  "id": "PROJET-1",
+  "titre": "Projet 1 : J'embauche mon premier employé bot",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Sur l'accueil, comment crées-tu un bot ?",
+      "choix": [
+        "Le rond à tes initiales",
+        "Le + en haut à droite",
+        "La loupe"
+      ],
+      "bonne_reponse": 1,
+      "explication": "+ en haut à droite = créer. La loupe cherche. Le rond ouvre ton compte."
+    },
+    {
+      "id": "q2",
+      "question": "Où vont les règles permanentes ?",
+      "choix": [
+        "Dans le message du jour",
+        "Dans la description",
+        "Dans le nom"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Description = toujours vrai. Message = aujourd'hui."
+    },
+    {
+      "id": "q3",
+      "question": "Que fais-tu avant d'envoyer un cas de test ?",
+      "choix": [
+        "Rien, tu juges après",
+        "Tu écris ce que tu attends",
+        "Tu demandes au bot de se noter"
+      ],
+      "bonne_reponse": 1,
+      "explication": "L'attente avant l'envoi, sinon tu juges au feeling."
+    },
+    {
+      "id": "q4",
+      "question": "Quel cas vérifie que le bot tient ses interdits ?",
+      "choix": [
+        "Normal",
+        "Piège",
+        "Flou"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le piège pousse le bot à dire oui là où il doit dire non."
+    },
+    {
+      "id": "q5",
+      "question": "Le bot répète une erreur. Tu fais quoi ?",
+      "choix": [
+        "Tu le corriges dans le chat",
+        "Tu ajoutes une règle à la description",
+        "Tu recrées le bot"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le chat aide maintenant. La fiche aide toujours."
+    },
+    {
+      "id": "q6",
+      "question": "Quelle règle est la meilleure ?",
+      "choix": [
+        "« Sois prudent. »",
+        "« Jamais de remboursement. Dis : Léa revient vers vous. »",
+        "« Fais de ton mieux. »"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Interdit + phrase à dire à la place."
+    },
+    {
+      "id": "q7",
+      "question": "Qu'est-ce qui sépare une fiche top 1 % d'une fiche moyenne ?",
+      "choix": [
+        "Plus de politesse",
+        "Des règles chiffrées et des exemples",
+        "Un nom plus long"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot imite ce qu'il voit : règles précises + exemples."
+    }
+  ]
+}

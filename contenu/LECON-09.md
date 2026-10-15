@@ -1,65 +1,52 @@
-# Leçon 9 : Passe ton appel et vérifie
+# Leçon 9 : Apprends-lui à trier
 
-<p class="chapeau">Plan prêt. Appel ≤ 5 min. Transcription, mémo, coût.</p>
+<p class="chapeau">Dix emails. Lequel d'abord ? Ton bot décide pour toi.</p>
 
-## Pendant et après
+## 3 piles
 
-Muet · Raccrocher · Transcription. Si ça coupe : ferme, réseau, relance.
+- **À moi** : il faut ta décision.
+- **Prêt** : une réponse simple suffit.
+- **Bruit** : pub, newsletter.
 
-Après : carte avec durée. Mémo : écoute + texte.
+## Ajoute une rubrique à la fiche
 
-<div class="box attention" markdown="1">
-Lieu de la leçon 8. Voiture = à l'arrêt. Bot principal. ≤ 5 min. 1 message écrit max.
-</div>
+Une rubrique **Emails** dans la description. Elle dit comment trier et comment résumer.
+
+## Modèle à coller
+
+```
+Emails : quand je demande le courrier, classe chaque email en À moi, Prêt ou Bruit.
+Pour chacun : expéditeur, 1 ligne de résumé, la pile.
+À moi : remboursement, plainte, demande spéciale.
+Prêt : question simple sur produit, prix affiché, livraison.
+Bruit : pub, newsletter. Ne les détaille pas.
+```
 
 <div class="box atoi" markdown="1">
-**Exercice 1 : départ.**
+**À toi de jouer.** 3 étapes. 3 emails, 1 message.
 
-1. Relis but, 3 points, raccrochage.
-2. « Usage avant : … % »
-3. Minuteur 5 min prêt.
+1. Colle le modèle dans la description. Adapte À moi et Prêt à ton projet. Enregistre.
+2. Depuis ton app mail, envoie 3 emails : une plainte, une question simple, une fausse pub.
+3. Envoie au bot : « Trie ton courrier du jour. »
 
-**C'est réussi si :** note ouverte ; usage noté ; minuteur prêt.
+**C'est réussi si :**
+
+- la rubrique Emails parle de ton projet (étape 1) ;
+- les 3 emails sont partis (étape 2) ;
+- chaque email est dans la bonne pile (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-Note ouverte. Usage avant : 19 %. Minuteur prêt.
+**À moi** (toi) : bougie cassée, veut un remboursement.  
+**Prêt** (toi) : demande si la cire est végétale.  
+**Bruit** : 1 pub, non détaillée.
 </div>
 
-<div class="box atoi" markdown="1">
-**Exercice 2 : appelle.**
-
-1. Zone vide. **Appel vocal**. Lance le minuteur.
-2. But, puis 3 points.
-3. « Merci, je raccroche. » -> Raccrocher.
-
-**C'est réussi si :** but + 3 points ; raccroché ≤ 5 min.
-</div>
-
-<div class="box corrige" markdown="1">
-Appel lancé. Points dits. Raccroché à 4 min 10.
-</div>
-
-<div class="box atoi" markdown="1">
-**Exercice 3 : transcription + mémo + coût.**
-
-1. Durée. Pour chaque point : la réponse était bonne ? (des yeux)
-2. Une phrase mal comprise (ou « aucune »).
-3. Mémo : écoute. Sinon 1 message : « Envoie-moi un mémo vocal de 3 phrases. »
-4. « 3 phrases : oui/non. Points repris : oui/non. »
-5. Usage après. Écart.
-
-**C'est réussi si :** durée ≤ 5 ; 3 points jugés ; mémo lu ; écart calculé ; ≤ 1 message écrit.
-</div>
-
-<div class="box corrige" markdown="1">
-Durée : 4 min 10. Points ✅. Mémo : 3 phrases, oui. Usage après : 21 %. Coût ≈ 2.
-</div>
 <div class="fin" markdown="1">
 ## En résumé
 
-- ≤ 5 min. Plan sous les yeux.
-- Coût = avant / après.
+- 3 piles : À moi, Prêt, Bruit.
+- Les règles de tri vont dans la fiche.
 
-**Bravo !** Leçon 10 : la mémoire.
+**Bravo !** Leçon 10 : il prépare la réponse, tu valides.
 </div>

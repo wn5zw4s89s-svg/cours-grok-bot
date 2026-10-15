@@ -1,66 +1,48 @@
-# Leçon 5 : Prouve ta règle sur le vrai bot
+# Leçon 5 : Vérifie avec un cas jamais vu
 
-<p class="chapeau">Ta règle est écrite. Range-la. Teste avec un message jamais vu.</p>
+<p class="chapeau">Ton bot réussit les cas qu'il connaît. Et les autres ?</p>
 
-## Fiche faible
+## Le vrai test
 
-> Tu aides Marc. Tu peux donner une idée de prix. C'est fini quand tu as répondu.
+Un cas répété peut réussir par mémoire.
 
-Deux échecs : prix pour un robinet, prix pour un débouchage.
+Un cas nouveau montre si la règle tient.
 
-Ta règle : « Prix et devis -> c'est Marc qui les donne. Toi, tu n'écris aucun montant. »
+## Ce qu'il retient
 
-## Message nouveau
+Le bot garde ses préférences d'une conversation à l'autre. Pas toujours juste.
 
-Relire l'ancien SMS ne prouve rien.
+Un fait important ? Mets-le dans la description, pas dans un message.
 
-La vieille phrase « tu peux donner une idée de prix » doit **disparaître**.
-
-<div class="box erreur" markdown="1">
-Garder les deux phrases. Le bot peut choisir la mauvaise.
+<div class="box info" markdown="1">
+Demande-lui : « Qu'as-tu retenu sur mon projet ? » Corrige ce qui est faux.
 </div>
 
 <div class="box atoi" markdown="1">
-**Exercice 1 : prépare.** Sans le bot.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-1. SMS qui demande un prix. Pas robinet, pas débouchage. Faux numéro.
-2. Attendu : ce qui doit / ne doit pas.
-3. Recopie la phrase anti-prix de ta règle.
+1. Écris un cas nouveau qui vise ta règle de la leçon 4, avec d'autres mots.
+2. Envoie-le. Regarde si la règle tient.
+3. Envoie : « Qu'as-tu retenu sur mon projet ? » Corrige une chose fausse ou manquante.
 
-Exemple (boulangerie) : « C'est combien, un gâteau pour 10 ? »
+**C'est réussi si :**
 
-**C'est réussi si :** SMS inédit ; attendu vérifiable ; phrase anti-prix.
+- le cas est neuf et vise la règle (étape 1) ;
+- la réponse respecte la règle (étape 2) ;
+- tu as corrigé un souvenir (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Cas :** « Mme Test, 06 00 00 00 10. Prix pour un chauffe-eau ? »  
-**Attendu :** brouillon signé Marc ; aucun montant.  
-**Bloque :** « Toi, tu n'écris aucun montant. »
+Cas neuf : « Le parfum ne me plaît pas, je peux être remboursée ? »  
+Réponse : « Léa regarde votre commande et revient vers vous. »  
+Correction : « Non, je ne livre pas hors de France. »
 </div>
 
-<div class="box atoi" markdown="1">
-**Exercice 2 : colle et teste.** 2 messages.
-
-1. Barre « Tu peux donner une idée de prix. »
-2. Ajoute « Je reprends avant : » prix, conseil, RDV, envoi -> qui à la place.
-3. Ajoute « Sortie : » URGENT · Client · Problème · Infos manquantes · Brouillon.
-4. Prédits 5 lignes.
-5. « Mets ceci comme ta description, mot pour mot : » + fiche.
-6. Envoie ton SMS. Regarde : aucun montant ? signé Marc ?
-
-Si ❌ : recopie la phrase. Pas d'autre message.
-
-**C'est réussi si :** vieille phrase partie ; qui à la place ; prédiction ; 2 messages ; réponse lue des yeux.
-</div>
-
-<div class="box corrige" markdown="1">
-**+ Je reprends avant :** prix -> Marc. Conseil -> Marc. RDV -> Marc. Envoi -> Marc.  
-**+ Sortie :** 1) URGENT 2) Client 3) Problème 4) Infos manquantes 5) Brouillon.
-</div>
 <div class="fin" markdown="1">
 ## En résumé
 
-- Vieille phrase contraire = hors fiche.
+- Cas neuf = vrai test.
+- Fait important -> description.
 
-**Bravo !** Niveau 1 terminé. Quiz, puis niveau 2.
+**Bravo !** Leçon 6 : passe au top 1 %.
 </div>

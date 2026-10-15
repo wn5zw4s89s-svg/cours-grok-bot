@@ -1,43 +1,44 @@
-# Leçon 13 : Enregistre et lance ton skill
+# Leçon 13 : Trouve qui a besoin de toi
 
-<p class="chapeau">Ta recette est écrite. Fais-la réussir une fois. Enregistre-la. Relance-la sur un autre fichier.</p>
+<p class="chapeau">Chaque jour, des gens écrivent sur X ce qu'ils cherchent. Certains te cherchent.</p>
 
-## Enregistre en le demandant
+## Les phrases signal
 
-Pas de formulaire : tu demandes au bot.
+Un futur client ne dit pas « je veux acheter ». Il dit son problème.
 
-> « Enregistre la méthode qu'on vient d'utiliser comme skill nommé … . Inclus : … »
+« Je cherche une idée de cadeau pour ma mère. »  
+« Une bougie qui sent vraiment quelque chose, ça existe ? »
 
-Pour l'appeler : tape `/` dans la zone de message, puis choisis le skill.
+## Ton bot lit X
 
-<div class="box question" markdown="1">
-**Le skill n'apparaît pas dans `/` ?** Dans la barre de gauche, ouvre tes apps connectées, puis tes skills privés.
-</div>
+Ton bot sait chercher sur X et lire les posts publics. Sans plugin, sans connecter ton compte.
+
+Il lit. Il ne poste pas.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 messages. Bot principal.
+**À toi de jouer.** 3 étapes. 1 message.
 
-1. Joins `fournitures-test.csv`. Envoie ta méthode de la leçon 12 : « Applique cette méthode à ce fichier : » + les 6 rubriques.
-2. Compare à ta sortie attendue (des yeux).
-3. Envoie : « Enregistre cette méthode comme skill nommé stock-a-commander, avec les 6 rubriques, mot pour mot. »
-4. Joins `fournitures-test-2.csv`. Tape `/`, choisis le skill, envoie.
-5. Regarde la réponse. Si elle rate : demande de corriger **le skill**, pas seulement la réponse.
+1. Écris 5 phrases qu'un futur client posterait. Ses mots, pas les tiens.
+2. Écris 2 phrases qui ressemblent à un signal mais n'en sont pas.
+3. Envoie à ton bot : « Voici mes phrases signal et mes faux signaux. Ajoute-les à ta description sous la rubrique Prospects. »
 
-**C'est réussi si :** 1er résultat comparé (2) ; skill visible dans `/` (3-4) ; 2e fichier traité et jugé des yeux (5).
+**C'est réussi si :**
+
+- 5 phrases écrites comme un client parle (étape 1) ;
+- 2 faux signaux (étape 2) ;
+- la rubrique Prospects existe dans la fiche (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Attendu pour `fournitures-test-2.csv` :** Bonde lavabo chromée (0/2) · Tuyau PER 16 mm (18/25) · Siphon douche 90 mm (1/2).  
-Raccord, joint torique et purgeur ne doivent **pas** apparaître.
+**Signaux :** « idée cadeau fête des mères », « bougie qui sent fort », « déco cosy pas chère », « cadeau de crémaillère », « bougie artisanale française ».  
+**Faux signaux :** « la bougie de mon anniversaire » (gâteau), « je vends mes bougies » (concurrente).
 </div>
+
 <div class="fin" markdown="1">
 ## En résumé
 
-- Tu réussis la tâche une fois, puis tu demandes : « Enregistre comme skill. »
-- `/` appelle le skill.
-- Le 2e fichier confirme que ça tient.
+- Un client écrit son problème, pas « j'achète ».
+- Ton bot lit X public. Il ne poste rien.
 
-**Bravo !** Leçon 14 : les garde-fous.
+**Bravo !** Leçon 14 : une première chasse.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/skills-routines-and-automations (lue le 15/10/2026).</small>

@@ -1,65 +1,47 @@
-# Leçon 10 : Maîtrise ce que ton bot retient
+# Leçon 10 : Il prépare, tu valides
 
-<p class="chapeau">Le bot se souvient. Pas toujours juste. Range chaque info. Corrige un souvenir faux.</p>
+<p class="chapeau">Le bot écrit la réponse. Toi, tu appuies sur envoyer. Ou pas.</p>
 
-## Où ranger
+## La carte brouillon
 
-| Type | Où |
-|---|---|
-| Règle / limite | description |
-| Préférence stable | mémoire |
-| Donnée qui change | fichier source |
+Quand le bot veut envoyer un email, une carte s'affiche dans le chat.
 
-<div class="box info" markdown="1">
-La mémoire d'un bot ne passe pas aux autres.
-</div>
-
-Pour Marc : « jamais de prix » -> description · tarifs -> fichier · « 3 phrases » -> mémoire · planning -> fichier.
-
-<div class="box atoi" markdown="1">
-**Exercice 1 : classe.** Sans le bot.
-
-- **A.** « Ne promets jamais une date. »
-- **B.** Tarifs des pièces (changent).
-- **C.** « Réponses de 3 phrases max. »
-- **D.** Planning de la semaine.
-- **E.** « N'envoie rien sans l'accord de Marc. »
-- **F.** « Marc vouvoie ses clients. »
-
-Forme : « A -> … , car … »
-
-Exemple : « Prix des roses -> fichier, car ça change. »
-
-**C'est réussi si :** A,E = description ; B,D = fichier ; C,F = mémoire.
-</div>
-
-<div class="box corrige" markdown="1">
-A -> description. B -> fichier. C -> mémoire. D -> fichier. E -> description. F -> mémoire.
-</div>
-
-<div class="box atoi" markdown="1">
-**Exercice 2 : corrige, vérifie en NOUVELLE conversation.** 3 messages. Bot principal.
-
-1. « Retiens : Tom Miller, Ville-Test, 06 00 00 00 01. Réponds « Noté ». »
-2. Même fil : « Correction : le numéro est 06 00 00 00 02. L'ancien est faux. Réponds « Corrigé ». »
-3. **Nouvelle conversation.** « Quel est le numéro du client fictif Tom Miller ? » — sans redonner le numéro.
-4. « Réponse : … Verdict : corrigé / pas corrigé. »
-
-**C'est réussi si :** 1-2 envoyés ; 3 = **nouveau** fil ; question sans numéro ; verdict noté.
-</div>
+Tu vois les destinataires et le texte. Sur iPhone : **Send Email** pour envoyer, **Discard** pour jeter.
 
 <div class="box attention" markdown="1">
-Même fil = le bot relit « Corrigé » au-dessus. Nouvelle conversation = vraie preuve.
+Toujours toi qui envoies. Même si tu as dit « réponds-lui ». Aucun réglage n'envoie sans ta validation.
+</div>
+
+## Relis avant d'envoyer
+
+- Le bon destinataire ?
+- Aucune promesse interdite ?
+- Le texte sonne comme toi ?
+
+<div class="box atoi" markdown="1">
+**À toi de jouer.** 3 étapes. 1 message.
+
+1. Envoie : « Prépare une réponse à l'email "Prêt" du jour. »
+2. Lis la carte. Vérifie les 3 questions ci-dessus.
+3. Réponse correcte ? Touche **Send Email** : elle arrive dans ta propre boîte. Sinon, **Discard** et dis au bot quoi changer.
+
+**C'est réussi si :**
+
+- une carte brouillon s'affiche (étape 1) ;
+- tu as relu destinataire, promesses et ton (étape 2) ;
+- tu as choisi toi-même d'envoyer ou de jeter (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-Réponse : « 06 00 00 00 02. » Verdict : souvenir corrigé.
+Carte : à ton adresse perso (c'était toi, le client). « Bonjour, oui, la cire est 100 % végétale. Bonne journée, Léa »  
+Destinataire bon, rien de promis, ton simple -> Send Email.
 </div>
+
 <div class="fin" markdown="1">
 ## En résumé
 
-- Règle -> description. Préférence -> mémoire. Change -> fichier.
-- Vérifie en **nouvelle conversation**.
+- Le bot prépare. Tu envoies.
+- Relis : destinataire, promesses, ton.
 
-**Bravo !** Leçon 11 : bot toujours actif.
+**Bravo !** Leçon 11 : il surveille la boîte tout seul.
 </div>

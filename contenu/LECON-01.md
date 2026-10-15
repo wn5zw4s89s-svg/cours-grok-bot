@@ -1,33 +1,31 @@
-# Leçon 1 : Crée ton premier bot
+# Leçon 1 : Embauche ton premier employé bot
 
-<p class="chapeau">Grok Bot est ouvert. Écran vide. Par où commencer ?</p>
+<p class="chapeau">Un projet. Trop de messages. Embauche quelqu'un qui ne dort pas.</p>
 
-## Rencontre Marc
+## Choisis ton projet
 
-Marc Garnier, plombier. Seul avec un apprenti.
+Un petit business, réel ou rêvé. Bougies, cours de guitare, réparation de vélos.
 
-Chaque soir : une heure de messages. « Ça fuit. » Pas d'adresse. Photos floues.
+Une seule phrase : « Je vends ___ à ___. »
 
-Son futur bot : **Le siphon**. Tout le cours le construit.
+## Le fil rouge
+
+Léa, créatrice fictive. Elle vend des bougies en ligne : **Bougies Lune**.
+
+Son premier employé : **Lumen**. Il répond aux clients.
 
 <div class="box info" markdown="1">
-Marc est inventé. Jamais de vrais noms, numéros ou adresses.
+Léa est inventée. Toi, tu fais TON projet. Jamais de vrais noms, numéros ou adresses dans les exemples.
 </div>
 
-## Embauche, n'écris pas
+## Un bot, pas un chat
 
-Un bot n'est pas une conversation jetable.
-
-C'est un collègue : un nom, un métier, une mémoire.
-
-## Crée un bot d'essai
-
-Sur l'accueil : en haut à gauche, le rond à tes initiales (compte) ; en haut à droite, la loupe (recherche) et le **+** (créer). En dessous, tes bots par sections.
+Un chat s'oublie. Un bot reste : un nom, un métier, une mémoire.
 
 <div class="schema">
   <div class="etape"><b>1</b>+</div>
   <div class="fleche">-></div>
-  <div class="etape"><b>2</b>Nom : Essai</div>
+  <div class="etape"><b>2</b>Un nom</div>
   <div class="fleche">-></div>
   <div class="etape"><b>3</b>« Bonjour »</div>
 </div>
@@ -35,27 +33,29 @@ Sur l'accueil : en haut à gauche, le rond à tes initiales (compte) ; en haut �
 <div class="box atoi" markdown="1">
 **À toi de jouer.** 1 message.
 
-1. Ouvre l'app **Grok Bot** sur ton iPhone.
-2. Touche le **+** en haut à droite pour créer un bot.
-3. Nom : **Essai**.
-4. Envoie : « Bonjour, qui es-tu ? »
+1. Écris ta phrase : « Je vends ___ à ___. »
+2. Ouvre l'app **Grok Bot** sur ton iPhone. Touche le **+** en haut à droite.
+3. Donne au bot un nom d'employé, pas « Assistant ».
+4. Envoie : « Bonjour. Je vends ___ à ___. Que pourrais-tu faire pour moi ? »
 
 **C'est réussi si :**
 
-- un bot nommé Essai existe (étapes 1-3) ;
-- il t'a répondu (étape 4).
+- ta phrase tient en une ligne (étape 1) ;
+- ton bot existe avec un vrai nom (étapes 2-3) ;
+- il propose des tâches liées à TON projet (étape 4).
 </div>
 
 <div class="box corrige" markdown="1">
-Bot « Essai » dans la liste. Une réponse à « Bonjour, qui es-tu ? ».
+Phrase : « Je vends des bougies parfumées à des particuliers. »  
+Bot : **Lumen**.  
+Réponse type : répondre aux questions sur les parfums, les délais, préparer des réponses.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Un bot = un collègue durable.
-- Accueil : + en haut à droite pour créer.
-- Fil rouge : Marc et Le siphon.
+- Un projet = une phrase.
+- + en haut à droite -> un bot avec un vrai nom.
 
-**Bravo !** Leçon 2 : donne un métier à Le siphon.
+**Bravo !** Leçon 2 : donne-lui un métier.
 </div>

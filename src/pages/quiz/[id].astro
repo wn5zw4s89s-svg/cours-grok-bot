@@ -9,10 +9,10 @@ const nb = site.lecons.filter((l) => l.niveau === q.niveau).length;
 <Base title={q.titre} page="quiz">
   <article class="quiz-page">
     <a class="retour" href={base}>← Accueil</a>
-    <p class="surtitre">Quiz · Niveau {q.niveau}</p>
+    <p class="surtitre">Quiz · {site.labelUnite || 'Niveau'} {q.niveau}</p>
     <h1>{q.titre}</h1>
     <div class="verrou" data-quiz-verrou hidden>
-      <p data-quiz-msg>Finis les {nb} leçons de ce niveau pour débloquer le quiz.</p>
+      <p data-quiz-msg>Finis les {nb} leçons de ce projet pour débloquer le quiz.</p>
       <a class="btn" data-quiz-suite href={base}>Continuer</a>
     </div>
     <div class="quiz" data-quiz={JSON.stringify(q)} data-niveau={q.niveau} data-nb={nb}></div>

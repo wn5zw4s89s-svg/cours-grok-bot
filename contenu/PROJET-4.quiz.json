@@ -1,0 +1,83 @@
+{
+  "id": "PROJET-4",
+  "titre": "Projet 4 : Ma marque en 1 week-end",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Un nom libre sur X est-il libre partout ?",
+      "choix": [
+        "Oui",
+        "Non : vérifie aussi les marques déposées",
+        "Oui si le bot le dit"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot regarde X. Les marques déposées se vérifient à part."
+    },
+    {
+      "id": "q2",
+      "question": "Comment juges-tu un logo ?",
+      "choix": [
+        "En grand, en plein écran",
+        "En petit, comme une photo de profil",
+        "Au nombre de couleurs"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un logo vit en petit. S'il disparaît en petit, il est raté."
+    },
+    {
+      "id": "q3",
+      "question": "Qui fixe le prix de ton offre ?",
+      "choix": [
+        "Le bot",
+        "Toi",
+        "Personne"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot n'invente pas de prix."
+    },
+    {
+      "id": "q4",
+      "question": "Comment vérifies-tu la page avant publication ?",
+      "choix": [
+        "Sur un Mac",
+        "Sur la capture téléphone envoyée par le bot",
+        "Tu ne vérifies pas"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot construit sur son ordinateur et t'envoie une capture."
+    },
+    {
+      "id": "q5",
+      "question": "Que n'as-tu pas le droit de faire sur GitHub Pages ?",
+      "choix": [
+        "Une page de présentation",
+        "Un site de vente en ligne",
+        "Un dépôt public"
+      ],
+      "bonne_reponse": 1,
+      "explication": "GitHub Pages interdit les sites de commerce. Ta page renvoie vers un email."
+    },
+    {
+      "id": "q6",
+      "question": "Un nom de domaine, c'est…",
+      "choix": [
+        "Obligatoire",
+        "Optionnel, payant, ta décision",
+        "Acheté par le bot"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot n'achète jamais rien."
+    },
+    {
+      "id": "q7",
+      "question": "Quelle consigne évite le slop design ?",
+      "choix": [
+        "« Fais moderne et élégant »",
+        "3 références précises et des interdits explicites",
+        "Plus d'emojis"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un bot comprend des références et des interdits, pas des adjectifs."
+    }
+  ]
+}

@@ -1,75 +1,57 @@
-# Leçon 6 : Prépare une demande avec des fichiers
+# Leçon 6 : Top 1 % : la fiche qui change tout
 
-<p class="chapeau">Une facture. Une photo. Le bot invente un chiffre. Écris la demande qui l'en empêche.</p>
+<p class="chapeau">Même bot. Même client. Deux fiches. Deux mondes.</p>
 
-## Le cas de Marc
+## Côte à côte
 
-Marc reçoit des factures fournisseurs et des tickets photo. Il veut un tableau en CHF. **Aucun chiffre inventé.**
+| Fiche moyenne | Fiche top 1 % |
+|---|---|
+| « Sois sympa avec les clients. » | « Tutoie si le client tutoie. 3 phrases max. » |
+| « Ne fais pas d'erreur. » | « Jamais de remboursement. Dis : "Léa revient vers vous." » |
+| Aucun exemple | 2 exemples : un message -> la réponse idéale |
 
-Lire des factures n'est pas le métier de Le siphon. Tu travailles avec ton **bot principal**.
+## Même message, deux réponses
 
-Fichiers d'exercice (fictifs) : `facture-fictive-imprimerie-exemple.pdf` et `ticket-fictif-cafe-exemple.png`. Télécharge-les depuis cette page (puis Fichiers ou Photos sur ton iPhone). La photo du ticket, tu peux aussi la prendre avec l'iPhone.
+Client : « elle sent rien votre bougie »
 
-## Le fichier ne parle pas
+**Moyenne :** « Bonjour ! Nous sommes vraiment désolés pour ce désagrément. Votre satisfaction est notre priorité absolue. N'hésitez pas à nous recontacter. »
 
-Chaque pièce jointe : **ce que c'est** + **à quoi ça sert**. Puis : « Ne modifie pas les originaux. »
+**Top 1 % :** « Mince ! Elle a brûlé combien de temps ? Souvent il faut 2 h pour que le parfum sorte. Léa »
 
-Résultat vérifiable : un tableau (colonnes nommées) + une liste à part pour le **déduit** et le **pas pu vérifier**. Mot fixe pour l'illisible.
+## Le secret
 
-<div class="box erreur" markdown="1">
-Laisser le bot « deviner » un chiffre. Non : mot fixe, toujours le même.
-</div>
+Des règles chiffrées. Des exemples. Le bot imite ce qu'il voit.
 
 <div class="box atoi" markdown="1">
-**Exercice 1 : nomme chaque fichier.** Sans le bot.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-1. Ouvre les deux fichiers (Fichiers ou Photos).
-2. « Le PDF est … . Sers-t'en pour … . »
-3. « La photo est … . Sers-t'en pour … . »
-4. Une phrase qui commence par « Ne … ».
+1. Envoie un cas difficile. Garde la réponse : c'est ta version moyenne.
+2. Ajoute à la description 2 règles chiffrées et 2 exemples « message -> réponse idéale ». Enregistre.
+3. Renvoie le même cas. Compare.
 
-Exemple : « Le PDF est le menu du restaurant Exemple. Sers-t'en pour relever chaque plat. »
+**C'est réussi si :**
 
-**C'est réussi si :** ce que c'est + à quoi ça sert × 2 ; « Ne modifie pas les originaux. »
+- tu as la réponse d'avant (étape 1) ;
+- la fiche contient 2 règles chiffrées et 2 exemples (étape 2) ;
+- la nouvelle réponse est plus courte et plus précise (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-Le PDF est une facture de l'Imprimerie Exemple SA. Sers-t'en pour relever chaque ligne.  
-La photo est un ticket du Café Exemple. Sers-t'en pour relever chaque achat.  
-Ne modifie pas les originaux.
-</div>
-
-<div class="box atoi" markdown="1">
-**Exercice 2 : assemble.** Sans le bot.
-
-1. 7 colonnes : Fichier | Fournisseur | Date | Désignation | Quantité | Prix unitaire CHF | Montant CHF.
-2. « Une ligne par … . Recopie les chiffres … . »
-3. « Si tu ne peux pas lire un chiffre, tu écris … , tu n'inventes rien. »
-4. Liste à part : « Déduit » et « Pas pu vérifier » + vérifie les calculs.
-5. « Rends le tableau … et en fichier CSV. »
-6. Tout dans Notes. **N'envoie rien.**
-
-**C'est réussi si :** 7 colonnes ; mot fixe ; liste déduit / pas vérifié ; CSV demandé ; note non envoyée.
-</div>
-
-<div class="box corrige" markdown="1">
-Rends un tableau : Fichier | Fournisseur | Date | Désignation | Quantité | Prix unitaire CHF | Montant CHF.  
-Une ligne par article. Recopie les chiffres tels quels.  
-Si tu ne peux pas lire un chiffre, tu écris « illisible », tu n'inventes rien.  
-Sous le tableau : « Déduit » et « Pas pu vérifier ». Vérifie les calculs. Signale chaque écart.  
-Rends le tableau et un fichier CSV.
+Règles : « 3 phrases max. » « Une seule question à la fois. »  
+Exemple : « c'est pour quand ? » -> « Je regarde votre commande. Léa revient vers vous aujourd'hui. »
 </div>
 
 <div class="box attention" markdown="1">
-Garde cette note. Leçon 7 : nouvelle conversation, bot principal.
+**Défi X.** Capture côte à côte : réponse avant, réponse après.  
+Phrase type : « J'ai embauché mon premier employé bot. Même client, deux fiches. À gauche, avant. À droite, après. »  
+C'est toi qui postes. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Chaque fichier = ce que c'est + à quoi ça sert.
-- Tableau vérifiable + « illisible » + liste des doutes.
-- Prépare sans envoyer.
+- Règles chiffrées + exemples > consignes vagues.
+- Projet 1 terminé : badge **Premier employé**.
 
-**Bravo !** Leçon 7 : envoie et vérifie.
+**Bravo !** Projet 2 : ton bot a son adresse email.
 </div>

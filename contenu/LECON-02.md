@@ -1,70 +1,61 @@
-# Leçon 2 : Donne un métier à ton bot
+# Leçon 2 : Donne-lui une fiche de poste
 
-<p class="chapeau">Marc : « Il me faudrait un truc qui m'aide. » Trop flou. Transforme-le en fiche.</p>
+<p class="chapeau">« Aide-moi avec mes clients. » Trop flou. Écris une fiche.</p>
 
-## Écoute Marc
+## 3 cases
 
-> « Le soir, je rappelle tout le monde. J'oublie des gens. Mais pas de prix à ma place. »
-
-Le siphon ne parle pas aux clients. Marc colle. Le bot prépare.
-
-## Remplis 3 cases
-
-- **Nom** : « Le siphon », pas « Assistant ».
+- **Nom** : déjà fait.
 - **Titre** : le métier en 6 mots.
 - **Description** : le mode d'emploi permanent.
 
-Dans la description : Métier · Entrées · Sortie · Fini quand · Je reprends avant · Hors périmètre · Si c'est flou.
+La description dit ce qui est toujours vrai. Le message dit ce qui se passe aujourd'hui.
+
+## 6 rubriques
+
+Métier · Entrées · Sortie · Interdits · Si c'est flou · Fini quand.
 
 <div class="box erreur" markdown="1">
-« Traite Mme Lefèvre » dans la description. Non : travail du jour -> message.
+« Réponds à Mme Exemple » dans la description. Non : c'est le travail du jour. Ça va dans un message.
 </div>
 
 ## Modèle à coller
 
-Copie tout le bloc. Change ensuite 1 ou 2 rubriques (titre, urgent, hors périmètre…).
-
 ```
-Nom : Le siphon
-Titre : Trie les demandes de dépannage
+Nom : Lumen
+Titre : Répond aux clients de Bougies Lune
 
-Métier : pour Marc Garnier, plombier fictif (Ville-Test, 06 00 00 00 99). Message collé -> fiche + brouillon.
-Entrées : messages que Marc colle.
-Sortie : URGENT ; Client ; Problème ; Infos manquantes ; Brouillon signé Marc.
-Urgent : eau qu'on n'arrête pas, ou plus d'eau.
-Fini quand : chaque champ rempli ou « manquant ».
-Je reprends avant : aucun prix, délai, rendez-vous, envoi.
-Hors périmètre : devis, conseils de réparation.
-Si c'est flou : « manquant » + question dans le brouillon.
+Métier : pour Léa, créatrice fictive de bougies. Message client collé -> réponse prête à envoyer.
+Entrées : messages de clients que Léa colle.
+Sortie : 1 ligne de résumé, puis la réponse, signée Léa.
+Interdits : aucune promo, aucun remboursement, aucun délai promis.
+Si c'est flou : pose une seule question au client.
+Fini quand : la réponse est prête, Léa n'a qu'à copier.
 ```
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 4 étapes. 2 messages.
+**À toi de jouer.** 3 étapes. 1 message.
 
-1. Copie le modèle. Change 1 ou 2 rubriques.
-2. Crée un nouveau bot. Ouvre sa description. Colle nom, titre, description. Enregistre.
-3. Envoie : « Message reçu : "Mme Lefèvre, ça goutte sous l'évier. Vous passez quand ? C'est combien ?" »
-4. Envoie : « Message reçu : "Le tuyau a éclaté, ça inonde !" »
+1. Copie le modèle. Remplace Léa et les bougies par ton projet.
+2. Dans ton bot, ouvre sa description. Colle titre et description. Enregistre.
+3. Envoie un faux message client : « Message reçu : "Bonjour, vous livrez en Belgique ? Et vous faites -20 % ?" » (adapte à ton projet).
 
 **C'est réussi si :**
 
-- fiche collée, 1 ou 2 rubriques modifiées (étapes 1-2) ;
-- réponse 1 : aucun prix, aucun rendez-vous, adresse « manquant » (étape 3) ;
-- réponse 2 : URGENT en première ligne (étape 4).
-
-Regarde la réponse du bot. N'écris rien.
+- la fiche parle de TON projet (étape 1) ;
+- elle est enregistrée dans la description (étape 2) ;
+- la réponse ne promet ni promo ni délai (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-Exemple de changement : titre « Classe les SMS de dépannage » ; urgent inchangé.  
-Réponse 1 : « Marc vous rappelle » ; pas de montant.  
-Réponse 2 : URGENT en 1re ligne.
+Réponse type : « Bonjour ! Je vérifie la livraison en Belgique et je reviens vers vous. Pas de code promo en ce moment. Léa »  
+Pas de « -20 % accordé ». Pas de « livré mardi ».
 </div>
+
 <div class="fin" markdown="1">
 ## En résumé
 
-- Fiche = Nom, Titre, description (7 rubriques).
-- Colle le modèle. Change 1 ou 2 lignes.
+- Description = toujours vrai. Message = aujourd'hui.
+- 6 rubriques. Le modèle suffit pour démarrer.
 
-**Bravo !** Leçon 3 : teste Le siphon.
+**Bravo !** Leçon 3 : teste-le.
 </div>

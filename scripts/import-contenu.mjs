@@ -34,11 +34,7 @@ export const MASKED_SECTIONS = [
   '*Libellés / mots … à vérifier sur ton écran* — mentions italiques (leçons 1, 2, 8, 13, 14, 15, 17, 18, 20, 23)',
 ];
 
-const NOMS = {
-  1: 'Débutant', 2: 'Apprenti', 3: 'Explorateur',
-  4: 'Bâtisseur', 5: 'Expert', 6: 'Maître',
-};
-
+// Noms de niveau : lus depuis niveaux.json (champ "nom"). Fallback : Niveau N.
 const HEADING_DROP = /^(Comment marche une leçon|Comment travailler|Ce que tu auras|Objectif|À cocher|À la fin|On reprend|En résumé)\b/i;
 const KEEP_BOX = /\b(atoi|corrige)\b/;
 
@@ -141,6 +137,17 @@ function linkifyFichiers(text) {
   });
 }
 
+function peekDefiX(lines, start) {
+  // Regarde le corps du prochain <div> : Défi X -> callout defi.
+  let i = start + 1;
+  const buf = [];
+  while (i < lines.length && !/^\s*<\/div>\s*$/.test(lines[i]) && buf.length < 8) {
+    if (lines[i].trim()) buf.push(lines[i]);
+    i++;
+  }
+  return /\*\*D[ée]fi\s*X\.?\*\*/i.test(buf.join('\n')) || /^D[ée]fi\s*X\b/i.test(buf.join('\n').trim());
+}
+
 function transformer(src, id) {
   const lines = linkifyFichiers(masquer(src)).split('\n');
   let title = id;
@@ -152,17 +159,22 @@ function transformer(src, id) {
   const out = [];
   const stack = [];
   let skip = 0;
-  for (const l of lines) {
+  for (let li = 0; li < lines.length; li++) {
+    const l = lines[li];
     const open = l.match(/^\s*<div([^>]*)>\s*$/);
     if (open) {
-      const attrs = open[1].replace(/\s*markdown="1"/, '');
-      const cls = (attrs.match(/class="([^"]*)"/) || [, ''])[1].split(/\s+/);
+      let attrs = open[1].replace(/\s*markdown="1"/, '');
+      const cls = (attrs.match(/class="([^"]*)"/) || [, ''])[1].split(/\s+/).filter(Boolean);
       if (cls.includes('corrige')) {
         stack.push('</div></details>');
         out.push('', '<details class="solution"><summary>Voir la solution</summary><div class="box corrige">', '');
       } else if (cls.includes('preuve')) {
         stack.push('SKIP'); skip++;
       } else {
+        // attention + Défi X -> box defi (défi partageable sur X)
+        if (cls.includes('attention') && peekDefiX(lines, li)) {
+          attrs = attrs.replace(/\battention\b/, 'defi');
+        }
         stack.push('</div>');
         out.push('', `<div${attrs}>`, '');
       }
@@ -176,7 +188,7 @@ function transformer(src, id) {
     }
     if (!skip) out.push(l);
   }
-    let html = marked.parse(out.join('\n'));
+  let html = marked.parse(out.join('\n'));
   const used = [...FICHIERS].filter((f) => html.includes(`fichiers/${f}`) || src.includes(f));
   if (used.length) {
     const lis = used.map((f) => `<a class="dl" href="${BASE}fichiers/${f}" download>${f}</a>`).join(' ');
@@ -185,7 +197,11 @@ function transformer(src, id) {
   return { title, html };
 }
 
-const mapNiv = JSON.parse(fs.readFileSync(path.join(SRC, 'niveaux.json'), 'utf8'));
+const mapPathProjets = path.join(SRC, 'projets.json');
+const mapPathNiveaux = path.join(SRC, 'niveaux.json');
+const useProjets = fs.existsSync(mapPathProjets);
+const mapRaw = JSON.parse(fs.readFileSync(useProjets ? mapPathProjets : mapPathNiveaux, 'utf8'));
+const labelUnite = useProjets ? 'Projet' : 'Niveau';
 const files = fs.readdirSync(SRC);
 
 const dispo = new Map();
@@ -197,10 +213,14 @@ for (const f of files) {
   const { title, html } = transformer(fs.readFileSync(path.join(SRC, f), 'utf8'), id);
   let court = title.replace(/^Leçon\s+\d+\s*:\s*/i, '');
   court = court.charAt(0).toUpperCase() + court.slice(1);
-  dispo.set(num, { id, num, title, court, html, disponible: true });
+  const raw = fs.readFileSync(path.join(SRC, f), 'utf8');
+  const bm = raw.match(/badge\s+\*\*([^*]+)\*\*/i);
+  dispo.set(num, { id, num, title, court, html, disponible: true, _badge: bm ? bm[1].trim() : null });
 }
 
-let quizFiles = files.filter((f) => /^PARTIE-\d+\.quiz\.json$/i.test(f)).map((f) => path.join(SRC, f));
+let quizFiles = files
+  .filter((f) => /^(PROJET|PARTIE)-\d+\.quiz\.json$/i.test(f))
+  .map((f) => path.join(SRC, f));
 if (!quizFiles.length) {
   const ex = path.join(APP, 'exemples');
   if (fs.existsSync(ex)) {
@@ -216,29 +236,47 @@ const quiz = quizFiles.sort().map((p) => {
     }
   });
   const n = parseInt(String(q.id).replace(/\D/g, ''), 10) || 0;
-  return { ...q, slug: String(q.id).toLowerCase(), niveau: n };
+  return { ...q, slug: String(q.id).toLowerCase(), niveau: n, projet: n };
 });
-const quizParNiv = Object.fromEntries(quiz.map((q) => [q.niveau, q.id]));
+const quizParId = Object.fromEntries(quiz.map((q) => [q.niveau, q.id]));
 
-const niveaux = Object.keys(mapNiv).map(Number).sort((a, b) => a - b).map((id) => ({
-  id,
-  nom: NOMS[id] || `Niveau ${id}`,
-  lecons: mapNiv[String(id)],
-  quizId: quizParNiv[id] || null,
-  total: mapNiv[String(id)].length,
-}));
+function parseEntry(raw) {
+  if (Array.isArray(raw)) return { nom: null, badge: null, lecons: raw };
+  if (raw && typeof raw === 'object' && Array.isArray(raw.lecons)) {
+    return { nom: raw.nom || null, badge: raw.badge || null, lecons: raw.lecons };
+  }
+  throw new Error('projets/niveaux.json : entrée invalide (attendu tableau ou {nom, badge?, lecons})');
+}
+
+const projets = Object.keys(mapRaw).map(Number).sort((a, b) => a - b).map((id) => {
+  let { nom, badge, lecons } = parseEntry(mapRaw[String(id)]);
+  const qz = quiz.find((q) => q.niveau === id);
+  if (!nom && qz?.titre) nom = String(qz.titre).replace(/^(Projet|Niveau)\s*\d+\s*[:—-]\s*/i, '');
+  if (!badge) badge = lecons.map((n) => dispo.get(n)?._badge).filter(Boolean).pop() || null;
+  return {
+    id,
+    nom: nom || `${labelUnite} ${id}`,
+    badge: badge || `Fin du ${labelUnite.toLowerCase()} ${id}`,
+    lecons,
+    quizId: quizParId[id] || null,
+    total: lecons.length,
+  };
+});
+// Alias historique : niveaux === projets (même tableau) pour pages / jeu.js existants.
+const niveaux = projets;
 
 const lecons = [];
-for (const niv of niveaux) {
-  for (const num of niv.lecons) {
+for (const proj of projets) {
+  for (const num of proj.lecons) {
     if (dispo.has(num)) {
-      const L = dispo.get(num);
-      lecons.push({ ...L, niveau: niv.id, numLabel: `Leçon ${num}` });
+      const { _badge, ...L } = dispo.get(num);
+      lecons.push({ ...L, niveau: proj.id, projet: proj.id, numLabel: `Leçon ${num}` });
     } else {
       lecons.push({
         id: `lecon-${String(num).padStart(2, '0')}`,
         num,
-        niveau: niv.id,
+        niveau: proj.id,
+        projet: proj.id,
         title: `Leçon ${num}`,
         court: 'Bientôt',
         numLabel: `Leçon ${num}`,
@@ -251,7 +289,9 @@ for (const niv of niveaux) {
 lecons.sort((a, b) => a.num - b.num);
 
 const site = {
-  niveaux,
+  projets,
+  niveaux, // alias
+  labelUnite,
   lecons,
   quiz,
   totalDispo: lecons.filter((l) => l.disponible).length,
@@ -262,4 +302,4 @@ fs.writeFileSync(path.join(OUT, 'site.json'), JSON.stringify(site));
 fs.writeFileSync(path.join(OUT, 'lecons.json'), JSON.stringify(lecons));
 fs.writeFileSync(path.join(OUT, 'quiz.json'), JSON.stringify(quiz));
 fs.writeFileSync(path.join(OUT, 'masked-sections.json'), JSON.stringify(MASKED_SECTIONS, null, 2));
-console.log(`Import : ${site.totalDispo}/${site.totalPlan} leçons, ${quiz.length} quiz, ${niveaux.length} niveaux. Masqué : ${MASKED_SECTIONS.length} motifs.`);
+console.log(`Import : ${site.totalDispo}/${site.totalPlan} leçons, ${quiz.length} quiz, ${projets.length} ${labelUnite.toLowerCase()}s (${useProjets ? 'projets.json' : 'niveaux.json'}). Masqué : ${MASKED_SECTIONS.length} motifs.`);

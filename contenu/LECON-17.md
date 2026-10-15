@@ -1,40 +1,47 @@
-# Leçon 17 : Lis X sans rien modifier
+# Leçon 17 : Le rapport du matin
 
-<p class="chapeau">Envoie ta demande. Le bot cite 2 posts. Tu ouvres les liens. Rien n'a bougé.</p>
+<p class="chapeau">6 h 05. Un rapport t'attend. Dix minutes, café compris.</p>
+
+## Le tri en 10 minutes
+
+- Ouvre le lien.
+- Bon prospect ? Copie le brouillon, poste-le depuis X.
+- Mauvais ? Dis au bot pourquoi.
+
+Chaque « mauvais » expliqué rend la nuit suivante meilleure.
+
+## Garde la main
+
+Tu peux changer l'heure, mettre en pause ou supprimer. En une phrase dans le chat.
 
 <div class="box attention" markdown="1">
-1 message. Lecture seule. Aucun plugin, aucune connexion de compte.
+Une routine tourne chaque jour, même quand tu n'en as pas besoin. Pas utile cette semaine ? Mets-la en pause.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 1 message. Bot principal.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-1. Envoie ta demande de la leçon 16.
-2. Regarde : 2 posts ? auteur pour chacun ? lien pour chacun ?
-3. Ouvre les 2 liens. Chaque post existe et parle du sujet ?
-4. Vérifie que le bot n'a rien fait sur X (pas de like, pas de réponse).
-5. Recopie les 2 liens et la phrase du bot pour chacun.
+1. Ouvre le chat du bot après la première vraie exécution. Lis le rapport.
+2. Envoie : « Mauvais prospects : n°___ et n°___, parce que ___. Ajoute ces raisons à tes faux signaux. »
+3. Envoie : « Mets la routine de prospection en pause » ou « Garde-la active ». Ton choix.
 
-**C'est réussi si :** 2 posts avec auteur et lien (2) ; liens ouverts et vérifiés (3) ; aucune action sur X (4).
+**C'est réussi si :**
+
+- tu as lu un rapport arrivé sans rien demander (étape 1) ;
+- 2 raisons ajoutées aux faux signaux (étape 2) ;
+- la routine est dans l'état que tu as choisi (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-Forme attendue (tes posts seront différents) :  
-1. @auteur1 — x.com/auteur1/status/… — « Conseil : purger le chauffe-eau avant l'hiver. »  
-2. @auteur2 — x.com/auteur2/status/… — « Fuite au groupe de sécurité, que faire ? »
-</div>
-<div class="box question" markdown="1">
-**Et pour lire mes e-mails ou mes fichiers ?** Il faudrait un connecteur. Pas dans ce cours aujourd'hui.
+Retour : « n°2 et n°4 : ce sont des vendeuses de bougies, pas des clientes. »  
+Bot : « Ajouté aux faux signaux. Routine toujours active, prochaine demain 6 h. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- X public se lit sans compte.
-- Tu ouvres les 2 liens toi-même.
-- Lecture seule : rien ne change.
+- 10 minutes : lire, poster toi-même, corriger.
+- Pause ou suppression en une phrase.
 
-**Bravo !** Leçon 18 : l'ordinateur du bot.
+**Bravo !** Leçon 18 : prospecter comme le top 1 %.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/computer-and-apps, « Search and read X » (lue le 15/10/2026).</small>

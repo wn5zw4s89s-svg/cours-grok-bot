@@ -1,55 +1,44 @@
-# Leçon 22 : Écris une routine sans danger
+# Leçon 22 : Il construit ta page
 
-<p class="chapeau">Le bot travaille seul, à heure fixe. Il doit savoir quoi faire quand une donnée manque.</p>
+<p class="chapeau">Nom, logo, offre. Le bot assemble. Tu regardes sur ton téléphone.</p>
 
-## Une routine
+## Une page, pas un site
 
-Une **routine** dit à **un** bot quand lancer un travail. Elle tourne même si ton iPhone est verrouillé.
+Une seule page suffit : logo, phrase, 3 preuves, un bouton.
 
-Tu la crées en le demandant dans le chat. Pas de formulaire.
+Le bouton ouvre un email vers l'adresse de ton bot (projet 2).
 
-## Les 6 points à confirmer (doc)
+## Comment tu vérifies
 
-1. Le bot qui en est responsable.
-2. L'horaire et le fuseau.
-3. La source à lire.
-4. Le résultat attendu.
-5. La limite de validation.
-6. Que faire si la source manque.
+Le bot construit sur son ordinateur. Il t'envoie une capture au format téléphone.
 
-Une nouvelle routine attend sa prochaine heure. Elle ne tourne pas à la création.
-
-<div class="box info" markdown="1">
-Chaque passage consomme. Toutes les heures = cher. Une fois par jour suffit ici.
-</div>
+Tu corriges par message.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** Sans le bot.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-Cas : chaque matin, Marc veut la liste des fournitures sous leur seuil. Le skill `stock-a-commander` existe (leçon 13).
+1. Envoie : « Construis une page web d'une seule page avec notre nom, le logo, l'offre, les 3 preuves et un bouton qui écrit à ton adresse email. Pas de formulaire. Envoie-moi une capture au format téléphone. »
+2. Regarde la capture. Lis la page comme un inconnu : comprends-tu l'offre en 5 secondes ?
+3. Envoie une correction, puis demande une nouvelle capture.
 
-1. Écris la demande de routine avec les 6 points.
-2. Ajoute : « Si le fichier manque -> dis "Pas de données", n'utilise pas d'anciennes données. »
-3. Ajoute : « Si rien n'est sous le seuil -> une seule ligne : "Rien à commander". »
+**C'est réussi si :**
 
-Exemple (boulangerie) : « Chaque jour à 6 h, lis stock-farine-test.csv. S'il manque, signale-le. »
-
-**C'est réussi si :** 6 points (1) ; règle fichier manquant (2) ; règle rien à dire (3) ; aucune commande ni aucun envoi.
+- une capture au format téléphone (étape 1) ;
+- tu as fait le test des 5 secondes (étape 2) ;
+- une version corrigée (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-« Du lundi au vendredi à 7 h (heure de Zurich), lance le skill stock-a-commander sur /workspace/fournitures-test.csv. Poste la liste dans cette conversation. Ne contacte aucun fournisseur, ne passe aucune commande. Si le fichier manque -> dis "Pas de données", n'utilise pas d'anciennes données. Si rien n'est sous le seuil -> "Rien à commander". »  
-Bot responsable : ton bot principal (celui à qui tu écris).
+Capture 1 : le bouton est sous la ligne de flottaison.  
+Correction : « Monte le bouton juste sous la phrase d'offre. »  
+Capture 2 : logo, phrase, bouton visibles sans faire défiler.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Routine = un bot + un horaire + une consigne.
-- 6 points, dont « source manquante ».
-- Préparer, jamais commander seul.
+- Une page : logo, phrase, preuves, bouton.
+- Test des 5 secondes sur la capture.
 
-**Bravo !** Leçon 23 : crée et teste.
+**Bravo !** Leçon 23 : en ligne.
 </div>
-
-<small>Sources : docs.x.ai/grok-bot/skills-routines-and-automations · cursor.com/help/grok-bot/routines.md (lues le 15/10/2026).</small>

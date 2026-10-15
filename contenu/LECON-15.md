@@ -1,41 +1,48 @@
-# Leçon 15 : Exige un brouillon avant tout envoi
+# Leçon 15 : Il prépare, tu postes
 
-<p class="chapeau">Le bot prépare un e-mail. Il ne l'envoie pas. Toi seul décides.</p>
+<p class="chapeau">Un bon prospect. Une réponse qui aide. Écrite par le bot, postée par toi.</p>
 
-## La phrase à mettre dans la fiche
+## La règle d'or
 
-> Avant tout envoi d'e-mail ou de message -> tu t'arrêtes. Tu montres : destinataire, objet, texte. Tu attends mon OK. Sans OK, rien ne part.
+Ton bot ne poste jamais sur X. Il écrit un brouillon dans le chat.
 
-La doc le dit : une validation bloque l'action proposée. Elle n'annule pas ce qui est déjà fait. Donc le brouillon d'abord.
+Tu copies. Tu ouvres X. Tu postes. Ou pas.
 
-<div class="box attention" markdown="1">
-2 messages. Destinataire fictif : `test@exemple.invalid`. Rien n'est envoyé.
+## Une réponse qui ne fait pas fuir
+
+- Aide d'abord, vends ensuite.
+- 2 phrases max.
+- Un lien seulement si la personne demande.
+
+<div class="box erreur" markdown="1">
+« Découvrez nos bougies artisanales ! Lien en bio ! » Spam.  
+« Si elle aime les parfums forts, cherche une bougie à mèche bois. J'en fais, si tu veux une idée. » Utile.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 2 messages. Bot principal.
+**À toi de jouer.** 3 étapes. 1 message.
 
-1. Ouvre la description du bot (touche son nom en haut du fil). Ajoute la phrase à la fin. Enregistre. Ou envoie : « Ajoute cette phrase à la fin de ta description, mot pour mot : » + la phrase.
-2. Envoie : « Prépare un e-mail à test@exemple.invalid. Objet : Rappel rendez-vous. Propose mardi 10 h. Signe Marc. »
-3. Vérifie : destinataire + objet + texte affichés. Le bot s'arrête.
-4. Regarde s'il s'arrête. Ne réponds **pas** « envoie ».
+1. Ajoute à la rubrique Prospects : « Brouillon : 2 phrases max, aide d'abord, pas de lien sauf demande. Tu ne postes jamais. »
+2. Envoie : « Prépare un brouillon de réponse pour chacun des bons prospects. »
+3. Choisis un brouillon. Corrige-le si besoin. Décide toi-même de le poster depuis l'app X, ou non.
 
-**C'est réussi si :** phrase dans la description (1) ; brouillon complet affiché (3) ; aucun envoi (4).
+**C'est réussi si :**
+
+- la règle est dans la fiche (étape 1) ;
+- chaque bon prospect a un brouillon (étape 2) ;
+- c'est toi qui décides de poster (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**À :** test@exemple.invalid  
-**Objet :** Rappel rendez-vous  
-**Texte :** Bonjour, je vous propose mardi à 10 h. Marc  
-**Fin :** « J'attends ton OK avant d'envoyer. »
+Post : « Cadeau pour ma mère, elle a déjà tout… »  
+Brouillon : « Une bougie à son parfum préféré, ça marche toujours. Je peux te conseiller si tu veux. »
 </div>
+
 <div class="fin" markdown="1">
 ## En résumé
 
-- Phrase brouillon dans la fiche.
-- Préparer, pas envoyer.
+- Le bot écrit. Toi, tu postes.
+- Aide d'abord, 2 phrases.
 
-**Bravo !** Leçon 16 : les connecteurs.
+**Bravo !** Leçon 16 : la routine de nuit.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/approvals-security-and-privacy (lue le 15/10/2026).</small>

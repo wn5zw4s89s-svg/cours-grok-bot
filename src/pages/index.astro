@@ -2,14 +2,26 @@
 import Base from '../layouts/Base.astro';
 import site from '../data/site.json';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const first = site.lecons[0];
+const n1 = site.niveaux[0];
+const n2 = site.niveaux[1];
+const objectifDefaut = n1
+  ? `0/${n1.total} avant ${n2 ? n2.nom : 'la fin du cours'}`
+  : 'Commence le cours';
 ---
 <Base page="accueil">
   <section class="hero-min">
+    <div class="stats-bar">
+      <span data-streak title="Série">🔥 0</span>
+      <span data-xp>0 XP</span>
+    </div>
     <h1>Cours Grok Bot</h1>
-    <p class="objectif" data-objectif>0/5 avant Apprenti</p>
+    <p class="objectif" data-objectif>{objectifDefaut}</p>
     <div class="barre"><span data-barre-niv></span></div>
-    <a class="btn btn-large" data-continuer href={`${base}lecon/${site.lecons[0].id}/`}>Commencer</a>
+    <div class="chemin" data-chemin aria-label="Chemin du projet"></div>
+    <a class="btn btn-large" data-continuer href={`${base}lecon/${first.id}/`}>Commencer</a>
     <p class="prochain-badge" data-prochain-badge></p>
+    <div class="badges-box" data-badges-list hidden></div>
   </section>
 
   {site.niveaux.map((niv) => {
@@ -17,7 +29,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     const quiz = site.quiz.find((q) => q.id === niv.quizId);
     return (
       <details class="niv" data-niveau-bloc={niv.id}>
-        <summary><span class="niv-nom">Niveau {niv.id} · {niv.nom}</span><span class="niv-etat" data-niv-etat={niv.id}>{lecs.length} leçons</span></summary>
+        <summary><span class="niv-nom">{site.labelUnite || 'Niveau'} {niv.id} · {niv.nom}</span><span class="niv-etat" data-niv-etat={niv.id}>{lecs.length} leçons</span></summary>
         <ol class="liste-compacte">
           {lecs.map((l) => (
             <li class="item-lecon" data-lecon-carte={l.id}>

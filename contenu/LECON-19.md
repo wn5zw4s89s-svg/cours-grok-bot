@@ -1,41 +1,48 @@
-# Leçon 19 : Regarde ton bot travailler et reprends la main
+# Leçon 19 : Un nom qu'on retient
 
-<p class="chapeau">5 minutes. Un formulaire de test. Pas d'envoi. Tu prends la main une fois.</p>
+<p class="chapeau">Vendredi soir. Pas de nom. Dimanche soir, une marque en ligne.</p>
 
-## Le formulaire
+## Le week-end
 
-https://httpbin.org/forms/post : une fausse commande de pizza, faite pour les essais.
+Nom -> logo -> offre -> page -> en ligne -> top 1 %.
 
-Champs : Customer name, Telephone, E-mail address, Pizza Size, Pizza Toppings, Preferred delivery time. Bouton : **Submit order**.
+Le bot construit. Toi, tu choisis et tu vérifies sur ton iPhone.
 
-<div class="box attention" markdown="1">
-5 minutes au plus. 1 consigne. **Ne touche pas Submit order.**
-</div>
+## Un bon nom
+
+- se dit en une fois ;
+- s'écrit comme il se prononce ;
+- n'est pas déjà pris sur X.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 1 message. Bot principal.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-1. Lance un minuteur de 5 min.
-2. Envoie ta consigne de la leçon 18.
-3. Ouvre l'ordinateur du bot. Regarde.
-4. Au champ choisi : reprends la main. Tape l'heure (ex. 19:30) depuis l'iPhone. Puis rends la main au bot.
-5. Vérifie : formulaire rempli, pas envoyé.
-6. Note ton usage après. Écart = coût.
+1. Envoie : « Propose 10 noms de marque pour mon projet. Courts, faciles à dire, en français. »
+2. Garde-en 3. Envoie : « Vérifie sur X si un compte public porte déjà ces noms. »
+3. Choisis ton nom. Dis-le au bot : « Notre marque s'appelle ___. Retiens-le. »
 
-**C'est réussi si :** 5 min au plus (1) ; main prise puis rendue (4) ; pas d'envoi (5) ; usage après noté (6).
+**C'est réussi si :**
+
+- 10 propositions (étape 1) ;
+- tu sais lesquels sont déjà pris sur X (étape 2) ;
+- un nom choisi par toi, retenu par le bot (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-4 min 30. Main prise au champ heure, rendue. Formulaire rempli. Submit order non cliqué. Usage 22 % -> 24 %.
+Gardés : Mèche, Lune Douce, Braise.  
+Bot : « @meche existe déjà, actif. Les 2 autres semblent libres. »  
+Choix de Léa : **Lune Douce**.
 </div>
+
+<div class="box info" markdown="1">
+Le bot regarde X, pas les marques déposées. Avant de vendre sous un nom, vérifie-le auprès de l'INPI.
+</div>
+
 <div class="fin" markdown="1">
 ## En résumé
 
-- Regarder, prendre la main, rendre.
-- Rien n'est envoyé.
-- Coût = usage avant / après.
+- Court, dit en une fois, libre sur X.
+- C'est toi qui choisis.
 
-**Bravo !** Leçon 20 : montrer au lieu d'expliquer.
+**Bravo !** Leçon 20 : le logo.
 </div>
-
-<small>Sources : docs.x.ai/grok-bot/computer-and-apps · httpbin.org/forms/post (vérifié le 15/10/2026).</small>

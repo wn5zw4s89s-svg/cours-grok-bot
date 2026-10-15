@@ -1,47 +1,45 @@
-# Leçon 20 : Choisis une tâche à montrer à ton bot
+# Leçon 20 : Un logo en un message
 
-<p class="chapeau">Expliquer chaque étape est long. Montre-la une fois. Choisis une tâche sans risque.</p>
+<p class="chapeau">Pas de graphiste. Un bot avec un ordinateur.</p>
 
-## Montre une tâche au bot
+## Comment il fait
 
-Tu fais une tâche dans le navigateur du bot. Il enregistre et crée un skill.
+Ton bot a son propre ordinateur. Il dessine le logo en code, puis t'envoie l'image dans le chat.
 
-- Conversation seul à seul avec le bot, ordinateur ouvert.
-- Un bouton pour lui montrer une tâche.
-- 10 minutes d'enregistrement au plus. Pas de micro.
-- Le skill créé est un **brouillon**.
+Un logo simple : un mot, une forme, deux couleurs.
 
-<div class="box question" markdown="1">
-**Pas de bouton pour montrer une tâche ?** Il arrive progressivement. Plan B : fais la tâche une fois avec le bot, puis demande un skill à partir de la tâche réussie.
+<div class="box info" markdown="1">
+Ton bot peut aussi proposer une image générée. Le logo en code reste plus net et plus facile à corriger.
 </div>
 
+## Demande précise
+
+Dis-lui ce que tu veux voir. Pas « fais-moi un beau logo ».
+
 <div class="box atoi" markdown="1">
-**À toi de jouer.** Sans le bot.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-1. Ouvre l'ordinateur du bot. Cherche le bouton pour lui montrer une tâche. Note : visible / pas visible -> plan B.
-2. Choisis une tâche de navigateur sans risque : remplir https://httpbin.org/forms/post sans envoyer.
-3. Découpe-la en 3 à 5 étapes.
-4. Écris la phrase de départ. Forme : « Je vais te montrer comment … . »
+1. Envoie : « Dessine 3 logos pour ___ (ton nom) : le nom en lettres, une forme simple, 2 couleurs max. Envoie-les en image ici. »
+2. Regarde-les en petit sur ton écran, comme une photo de profil.
+3. Choisis-en un. Envoie une seule correction : couleur, forme ou police.
 
-Exemple (autre sujet) : « Je vais te montrer comment noter la météo de Genève dans un fichier. »
+**C'est réussi si :**
 
-**C'est réussi si :** bouton cherché (1) ; tâche sans envoi (2) ; 3 à 5 étapes (3) ; phrase de départ (4).
+- 3 logos reçus en image (étape 1) ;
+- tu as jugé en petit (étape 2) ;
+- un logo final, corrigé une fois (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Bouton :** pas visible -> plan B.  
-**Étapes :** 1) ouvrir le formulaire 2) remplir nom, téléphone, e-mail fictifs 3) choisir taille et garniture 4) s'arrêter avant Submit order.  
-**Départ :** « Je vais te montrer comment remplir ce formulaire de test sans l'envoyer. »
+Logo 2 retenu : « lune douce » en minuscules, un croissant fin, crème sur bleu nuit.  
+Correction : « Croissant plus épais : il disparaît en petit. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Montrer une tâche : tu montres, il crée un skill brouillon.
-- Pas de bouton = plan B.
-- Tâche courte, sans envoi.
+- Le bot dessine sur son ordinateur et t'envoie l'image.
+- Juge en petit. Une correction à la fois.
 
-**Bravo !** Leçon 21 : crée le skill.
+**Bravo !** Leçon 21 : l'offre.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/skills-routines-and-automations (lue le 15/10/2026).</small>

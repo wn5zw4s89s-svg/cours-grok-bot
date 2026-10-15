@@ -1,61 +1,42 @@
-# Leçon 14 : Écris des garde-fous « demande avant »
+# Leçon 14 : Ta première chasse, à la main
 
-<p class="chapeau">Le bot peut agir seul. Certains gestes doivent attendre ton oui.</p>
+<p class="chapeau">Avant d'automatiser, regarde ce que le bot trouve. Une fois, devant toi.</p>
 
-## Lis une demande de validation
+## Le format du rapport
 
-La carte montre l'action proposée et ses valeurs. Trois boutons :
+Pour chaque prospect : le lien du post, une ligne de résumé, pourquoi c'est un prospect.
 
-- Autoriser une fois : cette fois seulement.
-- Autoriser toujours : enregistre une règle, les prochaines passent seules.
-- Refuser : bloque.
-
-Une validation venue d'une routine expire après environ 10 minutes. L'action ne se fait pas.
-
-<div class="box erreur" markdown="1">
-Autoriser toujours sur un envoi. Un toucher, et les prochains partent sans toi.
-</div>
-
-## Écris des règles « demander d'abord »
-
-Ouvre le [réglage des règles de validation](grokbot://app/v1/settings?id=auto-review-rules) (sur iPhone : le rond à tes initiales en haut à gauche -> Réglages). Deux sortes de règles :
-
-- Demander d'abord : s'arrête toujours pour te demander.
-- Autoriser automatiquement : laisse passer, sauf si la revue voit un problème.
-
-Si les deux s'appliquent : demander d'abord gagne.
-
-Une bonne règle est étroite : une action, un périmètre.
-
-- Floue : « Sois prudent avec les e-mails. »
-- Claire : « Ask first before sending any external email. »
+Sans lien, tu ne peux rien vérifier.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** Sans le bot.
+**À toi de jouer.** 3 étapes. 1 message.
 
-Forme : « Ask first before … » + la traduction en français.
+1. Envoie : « Cherche sur X des posts publics récents qui collent à ta rubrique Prospects. Donne-moi 5 posts : lien, résumé en 1 ligne, pourquoi. »
+2. Ouvre 2 liens sur ton iPhone. Lis les vrais posts.
+3. Pour chacun des 5, réponds au bot : bon ou mauvais, et pourquoi en 3 mots.
 
-1. Une règle sur un **envoi** (e-mail, message, publication).
-2. Une règle sur une action **irréversible** (supprimer, payer, modifier un document partagé).
+**C'est réussi si :**
 
-Exemple (autre sujet) : « Ask first before publishing any post. » (Demande avant toute publication.)
-
-**C'est réussi si :** 2 règles ; chacune vise une seule action précise ; on répond par oui ou non à « cette action est-elle concernée ? ».
+- 5 posts avec lien et raison (étape 1) ;
+- tu as lu 2 posts d'origine (étape 2) ;
+- le bot a ton avis sur les 5 (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**1.** Ask first before sending any external email or message. (Demande avant tout e-mail ou message externe.)  
-**2.** Ask first before deleting or overwriting any file. (Demande avant de supprimer ou d'écraser un fichier.)
+Bon : « Je cherche un cadeau pour ma sœur qui adore les bougies » -> demande directe.  
+Mauvais : « Coupure de courant, sortez les bougies » -> pas un achat.  
+Ton retour : « 3 bons, 2 hors sujet : coupure, gâteau. »
+</div>
+
+<div class="box info" markdown="1">
+Un lien ne s'ouvre pas ? Le post peut avoir été supprimé. Demande un autre prospect.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Autoriser une fois · autoriser toujours · refuser.
-- Demander d'abord gagne sur autoriser automatiquement.
-- Règle étroite : une action, un périmètre.
+- Lien + résumé + raison.
+- Vérifie toi-même avant d'automatiser.
 
-**Bravo !** Leçon 15 : un brouillon avant tout envoi.
+**Bravo !** Leçon 15 : des brouillons de réponse.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/approvals-security-and-privacy (lue le 15/10/2026).</small>

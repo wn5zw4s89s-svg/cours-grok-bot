@@ -1,0 +1,83 @@
+{
+  "id": "PROJET-3",
+  "titre": "Projet 3 : Un bot qui prospecte la nuit",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Comment ton bot lit-il X ?",
+      "choix": [
+        "Il faut connecter ton compte X",
+        "Il cherche et lit les posts publics, sans plugin",
+        "Il ne peut pas"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot lit X public sans connexion. Il ne poste pas."
+    },
+    {
+      "id": "q2",
+      "question": "Qui poste la réponse à un prospect ?",
+      "choix": [
+        "Le bot",
+        "Toi, depuis l'app X",
+        "La routine"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot prépare un brouillon. Toi seul postes."
+    },
+    {
+      "id": "q3",
+      "question": "Que doit contenir chaque prospect du rapport ?",
+      "choix": [
+        "Un pseudo seul",
+        "Lien, résumé, raison",
+        "Une note sur 20"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Sans lien, tu ne peux rien vérifier."
+    },
+    {
+      "id": "q4",
+      "question": "Tu crées une routine à 6 h, il est 6 h 05. Quand tourne-t-elle ?",
+      "choix": [
+        "Tout de suite",
+        "Demain à 6 h, sauf si tu demandes un test",
+        "Jamais"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Une routine neuve attend sa prochaine heure. Le test la lance tout de suite."
+    },
+    {
+      "id": "q5",
+      "question": "La recherche X échoue pendant la nuit. Que doit faire le bot ?",
+      "choix": [
+        "Inventer des prospects",
+        "Dire que ça a échoué",
+        "Réessayer en postant"
+      ],
+      "bonne_reponse": 1,
+      "explication": "La demande prévoit le cas d'échec : le dire, ne rien inventer."
+    },
+    {
+      "id": "q6",
+      "question": "« RT pour gagner une bougie » est…",
+      "choix": [
+        "Un bon prospect",
+        "Un cas piège",
+        "Un client fâché"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un concours ressemble à un prospect. Ce n'en est pas un."
+    },
+    {
+      "id": "q7",
+      "question": "Qu'est-ce qui rend les critères top 1 % ?",
+      "choix": [
+        "Plus de prospects",
+        "Qui, quand, exclusions, pièges, note",
+        "Des emojis"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Moins de prospects, mais tous vrais."
+    }
+  ]
+}

@@ -1,79 +1,46 @@
-# Leçon 4 : Transforme une erreur en règle
+# Leçon 4 : Transforme un raté en règle
 
-<p class="chapeau">Tu corriges dans le chat. Le lendemain, même erreur. Écris une règle qui tient.</p>
+<p class="chapeau">Tu corriges dans le chat. Demain, même erreur. Écris une règle qui tient.</p>
 
-## Vois l'erreur
+## Chat ou fiche ?
 
-Hier : « Combien pour mon robinet ? » -> un montant.  
-Chat : « Pour le robinet, ne donne pas le prix. »
+Une correction dans le chat aide maintenant.
 
-Aujourd'hui : « Tarif d'un débouchage ? » -> encore un montant.
+Une phrase dans la description aide toujours.
 
-Trop étroit. Un seul travail.
+## Une bonne règle
 
-<div class="box attention" markdown="1">
-Aucun message au bot. Zéro crédit.
-</div>
+Elle dit **quoi faire**, pas seulement quoi éviter.
 
-## Une fois ou une règle ?
-
-Ça reviendra ?
-
-- **Une fois** : cette personne, aujourd'hui. Reste dans le chat.
-- **Une règle** : ça reviendra. Va dans la description.
-
-## Phrase qui tient
-
-Cas large · interdit · qui à la place.
-
-« Prix et devis -> c'est Marc qui les donne. Toi, tu n'écris aucun montant. »
-
-<div class="box atoi" markdown="1">
-**Exercice 1 : classe.** Sans le bot.
-
-Forme : **A :** une règle, parce que…
-
-1. « Signe les brouillons Marc, pas Le siphon. »
-2. « Le client de 14 h, M. Test, rappelle-le en premier. »
-3. « Tu as encore donné un prix. Arrête. »
-
-Exemple : **X :** une fois, parce que ça concerne seulement ce matin.
-
-**C'est réussi si :** A et C = règle ; B = une fois.
-</div>
-
-<div class="box corrige" markdown="1">
-**A :** règle (tous les brouillons).  
-**B :** une fois (ce client).  
-**C :** règle (les prix reviennent).
+<div class="box erreur" markdown="1">
+« Sois prudent avec les remboursements. » Trop vague.  
+« Tu ne promets jamais de remboursement. Tu écris : "Léa revient vers vous sous 24 h." » Clair.
 </div>
 
 <div class="box atoi" markdown="1">
-**Exercice 2 : élargis.** Sans le bot.
+**À toi de jouer.** 3 étapes. 1 message.
 
-« Pour le robinet, ne donne pas le prix. »
+1. Prends un raté de la leçon 3. Écris une règle : interdit + phrase à dire à la place.
+2. Ajoute la règle dans la description du bot. Enregistre.
+3. Renvoie le même cas.
 
-1. « Elle oublie : … »
-2. « Prix et devis -> c'est … qui …. Toi, tu …. »
-3. « Je la mets dans : … »
+**C'est réussi si :**
 
-Exemple (garage) : « Prix -> Nadia. Toi, aucun montant. »
-
-**C'est réussi si :** aucun appareil (2) ; qui à la place (2) ; description (3).
+- la règle contient une phrase de remplacement (étape 1) ;
+- elle est dans la description, pas dans le chat (étape 2) ;
+- la nouvelle réponse suit la règle (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Elle oublie :** les autres travaux, et qui donne le prix.  
-**Règle :** Prix et devis -> c'est Marc qui les donne. Toi, tu n'écris aucun montant.  
-**Je la mets dans :** la description.
+Règle : « Tu ne promets jamais de remboursement. Tu écris : "Léa regarde votre commande et revient vers vous." »  
+Nouvelle réponse : « Désolée pour la bougie ! Léa regarde votre commande et revient vers vous. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Chat = temporaire. Description = durable.
-- Une fois vs une règle.
-- Cas large + interdit + qui.
+- Chat = maintenant. Fiche = toujours.
+- Règle = interdit + phrase à dire.
 
-**Bravo !** Leçon 5 : prouve sur le vrai bot.
+**Bravo !** Leçon 5 : un cas jamais vu.
 </div>

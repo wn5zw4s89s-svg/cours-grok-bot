@@ -1,51 +1,55 @@
-# Leçon 16 : Prépare une lecture sur X
+# Leçon 16 : La routine de nuit
 
-<p class="chapeau">Ton bot peut lire ce qui est public sur X. Sans plugin. Sans connexion. Rien ne bouge.</p>
+<p class="chapeau">Tu dors. Ton bot cherche. Au réveil, la liste t'attend.</p>
 
-## X public, nativement
+## Une routine, c'est quoi ?
 
-Le bot cherche des posts, ouvre un post depuis son lien, lit les posts d'un compte, compte les posts récents sur un sujet.
+Une tâche que le bot lance seul, à heure fixe. Tu la demandes en une phrase.
 
-C'est en **lecture seule**. Il ne se connecte pas en ton nom.
+Elle tourne même app fermée, iPhone éteint.
+
+## Une bonne demande dit
+
+- quand (heure et fuseau) ;
+- quoi chercher ;
+- quoi rendre ;
+- la limite : ne rien poster ;
+- quoi faire si X ne répond pas.
 
 <div class="box info" markdown="1">
-Pour un service privé (tes e-mails, tes fichiers), il faudrait un **connecteur**. On n'en installe aucun ici.
+Une routine neuve attend sa prochaine heure. Elle ne tourne pas à la création. Pour voir le résultat tout de suite, demande un test.
 </div>
 
-## Une bonne demande de lecture
+## Modèle à coller
 
-Un sujet précis. Un nombre de posts. Les sources citées : auteur + lien.
-
-Et : « Ne publie rien, ne like rien, ne réponds à personne. »
+```
+Crée une routine : chaque jour à 6 h (heure de Paris), cherche sur X les posts publics des dernières 24 h qui collent à ta rubrique Prospects. Garde les 5 meilleurs : lien, résumé, pourquoi, brouillon de réponse. Ne poste rien. Si la recherche échoue, dis-le au lieu d'inventer.
+```
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** Sans le bot.
+**À toi de jouer.** 3 étapes. 2 messages.
 
-Cas : Marc veut savoir ce qu'on dit sur X des fuites de chauffe-eau en hiver.
+1. Copie le modèle. Adapte l'heure et le fuseau.
+2. Envoie-le. Lis le résumé du bot : heure, tâche, où arrive le résultat.
+3. Envoie : « Lance un test de cette routine maintenant. »
 
-1. Choisis le sujet en 3 à 5 mots.
-2. Écris la demande. Forme : « Cherche 2 posts publics sur X à propos de … . Pour chacun : auteur, lien, une phrase de résumé. Ne publie rien, ne like rien, ne réponds à personne. »
-3. Écris l'attendu : ce qui doit apparaître, ce qui ne doit pas.
+**C'est réussi si :**
 
-Exemple (autre sujet) : « Cherche 2 posts publics sur X à propos de "pain au levain maison". Pour chacun : auteur, lien, une phrase. »
-
-**C'est réussi si :** sujet précis (1) ; demande avec auteur + lien + « Ne publie rien » (2) ; attendu vérifiable (3).
+- l'heure et le fuseau sont les tiens (étape 1) ;
+- le bot confirme la routine et sa prochaine exécution (étape 2) ;
+- le test rend une liste avec liens et brouillons (étape 3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Sujet :** fuite chauffe-eau hiver.  
-**Demande :** « Cherche 2 posts publics sur X à propos de "fuite chauffe-eau hiver". Pour chacun : auteur, lien, une phrase de résumé. Ne publie rien, ne like rien, ne réponds à personne. »  
-**Attendu :** 2 posts, chacun avec auteur et lien `x.com/…`. Aucune action sur X.
+Bot : « Routine créée. Chaque jour à 6 h, heure de Paris. Prochaine : demain 6 h. Résultat dans ce chat. »  
+Test : 5 posts, 5 liens, 5 brouillons, rien de posté.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- X public : le bot lit sans plugin ni compte.
-- Service privé = connecteur (pas aujourd'hui).
-- Demande précise, sources citées, aucune action.
+- Quand, quoi, rendu, limite, échec.
+- Une routine neuve attend : teste-la.
 
-**Bravo !** Leçon 17 : lis pour de vrai.
+**Bravo !** Leçon 17 : le café du matin.
 </div>
-
-<small>Source : docs.x.ai/grok-bot/computer-and-apps, « Search and read X » (lue le 15/10/2026).</small>
