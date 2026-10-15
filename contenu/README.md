@@ -3,7 +3,12 @@
 **Lot 1–11 réécrit, prêt à republier** (15/10).  
 **Lot 12–23 (Niveau 3) écrit et vérifié sur la doc, prêt à publier** (15/10).  
 **Lot 24–31 (Niveau 4) écrit et vérifié sur la doc, prêt à publier** (15/10). Leçon 29 retouchée : audit en lecture, aucun réglage changé.  
-**Lot 32–36 (Niveau 5) écrit et vérifié sur la doc, prêt à publier** (15/10).
+**Lot 32–36 (Niveau 5) écrit et vérifié sur la doc, prêt à publier** (15/10).  
+**Lot 37–43 (Niveau 6) écrit, prêt à publier** (15/10). Leçons 16–17 réécrites : lecture X publique, sans plugin ni compte (choix de Joseph).
+
+**COURS 1–43 COMPLET** : 43 leçons + 6 quiz (PARTIE-1 à PARTIE-6).
+
+> Note prix (cursor.com/pricing, lu le 15/10/2026, hors taxes) : les anciens « Hobby » et « Individual 20 $ » n'existent plus. Aujourd'hui : **Free 0 $** (agent limité, pas d'agents cloud) et **Premium 30 $/mois** (agents cloud et Grok Bot inclus).
 
 ## Règle Gebbia (Joseph, 15/10)
 
@@ -23,6 +28,8 @@ Pas de cases à cocher d'objectifs, pas de listes « ce que tu auras à la fin �
 | `PARTIE-4.quiz.json` | Quiz niveau 4 |
 | `LECON-32.md` … `LECON-36.md` | Niveau 5 |
 | `PARTIE-5.quiz.json` | Quiz niveau 5 |
+| `LECON-37.md` … `LECON-43.md` | Niveau 6 |
+| `PARTIE-6.quiz.json` | Quiz niveau 6 |
 | `niveaux.json` | Mapping niveau -> leçons (1–43) |
 | `README.md` | Ce fichier |
 
@@ -57,8 +64,8 @@ Pas de cases à cocher d'objectifs, pas de listes « ce que tu auras à la fin �
 | 13 | Enregistre et lance ton skill | 7B |
 | 14 | Écris des garde-fous « demande avant » | 8A |
 | 15 | Exige un brouillon avant tout envoi | 8B |
-| 16 | Choisis un connecteur et prépare une lecture | 9A |
-| 17 | Lis par un connecteur sans rien modifier | 9B |
+| 16 | Prépare une lecture sur X (sans plugin) | 9A |
+| 17 | Lis X sans rien modifier | 9B |
 | 18 | Comprends l'ordinateur et le navigateur du bot | 10A |
 | 19 | Regarde ton bot travailler et reprends la main | 10B |
 | 20 | Choisis une tâche à montrer à ton bot | 11A |
@@ -89,6 +96,18 @@ Pas de cases à cocher d'objectifs, pas de listes « ce que tu auras à la fin �
 | 35 | Prouve que l'agent suit tes règles | 19B |
 | 36 | Confie du code à un agent cloud (lecture et démo) | 20 |
 
+### Niveau 6 — Ultra expert
+
+| Leçon | Titre |
+|---|---|
+| 37 | Organise une flotte de bots avec un chef d'orchestre |
+| 38 | Construis une batterie de tests qui rejoue |
+| 39 | Mesure et réduis ce que tes bots consomment |
+| 40 | Fais construire une app par des bots |
+| 41 | Mets ton app en ligne avec un agent cloud (lecture et démo) |
+| 42 | Fais maintenir ton app par un bot |
+| 43 | Livre un bot complet et suis-le (grille, client fictif) |
+
 Fil rouge : **Marc Garnier** / **Le siphon**.  
 App en **français** : libellés FR (Nouveau, Réglages du bot, Description, Enregistrer, Appel vocal…). Note « à vérifier sur ton écran » si le libellé exact varie.  
 Leçon 10 : vérif mémoire en **nouvelle conversation**.
@@ -101,7 +120,7 @@ Dossier `fichiers/` :
 |---|---|
 | `facture-fictive-imprimerie-exemple.pdf` | 6, 7 |
 | `ticket-fictif-cafe-exemple.png` | 6, 7 |
-| `fournitures-test.csv` | 12, 13, 16, 17, 22, 23 |
+| `fournitures-test.csv` | 12, 13, 22, 23 |
 | `fournitures-test-2.csv` | 13 |
 
 Données inventées (Sanitaire Exemple SA, Robinetterie Test Sàrl, Quincaillerie Fictive SA). Mettre un lien de téléchargement sur chaque leçon concernée.
@@ -110,7 +129,8 @@ Données inventées (Sanitaire Exemple SA, Robinetterie Test Sàrl, Quincailleri
 
 - docs.x.ai/grok-bot/skills-routines-and-automations : 6 rubriques des skills, Teach a task, 6 points d'une routine, Test run.
 - docs.x.ai/grok-bot/approvals-security-and-privacy : Allow once / Always allow / Deny, Auto-review (Ask first / Allow automatically), Take over / Take control / I'm done.
-- docs.x.ai/grok-bot/computer-and-apps : ordinateur partagé, Connect apps -> Add, `@` / `/`, X public sans plugin.
+- docs.x.ai/grok-bot/computer-and-apps : ordinateur partagé, Connect apps -> Add, `@` / `/`, X public lu sans plugin ni compte (leçons 16–17).
+- docs.x.ai/grok-bot/settings-and-notifications : Usage & Billing, Weekly usage, langue de l'app (français disponible).
 - cursor.com/help/grok-bot/routines.md : Details -> Routines, Pause / Test / Edit / Delete routine, When to run.
 - cursor.com/help/grok-bot/connect-plugins.md : Authorize / Authenticate, Installed, Needs auth.
 - docs.x.ai/grok-bot/chat-and-collaboration : groupe (Nouveau -> New chat, 2 à 6 bots), @, relais entre bots, limites des groupes.
@@ -145,4 +165,4 @@ Lire ce dossier `contenu/`. Les anciennes leçons dans `/workspace/grokbot-live/
 
 ## Lots suivants
 
-Niveau 6 : pas encore écrit (style Gebbia).
+Aucun. Cours complet.

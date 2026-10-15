@@ -2,13 +2,93 @@
   "id": "PARTIE-3",
   "titre": "Niveau 3 — Bot qui agit",
   "questions": [
-    {"id":"q1","question":"Un skill, c'est…","choix":["Des instructions réutilisables, appelées avec /","Un connecteur vers une app","Une routine à heure fixe"],"bonne_reponse":0,"explication":"Une recette rejouable, partagée par tous tes bots."},
-    {"id":"q2","question":"Comment prouver qu'un skill marche ?","choix":["Le relire","Le lancer sur un deuxième fichier","Demander au bot s'il est bon"],"bonne_reponse":1,"explication":"Un 2e exemple montre qu'il tient."},
-    {"id":"q3","question":"Quel bouton est risqué sur un envoi ?","choix":["Allow once","Always allow","Deny"],"bonne_reponse":1,"explication":"Il enregistre une règle : les prochains envois passent sans toi."},
-    {"id":"q4","question":"Une règle Ask first et une règle Allow automatically visent la même action. Qui gagne ?","choix":["Allow automatically","Ask first","La plus récente"],"bonne_reponse":1,"explication":"Ask first gagne toujours."},
-    {"id":"q5","question":"Lire des posts publics sur X demande…","choix":["Le plugin X","Rien : le bot lit X public sans plugin","Un compte payant"],"bonne_reponse":1,"explication":"Le plugin X sert seulement à tes messages privés, signets et fil."},
-    {"id":"q6","question":"Un site demande un mot de passe. Tu…","choix":["Le colles dans le chat","Prends la main (Take over) et le tapes toi-même","Demandes au bot de deviner"],"bonne_reponse":1,"explication":"Jamais de mot de passe dans le chat."},
-    {"id":"q7","question":"Le fichier d'une routine manque. Elle doit…","choix":["Reprendre les anciennes données","Dire « Pas de données »","Passer une commande quand même"],"bonne_reponse":1,"explication":"Pas de données = elle prévient, sans vieilles données."},
-    {"id":"q8","question":"Le bouton Test d'une routine…","choix":["Ne coûte rien","Fait un vrai travail et consomme","Supprime la routine"],"bonne_reponse":1,"explication":"Un seul test, puis pause."}
+    {
+      "id": "q1",
+      "question": "Un skill, c'est…",
+      "choix": [
+        "Des instructions réutilisables, appelées avec /",
+        "Un connecteur vers une app",
+        "Une routine à heure fixe"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Une recette rejouable, partagée par tous tes bots."
+    },
+    {
+      "id": "q2",
+      "question": "Comment prouver qu'un skill marche ?",
+      "choix": [
+        "Le relire",
+        "Le lancer sur un deuxième fichier",
+        "Demander au bot s'il est bon"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un 2e exemple montre qu'il tient."
+    },
+    {
+      "id": "q3",
+      "question": "Quel bouton est risqué sur un envoi ?",
+      "choix": [
+        "Allow once",
+        "Always allow",
+        "Deny"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Il enregistre une règle : les prochains envois passent sans toi."
+    },
+    {
+      "id": "q4",
+      "question": "Une règle Ask first et une règle Allow automatically visent la même action. Qui gagne ?",
+      "choix": [
+        "Allow automatically",
+        "Ask first",
+        "La plus récente"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Ask first gagne toujours."
+    },
+    {
+      "id": "q5",
+      "question": "Lire des posts publics sur X demande…",
+      "choix": [
+        "Un plugin X et ta connexion",
+        "Rien : le bot lit X public nativement",
+        "Un compte payant X"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Lecture seule, sans plugin ni compte. Un connecteur ne sert qu'aux services privés."
+    },
+    {
+      "id": "q6",
+      "question": "Un site demande un mot de passe. Tu…",
+      "choix": [
+        "Le colles dans le chat",
+        "Prends la main (Take over) et le tapes toi-même",
+        "Demandes au bot de deviner"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Jamais de mot de passe dans le chat."
+    },
+    {
+      "id": "q7",
+      "question": "Le fichier d'une routine manque. Elle doit…",
+      "choix": [
+        "Reprendre les anciennes données",
+        "Dire « Pas de données »",
+        "Passer une commande quand même"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Pas de données = elle prévient, sans vieilles données."
+    },
+    {
+      "id": "q8",
+      "question": "Le bouton Test d'une routine…",
+      "choix": [
+        "Ne coûte rien",
+        "Fait un vrai travail et consomme",
+        "Supprime la routine"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un seul test, puis pause."
+    }
   ]
 }

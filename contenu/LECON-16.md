@@ -1,48 +1,51 @@
-# Leçon 16 : Choisis un connecteur et prépare une lecture
+# Leçon 16 : Prépare une lecture sur X
 
-<p class="chapeau">Ton bot peut lire tes apps. Commence en lecture seule. Rien ne bouge.</p>
+<p class="chapeau">Ton bot peut lire ce qui est public sur X. Sans plugin. Sans connexion. Rien ne bouge.</p>
 
-## Connecteur = plugin
+## X public, nativement
 
-Un **connecteur** relie le bot à un service (Drive, Gmail, Notion…). Il s'installe comme **plugin**.
+Le bot cherche des posts, ouvre un post depuis son lien, lit les posts d'un compte, compte les posts récents sur un sujet.
 
-Où : barre de gauche -> **Connect apps** -> **Add** -> connexion dans le navigateur (**Authorize**). *Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
-
-Un plugin installé sert à **tous tes bots**.
+C'est en **lecture seule**. Il ne se connecte pas en ton nom.
 
 <div class="box info" markdown="1">
-X public se lit **sans** plugin : le bot cherche et lit les posts publics. Le plugin X sert seulement à tes messages privés, signets, fil.
+Pour un service privé (tes e-mails, tes fichiers), il faudrait un **connecteur**. On n'en installe aucun ici.
 </div>
 
-## Lecture seule
+## Une bonne demande de lecture
 
-Le bot lit. Il ne crée, ne modifie, ne supprime rien. Il cite chaque source.
+Un sujet précis. Un nombre de posts. Les sources citées : auteur + lien.
+
+Et : « Ne publie rien, ne like rien, ne réponds à personne. »
 
 <div class="box atoi" markdown="1">
 **À toi de jouer.** Sans le bot.
 
-1. Mets `fournitures-test.csv` dans ton Google Drive (dossier « Test »).
-2. Écris ta demande Drive. Forme : « Avec @Google Drive, lis … . Ne modifie rien. Cite le nom du fichier. Rends … . »
-3. Écris ta demande X (sans plugin) sur un sujet public. Forme : « Cherche 3 posts publics sur X à propos de … . Cite l'auteur et le lien. »
+Cas : Marc veut savoir ce qu'on dit sur X des fuites de chauffe-eau en hiver.
 
-Exemple (autre sujet) : « Avec @Google Drive, lis Météo-Test. Ne modifie rien. Cite le nom du fichier. Rends 3 lignes. »
+1. Choisis le sujet en 3 à 5 mots.
+2. Écris la demande. Forme : « Cherche 2 posts publics sur X à propos de … . Pour chacun : auteur, lien, une phrase de résumé. Ne publie rien, ne like rien, ne réponds à personne. »
+3. Écris l'attendu : ce qui doit apparaître, ce qui ne doit pas.
 
-**C'est réussi si :** fichier dans Drive (1) ; demande Drive avec « Ne modifie rien » et « cite » (2) ; demande X avec auteur et lien (3).
+Exemple (autre sujet) : « Cherche 2 posts publics sur X à propos de "pain au levain maison". Pour chacun : auteur, lien, une phrase. »
+
+**C'est réussi si :** sujet précis (1) ; demande avec auteur + lien + « Ne publie rien » (2) ; attendu vérifiable (3).
 </div>
 
 <div class="box corrige" markdown="1">
-**Drive :** « Avec @Google Drive, lis fournitures-test.csv dans le dossier Test. Ne modifie rien. Cite le nom du fichier. Rends les articles sous leur seuil. »  
-**X :** « Cherche 3 posts publics sur X à propos de "fuite chauffe-eau". Cite l'auteur et le lien. »
+**Sujet :** fuite chauffe-eau hiver.  
+**Demande :** « Cherche 2 posts publics sur X à propos de "fuite chauffe-eau hiver". Pour chacun : auteur, lien, une phrase de résumé. Ne publie rien, ne like rien, ne réponds à personne. »  
+**Attendu :** 2 posts, chacun avec auteur et lien `x.com/…`. Aucune action sur X.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Connecteur = plugin, via Connect apps.
-- X public : pas besoin de plugin.
-- Lecture seule et sources citées.
+- X public : le bot lit sans plugin ni compte.
+- Service privé = connecteur (pas aujourd'hui).
+- Demande précise, sources citées, aucune action.
 
 **Bravo !** Leçon 17 : lis pour de vrai.
 </div>
 
-<small>Sources : docs.x.ai/grok-bot/computer-and-apps · cursor.com/help/grok-bot/connect-plugins.md (lues le 15/10/2026).</small>
+<small>Source : docs.x.ai/grok-bot/computer-and-apps, « Search and read X » (lue le 15/10/2026).</small>

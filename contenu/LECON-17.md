@@ -1,47 +1,45 @@
-# Leçon 17 : Lis par un connecteur sans rien modifier
+# Leçon 17 : Lis X sans rien modifier
 
-<p class="chapeau">Ajoute le plugin. Appelle-le avec @. Lis. Vérifie que rien n'a bougé.</p>
-
-## Ajouté ≠ connecté
-
-**Added** = installé. Il faut aussi être connecté.
-
-S'il affiche **Needs auth** : ouvre-le -> **Authenticate**. Puis vérifie qu'il est dans **Installed**. *Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
+<p class="chapeau">Envoie ta demande. Le bot cite 2 posts. Tu ouvres les liens. Rien n'a bougé.</p>
 
 <div class="box attention" markdown="1">
-2 messages. Lecture seule. Aucune écriture dans Drive.
+1 message. Lecture seule. Aucun plugin, aucune connexion de compte.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 2 messages. Bot principal.
+**À toi de jouer.** 1 message. Bot principal.
 
-1. **Connect apps** -> Google Drive -> **Add** -> connecte-toi.
-2. Message 1 : ta demande Drive (leçon 16). Tape `@` pour choisir Google Drive.
-3. Note : nom du fichier cité ✅/❌ ; bons articles ✅/❌.
-4. Ouvre le fichier dans Drive. Date de modification inchangée ✅/❌.
-5. Message 2 : ta demande X. Note : auteur et lien cités ✅/❌.
+1. Envoie ta demande de la leçon 16.
+2. Note : 2 posts ✅/❌ · auteur pour chacun ✅/❌ · lien pour chacun ✅/❌.
+3. Ouvre les 2 liens dans ton navigateur. Le post existe et parle du sujet ✅/❌.
+4. Vérifie que le bot n'a rien fait sur X (pas de like, pas de réponse). ✅/❌
+5. Recopie les 2 liens et la phrase du bot pour chacun.
 
-**C'est réussi si :** plugin dans Installed (1) ; ✅/❌ notés (3, 5) ; fichier inchangé (4).
+**C'est réussi si :** 2 posts avec auteur et lien (2) ; liens ouverts et vérifiés (3) ; aucune action sur X (4) ; preuve recopiée (5).
 </div>
 
 <div class="box corrige" markdown="1">
-**Drive :** « D'après fournitures-test.csv : Joint fibre 1/2", Siphon évier PVC 40 mm, Mitigeur lavabo. » ✅  
-**Fichier :** même date de modification ✅  
-**X :** 3 posts avec auteur et lien ✅
+Forme attendue (tes posts seront différents) :  
+1. @auteur1 — x.com/auteur1/status/… — « Conseil : purger le chauffe-eau avant l'hiver. »  
+2. @auteur2 — x.com/auteur2/status/… — « Fuite au groupe de sécurité, que faire ? »
 </div>
 
 <div class="box preuve" markdown="1">
-Source citée ✅ « D'après fournitures-test.csv… » · Rien modifié ✅
+Post 1 ✅ lien « x.com/… » + phrase du bot · Post 2 ✅ lien « x.com/… » + phrase du bot · Aucune action sur X ✅
+</div>
+
+<div class="box question" markdown="1">
+**Et pour lire mes e-mails ou mes fichiers ?** Il faudrait un connecteur (barre de gauche : **Connect apps**, *à vérifier sur ton écran*). Pas dans ce cours aujourd'hui.
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Added n'est pas connecté : Authenticate.
-- `@` appelle le connecteur.
-- Preuve : source citée + fichier inchangé.
+- X public se lit sans compte.
+- Preuve = 2 liens ouverts par toi.
+- Lecture seule : rien ne change.
 
 **Bravo !** Leçon 18 : l'ordinateur du bot.
 </div>
 
-<small>Sources : docs.x.ai/grok-bot/computer-and-apps · cursor.com/help/grok-bot/connect-plugins.md (lues le 15/10/2026).</small>
+<small>Source : docs.x.ai/grok-bot/computer-and-apps, « Search and read X » (lue le 15/10/2026).</small>
