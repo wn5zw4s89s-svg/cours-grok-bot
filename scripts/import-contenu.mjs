@@ -78,8 +78,14 @@ function stripReussi(lines) {
   return out;
 }
 
+// Parenthèses OctoBoss (« (ta première tentacule) », « (tentacule 2) », « (son ADN) »…) retirées des titres.
+const PAREN_OCTO = /\s*\((?:[^()]*\b(?:tentacules?|pieuvre|OctoBoss|ADN|kraken|vagues?|ventouses?|r\u00e9flexes?|r\u00e9flexe nocturne|poche d.encre|proies?)\b[^()]*)\)/gi;
+export const nettoyerTitre = (t) => String(t).replace(PAREN_OCTO, '').replace(/\s*\(\d+\s*min\)/gi, '').trim();
+
 function masquer(src) {
   let t = src.replace(/\r\n/g, '\n');
+  // Titres : sans « (2 min) » ni parenthèse OctoBoss
+  t = t.replace(/^(#{1,3}\s+.*)$/gm, (m) => nettoyerTitre(m));
   // Mentions « à vérifier sur ton écran » (libellés) masquées
   t = t.replace(/,?\s*\*[^*\n]*vérifier sur ton écran[^*\n]*\*\.?/gi, '');
   // Flèches
@@ -214,8 +220,11 @@ for (const f of files) {
   let court = title.replace(/^Leçon\s+\d+\s*:\s*/i, '');
   court = court.charAt(0).toUpperCase() + court.slice(1);
   const raw = fs.readFileSync(path.join(SRC, f), 'utf8');
+  const fm = raw.match(/<div\s+class="fin"[^>]*>([\s\S]*?)<\/div>/i);
+  const rb = fm && fm[1].match(/^\s*[-*]\s+(.+)$/m);
+  const recap = rb ? nettoyerTitre(rb[1].replace(/\*\*/g, '').replace(/`/g, '')) : '';
   const bm = raw.match(/badge\s*:?\s*\*\*([^*]+)\*\*/i);
-  dispo.set(num, { id, num, title, court, html, disponible: true, _badge: bm ? bm[1].trim() : null });
+  dispo.set(num, { id, num, title, court, html, recap, disponible: true, _badge: bm ? bm[1].trim() : null });
 }
 
 let quizFiles = files
@@ -236,6 +245,7 @@ const quiz = quizFiles.sort().map((p) => {
     }
   });
   const n = parseInt(String(q.id).replace(/\D/g, ''), 10) || 0;
+  if (q.titre) q.titre = nettoyerTitre(q.titre);
   return { ...q, slug: String(q.id).toLowerCase(), niveau: n, projet: n };
 });
 const quizParId = Object.fromEntries(quiz.map((q) => [q.niveau, q.id]));

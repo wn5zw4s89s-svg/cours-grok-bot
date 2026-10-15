@@ -401,3 +401,30 @@ body[data-page=lecon] main,body[data-page=quiz] main{padding-top:max(18px,env(sa
 .box.atoi::before{display:none}
 .etape-sec>.pieuvre:first-child{display:none}
 .lh{position:static;padding:0}
+
+/* ux4 */
+.box.corrige::before{display:none;content:none}
+.ico-liste{width:48px;height:48px;margin-right:6px;border-radius:14px}
+.ico-liste:active{background:var(--card)}
+.verrou-txt{display:block;font-size:12px;font-weight:600;color:var(--m);margin-top:2px}
+.item-lecon a{display:flex;align-items:center;gap:12px}
+.item-lecon .titre{flex:0 1 auto}
+.item-lecon a{flex-wrap:wrap}.item-lecon .verrou-txt{flex-basis:100%;padding-left:40px;margin-top:-8px}
+.item-lecon.verrouillee a{opacity:.6}
+textarea.ecrit{display:block;width:100%;box-sizing:border-box;margin-top:12px;font:inherit;font-size:17px;color:var(--t);background:var(--card);border:2px solid var(--edge);border-radius:14px;padding:12px 14px;resize:vertical;min-height:56px}
+textarea.ecrit:focus{outline:none;border-color:var(--c)}
+.ecrit-ok{display:block;min-height:18px;font-size:13px;color:var(--ok);margin-top:6px}
+.termine{text-align:center;padding:48px 8px 24px;animation:enter .4s}
+.termine-ok{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:var(--ok);color:var(--bg);display:grid;place-items:center;font-size:44px;font-weight:900}
+.termine h2{font-size:26px;margin:0 0 10px}
+.termine-recap{color:var(--m);font-size:17px;line-height:1.4;margin:0 auto 28px;max-width:320px}
+.termine .btn{display:flex;width:100%}
+.gb-badge-pop{background:var(--bg);justify-content:flex-start;padding:max(24px,env(safe-area-inset-top)) 20px calc(24px + env(safe-area-inset-bottom))}
+.gb-badge-pop>*:first-child{margin-top:auto}.gb-badge-pop>*:last-child{margin-bottom:auto}
+.gb-badge-pop .octo-host{flex:none}
+.gb-badge-carte{padding:22px 18px}
+.gb-badge-carte .d{font-size:16px;margin:6px 0 18px}
+.gb-badge-carte .btn{display:flex;width:100%;margin:0 0 10px}
+.gb-badge-carte .btn-x{display:flex;align-items:center;justify-content:center;width:100%;box-sizing:border-box;min-height:48px;border:2px solid var(--edge);border-radius:14px;background:transparent;color:var(--t);text-decoration:none;font-weight:800;font-size:15px}
+.termine a.btn,.gb-badge-carte button.btn{display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none}
+.gb-badge-pop .gb-badge-carte a.btn-x{background:transparent!important;color:var(--t)!important;box-shadow:none!important;border:2px solid var(--edge)}

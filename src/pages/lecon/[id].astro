@@ -10,9 +10,9 @@ export function getStaticPaths() {
     const q = quiz.find((x) => x.niveau === l.niveau);
     const dernierDuNiveau = !next || next.niveau !== l.niveau;
     let suite;
-    if (dernierDuNiveau && q) suite = { href: `quiz/${q.slug}/`, label: 'Terminé → Quiz' };
-    else if (next) suite = { href: `lecon/${next.id}/`, label: `Terminé → Leçon ${next.num}` };
-    else suite = { href: '', label: 'Terminé → Accueil' };
+    if (dernierDuNiveau && q) suite = { href: `quiz/${q.slug}/`, label: 'Passer le quiz' };
+    else if (next) suite = { href: `lecon/${next.id}/`, label: `Leçon ${next.num} →` };
+    else suite = { href: '', label: 'Accueil' };
     return { params: { id: l.id }, props: { l, prev: lecons[i - 1], suite } };
   });
 }
@@ -22,7 +22,7 @@ const tent = octo.tentacules.find((t) => t.projet === l.niveau);
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base title={l.title} page="lecon">
-  <article class="lecon" data-lecon={l.id} data-num={l.num}>
+  <article class="lecon" data-lecon={l.id} data-num={l.num} data-recap={l.recap || c.but || ''}>
     <div class="lh"><a class="retour" href={base} aria-label="Fermer">✕</a><div class="bar"><i data-barre-lecon></i></div></div>
     <h1 class="sr">Leçon {l.num} · {c.titre}</h1>
     <div class="verrou" hidden>
@@ -33,7 +33,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <div class="contenu" set:html={l.html} />
     <div class="fin-lecon">
       <button type="button" class="btn btn-large" data-suivant hidden>Continuer</button>
-      <button type="button" class="btn btn-large" data-terminer data-suite={`${base}${suite.href}`}>Terminer</button>
+      <button type="button" class="btn btn-large" data-terminer data-suite={`${base}${suite.href}`} data-suite-label={suite.label}>Terminer</button>
     </div>
   </article>
 </Base>

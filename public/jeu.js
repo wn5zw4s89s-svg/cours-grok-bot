@@ -205,6 +205,16 @@
     return `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://wn5zw4s89s-svg.github.io/cours-grok-bot/')}`;
   }
 
+  function badgeTexte(b) {
+    const [, nom, , projId] = b;
+    if (nom === 'Première bulle') return 'Tu as terminé ta première leçon.';
+    if (nom === 'Sans fausse note') return 'Tu as eu un quiz sans aucune erreur.';
+    if (projId) {
+      const p = UNITES.find((n) => n.id === projId);
+      return projId === 1 ? 'Tu as créé ton premier bot et fini le projet 1.' : `Tu as fini le projet ${projId}${p ? ` : ${p.nom}` : ''}.`;
+    }
+    return '';
+  }
   function montrerBadge(badge, onNext) {
     const [emoji, nom, , projId] = badge;
     document.querySelector('.gb-badge-pop')?.remove();
@@ -216,9 +226,11 @@
       host,
       $('div', { class: 'gb-badge-carte' },
         $('div', { class: 'medal' }, emoji),
+        $('div', { class: 'k' }, 'Badge débloqué'),
         $('div', { class: 'n' }, nom),
-        $('a', { class: 'btn btn-large btn-x', href: shareUrl(nom, emoji), target: '_blank', rel: 'noopener noreferrer' }, 'Partager sur 𝕏')),
-      $('button', { class: 'lien', type: 'button', on: { click: fermer } }, 'Continuer'));
+        $('p', { class: 'd' }, badgeTexte(badge)),
+        $('button', { class: 'btn btn-large', type: 'button', on: { click: fermer } }, 'Continuer'),
+        $('a', { class: 'btn-sec btn-x', href: shareUrl(nom, emoji), target: '_blank', rel: 'noopener noreferrer' }, 'Partager sur 𝕏')));
     document.body.appendChild(overlay);
     const o = makeOcto(host, projId ? nbT - 1 : nbT);
     requestAnimationFrame(() => overlay.classList.add('on'));
@@ -283,7 +295,7 @@
       document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · gagne « ${TENT(cur.id).nom} »`));
       document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
       document.querySelectorAll('[data-t-ligne]').forEach((e) => (e.textContent = `🐙 Bots créés : ${nbT} sur ${UNITES.length} (tentacules ${nbT} sur ${UNITES.length}). 1 projet terminé = 1 bot.`));
-      document.querySelectorAll('[data-dire]').forEach((e) => (e.textContent = debut ? 'Salut boss ! Crée ton premier bot en 2\u00a0min.' : nxt ? `Bien joué boss ! ${f} leçon${f > 1 ? 's' : ''} faite${f > 1 ? 's' : ''}. On continue ?` : 'Tout est fait ! Passe le quiz pour ta tentacule.'));
+      document.querySelectorAll('[data-dire]').forEach((e) => (e.textContent = debut ? 'Salut boss ! Crée ton premier bot en 2\u00a0min.' : nxt ? `Bien joué boss ! ${f} leçon${f > 1 ? 's' : ''} faite${f > 1 ? 's' : ''}. On continue ?` : 'Tout est fait ! Passe le quiz pour gagner ton badge.'));
       document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = `${f} leçon${f > 1 ? 's' : ''} sur ${ls.length} faite${f > 1 ? 's' : ''}`));
       document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.setProperty('--p', f / ls.length)));
       const next = ls.find((l) => !d.lecons[l.id]);
@@ -343,6 +355,9 @@
       c.classList.toggle('actuelle', i === nextIdx);
       const et = c.querySelector('[data-etat]');
       if (et) et.textContent = d.lecons[l.id] ? '✓' : String(l.num);
+      let vt = c.querySelector('.verrou-txt');
+      if (!ok && !vt) { vt = $('span', { class: 'verrou-txt' }, 'Finis la leçon précédente'); c.querySelector('.titre')?.after(vt); }
+      if (ok && vt) vt.remove();
       const a = c.querySelector('a');
       if (a) {
         if (!ok) { a.setAttribute('aria-disabled', 'true'); a.tabIndex = -1; }
@@ -388,13 +403,21 @@
       });
       pressFx(btn);
       const go = () => { location.href = btn.dataset.suite || M.base; };
+      const termine = () => {
+        const ecran = $('section', { class: 'termine', role: 'status' },
+          $('div', { class: 'termine-ok', 'aria-hidden': 'true' }, '✓'),
+          $('h2', {}, `Leçon ${L[i].num} terminée`),
+          art.dataset.recap ? $('p', { class: 'termine-recap' }, art.dataset.recap) : null,
+          $('a', { class: 'btn btn-large', href: btn.dataset.suite || M.base }, btn.dataset.suiteLabel || 'Continuer'));
+        art.querySelector('.contenu').replaceChildren(ecran);
+        art.querySelector('.fin-lecon').hidden = true;
+        art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', 1));
+        scrollTo(0, 0);
+      };
       octos().forEach((o) => octoMood(o, 'happy'));
-      if (!deja) { confetti(niveauComplete ? 72 : 40, 70); btn.textContent = 'Bien joué !'; btn.classList.add('green'); rafraichir(); }
-      if (nouveaux.length) {
-        montrerBadge(nouveaux[nouveaux.length - 1], go);
-      } else {
-        setTimeout(go, deja ? 150 : (RM ? 300 : 1300));
-      }
+      if (!deja) { confetti(niveauComplete ? 72 : 40, 70); rafraichir(); }
+      termine();
+      if (nouveaux.length) montrerBadge(nouveaux[nouveaux.length - 1]);
     });
   });
 
@@ -522,6 +545,20 @@
     art.classList.add('pas-a-pas');
     nxt.addEventListener('click', () => show(k + 1));
     show(0);
+  });
+  // Champ d'écriture pour les « À toi » qui demandent d'écrire une phrase à trous (« ___ »)
+  document.querySelectorAll('.lecon .box.atoi').forEach((box, n) => {
+    const txt = box.textContent;
+    if (!/(É|é)cris/.test(txt) || !/___/.test(txt)) return;
+    const m = txt.match(/«\s*([^»]*___[^»]*)»/);
+    const key = `gb2:ecrit:${box.closest('.lecon').dataset.lecon}:${n}`;
+    const id = `ecrit-${n}`;
+    const ta = $('textarea', { class: 'ecrit', id, rows: '2', placeholder: m ? m[1].trim() : 'Écris ici…', autocomplete: 'off' });
+    try { ta.value = localStorage.getItem(key) || ''; } catch {}
+    const ok = $('span', { class: 'ecrit-ok', 'aria-live': 'polite' });
+    ta.addEventListener('input', () => { try { localStorage.setItem(key, ta.value); } catch {} ok.textContent = ta.value.trim() ? 'Enregistré ✓' : ''; });
+    if (ta.value.trim()) ok.textContent = 'Enregistré ✓';
+    box.append($('label', { class: 'sr', for: id }, 'Ta phrase'), ta, ok);
   });
   // Liste des leçons (feuille)
   const sheet = document.querySelector('[data-sheet]');
