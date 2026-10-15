@@ -1,0 +1,94 @@
+{
+  "id": "PROJET-8",
+  "titre": "Projet 8 : Ma plateforme de camping 100 % IA",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Comment battre Hipcamp et Campspace ?",
+      "choix": [
+        "Faire pareil, en plus petit",
+        "Un angle : niche, région, promesse",
+        "Baisser tous les prix"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un angle qu'ils ne couvrent pas chez toi."
+    },
+    {
+      "id": "q2",
+      "question": "Qui écrit aux hôtes ?",
+      "choix": [
+        "Recruteur",
+        "Toi, avec les brouillons du bot",
+        "Chef"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Aucun bot n'écrit à un hôte."
+    },
+    {
+      "id": "q3",
+      "question": "Quand une annonce peut-elle être publiée ?",
+      "choix": [
+        "Dès que le bot l'a écrite",
+        "Après l'accord écrit de l'hôte",
+        "Jamais"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Rien d'inventé, tout validé par écrit."
+    },
+    {
+      "id": "q4",
+      "question": "Pourquoi Netlify Free plutôt que Vercel Hobby ?",
+      "choix": [
+        "Vercel Hobby interdit l'usage commercial",
+        "Netlify est plus joli",
+        "Vercel ne marche pas sur iPhone"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Netlify autorise les projets commerciaux sur son offre gratuite, avec un plafond de crédits."
+    },
+    {
+      "id": "q5",
+      "question": "Pas encore de statut légal. Quel mode de paiement ?",
+      "choix": [
+        "Stripe Connect en réel",
+        "Réservation par email ou test Stripe",
+        "Paiement en espèces via le bot"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le paiement réel demande un statut."
+    },
+    {
+      "id": "q6",
+      "question": "Que doit faire une plateforme pour les revenus de ses hôtes (DAC7) ?",
+      "choix": [
+        "Rien",
+        "Les informer et déclarer leurs opérations chaque année",
+        "Payer leurs impôts"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Source : impots.gouv.fr."
+    },
+    {
+      "id": "q7",
+      "question": "Un campeur écrit qu'un enfant s'est brûlé. Support répond d'abord…",
+      "choix": [
+        "« Désolé pour le désagrément »",
+        "« Appelez le 112 »",
+        "Rien, il attend"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Urgence : 112 d'abord, puis il te prévient."
+    },
+    {
+      "id": "q8",
+      "question": "Qui peut laisser un avis ?",
+      "choix": [
+        "Un bot, pour lancer la plateforme",
+        "Seulement un campeur qui a séjourné",
+        "N'importe qui"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Aucun avis inventé, règles publiées."
+    }
+  ]
+}

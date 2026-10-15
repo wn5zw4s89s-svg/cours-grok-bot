@@ -3,7 +3,7 @@
 Mobile d'abord (iPhone). FR. Aucune case à remplir. Chaque projet finit par une leçon Top 1 % et un défi X que l'élève poste lui-même.
 Badges, points et série de jours : couche gamification du site (Le Bâtisseur).
 
-Statut : projets 1 à 7 écrits (01-45). Projet 8 à venir.
+Statut : cours complet, 58 leçons écrites (01-58), 8 quiz.
 
 Répartition : 6 + 6 + 6 + 6 + 7 + 7 + 7 + 13 = 58.
 
@@ -16,7 +16,7 @@ Répartition : 6 + 6 + 6 + 6 + 7 + 7 + 7 + 13 = 58.
 | 5. 1 photo -> 1 pub TikTok | 25-31 | 31 : 10 idées, un critique, 3 tours |
 | 6. Mon premier euro gagné par un bot | 32-38 | 38 : pourquoi ça vend, 2 versions testées |
 | 7. Ma boîte en 3 jours 100 % bots | 39-45 | 45 : skill « goût maison » partagée |
-| 8. Ma plateforme de camping 100 % IA | 46-58 (12 + Top 1 %) | 58 : critique anti-slop du site |
+| 8. Ma plateforme de camping 100 % IA | 46-58 | 58 : revue anti-slop de tout le site |
 
 ## Projet 1
 01 Embauche ton premier employé bot · 02 Fiche de poste · 03 5 cas de test · 04 Un raté -> une règle · 05 Cas jamais vu + mémoire · 06 Top 1 % : la fiche qui change tout
@@ -39,8 +39,13 @@ Répartition : 6 + 6 + 6 + 6 + 7 + 7 + 7 + 13 = 58.
 ## Projet 7
 39 Jour 1 : le chef d'orchestre · 40 Jour 1 : les spécialistes · 41 Jour 2 : les relais · 42 Jour 2 : le groupe · 43 Jour 3 : les routines · 44 Jour 3 : tester et entretenir · 45 Top 1 % : la skill du goût maison
 
+## Projet 8
+46 L'angle · 47 L'équipe · 48 Le légal · 49 Le site sur Netlify Free · 50 Recruter de vrais hôtes · 51 Annonces réelles, règles et sécurité · 52 Réservations et paiement · 53 Support aux campeurs · 54 Les avis · 55 Lancement sur X · 56 Première vraie réservation · 57 Routines et chiffres · 58 Top 1 % : revue anti-slop
+
+Badge final : **Fondateur**.
+
 ## Fil rouge
-Léa (fictive), Bougies Lune, son bot Lumen. L'élève fait SON projet ; modèles à coller fournis.
+Léa (fictive), Bougies Lune, son bot Lumen. Projet 8 : sa plateforme fictive Champ Libre. L'élève fait SON projet ; modèles à coller fournis.
 
 ## Fichiers
 LECON-NN.md, PROJET-N.quiz.json, projets.json (remplace niveaux.json).
