@@ -1,26 +1,24 @@
-# Leçon 2 : Écris l'ADN de ta tentacule
+# Leçon 2 : Écris la description de ton bot (son ADN)
 
-<p class="chapeau">Une tentacule sans ADN gigote au hasard. L'ADN lui dit quoi faire, toujours.</p>
+<p class="chapeau">Sans description, ton bot improvise. La description lui dit quoi faire, toujours.</p>
 
-## Étape 1 · L'ADN (2 min)
+## Étape 1 · Description ou message ? (2 min)
 
-L'**ADN** = la **description** du bot. Ce qui est vrai tout le temps.
-
-Le message du jour, lui, dit ce qui se passe aujourd'hui.
+La **description** (l'ADN) dit ce qui est vrai tout le temps. Le message dit ce qui se passe aujourd'hui.
 
 <div class="box atoi" markdown="1">
-**À toi.** Range ces 2 phrases : « Ne promets jamais de délai » et « Réponds à Mme Exemple ». Laquelle va dans l'ADN ?
+**À toi.** Range ces 2 phrases : « Ne promets jamais de délai » et « Réponds à Mme Exemple ». Laquelle va dans la description ?
 
 **C'est réussi si :** tu as choisi la phrase vraie tout le temps.
 </div>
 
 <div class="box corrige" markdown="1">
-ADN : « Ne promets jamais de délai. » Message du jour : « Réponds à Mme Exemple. »
+Description : « Ne promets jamais de délai. » Message du jour : « Réponds à Mme Exemple. »
 </div>
 
-## Étape 2 · Colle l'ADN (2 min)
+## Étape 2 · Colle la description (2 min)
 
-Six gènes : Métier · Entrées · Sortie · Interdits · Si c'est flou · Fini quand.
+Six rubriques : Métier · Entrées · Sortie · Interdits · Si c'est flou · Fini quand.
 
 ```
 Titre : Répond aux clients de Bougies Lune
@@ -56,14 +54,14 @@ Exemple pour un prof de guitare : « Métier : pour Sam, prof de guitare fictif.
 </div>
 
 <div class="pieuvre" data-reaction="reussite" markdown="1">
-« Elle sait ce qu'elle fait. Voyons si elle tient sous les vagues. »
+« La description tient. Testons-la. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- ADN = description = toujours vrai.
-- 6 gènes. Le modèle suffit.
+- Description = toujours vrai. Message = aujourd'hui.
+- 6 rubriques. Le modèle suffit.
 
-**Leçon 3 :** les 5 vagues.
+**Leçon 3 : 5 cas de test.**
 </div>

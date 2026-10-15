@@ -1,6 +1,6 @@
 {
   "id": "PROJET-3",
-  "titre": "Projet 3 : Un bot qui prospecte la nuit",
+  "titre": "Projet 3 : Un bot qui prospecte la nuit (tentacule 3)",
   "questions": [
     {
       "id": "q1",
@@ -37,7 +37,7 @@
     },
     {
       "id": "q4",
-      "question": "Tu crées une routine à 6 h, il est 6 h 05. Quand tourne-t-elle ?",
+      "question": "Tu crées une routine (un réflexe) à 6 h, il est 6 h 05. Quand tourne-t-elle ?",
       "choix": [
         "Tout de suite",
         "Demain à 6 h, sauf si tu demandes un test",

@@ -1,0 +1,14 @@
+---
+// Pieuvre OctoBoss rendue côté serveur : visible sans JS, taille explicite (Safari).
+const { grown = 0 } = Astro.props;
+const tents = Array.from({ length: 8 }, (_, i) => ({ i, x: (-31 + i * 8.9).toFixed(1), ang: ((i - 3.5) * -11).toFixed(1) }));
+---
+<svg class="octo" xmlns="http://www.w3.org/2000/svg" viewBox="-70 -60 140 140" width="140" height="140" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><g class="whole"><g class="tents">{tents.map((t) => (<g class={`tent${t.i < grown ? ' on' : ''}`} style={`animation-delay:${-t.i * 0.35}s`}><g transform={`translate(${t.x},20) rotate(${t.ang})`}><g class="grow"><path d="M-6 0 C-8 18 6 26 -2 40 C-6 48 4 54 8 48" stroke="#FF6B5A" stroke-width="10" fill="none" stroke-linecap="round"/><circle cx="-3" cy="16" r="1.8" fill="#C0443A"/><circle cx="0" cy="28" r="1.6" fill="#C0443A"/><g class="bot"><circle cx="8" cy="50" r="7" fill="#0F2A30" stroke="#F2FBFA" stroke-width="1.5"/><circle cx="6" cy="49" r="1.3" fill="#3DDC97"/><circle cx="10" cy="49" r="1.3" fill="#3DDC97"/></g></g></g></g>))}</g>
+<ellipse cx="0" cy="-8" rx="42" ry="40" fill="#FF6B5A"/><ellipse cx="0" cy="22" rx="38" ry="12" fill="#C0443A" opacity=".5"/>
+<ellipse cx="-12" cy="-30" rx="12" ry="7" fill="#fff" opacity=".18"/><circle cx="-26" cy="-36" r="3" fill="#fff" opacity=".2"/>
+<g class="eye"><ellipse cx="-14" cy="-6" rx="10" ry="11" fill="#F2FBFA"/><circle class="pupil" cx="-12" cy="-4" r="5.5" fill="#06161A"/></g>
+<g class="eye"><ellipse cx="14" cy="-6" rx="10" ry="11" fill="#F2FBFA"/><circle class="pupil" cx="16" cy="-4" r="5.5" fill="#06161A"/></g>
+<ellipse class="blush" cx="-26" cy="8" rx="6" ry="3.5" fill="#fff"/><ellipse class="blush" cx="26" cy="8" rx="6" ry="3.5" fill="#fff"/>
+<path class="mouth" d="M-8 10 Q0 17 8 10" stroke="#06161A" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path class="sweat" d="M32 -22 q4 6 0 9 q-4 -3 0 -9z" fill="#9fe3ff"/>
+<path d="M-30 -42 l8 -14 l8 10 l8 -14 l6 14 l8 -10 l6 14z" fill="#FFD25A" stroke="#C0443A" stroke-width="2" stroke-linejoin="round" transform="translate(4,-4) scale(.62)"/></g></svg>

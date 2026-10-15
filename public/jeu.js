@@ -36,7 +36,7 @@
   const OCTO = M.octo || { tentacules: [], slogan: '' };
   const TENT = (id) => OCTO.tentacules.find((t) => t.projet === id) || { nom: `Projet ${id}`, emoji: '🐙', phrase: '' };
   const SVGNS = 'http://www.w3.org/2000/svg';
-  const OCTO_SVG = `<svg class="octo" viewBox="-70 -60 140 140" aria-hidden="true"><g class="whole"><g class="tents"></g>
+  const OCTO_SVG = `<svg class="octo" xmlns="http://www.w3.org/2000/svg" viewBox="-70 -60 140 140" width="140" height="140" aria-hidden="true"><g class="whole"><g class="tents"></g>
 <ellipse cx="0" cy="-8" rx="42" ry="40" fill="#FF6B5A"/><ellipse cx="0" cy="22" rx="38" ry="12" fill="#C0443A" opacity=".5"/>
 <ellipse cx="-12" cy="-30" rx="12" ry="7" fill="#fff" opacity=".18"/><circle cx="-26" cy="-36" r="3" fill="#fff" opacity=".2"/>
 <g class="eye"><ellipse cx="-14" cy="-6" rx="10" ry="11" fill="#F2FBFA"/><circle class="pupil" cx="-12" cy="-4" r="5.5" fill="#06161A"/></g>
@@ -46,6 +46,8 @@
 <path class="sweat" d="M32 -22 q4 6 0 9 q-4 -3 0 -9z" fill="#9fe3ff"/>
 <path d="M-30 -42 l8 -14 l8 10 l8 -14 l6 14 l8 -10 l6 14z" fill="#FFD25A" stroke="#C0443A" stroke-width="2" stroke-linejoin="round" transform="translate(4,-4) scale(.62)"/></g></svg>`;
   function makeOcto(host, grown) {
+    const exist = host.querySelector('svg.octo');
+    if (exist) { octoGrow(exist, grown); return exist; }
     host.innerHTML = OCTO_SVG;
     const svg = host.firstElementChild, g = svg.querySelector('.tents');
     for (let i = 0; i < 8; i++) {
@@ -212,7 +214,7 @@
     const fermer = () => { overlay.classList.remove('on'); setTimeout(() => overlay.remove(), 300); onNext && onNext(); };
     const overlay = $('div', { class: 'gb-badge-pop', role: 'dialog', 'aria-label': 'Badge débloqué' },
       host,
-      $('h2', {}, projId ? 'Nouvelle tentacule\u00a0!' : 'Bravo, boss\u00a0!'),
+      $('h2', {}, projId ? 'Nouveau bot\u00a0! (nouvelle tentacule)' : 'Bravo, boss\u00a0!'),
       $('div', { class: 'gb-badge-carte' },
         $('div', { class: 'medal' }, emoji),
         $('div', { class: 'k' }, 'Badge débloqué'),
@@ -222,7 +224,7 @@
       $('div', { class: 'stats' },
         $('div', {}, $('small', {}, 'Bulles'), `🫧 ${d.xp || 0}`),
         $('div', {}, $('small', {}, 'Série'), `🔥 ${d.streak?.count || 0}`),
-        $('div', {}, $('small', {}, 'Tentacules'), `${nbT}/${UNITES.length || 8}`)),
+        $('div', {}, $('small', {}, 'Bots (tentacules)'), `${nbT}/${UNITES.length || 8}`)),
       $('button', { class: 'lien', type: 'button', on: { click: fermer } }, 'Continuer'));
     document.body.appendChild(overlay);
     const o = makeOcto(host, projId ? nbT - 1 : nbT);
@@ -233,8 +235,13 @@
   }
 
   function majStats(d) {
-    document.querySelectorAll('[data-xp-n]').forEach((e) => { e.textContent = `${d.xp || 0}`; });
-    document.querySelectorAll('[data-streak-n]').forEach((e) => { e.textContent = `${d.streak?.count || 0}`; });
+    const xp = d.xp || 0, sn = d.streak?.count || 0;
+    document.querySelectorAll('[data-xp-n]').forEach((e) => { e.textContent = `${xp}`; });
+    document.querySelectorAll('[data-streak-n]').forEach((e) => { e.textContent = `${sn}`; });
+    document.querySelectorAll('[data-xp-u]').forEach((e) => { e.textContent = xp > 1 ? 'bulles' : 'bulle'; });
+    document.querySelectorAll('[data-streak-u]').forEach((e) => { e.textContent = sn > 1 ? 'jours' : 'jour'; });
+    document.querySelectorAll('[data-xp-pill]').forEach((e) => { e.hidden = xp <= 0; });
+    document.querySelectorAll('[data-streak-pill]').forEach((e) => { e.hidden = sn <= 0; });
     document.querySelectorAll('[data-xp]').forEach((e) => { e.textContent = `${d.xp || 0} XP`; });
     document.querySelectorAll('[data-streak]').forEach((e) => {
       const n = d.streak?.count || 0;
@@ -246,32 +253,20 @@
   function dessinerChemin(d, cur) {
     const host = document.querySelector('[data-chemin]');
     if (!host) return;
-    if (!cur) { host.replaceChildren($('p', { class: 'muted centre' }, '🐙 8 tentacules sur 8. Tu es le boss.')); host.style.height = 'auto'; return; }
+    if (!cur) { host.replaceChildren($('li', { class: 'step' }, $('span', { class: 'step-txt' }, 'Cours terminé : 8 projets sur 8.'))); return; }
     const ls = lecNiv(cur.id);
     const nextIdx = ls.findIndex((l) => !d.lecons[l.id]);
-    const X = [50, 28, 44, 72, 58, 30, 46];
-    const STEP = 66, nodes = [];
-    const items = [...ls.map((l) => ({ l })), { fin: true }];
-    items.forEach((it, i) => {
-      const style = `left:calc(${X[i % X.length]}% - 33px);top:${8 + i * STEP}px;animation-delay:${-i * 0.4}s`;
-      if (it.fin) {
-        const fini = nivFini(d, cur.id), t = TENT(cur.id), q = M.quiz.find((x) => x.niveau === cur.id);
-        const attrs = { class: `node coffre${fini ? ' done' : ''}`, style, title: `Quiz · ${t.nom}` };
-        nodes.push(q && fini ? $('a', { ...attrs, href: `${M.base}quiz/${q.slug}/` }, t.emoji) : $('span', attrs, fini ? t.emoji : '🎁'));
-        return;
-      }
-      const l = it.l, fait = !!d.lecons[l.id], actuelle = i === nextIdx, ok = debloquee(d, idx(l.id));
+    const items = ls.map((l, i) => {
+      const fait = !!d.lecons[l.id], actuelle = i === nextIdx, ok = debloquee(d, idx(l.id));
       const cls = `node${fait ? ' done' : actuelle ? ' cur' : ''}${!ok ? ' lock' : ''}`;
-      const label = fait ? '✓' : ok ? String(l.num) : '🔒';
-      nodes.push(ok ? $('a', { class: cls, style, href: `${M.base}lecon/${l.id}/`, title: l.court || `Leçon ${l.num}` }, label)
-        : $('span', { class: cls, style, title: 'Verrouillé' }, label));
-      if (actuelle) {
-        const x = X[i % X.length];
-        nodes.push($('div', { class: 'tip', style: `top:${8 + i * STEP + 14}px;${x > 45 ? `right:calc(${100 - x}% + 44px)` : `left:calc(${x}% + 44px)`}` }, L.some((z) => d.lecons[z.id]) ? "C'EST TOI, BOSS" : 'COMMENCE ICI'));
-      }
+      const t = l.clair || l.court || `Leçon ${l.num}`;
+      return $('li', { class: `step${actuelle ? ' cur' : ''}${fait ? ' done' : ''}` }, $('span', { class: cls }, fait ? '✓' : String(l.num)),
+        ok ? $('a', { class: 'step-lien', href: `${M.base}lecon/${l.id}/` }, t) : $('span', { class: 'step-txt' }, t));
     });
-    host.style.height = `${items.length * STEP + 10}px`;
-    host.replaceChildren(...nodes);
+    const q = M.quiz.find((x) => x.niveau === cur.id), quizOk = q && ls.every((l) => d.lecons[l.id]), fini = nivFini(d, cur.id);
+    items.push($('li', { class: `step${quizOk && !fini ? ' cur' : ''}` }, $('span', { class: `node${fini ? ' done' : quizOk ? ' cur' : ' lock'}` }, '✓'),
+      quizOk ? $('a', { class: 'step-lien', href: `${M.base}quiz/${q.slug}/` }, 'Quiz : vérifie ce que tu as appris') : $('span', { class: 'step-txt' }, 'Quiz : vérifie ce que tu as appris')));
+    host.replaceChildren(...items);
   }
 
   function rafraichir() {
@@ -282,18 +277,28 @@
     const nbT = UNITES.filter((n) => nivFini(d, n.id)).length;
     octos().forEach((o) => { if (!o.closest('.gb-badge-pop')) octoGrow(o, nbT); });
     document.querySelectorAll('[data-hero-tag]').forEach((e) => {
-      e.textContent = cur ? `Tentacule ${cur.id}/${UNITES.length} · ${TENT(cur.id).nom} ${TENT(cur.id).emoji}` : `${UNITES.length}/${UNITES.length} tentacules 🐙`;
+      e.textContent = cur ? `Bot ${cur.id} sur ${UNITES.length} (tentacule ${cur.id} sur ${UNITES.length})` : `${UNITES.length} bots sur ${UNITES.length} 🐙`;
     });
     document.querySelectorAll('[data-projet-nom]').forEach((e) => { e.textContent = cur ? `${labelU} ${cur.id} · ${cur.nom}` : 'Cours terminé'; });
     document.querySelectorAll('[data-t]').forEach((e) => e.classList.toggle('on', nivFini(d, +e.dataset.t)));
     if (cur) {
       const ls = lecNiv(cur.id), f = ls.filter((l) => d.lecons[l.id]).length;
       const suiv = UNITES.find((n) => n.id === cur.id + 1);
-      document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = `${f}/${ls.length} leçons avant ta tentacule « ${TENT(cur.id).nom} ».`));
+      const nxt = ls.find((l) => !d.lecons[l.id]), debut = !L.some((l) => d.lecons[l.id]);
+      document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `Projet ${cur.id} sur ${UNITES.length} (${TENT(cur.id).nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
+      document.querySelectorAll('[data-next-kick]').forEach((e) => (e.textContent = debut ? 'Ta première leçon · 2\u00a0min par étape' : nxt ? 'Ta prochaine leçon' : 'Dernière étape'));
+      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${nxt.clair || nxt.court}` : `Quiz · gagne « ${TENT(cur.id).nom} »`));
+      document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
+      document.querySelectorAll('[data-t-ligne]').forEach((e) => (e.textContent = `🐙 Bots créés : ${nbT} sur ${UNITES.length} (tentacules ${nbT} sur ${UNITES.length}). 1 projet terminé = 1 bot.`));
+      document.querySelectorAll('[data-dire]').forEach((e) => (e.textContent = debut ? 'Salut boss ! Crée ton premier bot en 2\u00a0min.' : nxt ? `Bien joué boss ! ${f} leçon${f > 1 ? 's' : ''} faite${f > 1 ? 's' : ''}. On continue ?` : 'Tout est fait ! Passe le quiz pour ta tentacule.'));
+      document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = `${f} leçon${f > 1 ? 's' : ''} sur ${ls.length} faite${f > 1 ? 's' : ''}`));
       document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.setProperty('--p', f / ls.length)));
       const next = ls.find((l) => !d.lecons[l.id]);
       document.querySelectorAll('[data-continuer]').forEach((a) => {
-        a.textContent = L.some((l) => d.lecons[l.id]) ? `Continuer · Leçon ${next.num}` : 'Commencer';
+        const q = M.quiz.find((x) => x.niveau === cur.id);
+        if (!next && q) { a.textContent = 'Passer le quiz'; a.href = `${M.base}quiz/${q.slug}/`; return; }
+        if (!next) return;
+        a.textContent = L.some((l) => d.lecons[l.id]) ? 'Continuer' : 'Commencer';
         a.href = `${M.base}lecon/${next.id}/`;
       });
     } else {
@@ -493,7 +498,7 @@
     p.append(h, b);
     const o = makeOcto(h, UNITES.filter((n) => nivFini(etat(), n.id)).length);
     if (p.dataset.reaction === 'croissance') {
-      const m = p.textContent.match(/Tentacule\s+(\d+)/i); p._n = m ? +m[1] : null;
+      const m = p.textContent.match(/(?:Bot|Tentacule)\s+(\d+)\s+sur/i); p._n = m ? +m[1] : null;
       if (p._n) octoGrow(o, p._n - 1);
     }
     p._o = o;

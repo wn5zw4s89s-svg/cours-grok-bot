@@ -2,49 +2,58 @@
 
 <p class="chapeau">Un vrai employé a une adresse. Le tien aussi.</p>
 
-## Ce que c'est
-
-Une adresse à toi : `ton-nom@mail.grokbot.com`.
-
-Tes bots peuvent recevoir, lire, chercher et préparer des emails avec.
-
-## 3 choses à savoir
-
-- **Une seule adresse** par compte. Partagée par tous tes bots.
-- **Définitive.** Pas de changement, pas de suppression.
-- **Rien ne part sans toi.** Chaque envoi attend ton feu vert.
-
-<div class="box attention" markdown="1">
-Choisis le nom avec soin. Minuscules, chiffres, points, tirets. Pas de mots réservés comme support, admin, info, team, grok.
+<div class="pieuvre" data-reaction="accueil" markdown="1">
+« Projet 2. On ouvre le courrier ? »
 </div>
 
-## Demande d'abord, réserve ensuite
+## Étape 1 · Ce qu'il faut savoir (2 min)
 
-Le bot vérifie si un nom est libre sans le réserver. Puis il affiche une carte. Rien n'est réservé tant que tu n'approuves pas.
+Une adresse à toi : `ton-nom@mail.grokbot.com`. Tous tes bots l'utilisent. **Une seule** par compte. **Définitive** : pas de changement, pas de suppression. Aucun email ne part sans ton feu vert.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 2 messages.
+**À toi.** Écris 3 noms possibles. Minuscules, chiffres, points, tirets. Pas de mots réservés comme support, admin, info, team, grok.
 
-1. Écris 3 noms possibles pour ton projet.
-2. Envoie : « Vérifie si ces adresses sont libres, sans rien réserver : ___, ___, ___. »
-3. Envoie : « Réserve ___. » Lis la carte. Approuve seulement si le nom est le bon.
-
-**C'est réussi si :**
-
-- 3 noms qui suivent les règles (étape 1) ;
-- le bot dit lesquels sont libres (étape 2) ;
-- ton adresse existe, celle que tu as choisie (étape 3).
+**C'est réussi si :** 3 noms qui suivent ces règles.
 </div>
 
 <div class="box corrige" markdown="1">
-Noms : `bougies-lune`, `lea.bougies`, `lune-atelier`.  
-Le bot : « bougies-lune est pris, les 2 autres sont libres. »  
-Adresse finale : `lea.bougies@mail.grokbot.com` (exemple fictif).
+`bougies-lune`, `lea.bougies`, `lune-atelier`.
+</div>
+
+## Étape 2 · Vérifie sans réserver (2 min)
+
+Vérifier ne réserve rien.
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie à ton bot : « Vérifie si ces adresses sont libres, sans rien réserver : ___, ___, ___. »
+
+**C'est réussi si :** le bot dit lesquelles sont libres.
+</div>
+
+<div class="box corrige" markdown="1">
+« bougies-lune est prise, les 2 autres sont libres. »
+</div>
+
+## Étape 3 · Réserve (2 min)
+
+Le bot affiche une carte. Rien n'est réservé tant que tu n'approuves pas.
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie : « Réserve ___. » Lis la carte. Approuve seulement si le nom est le bon.
+
+**C'est réussi si :** ton adresse existe, celle que tu as choisie.
+</div>
+
+<div class="box corrige" markdown="1">
+`lea.bougies@mail.grokbot.com` (exemple fictif).
 </div>
 
 <div class="box info" markdown="1">
-Déjà une adresse ? Demande : « Quelle est ton adresse email ? » Garde-la.  
-Compte d'équipe ? Un admin doit d'abord activer l'email des bots.
+Déjà une adresse ? Demande : « Quelle est ton adresse email ? » Garde-la. Compte d'équipe ? Un admin doit d'abord activer l'email des bots.
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« J'ai une adresse ! »
 </div>
 
 <div class="fin" markdown="1">
@@ -53,5 +62,5 @@ Compte d'équipe ? Un admin doit d'abord activer l'email des bots.
 - Une adresse, définitive, pour tous tes bots.
 - Vérifier ne réserve rien. La carte, si.
 
-**Bravo !** Leçon 8 : envoie-lui un premier email.
+**Leçon 8 : écris à ton bot.**
 </div>

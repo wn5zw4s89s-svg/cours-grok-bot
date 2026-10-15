@@ -312,3 +312,59 @@ details.solution[open] .box.corrige{animation:enter .4s cubic-bezier(.2,.9,.3,1.
 .conf i{position:absolute;left:50%;width:9px;height:14px;border-radius:2px;will-change:transform,opacity}
 .conf i.b{border-radius:50%;border:2px solid rgba(242,251,250,.8);background:transparent}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.bulles{display:none}.pv-bulle{opacity:1;transform:none}}
+/* ===== UX accueil v2 (lisible en 3 s) ===== */
+main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+body{min-height:100vh;min-height:100dvh}
+.top{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.pill small{font-size:12px;font-weight:700;color:var(--m)}
+.pill[hidden]{display:none}
+.octo-host svg{width:100%;height:100%;max-width:100%}
+.accueil-hero{display:flex;align-items:center;gap:6px;margin:6px 0 4px;animation:enter .5s cubic-bezier(.2,.9,.3,1.2) both}
+.accueil-hero .octo-home{width:112px;height:112px;margin:0}
+.dire{position:relative;flex:1;margin:0;background:var(--t);color:#0b1d21;font-weight:800;font-size:17px;line-height:1.3;padding:12px 14px;border-radius:18px;animation:bob 3s ease-in-out infinite}
+.dire::before{content:"";position:absolute;left:-8px;top:50%;margin-top:-8px;border:8px solid transparent;border-right-color:var(--t);border-left:0}
+.next{padding:18px 18px 20px;margin-top:6px}
+.next-kick{margin:0;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.next-titre{font-size:24px;line-height:1.15;margin:6px 0 6px}
+.next-prog{margin:0;color:var(--m);font-size:14px;font-weight:600;line-height:1.35}
+.btn-go{display:block;text-align:center;text-decoration:none;margin-top:16px;font-size:18px;padding:17px}
+.path-titre{font-size:15px;color:var(--m);font-weight:800;margin:26px 0 8px;letter-spacing:0}
+.path2{list-style:none;margin:0 0 8px;padding:0}
+.step{display:flex;align-items:center;gap:14px;padding:9px 0;position:relative}
+.step.z0{padding-left:4%}.step.z1{padding-left:18%}.step.z2{padding-left:30%}.step.z3{padding-left:18%}
+.step .node{position:relative;flex:none;width:58px;height:52px;left:auto;top:auto;font-size:20px}
+.step-txt{display:flex;flex-direction:column;font-weight:800;font-size:15px;line-height:1.2;color:var(--t);min-width:0}
+.step-txt small{font-size:11px;font-weight:800;color:var(--m);text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.step.cur .step-txt small{color:var(--c)}
+.step-lien{text-decoration:none;color:inherit}
+.step:not(.cur):not(.done) .step-txt{color:var(--m)}
+.step .node.lock{opacity:.6}
+.tentacules{margin-bottom:env(safe-area-inset-bottom)}
+.gb-badge-pop{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+/* ===== Règle Joseph : apprendre d'abord, jeu en accent discret ===== */
+.bulles{display:none}
+.node,.dire,.tip,.flame{animation:none!important}
+.node.cur::after{display:none}
+.pill{padding:4px 9px;font-size:13px;border-radius:11px}
+.next{margin-top:10px}
+.next-tete{display:flex;align-items:center;gap:8px}
+.octo-petit{width:40px;height:40px}
+.next-kick{color:var(--m)}
+.next-titre{font-size:27px;margin:10px 0 8px}
+.next-but{margin:0;font-size:16px;line-height:1.4;color:var(--t);opacity:.85}
+.btn-go{margin-top:18px}
+.next-prog{margin:12px 0 0;font-size:13px;text-align:center}
+.path-titre{margin-top:30px}
+.step{padding:6px 0;gap:12px}
+.step .node{width:30px;height:30px;font-size:13px;box-shadow:none;border-radius:50%}
+.step .node.lock{opacity:1;background:var(--card);color:var(--m)}
+.step .node.cur{outline:2px solid var(--c);outline-offset:2px}
+.step-lien,.step-txt{font-size:16px;font-weight:700;line-height:1.3}
+.step-lien{color:var(--t)}
+.step.cur .step-lien{color:var(--c)}
+.step-txt{color:var(--m)}
+.t-ligne{font-size:13px;color:var(--m);margin:22px 0 0;line-height:1.4}
+.octo-lecon{width:48px;height:48px}
+.lecon-tete h1{font-size:26px;line-height:1.15;margin:2px 0 0}
+.but{font-size:16px;line-height:1.4;margin:6px 0 18px;opacity:.9}
+.but b{color:var(--c)}

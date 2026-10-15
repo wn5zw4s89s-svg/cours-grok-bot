@@ -1,4 +1,5 @@
 ---
+import Octo from '../../components/Octo.astro';
 import Base from '../../layouts/Base.astro';
 import site from '../../data/site.json';
 export function getStaticPaths() { return site.quiz.map((q) => ({ params: { id: q.slug }, props: { q } })); }
@@ -9,9 +10,10 @@ const nb = site.lecons.filter((l) => l.niveau === q.niveau).length;
 <Base title={q.titre} page="quiz">
   <article class="quiz-page">
     <div class="lh"><a class="retour" href={base} aria-label="Accueil">✕</a><div class="bar"><i data-barre-quiz></i></div></div>
-    <div class="lecon-tete"><div class="octo-host octo-lecon" data-octo data-octo-quiz></div><div>
+    <div class="lecon-tete"><div class="octo-host octo-lecon" data-octo data-octo-quiz><Octo /></div><div>
     <p class="surtitre">Quiz · {site.labelUnite || 'Niveau'} {q.niveau}</p>
     <h1>{q.titre}</h1></div></div>
+    <p class="but"><b>Tu vérifies :</b> ce que tu as appris dans les {nb} leçons du projet {q.niveau} ({q.questions.length} questions).</p>
     <div class="verrou" data-quiz-verrou hidden>
       <p data-quiz-msg>Finis les {nb} leçons de ce projet pour débloquer le quiz.</p>
       <a class="btn" data-quiz-suite href={base}>Continuer</a>

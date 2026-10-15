@@ -2,6 +2,10 @@
 import '../styles/site.css';
 import site from '../data/site.json';
 import octo from '../data/octoboss.json';
+import { clair } from '../lib/clair.js';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const jsv = createHash('sha1').update(readFileSync('public/jeu.js')).digest('hex').slice(0, 8);
 const { title, page = '' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const meta = {
@@ -10,7 +14,7 @@ const meta = {
   niveaux: site.niveaux,
   projets: site.projets,
   labelUnite: site.labelUnite || 'Niveau',
-  lecons: site.lecons.map((l) => ({ id: l.id, num: l.num, niveau: l.niveau, court: l.court, disponible: l.disponible, numLabel: l.numLabel })),
+  lecons: site.lecons.map((l) => ({ id: l.id, num: l.num, niveau: l.niveau, court: l.court, disponible: l.disponible, numLabel: l.numLabel, clair: clair(l).titre, but: clair(l).but })),
   quiz: site.quiz.map((q) => ({ id: q.id, slug: q.slug, titre: q.titre, nb: q.questions.length, niveau: q.niveau })),
 };
 ---
@@ -30,12 +34,12 @@ const meta = {
   <header class="top">
     <a class="logo" href={base}>Octo<b>Boss</b></a>
     <div class="pills">
-      <span class="pill" data-streak-pill title="Série"><span class="flame">🔥</span> <span data-streak-n>0</span></span>
-      <span class="pill xp" data-xp-pill title="Bulles">🫧 <span data-xp-n>0</span></span>
+      <span class="pill" data-streak-pill hidden title="Jours d'affilée"><span class="flame">🔥</span> <span data-streak-n>0</span> <small data-streak-u>jour</small></span>
+      <span class="pill xp" data-xp-pill hidden title="Bulles gagnées : 10 par leçon">🫧 <span data-xp-n>0</span> <small data-xp-u>bulles</small></span>
     </div>
   </header>
   <main><slot /></main>
   <script type="application/json" id="gb-meta" set:html={JSON.stringify(meta)} />
-  <script is:inline src={`${base}jeu.js`} defer></script>
+  <script is:inline src={`${base}jeu.js?v=${jsv}`} defer></script>
 </body>
 </html>

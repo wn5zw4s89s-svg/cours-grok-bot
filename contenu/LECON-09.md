@@ -2,17 +2,9 @@
 
 <p class="chapeau">Dix emails. Lequel d'abord ? Ton bot décide pour toi.</p>
 
-## 3 piles
+## Étape 1 · Ajoute la rubrique Emails (2 min)
 
-- **À moi** : il faut ta décision.
-- **Prêt** : une réponse simple suffit.
-- **Bruit** : pub, newsletter.
-
-## Ajoute une rubrique à la fiche
-
-Une rubrique **Emails** dans la description. Elle dit comment trier et comment résumer.
-
-## Modèle à coller
+3 piles : **À moi** (ta décision), **Prêt** (réponse simple), **Bruit** (pub).
 
 ```
 Emails : quand je demande le courrier, classe chaque email en À moi, Prêt ou Bruit.
@@ -23,30 +15,48 @@ Bruit : pub, newsletter. Ne les détaille pas.
 ```
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 3 emails, 1 message.
+**À toi.** Colle le modèle dans la description. Adapte À moi et Prêt à ton projet. Enregistre.
 
-1. Colle le modèle dans la description. Adapte À moi et Prêt à ton projet. Enregistre.
-2. Depuis ton app mail, envoie 3 emails : une plainte, une question simple, une fausse pub.
-3. Envoie au bot : « Trie ton courrier du jour. »
-
-**C'est réussi si :**
-
-- la rubrique Emails parle de ton projet (étape 1) ;
-- les 3 emails sont partis (étape 2) ;
-- chaque email est dans la bonne pile (étape 3).
+**C'est réussi si :** la rubrique Emails parle de ton projet.
 </div>
 
 <div class="box corrige" markdown="1">
-**À moi** (toi) : bougie cassée, veut un remboursement.  
-**Prêt** (toi) : demande si la cire est végétale.  
-**Bruit** : 1 pub, non détaillée.
+À moi : remboursement, plainte. Prêt : question sur la cire, la livraison.
+</div>
+
+## Étape 2 · Envoie 3 emails (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Depuis ton app mail, envoie au bot : une plainte, une question simple, une fausse pub.
+
+**C'est réussi si :** les 3 emails sont partis.
+</div>
+
+<div class="box corrige" markdown="1">
+« Bougie cassée, je veux être remboursée. » · « La cire est végétale ? » · « -50 % sur nos stylos ! »
+</div>
+
+## Étape 3 · Demande le tri (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie au bot : « Trie ton courrier du jour. »
+
+**C'est réussi si :** chaque email est dans la bonne pile.
+</div>
+
+<div class="box corrige" markdown="1">
+**À moi** : bougie cassée, remboursement. **Prêt** : cire végétale ? **Bruit** : 1 pub.
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« Trié. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
 - 3 piles : À moi, Prêt, Bruit.
-- Les règles de tri vont dans la fiche.
+- Les règles de tri vont dans la description.
 
-**Bravo !** Leçon 10 : il prépare la réponse, tu valides.
+**Leçon 10 : il prépare, tu valides.**
 </div>
