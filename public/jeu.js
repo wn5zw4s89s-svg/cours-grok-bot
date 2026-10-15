@@ -31,6 +31,52 @@
     return e;
   };
 
+  // ===== OctoBoss : mascotte, bulles, tentacules =====
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const OCTO = M.octo || { tentacules: [], slogan: '' };
+  const TENT = (id) => OCTO.tentacules.find((t) => t.projet === id) || { nom: `Projet ${id}`, emoji: '🐙', phrase: '' };
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const OCTO_SVG = `<svg class="octo" viewBox="-70 -60 140 140" aria-hidden="true"><g class="whole"><g class="tents"></g>
+<ellipse cx="0" cy="-8" rx="42" ry="40" fill="#FF6B5A"/><ellipse cx="0" cy="22" rx="38" ry="12" fill="#C0443A" opacity=".5"/>
+<ellipse cx="-12" cy="-30" rx="12" ry="7" fill="#fff" opacity=".18"/><circle cx="-26" cy="-36" r="3" fill="#fff" opacity=".2"/>
+<g class="eye"><ellipse cx="-14" cy="-6" rx="10" ry="11" fill="#F2FBFA"/><circle class="pupil" cx="-12" cy="-4" r="5.5" fill="#06161A"/></g>
+<g class="eye"><ellipse cx="14" cy="-6" rx="10" ry="11" fill="#F2FBFA"/><circle class="pupil" cx="16" cy="-4" r="5.5" fill="#06161A"/></g>
+<ellipse class="blush" cx="-26" cy="8" rx="6" ry="3.5" fill="#fff"/><ellipse class="blush" cx="26" cy="8" rx="6" ry="3.5" fill="#fff"/>
+<path class="mouth" d="M-8 10 Q0 17 8 10" stroke="#06161A" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path class="sweat" d="M32 -22 q4 6 0 9 q-4 -3 0 -9z" fill="#9fe3ff"/>
+<path d="M-30 -42 l8 -14 l8 10 l8 -14 l6 14 l8 -10 l6 14z" fill="#FFD25A" stroke="#C0443A" stroke-width="2" stroke-linejoin="round" transform="translate(4,-4) scale(.62)"/></g></svg>`;
+  function makeOcto(host, grown) {
+    host.innerHTML = OCTO_SVG;
+    const svg = host.firstElementChild, g = svg.querySelector('.tents');
+    for (let i = 0; i < 8; i++) {
+      const x = -31 + i * 8.9, ang = (i - 3.5) * -11;
+      const t = document.createElementNS(SVGNS, 'g');
+      t.setAttribute('class', 'tent' + (i < grown ? ' on' : ''));
+      t.style.animationDelay = (-i * 0.35) + 's';
+      t.innerHTML = `<g transform="translate(${x},20) rotate(${ang})"><g class="grow"><path d="M-6 0 C-8 18 6 26 -2 40 C-6 48 4 54 8 48" stroke="#FF6B5A" stroke-width="10" fill="none" stroke-linecap="round"/><circle cx="-3" cy="16" r="1.8" fill="#C0443A"/><circle cx="0" cy="28" r="1.6" fill="#C0443A"/><g class="bot"><circle cx="8" cy="50" r="7" fill="#0F2A30" stroke="#F2FBFA" stroke-width="1.5"/><circle cx="6" cy="49" r="1.3" fill="#3DDC97"/><circle cx="10" cy="49" r="1.3" fill="#3DDC97"/></g></g></g>`;
+      g.appendChild(t);
+    }
+    return svg;
+  }
+  const octoMood = (o, m) => {
+    if (!o) return;
+    o.classList.remove('happy', 'sad'); void o.getBoundingClientRect();
+    if (m) o.classList.add(m);
+    o.querySelector('.mouth').setAttribute('d', m === 'sad' ? 'M-8 15 Q0 9 8 15' : m === 'happy' ? 'M-10 8 Q0 22 10 8' : 'M-8 10 Q0 17 8 10');
+  };
+  const octoGrow = (o, n) => o?.querySelectorAll('.tent').forEach((t, i) => t.classList.toggle('on', i < n));
+  const octos = () => [...document.querySelectorAll('[data-octo] > svg')];
+  const pressFx = (el) => { el.classList.add('press'); setTimeout(() => el.classList.remove('press'), 140); };
+  (function bulles() {
+    const h = document.querySelector('[data-bulles]');
+    if (!h || RM) return;
+    for (let i = 0; i < 12; i++) {
+      const b = document.createElement('i'), sz = 6 + Math.random() * 16;
+      b.style.cssText = `left:${Math.random() * 100}%;width:${sz}px;height:${sz}px;animation-duration:${8 + Math.random() * 9}s;animation-delay:${-Math.random() * 14}s`;
+      h.appendChild(b);
+    }
+  })();
+
   const L = M.lecons, idx = (id) => L.findIndex((l) => l.id === id);
   const UNITES = M.projets || M.niveaux || [];
   const labelU = M.labelUnite || (M.projets ? 'Projet' : 'Niveau');
@@ -71,9 +117,9 @@
   };
 
   const BADGES = [
-    ['🌱', 'Premier pas', (d) => !!d.lecons['lecon-01']],
-    ...UNITES.map((n) => ['🏅', n.badge || `Fin du ${labelU.toLowerCase()} ${n.id}`, (d) => nivFini(d, n.id), n.id]),
-    ['⭐', 'Quiz parfait', (d) => Object.values(d.quiz).some((q) => q.meilleur === q.total && q.total > 0)],
+    ['🫧', 'Première bulle', (d) => !!d.lecons['lecon-01']],
+    ...UNITES.map((n) => [TENT(n.id).emoji, (n.badge && !/^Fin du /.test(n.badge)) ? n.badge : TENT(n.id).nom, (d) => nivFini(d, n.id), n.id]),
+    ['🎯', 'Sans fausse note', (d) => Object.values(d.quiz).some((q) => q.meilleur === q.total && q.total > 0)],
   ];
   // Prochain badge = premier non gagné (y compris celui du projet en cours).
   const prochainBadge = (d) => BADGES.find((b) => !b[2](d));
@@ -90,7 +136,27 @@
     return nouveaux;
   };
 
-  function confetti(burst = 48) {
+  function confetti(n = 48, top = 40) {
+    if (RM) return;
+    const c = document.createElement('div');
+    c.className = 'conf';
+    document.body.appendChild(c);
+    const cols = ['#FF6B5A', '#F2FBFA', '#3DDC97', '#FFD25A', '#6E9A9C'];
+    let left = n;
+    for (let i = 0; i < n; i++) {
+      const p = document.createElement('i');
+      if (i % 3 === 0) p.className = 'b'; else p.style.background = cols[i % cols.length];
+      const a = Math.random() * Math.PI * 2, r = 120 + Math.random() * 180, dx = Math.cos(a) * r, dy = Math.sin(a) * r - 80;
+      p.style.top = top + '%';
+      c.appendChild(p);
+      p.animate([
+        { transform: 'translate(0,0) rotate(0) scale(.4)', opacity: 1 },
+        { transform: `translate(${dx}px,${dy}px) rotate(${Math.random() * 720}deg) scale(1)`, opacity: 1, offset: 0.6 },
+        { transform: `translate(${dx * 1.1}px,${dy + 260}px) rotate(${Math.random() * 900}deg)`, opacity: 0 },
+      ], { duration: 1600 + Math.random() * 900, easing: 'cubic-bezier(.2,.8,.3,1)' }).onfinish = () => { p.remove(); if (--left === 0) c.remove(); };
+    }
+  }
+  function oldConfetti(burst = 48) {
     const c = document.createElement('canvas');
     c.className = 'gb-confetti';
     c.width = window.innerWidth;
@@ -133,31 +199,42 @@
   }
 
   function shareUrl(badgeNom, emoji) {
-    const text = `${emoji} Badge débloqué : ${badgeNom} — Cours Grok Bot`;
-    return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(SITE_URL)}`;
+    const text = `${emoji} J'ai débloqué « ${badgeNom} » sur OctoBoss 🐙 — ${OCTO.slogan || '8 tentacules, 8 bots, 0 salarié'}.`;
+    return `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://wn5zw4s89s-svg.github.io/cours-grok-bot/')}`;
   }
 
-  function montrerBadge(badge) {
-    const [emoji, nom] = badge;
-    let overlay = document.querySelector('.gb-badge-pop');
-    if (overlay) overlay.remove();
-    overlay = $('div', { class: 'gb-badge-pop' },
+  function montrerBadge(badge, onNext) {
+    const [emoji, nom, , projId] = badge;
+    document.querySelector('.gb-badge-pop')?.remove();
+    const d = etat();
+    const nbT = UNITES.filter((n) => nivFini(d, n.id)).length;
+    const host = $('div', { class: 'octo-host octo-fin', 'data-octo': '' });
+    const fermer = () => { overlay.classList.remove('on'); setTimeout(() => overlay.remove(), 300); onNext && onNext(); };
+    const overlay = $('div', { class: 'gb-badge-pop', role: 'dialog', 'aria-label': 'Badge débloqué' },
+      host,
+      $('h2', {}, projId ? 'Nouvelle tentacule\u00a0!' : 'Bravo, boss\u00a0!'),
       $('div', { class: 'gb-badge-carte' },
-        $('div', { class: 'gb-badge-emoji' }, emoji),
-        $('div', { class: 'gb-badge-titre' }, 'Badge débloqué'),
-        $('div', { class: 'gb-badge-nom' }, nom),
-        $('a', {
-          class: 'btn btn-large',
-          href: shareUrl(nom, emoji),
-          target: '_blank',
-          rel: 'noopener noreferrer',
-        }, 'Partager sur X'),
-        $('button', { class: 'lien', type: 'button', on: { click: () => overlay.remove() } }, 'Continuer')));
+        $('div', { class: 'medal' }, emoji),
+        $('div', { class: 'k' }, 'Badge débloqué'),
+        $('div', { class: 'n' }, nom),
+        $('div', { class: 'd' }, projId ? TENT(projId).phrase : OCTO.slogan),
+        $('a', { class: 'btn btn-large btn-x', href: shareUrl(nom, emoji), target: '_blank', rel: 'noopener noreferrer' }, 'Partager sur 𝕏')),
+      $('div', { class: 'stats' },
+        $('div', {}, $('small', {}, 'Bulles'), `🫧 ${d.xp || 0}`),
+        $('div', {}, $('small', {}, 'Série'), `🔥 ${d.streak?.count || 0}`),
+        $('div', {}, $('small', {}, 'Tentacules'), `${nbT}/${UNITES.length || 8}`)),
+      $('button', { class: 'lien', type: 'button', on: { click: fermer } }, 'Continuer'));
     document.body.appendChild(overlay);
-    confetti(64);
+    const o = makeOcto(host, projId ? nbT - 1 : nbT);
+    requestAnimationFrame(() => overlay.classList.add('on'));
+    octoMood(o, 'happy');
+    setTimeout(() => { octoGrow(o, nbT); octoMood(o, 'happy'); }, 500);
+    confetti(70, 32);
   }
 
   function majStats(d) {
+    document.querySelectorAll('[data-xp-n]').forEach((e) => { e.textContent = `${d.xp || 0}`; });
+    document.querySelectorAll('[data-streak-n]').forEach((e) => { e.textContent = `${d.streak?.count || 0}`; });
     document.querySelectorAll('[data-xp]').forEach((e) => { e.textContent = `${d.xp || 0} XP`; });
     document.querySelectorAll('[data-streak]').forEach((e) => {
       const n = d.streak?.count || 0;
@@ -168,30 +245,32 @@
 
   function dessinerChemin(d, cur) {
     const host = document.querySelector('[data-chemin]');
-    if (!host || !cur) { if (host) host.replaceChildren(); return; }
+    if (!host) return;
+    if (!cur) { host.replaceChildren($('p', { class: 'muted centre' }, '🐙 8 tentacules sur 8. Tu es le boss.')); host.style.height = 'auto'; return; }
     const ls = lecNiv(cur.id);
     const nextIdx = ls.findIndex((l) => !d.lecons[l.id]);
-    const nodes = [];
-    ls.forEach((l, i) => {
-      if (i > 0) {
-        const done = !!d.lecons[ls[i - 1].id] && !!d.lecons[l.id];
-        const half = !!d.lecons[ls[i - 1].id];
-        nodes.push($('span', { class: `chemin-trait${done ? ' on' : half ? ' half' : ''}` }));
+    const X = [50, 28, 44, 72, 58, 30, 46];
+    const STEP = 66, nodes = [];
+    const items = [...ls.map((l) => ({ l })), { fin: true }];
+    items.forEach((it, i) => {
+      const style = `left:calc(${X[i % X.length]}% - 33px);top:${8 + i * STEP}px;animation-delay:${-i * 0.4}s`;
+      if (it.fin) {
+        const fini = nivFini(d, cur.id), t = TENT(cur.id), q = M.quiz.find((x) => x.niveau === cur.id);
+        const attrs = { class: `node coffre${fini ? ' done' : ''}`, style, title: `Quiz · ${t.nom}` };
+        nodes.push(q && fini ? $('a', { ...attrs, href: `${M.base}quiz/${q.slug}/` }, t.emoji) : $('span', attrs, fini ? t.emoji : '🎁'));
+        return;
       }
-      const fait = !!d.lecons[l.id];
-      const actuelle = i === nextIdx;
-      const ok = debloquee(d, idx(l.id));
-      const cls = `chemin-dot${fait ? ' fait' : ''}${actuelle ? ' actuelle' : ''}${!ok ? ' lock' : ''}`;
-      const label = fait ? '✓' : actuelle ? String(l.num) : ok ? String(l.num) : '·';
-      const a = ok
-        ? $('a', { class: cls, href: `${M.base}lecon/${l.id}/`, title: l.court || `Leçon ${l.num}` }, label)
-        : $('span', { class: cls, title: 'Verrouillé' }, '🔒');
-      nodes.push(a);
+      const l = it.l, fait = !!d.lecons[l.id], actuelle = i === nextIdx, ok = debloquee(d, idx(l.id));
+      const cls = `node${fait ? ' done' : actuelle ? ' cur' : ''}${!ok ? ' lock' : ''}`;
+      const label = fait ? '✓' : ok ? String(l.num) : '🔒';
+      nodes.push(ok ? $('a', { class: cls, style, href: `${M.base}lecon/${l.id}/`, title: l.court || `Leçon ${l.num}` }, label)
+        : $('span', { class: cls, style, title: 'Verrouillé' }, label));
+      if (actuelle) {
+        const x = X[i % X.length];
+        nodes.push($('div', { class: 'tip', style: `top:${8 + i * STEP + 14}px;${x > 45 ? `right:calc(${100 - x}% + 44px)` : `left:calc(${x}% + 44px)`}` }, L.some((z) => d.lecons[z.id]) ? "C'EST TOI, BOSS" : 'COMMENCE ICI'));
+      }
     });
-    // Badge fin de niveau en bout de chemin
-    const fini = nivFini(d, cur.id);
-    nodes.push($('span', { class: `chemin-trait${fini ? ' on' : ''}` }));
-    nodes.push($('span', { class: `chemin-dot badge-end${fini ? ' fait' : ''}`, title: cur.badge || `${labelU} ${cur.id}` }, fini ? '🏅' : '🏆'));
+    host.style.height = `${items.length * STEP + 10}px`;
     host.replaceChildren(...nodes);
   }
 
@@ -200,11 +279,18 @@
     majStats(d);
     const pill = document.querySelector('[data-niveau]');
     if (pill) pill.textContent = cur ? `${labelU} ${cur.id} · ${cur.nom}` : 'Cours terminé 🏆';
+    const nbT = UNITES.filter((n) => nivFini(d, n.id)).length;
+    octos().forEach((o) => { if (!o.closest('.gb-badge-pop')) octoGrow(o, nbT); });
+    document.querySelectorAll('[data-hero-tag]').forEach((e) => {
+      e.textContent = cur ? `Tentacule ${cur.id}/${UNITES.length} · ${TENT(cur.id).nom} ${TENT(cur.id).emoji}` : `${UNITES.length}/${UNITES.length} tentacules 🐙`;
+    });
+    document.querySelectorAll('[data-projet-nom]').forEach((e) => { e.textContent = cur ? `${labelU} ${cur.id} · ${cur.nom}` : 'Cours terminé'; });
+    document.querySelectorAll('[data-t]').forEach((e) => e.classList.toggle('on', nivFini(d, +e.dataset.t)));
     if (cur) {
       const ls = lecNiv(cur.id), f = ls.filter((l) => d.lecons[l.id]).length;
       const suiv = UNITES.find((n) => n.id === cur.id + 1);
-      document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = `${f}/${ls.length} avant ${suiv ? suiv.nom : 'la fin du cours'}`));
-      document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.width = Math.round((f / ls.length) * 100) + '%'));
+      document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = `${f}/${ls.length} leçons avant ta tentacule « ${TENT(cur.id).nom} ».`));
+      document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.setProperty('--p', f / ls.length)));
       const next = ls.find((l) => !d.lecons[l.id]);
       document.querySelectorAll('[data-continuer]').forEach((a) => {
         a.textContent = L.some((l) => d.lecons[l.id]) ? `Continuer · Leçon ${next.num}` : 'Commencer';
@@ -212,7 +298,7 @@
       });
     } else {
       document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = 'Tout est terminé'));
-      document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.width = '100%'));
+      document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.setProperty('--p', 1)));
       document.querySelectorAll('[data-continuer]').forEach((a) => { a.textContent = 'Revoir la leçon 1'; a.href = `${M.base}lecon/${L[0].id}/`; });
     }
     dessinerChemin(d, cur);
@@ -302,16 +388,14 @@
         niveauComplete = niv != null && nivFini(d, niv);
         nouveaux = syncBadges(d);
       });
-      if (!deja) confetti(niveauComplete ? 72 : 40);
+      pressFx(btn);
       const go = () => { location.href = btn.dataset.suite || M.base; };
+      octos().forEach((o) => octoMood(o, 'happy'));
+      if (!deja) { confetti(niveauComplete ? 72 : 40, 70); btn.textContent = `+${XP_LECON} 🫧 Bien joué, boss !`; btn.classList.add('green'); rafraichir(); }
       if (nouveaux.length) {
-        montrerBadge(nouveaux[nouveaux.length - 1]);
-        const pop = document.querySelector('.gb-badge-pop .lien');
-        if (pop) pop.addEventListener('click', go, { once: true });
-        // auto-continue after share dismiss; also allow 4s autopilot if they ignore
-        setTimeout(() => { if (document.querySelector('.gb-badge-pop')) go(); }, 8000);
+        montrerBadge(nouveaux[nouveaux.length - 1], go);
       } else {
-        go();
+        setTimeout(go, deja ? 150 : (RM ? 300 : 1300));
       }
     });
   });
@@ -369,6 +453,7 @@
         $('p', {}, $('button', { class: 'lien', on: { click: () => jouer(0, 0) } }, 'Rejouer'))
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));
+      octoMood(octos()[0], score / N >= 0.6 ? 'happy' : 'sad');
       if (nouveaux.length) setTimeout(() => montrerBadge(nouveaux[nouveaux.length - 1]), 400);
       rafraichir();
     };
@@ -380,11 +465,16 @@
         const ok = j === x.bonne_reponse; btns[x.bonne_reponse].classList.add('bon'); if (!ok) btns[j].classList.add('faux');
         const s = score + (ok ? 1 : 0);
         fb.replaceChildren($('div', { class: 'q-fb' },
-          $('div', { class: ok ? 'ok' : 'ko' }, ok ? '✅ Bonne réponse' : '❌ Pas tout à fait'),
+          $('div', { class: ok ? 'ok' : 'ko' }, ok ? 'Bien joué, boss ! 🐙' : 'Aïe… ton bot va paniquer.'),
           $('div', {}, x.explication || ''),
           $('button', { class: 'btn', on: { click: () => jouer(i + 1, s) } }, i + 1 === N ? 'Voir mon score' : 'Suivante →')));
         el.querySelector('.q-score').textContent = `${s}`;
+        const o = octos()[0]; octoMood(o, ok ? 'happy' : 'sad'); if (!ok) setTimeout(() => octoMood(o), 1400);
+        if (ok) confetti(16, 45);
+        fb.firstChild.classList.add(ok ? 'good' : 'bad');
+        document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', (i + 1) / N));
       } } }, c));
+      document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', i / N));
       el.replaceChildren($('div', { class: 'q-carte' },
         $('div', { class: 'q-entete' }, $('span', {}, `${i + 1} / ${N}`), $('span', { class: 'q-score' }, `${score}`)),
         $('div', { class: 'barre', style: 'margin:12px 0 0' }, $('span', { style: `width:${(i / N) * 100}%` })),
@@ -393,7 +483,45 @@
     jouer(0, 0);
   });
 
+  // Mascottes de la page
+  document.querySelectorAll('[data-octo]').forEach((h) => makeOcto(h, 0));
+  // Répliques de la pieuvre : <div class="pieuvre" data-reaction="...">
+  const pv = [...document.querySelectorAll('.contenu .pieuvre')];
+  pv.forEach((p) => {
+    const h = $('div', { class: 'octo-host octo-mini' }), b = $('div', { class: 'pv-bulle' });
+    while (p.firstChild) b.appendChild(p.firstChild);
+    p.append(h, b);
+    const o = makeOcto(h, UNITES.filter((n) => nivFini(etat(), n.id)).length);
+    if (p.dataset.reaction === 'croissance') {
+      const m = p.textContent.match(/Tentacule\s+(\d+)/i); p._n = m ? +m[1] : null;
+      if (p._n) octoGrow(o, p._n - 1);
+    }
+    p._o = o;
+  });
+  const reagir = (p) => {
+    const r = p.dataset.reaction, o = p._o;
+    p.classList.add('vu');
+    if (r === 'reussite') octoMood(o, 'happy');
+    else if (r === 'erreur') { octoMood(o, 'sad'); setTimeout(() => octoMood(o), 1600); }
+    else if (r === 'croissance') { setTimeout(() => { if (p._n) octoGrow(o, p._n); octoMood(o, 'happy'); }, 300); }
+  };
+  if (pv.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { reagir(e.target); io.unobserve(e.target); } }), { threshold: 0.6 });
+    pv.forEach((p) => io.observe(p));
+  } else pv.forEach(reagir);
+  // Barre de lecture des leçons
+  const bl = document.querySelectorAll('[data-barre-lecon]');
+  if (bl.length) {
+    const maj = () => { const h = document.documentElement, m = h.scrollHeight - innerHeight; bl.forEach((b) => b.style.setProperty('--p', m > 0 ? Math.min(1, scrollY / m) : 1)); };
+    addEventListener('scroll', maj, { passive: true }); maj();
+  }
+  // Boutons 3D : effet pression tactile
+  document.addEventListener('pointerdown', (e) => { const b = e.target.closest('.btn,.node,.q-choix button'); if (b) pressFx(b); });
+
   // Sync badges déjà mérités (migration)
   ecrire((d) => { syncBadges(d); });
   rafraichir();
+  // Démo : ?badge=N affiche la carte du badge du projet N (sans rien enregistrer)
+  const qb = new URLSearchParams(location.search).get('badge');
+  if (qb) { const b = BADGES.find((x) => x[3] === +qb); if (b) setTimeout(() => montrerBadge(b), 200); }
 })();

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import site from '../../data/site.json';
+import octo from '../../data/octoboss.json';
 export function getStaticPaths() {
   const { lecons, quiz } = site;
   return lecons.map((l, i) => {
@@ -15,13 +16,17 @@ export function getStaticPaths() {
   });
 }
 const { l, prev, suite } = Astro.props;
+const tent = octo.tentacules.find((t) => t.projet === l.niveau);
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base title={l.title} page="lecon">
   <article class="lecon" data-lecon={l.id} data-num={l.num}>
-    <a class="retour" href={base}>← Accueil</a>
-    <p class="surtitre">Leçon {l.num}</p>
-    <h1>{l.court}</h1>
+    <div class="lh"><a class="retour" href={base} aria-label="Accueil">✕</a><div class="bar"><i data-barre-lecon></i></div></div>
+    <div class="lecon-tete">
+      <div class="octo-host octo-lecon" data-octo></div>
+      <div><p class="surtitre">{tent ? `${tent.emoji} ${tent.nom} · ` : ''}Leçon {l.num}</p>
+      <h1>{l.court}</h1></div>
+    </div>
     <div class="verrou" hidden>
       <p>🔒 Termine d'abord la leçon {prev?.num}.</p>
       {prev && <a class="btn" href={`${base}lecon/${prev.id}/`}>Leçon {prev.num}</a>}

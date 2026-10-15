@@ -44,6 +44,31 @@ Répartition : 6 + 6 + 6 + 6 + 7 + 7 + 7 + 13 = 58.
 
 Badge final : **Fondateur**.
 
+## Univers OctoBoss (projet 1, à étendre)
+L'élève fait grandir OctoBoss, une pieuvre : 1 tentacule par projet, 8 au total.
+
+| OctoBoss | Vrai terme |
+|---|---|
+| Tentacule | un bot |
+| ADN | la description du bot |
+| Gènes | les 6 rubriques de la description |
+| Vague | un cas de test |
+| Ventouse | une règle (interdit + phrase à dire) |
+| Poche d'encre | la mémoire du bot |
+| Mode Kraken | le niveau top 1 % |
+
+Micro-étapes de 2 min : chaque `## Étape N · titre (2 min)` a son « À toi » et son corrigé.
+
+## Balise de réaction (pour Le Bâtisseur)
+
+```
+<div class="pieuvre" data-reaction="TYPE" markdown="1">
+Réplique de la pieuvre.
+</div>
+```
+
+TYPE : `accueil` (début de projet), `reussite` (exercice réussi), `erreur` (vague qui renverse), `croissance` (tentacule gagnée ; le texte dit « Tentacule N sur 8 »). Le site anime la pieuvre selon TYPE et affiche la réplique.
+
 ## Fil rouge
 Léa (fictive), Bougies Lune, son bot Lumen. Projet 8 : sa plateforme fictive Champ Libre. L'élève fait SON projet ; modèles à coller fournis.
 

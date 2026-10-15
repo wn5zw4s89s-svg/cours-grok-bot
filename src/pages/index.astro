@@ -1,35 +1,45 @@
 ---
 import Base from '../layouts/Base.astro';
 import site from '../data/site.json';
+import octo from '../data/octoboss.json';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const first = site.lecons[0];
-const n1 = site.niveaux[0];
-const n2 = site.niveaux[1];
-const objectifDefaut = n1
-  ? `0/${n1.total} avant ${n2 ? n2.nom : 'la fin du cours'}`
-  : 'Commence le cours';
+const tent = (id) => octo.tentacules.find((t) => t.projet === id) || { nom: `Projet ${id}`, emoji: '🐙' };
+const t1 = tent(1);
 ---
 <Base page="accueil">
-  <section class="hero-min">
-    <div class="stats-bar">
-      <span data-streak title="Série">🔥 0</span>
-      <span data-xp>0 XP</span>
+  <section class="hero card">
+    <div class="octo-host octo-home" data-octo></div>
+    <div class="hero-txt">
+      <div class="tag" data-hero-tag>Tentacule 1/{site.projets.length} · {t1.nom}</div>
+      <div class="sub" data-objectif>{octo.slogan.replace(', 0', ',\u00a00')}</div>
+      <div class="bar"><i data-barre-niv></i></div>
     </div>
-    <h1>Cours Grok Bot</h1>
-    <p class="objectif" data-objectif>{objectifDefaut}</p>
-    <div class="barre"><span data-barre-niv></span></div>
-    <div class="chemin" data-chemin aria-label="Chemin du projet"></div>
-    <a class="btn btn-large" data-continuer href={`${base}lecon/${first.id}/`}>Commencer</a>
-    <p class="prochain-badge" data-prochain-badge></p>
-    <div class="badges-box" data-badges-list hidden></div>
   </section>
 
+  <p class="kick" data-projet-nom>Projet 1 · {site.projets[0]?.nom}</p>
+  <div class="path" data-chemin aria-label="Chemin du projet"></div>
+
+  <a class="btn btn-large" data-continuer href={`${base}lecon/${first.id}/`}>Commencer</a>
+
+  <section class="tentacules card" aria-label="Tentacules">
+    <div class="kick">Tes 8 tentacules</div>
+    <div class="t-grid" data-tentacules>
+      {octo.tentacules.map((t) => (
+        <div class="t-badge" data-t={t.projet} title={t.nom}><span class="t-medal">{t.emoji}</span><span class="t-nom">{t.nom}</span></div>
+      ))}
+    </div>
+    <div data-badges-list hidden></div>
+  </section>
+
+  <h2 class="sec">Les 8 projets</h2>
   {site.niveaux.map((niv) => {
     const lecs = site.lecons.filter((l) => l.niveau === niv.id);
     const quiz = site.quiz.find((q) => q.id === niv.quizId);
+    const t = tent(niv.id);
     return (
       <details class="niv" data-niveau-bloc={niv.id}>
-        <summary><span class="niv-nom">{site.labelUnite || 'Niveau'} {niv.id} · {niv.nom}</span><span class="niv-etat" data-niv-etat={niv.id}>{lecs.length} leçons</span></summary>
+        <summary><span class="niv-emo">{t.emoji}</span><span class="niv-nom"><small>Tentacule {niv.id} · {t.nom}</small>{niv.nom}</span><span class="niv-etat" data-niv-etat={niv.id}>{lecs.length} leçons</span></summary>
         <ol class="liste-compacte">
           {lecs.map((l) => (
             <li class="item-lecon" data-lecon-carte={l.id}>

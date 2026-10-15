@@ -1,10 +1,12 @@
 ---
 import '../styles/site.css';
 import site from '../data/site.json';
+import octo from '../data/octoboss.json';
 const { title, page = '' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const meta = {
   base,
+  octo,
   niveaux: site.niveaux,
   projets: site.projets,
   labelUnite: site.labelUnite || 'Niveau',
@@ -16,14 +18,21 @@ const meta = {
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title ? `${title} · Cours Grok Bot` : 'Cours Grok Bot'}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#06161A" />
+  <title>{title ? `${title} · OctoBoss` : `OctoBoss — ${octo.slogan}`}</title>
+  <meta name="description" content={`OctoBoss — ${octo.slogan}. Le cours Grok Bot gratuit, en 8 projets.`} />
+  <meta property="og:title" content={`OctoBoss — ${octo.slogan}`} />
   <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
 </head>
 <body data-page={page}>
+  <div class="bulles" aria-hidden="true" data-bulles></div>
   <header class="top">
-    <a class="logo" href={base}><span class="logo-dot">G</span></a>
-    <span class="niveau-badge" data-niveau>{site.labelUnite || 'Niveau'} 1</span>
+    <a class="logo" href={base}>Octo<b>Boss</b></a>
+    <div class="pills">
+      <span class="pill" data-streak-pill title="Série"><span class="flame">🔥</span> <span data-streak-n>0</span></span>
+      <span class="pill xp" data-xp-pill title="Bulles">🫧 <span data-xp-n>0</span></span>
+    </div>
   </header>
   <main><slot /></main>
   <script type="application/json" id="gb-meta" set:html={JSON.stringify(meta)} />

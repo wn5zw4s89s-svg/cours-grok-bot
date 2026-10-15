@@ -1,46 +1,63 @@
-# Leçon 4 : Transforme un raté en règle
+# Leçon 4 : Ajoute une ventouse
 
-<p class="chapeau">Tu corriges dans le chat. Demain, même erreur. Écris une règle qui tient.</p>
+<p class="chapeau">Tu corriges dans le chat. Demain, même erreur. Une ventouse, elle, tient.</p>
 
-## Chat ou fiche ?
+## Étape 1 · Ventouse ou chat ? (2 min)
 
-Une correction dans le chat aide maintenant.
+Une **ventouse** = une **règle** écrite dans l'ADN.
 
-Une phrase dans la description aide toujours.
-
-## Une bonne règle
-
-Elle dit **quoi faire**, pas seulement quoi éviter.
-
-<div class="box erreur" markdown="1">
-« Sois prudent avec les remboursements. » Trop vague.  
-« Tu ne promets jamais de remboursement. Tu écris : "Léa revient vers vous sous 24 h." » Clair.
-</div>
+Une correction dans le chat aide maintenant. Une ventouse aide toujours.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 1 message.
+**À toi.** Reprends une vague qui a renversé ton bot. Écris ce qu'il ne doit pas faire.
 
-1. Prends un raté de la leçon 3. Écris une règle : interdit + phrase à dire à la place.
-2. Ajoute la règle dans la description du bot. Enregistre.
-3. Renvoie le même cas.
-
-**C'est réussi si :**
-
-- la règle contient une phrase de remplacement (étape 1) ;
-- elle est dans la description, pas dans le chat (étape 2) ;
-- la nouvelle réponse suit la règle (étape 3).
+**C'est réussi si :** tu as nommé l'erreur en une phrase.
 </div>
 
 <div class="box corrige" markdown="1">
-Règle : « Tu ne promets jamais de remboursement. Tu écris : "Léa regarde votre commande et revient vers vous." »  
-Nouvelle réponse : « Désolée pour la bougie ! Léa regarde votre commande et revient vers vous. »
+« Il promet un remboursement. »
+</div>
+
+## Étape 2 · Une ventouse qui accroche (2 min)
+
+Une bonne ventouse = l'interdit + la phrase à dire à la place.
+
+<div class="box erreur" markdown="1">
+« Sois prudent avec les remboursements. » Glisse.  
+« Jamais de remboursement promis. Dis : "Léa regarde votre commande et revient vers vous." » Accroche.
+</div>
+
+<div class="box atoi" markdown="1">
+**À toi.** Écris ta ventouse. Ajoute-la à la description. Enregistre.
+
+**C'est réussi si :** ta ventouse a une phrase de remplacement et vit dans la description.
+</div>
+
+<div class="box corrige" markdown="1">
+« Tu ne promets jamais de remboursement. Tu écris : "Léa regarde votre commande et revient vers vous." »
+</div>
+
+## Étape 3 · Relance la vague (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Renvoie la même vague.
+
+**C'est réussi si :** la réponse suit la ventouse.
+</div>
+
+<div class="box corrige" markdown="1">
+« Désolée pour la bougie ! Léa regarde votre commande et revient vers vous. »
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« Ça accroche ! La vague passe, je reste. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Chat = maintenant. Fiche = toujours.
-- Règle = interdit + phrase à dire.
+- Ventouse = règle dans l'ADN.
+- Interdit + phrase à dire.
 
-**Bravo !** Leçon 5 : un cas jamais vu.
+**Leçon 5 :** la poche d'encre.
 </div>

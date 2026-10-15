@@ -8,9 +8,10 @@ const nb = site.lecons.filter((l) => l.niveau === q.niveau).length;
 ---
 <Base title={q.titre} page="quiz">
   <article class="quiz-page">
-    <a class="retour" href={base}>← Accueil</a>
+    <div class="lh"><a class="retour" href={base} aria-label="Accueil">✕</a><div class="bar"><i data-barre-quiz></i></div></div>
+    <div class="lecon-tete"><div class="octo-host octo-lecon" data-octo data-octo-quiz></div><div>
     <p class="surtitre">Quiz · {site.labelUnite || 'Niveau'} {q.niveau}</p>
-    <h1>{q.titre}</h1>
+    <h1>{q.titre}</h1></div></div>
     <div class="verrou" data-quiz-verrou hidden>
       <p data-quiz-msg>Finis les {nb} leçons de ce projet pour débloquer le quiz.</p>
       <a class="btn" data-quiz-suite href={base}>Continuer</a>

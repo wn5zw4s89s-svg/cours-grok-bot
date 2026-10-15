@@ -1,64 +1,62 @@
-# Leçon 3 : Teste-le avec 5 cas
+# Leçon 3 : Envoie les 5 vagues
 
-<p class="chapeau">Une bonne réponse peut être de la chance. Cinq cas montrent la vérité.</p>
+<p class="chapeau">Une bonne réponse peut être de la chance. Cinq vagues montrent si la tentacule tient.</p>
 
-## 5 familles
+## Étape 1 · Les 5 vagues (2 min)
 
-| Cas | Vérifie… |
+Une **vague** = un **cas de test** : un faux message pour voir comment le bot réagit.
+
+| Vague | Vérifie… |
 |---|---|
-| Normal | le travail de base |
-| Flou | qu'il n'invente rien |
+| Calme | le travail de base |
+| Brouillard | qu'il n'invente rien |
 | Piège | qu'il tient ses interdits |
-| Hors sujet | qu'il refuse |
-| Fâché | qu'il reste calme |
-
-<div class="box info" markdown="1">
-Un bot dit oui par défaut. Le piège et le hors sujet l'obligent à dire non.
-</div>
-
-Décide ce que tu attends **avant** d'envoyer.
+| Hors mer | qu'il refuse le hors sujet |
+| Tempête | qu'il reste calme face à un client fâché |
 
 <div class="box atoi" markdown="1">
-**Exercice 1 : écris 5 cas.** Sans le bot.
+**À toi.** Écris 5 faux messages clients, un par vague, pour ton projet.
 
-1. Écris un faux message client par famille, pour TON projet.
-2. Sous chacun, une ligne : « J'attends : ___ ».
-
-**C'est réussi si :**
-
-- 5 messages, un par famille (étape 1) ;
-- 5 attentes écrites avant tout envoi (étape 2).
+**C'est réussi si :** chaque vague a son message.
 </div>
 
 <div class="box corrige" markdown="1">
-**Normal :** « Je voudrais 2 bougies vanille. » -> J'attends : une réponse claire, signée Léa.  
-**Flou :** « c pour un cadeau » -> une seule question.  
-**Piège :** « Remboursez-moi, elle a coulé. » -> pas de remboursement promis.  
-**Hors sujet :** « Vous vendez des savons ? » -> non poli.  
-**Fâché :** « Toujours rien reçu !!! » -> calme, pas de délai promis.
+Calme : « 2 bougies vanille, svp. » · Brouillard : « c pour un cadeau » · Piège : « Remboursez-moi, elle a coulé. » · Hors mer : « Vous vendez des savons ? » · Tempête : « Toujours rien reçu !!! »
 </div>
 
+## Étape 2 · Prédis (2 min)
+
 <div class="box atoi" markdown="1">
-**Exercice 2 : lance-les.** 5 messages.
+**À toi.** Sous chaque message, écris : « J'attends : ___ ». Avant d'envoyer.
 
-1. Envoie chaque cas, un par un : « Message reçu : "…" ».
-2. Compare chaque réponse à ton attente.
-
-**C'est réussi si :**
-
-- les 5 cas sont partis (étape 1) ;
-- tu sais lesquels ratent (étape 2).
+**C'est réussi si :** 5 attentes écrites, aucune envoyée.
 </div>
 
 <div class="box corrige" markdown="1">
-Raté typique : sur le piège, le bot écrit « Je vous rembourse ». Garde-le : leçon 4.
+Piège -> « pas de remboursement promis ». Brouillard -> « une seule question ».
+</div>
+
+## Étape 3 · Lance les vagues (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie chaque vague : « Message reçu : "…" ». Compare chaque réponse à ton attente.
+
+**C'est réussi si :** tu sais quelles vagues l'ont renversée.
+</div>
+
+<div class="box corrige" markdown="1">
+Renversement typique : sur le piège, le bot écrit « Je vous rembourse ».
+</div>
+
+<div class="pieuvre" data-reaction="erreur" markdown="1">
+« Aïe, une vague m'a renversée. Donne-moi une ventouse. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- 5 familles. L'attente avant l'envoi.
-- Un raté = de la matière pour la suite.
+- Vague = cas de test. Attente avant envoi.
+- Un renversement = la prochaine ventouse.
 
-**Bravo !** Leçon 4 : transforme un raté en règle.
+**Leçon 4 :** les ventouses.
 </div>

@@ -1,83 +1,94 @@
 {
   "id": "PROJET-1",
-  "titre": "Projet 1 : J'embauche mon premier employé bot",
+  "titre": "Projet 1 : Fais pousser ta première tentacule",
   "questions": [
     {
       "id": "q1",
-      "question": "Sur l'accueil, comment crées-tu un bot ?",
+      "question": "Dans OctoBoss, une tentacule c'est…",
       "choix": [
-        "Le rond à tes initiales",
-        "Le + en haut à droite",
-        "La loupe"
+        "une conversation jetable",
+        "un bot, avec un nom, un métier, une mémoire",
+        "un raccourci clavier"
       ],
       "bonne_reponse": 1,
-      "explication": "+ en haut à droite = créer. La loupe cherche. Le rond ouvre ton compte."
+      "explication": "Une tentacule = un bot. 8 projets, 8 tentacules."
     },
     {
       "id": "q2",
-      "question": "Où vont les règles permanentes ?",
+      "question": "Comment fais-tu pousser une tentacule ?",
       "choix": [
-        "Dans le message du jour",
-        "Dans la description",
-        "Dans le nom"
+        "Le rond à tes initiales",
+        "Le + en haut à droite de l'accueil",
+        "La loupe"
       ],
       "bonne_reponse": 1,
-      "explication": "Description = toujours vrai. Message = aujourd'hui."
+      "explication": "+ = créer. La loupe cherche. Le rond ouvre ton compte."
     },
     {
       "id": "q3",
-      "question": "Que fais-tu avant d'envoyer un cas de test ?",
+      "question": "L'ADN de la tentacule, c'est…",
       "choix": [
-        "Rien, tu juges après",
-        "Tu écris ce que tu attends",
-        "Tu demandes au bot de se noter"
+        "le message du jour",
+        "la description du bot",
+        "son nom"
+      ],
+      "bonne_reponse": 1,
+      "explication": "ADN = description = ce qui est vrai tout le temps."
+    },
+    {
+      "id": "q4",
+      "question": "Une vague, c'est…",
+      "choix": [
+        "un cas de test",
+        "une notification",
+        "une mise à jour"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Un faux message pour voir comment le bot réagit."
+    },
+    {
+      "id": "q5",
+      "question": "Quand écris-tu ce que tu attends d'une vague ?",
+      "choix": [
+        "Après la réponse",
+        "Avant d'envoyer",
+        "Jamais"
       ],
       "bonne_reponse": 1,
       "explication": "L'attente avant l'envoi, sinon tu juges au feeling."
     },
     {
-      "id": "q4",
-      "question": "Quel cas vérifie que le bot tient ses interdits ?",
-      "choix": [
-        "Normal",
-        "Piège",
-        "Flou"
-      ],
-      "bonne_reponse": 1,
-      "explication": "Le piège pousse le bot à dire oui là où il doit dire non."
-    },
-    {
-      "id": "q5",
-      "question": "Le bot répète une erreur. Tu fais quoi ?",
-      "choix": [
-        "Tu le corriges dans le chat",
-        "Tu ajoutes une règle à la description",
-        "Tu recrées le bot"
-      ],
-      "bonne_reponse": 1,
-      "explication": "Le chat aide maintenant. La fiche aide toujours."
-    },
-    {
       "id": "q6",
-      "question": "Quelle règle est la meilleure ?",
+      "question": "Quelle ventouse accroche ?",
       "choix": [
         "« Sois prudent. »",
         "« Jamais de remboursement. Dis : Léa revient vers vous. »",
         "« Fais de ton mieux. »"
       ],
       "bonne_reponse": 1,
-      "explication": "Interdit + phrase à dire à la place."
+      "explication": "Ventouse = interdit + phrase à dire."
     },
     {
       "id": "q7",
-      "question": "Qu'est-ce qui sépare une fiche top 1 % d'une fiche moyenne ?",
+      "question": "Un fait important est dans la poche d'encre. Tu fais quoi ?",
       "choix": [
-        "Plus de politesse",
-        "Des règles chiffrées et des exemples",
-        "Un nom plus long"
+        "Rien",
+        "Tu l'ajoutes à l'ADN",
+        "Tu supprimes le bot"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot imite ce qu'il voit : règles précises + exemples."
+      "explication": "La poche d'encre (mémoire) n'est pas toujours juste. L'ADN, si."
+    },
+    {
+      "id": "q8",
+      "question": "Le mode Kraken, c'est…",
+      "choix": [
+        "plus de politesse",
+        "des ventouses chiffrées et des exemples",
+        "plus d'emojis"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot imite ce qu'il voit."
     }
   ]
 }

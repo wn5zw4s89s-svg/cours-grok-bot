@@ -1,61 +1,66 @@
-# Leçon 1 : Embauche ton premier employé bot
+# Leçon 1 : Fais pousser ta première tentacule
 
-<p class="chapeau">Un projet. Trop de messages. Embauche quelqu'un qui ne dort pas.</p>
+<p class="chapeau">Voici OctoBoss, une pieuvre sans tentacules. Chaque tentacule sera un bot qui travaille pour toi. Huit projets, huit tentacules.</p>
 
-## Choisis ton projet
-
-Un petit business, réel ou rêvé. Bougies, cours de guitare, réparation de vélos.
-
-Une seule phrase : « Je vends ___ à ___. »
-
-## Le fil rouge
-
-Léa, créatrice fictive. Elle vend des bougies en ligne : **Bougies Lune**.
-
-Son premier employé : **Lumen**. Il répond aux clients.
-
-<div class="box info" markdown="1">
-Léa est inventée. Toi, tu fais TON projet. Jamais de vrais noms, numéros ou adresses dans les exemples.
+<div class="pieuvre" data-reaction="accueil" markdown="1">
+« Salut. Je n'ai encore aucune tentacule. On commence ? »
 </div>
 
-## Un bot, pas un chat
+## Étape 1 · Ton projet (2 min)
 
-Un chat s'oublie. Un bot reste : un nom, un métier, une mémoire.
+Une **tentacule** = un **bot** Grok Bot. Il a un nom, un métier, une mémoire.
 
-<div class="schema">
-  <div class="etape"><b>1</b>+</div>
-  <div class="fleche">-></div>
-  <div class="etape"><b>2</b>Un nom</div>
-  <div class="fleche">-></div>
-  <div class="etape"><b>3</b>« Bonjour »</div>
-</div>
+Il lui faut d'abord une mission : ton projet.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 1 message.
+**À toi.** Écris une phrase : « Je vends ___ à ___. »
 
-1. Écris ta phrase : « Je vends ___ à ___. »
-2. Ouvre l'app **Grok Bot** sur ton iPhone. Touche le **+** en haut à droite.
-3. Donne au bot un nom d'employé, pas « Assistant ».
-4. Envoie : « Bonjour. Je vends ___ à ___. Que pourrais-tu faire pour moi ? »
-
-**C'est réussi si :**
-
-- ta phrase tient en une ligne (étape 1) ;
-- ton bot existe avec un vrai nom (étapes 2-3) ;
-- il propose des tâches liées à TON projet (étape 4).
+**C'est réussi si :** ta phrase tient sur une ligne.
 </div>
 
 <div class="box corrige" markdown="1">
-Phrase : « Je vends des bougies parfumées à des particuliers. »  
-Bot : **Lumen**.  
-Réponse type : répondre aux questions sur les parfums, les délais, préparer des réponses.
+Fil rouge (fictif) : « Je vends des bougies parfumées à des particuliers. » C'est Léa, de Bougies Lune.
+</div>
+
+## Étape 2 · Fais pousser la tentacule (2 min)
+
+Sur l'accueil de l'app : le **+** en haut à droite crée un bot. La loupe cherche. Le rond à tes initiales ouvre ton compte.
+
+<div class="box atoi" markdown="1">
+**À toi.** Ouvre l'app Grok Bot sur ton iPhone. Touche le **+** en haut à droite. Donne un nom d'employé, pas « Assistant ».
+
+**C'est réussi si :** ton bot apparaît sur l'accueil avec ce nom.
+</div>
+
+<div class="box corrige" markdown="1">
+Léa nomme sa tentacule **Lumen**.
+</div>
+
+<div class="pieuvre" data-reaction="croissance" markdown="1">
+Tentacule 1 sur 8. « Je la sens ! »
+</div>
+
+## Étape 3 · Premier battement (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie à ton bot : « Bonjour. Je vends ___ à ___. Que pourrais-tu faire pour moi ? »
+
+**C'est réussi si :** il propose des tâches liées à TON projet.
+</div>
+
+<div class="box corrige" markdown="1">
+Lumen : « Répondre aux questions sur les parfums, préparer tes réponses aux clients, trier tes messages. »
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« Elle bouge ! Maintenant, apprenons-lui un métier. »
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Un projet = une phrase.
-- + en haut à droite -> un bot avec un vrai nom.
+- Tentacule = bot. + en haut à droite pour la faire pousser.
+- Une mission en une phrase.
 
-**Bravo !** Leçon 2 : donne-lui un métier.
+**Leçon 2 :** l'ADN de ta tentacule.
 </div>

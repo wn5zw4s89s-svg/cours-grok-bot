@@ -214,7 +214,7 @@ for (const f of files) {
   let court = title.replace(/^Leçon\s+\d+\s*:\s*/i, '');
   court = court.charAt(0).toUpperCase() + court.slice(1);
   const raw = fs.readFileSync(path.join(SRC, f), 'utf8');
-  const bm = raw.match(/badge\s+\*\*([^*]+)\*\*/i);
+  const bm = raw.match(/badge\s*:?\s*\*\*([^*]+)\*\*/i);
   dispo.set(num, { id, num, title, court, html, disponible: true, _badge: bm ? bm[1].trim() : null });
 }
 
