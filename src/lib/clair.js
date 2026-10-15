@@ -11,5 +11,5 @@ const dec = (s) => s.replace(/<[^>]+>/g, '').replace(/&#39;/g, '’').replace(/&
 export function clair(l) {
   if (l.niveau === 1 && P1[l.num]) return { titre: l.court, but: P1[l.num][1] };
   const h = [...(l.html || '').matchAll(/<h2[^>]*>(.*?)<\/h2>/g)].map((m) => dec(m[1])).filter((x) => !/^(Récap|Défi|Quiz)/i.test(x)).slice(0, 3);
-  return { titre: l.court, but: h.length ? `Au programme : ${h.join(' · ')}.` : '' };
+  return { titre: l.court, but: '' };
 }

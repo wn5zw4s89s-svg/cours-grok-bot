@@ -3,61 +3,39 @@ import Base from '../layouts/Base.astro';
 import { clair } from '../lib/clair.js';
 import Octo from '../components/Octo.astro';
 import site from '../data/site.json';
-import octo from '../data/octoboss.json';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const first = site.lecons[0];
-const tent = (id) => octo.tentacules.find((t) => t.projet === id) || { nom: `Projet ${id}`, emoji: '🐙' };
-const t1 = tent(1);
-const lecs1 = site.lecons.filter((l) => l.niveau === 1);
+const nu = (t = '') => t.replace(/\s*\([^)]*\)/g, '');
 ---
 <Base page="accueil">
-  <section class="next">
-    <div class="next-tete">
-      <div class="octo-host octo-petit" data-octo><Octo /></div>
-      <p class="next-kick" data-next-kick>Ta première leçon · 2&nbsp;min par étape</p>
-    </div>
-    <h1 class="next-titre" data-next-titre>Leçon {first.num} · {clair(first).titre}</h1>
-    <p class="next-but" data-next-but>{clair(first).but}</p>
+  <section class="home">
+    <div class="octo-host octo-home" data-octo><Octo /></div>
+    <h1 class="home-titre" data-next-titre>Leçon {first.num} · {nu(clair(first).titre)}</h1>
+    <p class="home-but" data-next-but>{clair(first).but}</p>
     <a class="btn btn-large btn-go" data-continuer href={`${base}lecon/${first.id}/`}>Commencer</a>
-    <p class="next-prog" data-progres>Projet 1 sur {site.projets.length} ({t1.nom}) · 0 leçon sur {lecs1.length}</p>
   </section>
 
-  <h2 class="path-titre" data-projet-nom>Projet 1 · {site.projets[0]?.nom}</h2>
-  <ol class="path2" data-chemin aria-label="Les leçons du projet">
-    {lecs1.map((l, i) => (
-      <li class={`step${i === 0 ? ' cur' : ''}`}>
-        <span class={`node${i === 0 ? ' cur' : ' lock'}`}>{l.num}</span>
-        {i === 0 ? <a class="step-lien" href={`${base}lecon/${l.id}/`}>{clair(l).titre}</a> : <span class="step-txt">{clair(l).titre}</span>}
-      </li>
-    ))}
-    <li class="step"><span class="node lock">✓</span><span class="step-txt">Quiz : vérifie ce que tu as appris</span></li>
-  </ol>
-
-  <p class="t-ligne" data-t-ligne>🐙 Bots créés : 0 sur 8 (tentacules 0 sur 8). 1 projet terminé = 1 bot.</p>
-
-<h2 class="sec">Les 8 projets</h2>
-  {site.niveaux.map((niv) => {
-    const lecs = site.lecons.filter((l) => l.niveau === niv.id);
-    const quiz = site.quiz.find((q) => q.id === niv.quizId);
-    const t = tent(niv.id);
-    return (
-      <details class="niv" data-niveau-bloc={niv.id}>
-        <summary><span class="niv-emo">{t.emoji}</span><span class="niv-nom"><small>Projet {niv.id} ({t.nom})</small>{niv.nom}</span><span class="niv-etat" data-niv-etat={niv.id}>{lecs.length} leçons</span></summary>
-        <ol class="liste-compacte">
-          {lecs.map((l) => (
-            <li class="item-lecon" data-lecon-carte={l.id}>
-              <a href={`${base}lecon/${l.id}/`}>
-                <span class="pastille" data-etat>{l.num}</span>
-                <span class="titre">{l.court}</span>
-                <span class="cadenas" aria-hidden="true">🔒</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-        {quiz && <a class="lien-quiz" href={`${base}quiz/${quiz.slug}/`} data-quiz-lien={quiz.id} data-quiz-niv={niv.id}>Quiz</a>}
-      </details>
-    );
-  })}
-
-  <p class="discret centre"><button class="lien" data-reset>Recommencer</button></p>
+  <div class="sheet" id="lecons" data-sheet hidden>
+    <div class="sheet-in" role="dialog" aria-label="Toutes les leçons">
+      <div class="sheet-tete"><h2>Leçons</h2><button type="button" class="x" data-sheet-close aria-label="Fermer">✕</button></div>
+      {site.niveaux.map((niv) => {
+        const lecs = site.lecons.filter((l) => l.niveau === niv.id);
+        const quiz = site.quiz.find((q) => q.id === niv.quizId);
+        return (
+          <details class="niv" data-niveau-bloc={niv.id}>
+            <summary><span class="niv-nom">{niv.id}. {nu(niv.nom)}</span><span class="niv-etat" data-niv-etat={niv.id}></span></summary>
+            <ol class="liste-compacte">
+              {lecs.map((l) => (
+                <li class="item-lecon" data-lecon-carte={l.id}>
+                  <a href={`${base}lecon/${l.id}/`}><span class="pastille" data-etat>{l.num}</span><span class="titre">{nu(l.court)}</span></a>
+                </li>
+              ))}
+            </ol>
+            {quiz && <a class="lien-quiz" href={`${base}quiz/${quiz.slug}/`} data-quiz-lien={quiz.id} data-quiz-niv={niv.id}>Quiz</a>}
+          </details>
+        );
+      })}
+      <p class="centre"><button class="lien" data-reset>Recommencer à zéro</button></p>
+    </div>
+  </div>
 </Base>

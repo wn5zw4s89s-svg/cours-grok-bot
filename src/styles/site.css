@@ -368,3 +368,36 @@ body{min-height:100vh;min-height:100dvh}
 .lecon-tete h1{font-size:26px;line-height:1.15;margin:2px 0 0}
 .but{font-size:16px;line-height:1.4;margin:6px 0 18px;opacity:.9}
 .but b{color:var(--c)}
+/* ===== ux3 : radicalement minimal ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.top{display:flex;align-items:center;justify-content:space-between;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+.ico-liste{background:none;border:0;color:var(--m);width:44px;height:44px;display:grid;place-items:center;margin-right:-10px;cursor:pointer}
+.home{min-height:calc(100dvh - 160px);display:flex;flex-direction:column;justify-content:center;text-align:center;padding:0 6px}
+.home .octo-home{width:132px;height:132px;margin:0 auto 18px}
+.home-titre{font-size:30px;line-height:1.15;margin:0 0 10px}
+.home-but{margin:0 auto;max-width:30ch;font-size:17px;line-height:1.4;color:var(--m)}
+.home-but:empty{display:none}
+.home .btn-go{margin-top:32px}
+.sheet{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.55);display:flex;align-items:flex-end}
+.sheet[hidden]{display:none}
+.sheet-in{background:var(--bg);width:100%;max-height:86dvh;overflow-y:auto;border-radius:22px 22px 0 0;padding:14px 20px calc(24px + env(safe-area-inset-bottom))}
+.sheet-tete{display:flex;justify-content:space-between;align-items:center;position:sticky;top:-14px;background:var(--bg);padding:6px 0}
+.sheet-tete h2{font-size:20px}
+.x{background:none;border:0;color:var(--m);font-size:20px;width:44px;height:44px;margin-right:-12px;cursor:pointer}
+.sheet .niv-nom{font-size:16px;font-weight:700}
+body.fige{overflow:hidden}
+.lh{display:flex;align-items:center;gap:14px;margin:4px 0 22px}
+.lh .retour{margin:0;font-size:22px}
+.lh .bar{flex:1;height:4px;margin:0;background:var(--card)}
+.pas-a-pas .contenu h2{font-size:26px;line-height:1.2;margin:0 0 14px}
+.etape-sec>:first-child{margin-top:0}
+.pas-a-pas .fin-lecon{margin-top:28px;padding-top:0}
+.pieuvre .octo-mini{width:40px;height:40px}
+.lecon-tete,.but,.gb-badge-pop h2{display:none}
+.quiz-page .lh{margin-bottom:16px}
+[hidden]{display:none!important}
+body[data-page=lecon] .top,body[data-page=quiz] .top{display:none}
+body[data-page=lecon] main,body[data-page=quiz] main{padding-top:max(18px,env(safe-area-inset-top))}
+.box.atoi::before{display:none}
+.etape-sec>.pieuvre:first-child{display:none}
+.lh{position:static;padding:0}

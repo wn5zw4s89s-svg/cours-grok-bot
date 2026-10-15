@@ -214,17 +214,10 @@
     const fermer = () => { overlay.classList.remove('on'); setTimeout(() => overlay.remove(), 300); onNext && onNext(); };
     const overlay = $('div', { class: 'gb-badge-pop', role: 'dialog', 'aria-label': 'Badge débloqué' },
       host,
-      $('h2', {}, projId ? 'Nouveau bot\u00a0! (nouvelle tentacule)' : 'Bravo, boss\u00a0!'),
       $('div', { class: 'gb-badge-carte' },
         $('div', { class: 'medal' }, emoji),
-        $('div', { class: 'k' }, 'Badge débloqué'),
         $('div', { class: 'n' }, nom),
-        $('div', { class: 'd' }, projId ? TENT(projId).phrase : OCTO.slogan),
         $('a', { class: 'btn btn-large btn-x', href: shareUrl(nom, emoji), target: '_blank', rel: 'noopener noreferrer' }, 'Partager sur 𝕏')),
-      $('div', { class: 'stats' },
-        $('div', {}, $('small', {}, 'Bulles'), `🫧 ${d.xp || 0}`),
-        $('div', {}, $('small', {}, 'Série'), `🔥 ${d.streak?.count || 0}`),
-        $('div', {}, $('small', {}, 'Bots (tentacules)'), `${nbT}/${UNITES.length || 8}`)),
       $('button', { class: 'lien', type: 'button', on: { click: fermer } }, 'Continuer'));
     document.body.appendChild(overlay);
     const o = makeOcto(host, projId ? nbT - 1 : nbT);
@@ -287,7 +280,7 @@
       const nxt = ls.find((l) => !d.lecons[l.id]), debut = !L.some((l) => d.lecons[l.id]);
       document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `Projet ${cur.id} sur ${UNITES.length} (${TENT(cur.id).nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
       document.querySelectorAll('[data-next-kick]').forEach((e) => (e.textContent = debut ? 'Ta première leçon · 2\u00a0min par étape' : nxt ? 'Ta prochaine leçon' : 'Dernière étape'));
-      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${nxt.clair || nxt.court}` : `Quiz · gagne « ${TENT(cur.id).nom} »`));
+      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · gagne « ${TENT(cur.id).nom} »`));
       document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
       document.querySelectorAll('[data-t-ligne]').forEach((e) => (e.textContent = `🐙 Bots créés : ${nbT} sur ${UNITES.length} (tentacules ${nbT} sur ${UNITES.length}). 1 projet terminé = 1 bot.`));
       document.querySelectorAll('[data-dire]').forEach((e) => (e.textContent = debut ? 'Salut boss ! Crée ton premier bot en 2\u00a0min.' : nxt ? `Bien joué boss ! ${f} leçon${f > 1 ? 's' : ''} faite${f > 1 ? 's' : ''}. On continue ?` : 'Tout est fait ! Passe le quiz pour ta tentacule.'));
@@ -338,7 +331,7 @@
         b.classList.toggle('verrouille', !ouvert && !fini);
       });
       document.querySelectorAll(`[data-niv-etat="${n.id}"]`).forEach((e) => {
-        e.textContent = fini ? `${ls.length} leçons ✓` : n.id === cur?.id ? `${f}/${ls.length}` : `${ls.length} leçons 🔒`;
+        e.textContent = fini ? '✓' : f > 0 ? `${f}/${ls.length}` : '';
       });
     });
 
@@ -359,7 +352,7 @@
     document.querySelectorAll('[data-quiz-lien]').forEach((a) => {
       const n = +a.dataset.quizNiv, ok = nivFini(d, n), q = d.quiz[a.dataset.quizLien];
       a.classList.toggle('mute', !ok);
-      a.textContent = ok ? (q ? `Quiz · ${q.meilleur}/${q.total}` : 'Quiz →') : 'Quiz 🔒';
+      a.textContent = ok ? (q ? `Quiz ✓ ${q.meilleur}/${q.total}` : 'Quiz →') : 'Quiz 🔒';
     });
   }
 
@@ -396,7 +389,7 @@
       pressFx(btn);
       const go = () => { location.href = btn.dataset.suite || M.base; };
       octos().forEach((o) => octoMood(o, 'happy'));
-      if (!deja) { confetti(niveauComplete ? 72 : 40, 70); btn.textContent = `+${XP_LECON} 🫧 Bien joué, boss !`; btn.classList.add('green'); rafraichir(); }
+      if (!deja) { confetti(niveauComplete ? 72 : 40, 70); btn.textContent = 'Bien joué !'; btn.classList.add('green'); rafraichir(); }
       if (nouveaux.length) {
         montrerBadge(nouveaux[nouveaux.length - 1], go);
       } else {
@@ -442,7 +435,6 @@
       const actions = [
         $('div', { class: 'etoiles' }, '★'.repeat(et) + '☆'.repeat(3 - et)),
         $('div', { class: 'gros-score' }, `${score}/${N}`),
-        $('p', { class: 'q-xp' }, `+${XP_QUIZ}${score === N ? ` (+${XP_QUIZ_PARFAIT} parfait)` : ''} XP`),
       ];
       if (nouveaux.length) {
         const b = nouveaux[nouveaux.length - 1];
@@ -473,7 +465,6 @@
           $('div', { class: ok ? 'ok' : 'ko' }, ok ? 'Bien joué, boss ! 🐙' : 'Aïe… ton bot va paniquer.'),
           $('div', {}, x.explication || ''),
           $('button', { class: 'btn', on: { click: () => jouer(i + 1, s) } }, i + 1 === N ? 'Voir mon score' : 'Suivante →')));
-        el.querySelector('.q-score').textContent = `${s}`;
         const o = octos()[0]; octoMood(o, ok ? 'happy' : 'sad'); if (!ok) setTimeout(() => octoMood(o), 1400);
         if (ok) confetti(16, 45);
         fb.firstChild.classList.add(ok ? 'good' : 'bad');
@@ -481,8 +472,6 @@
       } } }, c));
       document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', i / N));
       el.replaceChildren($('div', { class: 'q-carte' },
-        $('div', { class: 'q-entete' }, $('span', {}, `${i + 1} / ${N}`), $('span', { class: 'q-score' }, `${score}`)),
-        $('div', { class: 'barre', style: 'margin:12px 0 0' }, $('span', { style: `width:${(i / N) * 100}%` })),
         $('div', { class: 'q-texte' }, x.question), $('div', { class: 'q-choix' }, btns), fb));
     };
     jouer(0, 0);
@@ -514,12 +503,31 @@
     const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { reagir(e.target); io.unobserve(e.target); } }), { threshold: 0.6 });
     pv.forEach((p) => io.observe(p));
   } else pv.forEach(reagir);
-  // Barre de lecture des leçons
-  const bl = document.querySelectorAll('[data-barre-lecon]');
-  if (bl.length) {
-    const maj = () => { const h = document.documentElement, m = h.scrollHeight - innerHeight; bl.forEach((b) => b.style.setProperty('--p', m > 0 ? Math.min(1, scrollY / m) : 1)); };
-    addEventListener('scroll', maj, { passive: true }); maj();
-  }
+  // Une étape par écran
+  document.querySelectorAll('.lecon .contenu').forEach((c) => {
+    const art = c.closest('.lecon'), kids = [...c.childNodes], groups = [[]];
+    kids.forEach((k) => { if (k.nodeName === 'H2' && groups[groups.length - 1].some((x) => x.nodeName === 'H2')) groups.push([]); groups[groups.length - 1].push(k); });
+    const secs = groups.map((g) => { const d = $('section', { class: 'etape-sec' }); g.forEach((k) => d.appendChild(k)); return d; });
+    c.replaceChildren(...secs);
+    const nxt = art.querySelector('[data-suivant]'), fin = art.querySelector('[data-terminer]'), bar = art.querySelectorAll('[data-barre-lecon]');
+    let k = 0;
+    const show = (n) => {
+      k = n; secs.forEach((s, i) => (s.hidden = i !== n));
+      const last = n === secs.length - 1;
+      nxt.hidden = last; fin.hidden = !last;
+      bar.forEach((b) => b.style.setProperty('--p', (n + 1) / secs.length));
+      scrollTo(0, 0);
+      secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
+    };
+    art.classList.add('pas-a-pas');
+    nxt.addEventListener('click', () => show(k + 1));
+    show(0);
+  });
+  // Liste des leçons (feuille)
+  const sheet = document.querySelector('[data-sheet]');
+  document.querySelector('[data-sheet-open]')?.addEventListener('click', () => { sheet.hidden = false; document.body.classList.add('fige'); });
+  const ferme = () => { sheet.hidden = true; document.body.classList.remove('fige'); };
+  sheet?.addEventListener('click', (e) => { if (e.target === sheet || e.target.closest('[data-sheet-close]')) ferme(); });
   // Boutons 3D : effet pression tactile
   document.addEventListener('pointerdown', (e) => { const b = e.target.closest('.btn,.node,.q-choix button'); if (b) pressFx(b); });
 

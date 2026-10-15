@@ -30,13 +30,9 @@ const meta = {
   <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
 </head>
 <body data-page={page}>
-  <div class="bulles" aria-hidden="true" data-bulles></div>
   <header class="top">
     <a class="logo" href={base}>Octo<b>Boss</b></a>
-    <div class="pills">
-      <span class="pill" data-streak-pill hidden title="Jours d'affilée"><span class="flame">🔥</span> <span data-streak-n>0</span> <small data-streak-u>jour</small></span>
-      <span class="pill xp" data-xp-pill hidden title="Bulles gagnées : 10 par leçon">🫧 <span data-xp-n>0</span> <small data-xp-u>bulles</small></span>
-    </div>
+    {page === 'accueil' && <button type="button" class="ico-liste" data-sheet-open aria-label="Toutes les leçons"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>}
   </header>
   <main><slot /></main>
   <script type="application/json" id="gb-meta" set:html={JSON.stringify(meta)} />
