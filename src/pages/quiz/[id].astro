@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import quiz from '../../data/quiz.json';
+export function getStaticPaths() { return quiz.map((q) => ({ params: { id: q.slug }, props: { q } })); }
+const { q } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<Base title={`Quiz ${q.id}`} page="quiz">
+  <article class="quiz-page">
+    <a class="retour" href={base}>← Accueil</a>
+    <p class="surtitre">Quiz · {q.id.replace('PARTIE-', 'Partie ')}</p>
+    <h1>{q.titre}</h1>
+    <div class="quiz" data-quiz={JSON.stringify(q)}><noscript>Ce quiz a besoin de JavaScript.</noscript></div>
+  </article>
+</Base>

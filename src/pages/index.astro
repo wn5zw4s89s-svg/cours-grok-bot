@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import lecons from '../data/lecons.json';
+import quiz from '../data/quiz.json';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<Base page="accueil">
+  <section class="hero">
+    <p class="surtitre">Ton parcours</p>
+    <h1>Apprends à construire tes bots, <span class="accent">une leçon à la fois.</span></h1>
+    <p class="intro">Fais une leçon, coche « J'ai terminé », et la suivante se débloque. Gagne des badges en chemin.</p>
+    <div class="carte-progres">
+      <div class="progres-ligne"><strong data-niveau-nom>Débutant</strong><span data-compte>0 / {lecons.length} leçons</span></div>
+      <div class="barre"><span data-barre></span></div>
+      <a class="btn" data-continuer href={`${base}lecon/${lecons[0].id}/`}>Commencer</a>
+    </div>
+  </section>
+
+  <section class="bloc">
+    <h2>Leçons</h2>
+    <ol class="liste-lecons">
+      {lecons.map((l, i) => (
+        <li class="carte-lecon" data-lecon-carte={l.id}>
+          <a href={`${base}lecon/${l.id}/`}>
+            <span class="pastille" data-etat>{i + 1}</span>
+            <span class="txt"><span class="num">{l.num}</span><span class="titre">{l.court}</span></span>
+            <span class="cadenas" aria-hidden="true">🔒</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="bloc">
+    <h2>Quiz</h2>
+    <div class="grille">
+      {quiz.map((q) => (
+        <a class="carte-quiz" href={`${base}quiz/${q.slug}/`}>
+          <span class="num">{q.id.replace('PARTIE-', 'Partie ')}</span>
+          <span class="titre">{q.titre}</span>
+          <span class="score" data-quiz-score={q.id}>{q.questions.length} questions</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="bloc">
+    <h2>Badges</h2>
+    <div class="badges" data-badges></div>
+    <p class="discret"><button class="lien" data-reset>Recommencer à zéro</button></p>
+  </section>
+</Base>

@@ -1,0 +1,27 @@
+---
+import '../styles/site.css';
+import lecons from '../data/lecons.json';
+import quiz from '../data/quiz.json';
+const { title, page = '' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const meta = { base, lecons: lecons.map((l) => ({ id: l.id, num: l.num, court: l.court })), quiz: quiz.map((q) => ({ id: q.id, slug: q.slug, titre: q.titre, nb: q.questions.length })) };
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title ? `${title} · Cours Grok Bot` : 'Cours Grok Bot'}</title>
+  <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+</head>
+<body data-page={page}>
+  <header class="top">
+    <a class="logo" href={base}><span class="logo-dot">G</span> Cours Grok Bot</a>
+    <div class="top-xp"><span class="niveau-badge" data-niveau>Niveau 1</span><div class="mini-barre"><span data-barre></span></div></div>
+  </header>
+  <main><slot /></main>
+  <footer class="pied">Ta progression reste sur cet appareil. Aucun compte, aucune donnée envoyée.</footer>
+  <script type="application/json" id="gb-meta" set:html={JSON.stringify(meta)} />
+  <script is:inline src={`${base}jeu.js`} defer></script>
+</body>
+</html>

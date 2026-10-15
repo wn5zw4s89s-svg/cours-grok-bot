@@ -1,7 +1,4 @@
 node_modules/
 dist/
 .astro/
-src/content/docs/lecons/
-src/content/docs/quiz/
-src/data/quiz/
-public/index-contenu.json
+src/data/
