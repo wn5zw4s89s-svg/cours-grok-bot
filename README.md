@@ -1,19 +1,11 @@
-# Cours Grok Bot — V2 (Astro, sans Starlight)
+# Cours Grok Bot — V2 ultra-minimaliste
 
-Site : https://wn5zw4s89s-svg.github.io/cours-grok-bot/ — Node ≥ 22.12.
+https://wn5zw4s89s-svg.github.io/cours-grok-bot/
 
-    npm install && npm run dev      # local
-    npm run build                   # site statique dans dist/
+6 niveaux · 43 leçons (plan dans `contenu/niveaux.json`). Publié : **Niveau 1** (leçons 1–5 + quiz PARTIE-1).
 
-## Contenu
-Déposer dans `contenu/` : `LECON-*.md` (ordre alphabétique = ordre du parcours) et `PARTIE-N.quiz.json`
-(`{"id":"PARTIE-1","titre":"…","questions":[{"id":"q1","question":"…","choix":[…],"bonne_reponse":0,"explication":"…"}]}`).
-Sans vrai quiz, `exemples/PARTIE-1.quiz.json` (EXEMPLE) est utilisé. Chaque push sur main redéploie.
+    npm install && npm run build
 
-Blocs reconnus (`<div class="box …" markdown="1">`, une balise par ligne) : info, question, attention, erreur,
-atoi (À toi de jouer), plus, corrige (derrière « Voir la solution »), preuve (texte + ✅/❌).
-Une leçon qui contient « ✅ ou ❌ » sans bloc preuve reçoit une case de preuve en fin de leçon.
+Anciennes leçons (2A, 3B…) : `archive/lecons-legacy/` — plus affichées.
 
-## Jeu
-Aucun compte. Progression anonyme dans le navigateur (`localStorage`, clé `gb2:progression`) :
-leçons terminées (débloquent la suivante), preuves, dernier et meilleur score des quiz, niveaux, badges.
+À l’import, certaines sections des `.md` sont masquées (liste : `src/data/masked-sections.json`) sans modifier les fichiers de Prof Groksky.

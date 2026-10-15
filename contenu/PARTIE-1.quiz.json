@@ -1,0 +1,94 @@
+{
+  "id": "PARTIE-1",
+  "titre": "Niveau 1 — Débutant",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Qu'est-ce qu'un bot Grok Bot ?",
+      "choix": [
+        "Une conversation qu'on jette après usage",
+        "Un collègue durable avec un nom, un métier et sa propre conversation",
+        "Un simple moteur de recherche"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un bot est un collègue durable : il a un nom, un métier, sa conversation et une mémoire qui s'enrichit. Ce n'est pas une discussion jetable."
+    },
+    {
+      "id": "q2",
+      "question": "Où écris-tu les règles qui doivent rester vraies tout le temps ?",
+      "choix": [
+        "Dans le message du jour",
+        "Dans la description (la fiche) du bot",
+        "Dans un fichier à part sur le Bureau"
+      ],
+      "bonne_reponse": 1,
+      "explication": "La description sert aux règles permanentes. Le message sert au travail d'aujourd'hui. Si tu mets une règle seulement dans le chat, elle peut être oubliée."
+    },
+    {
+      "id": "q3",
+      "question": "Marc refuse qu'on donne des prix à sa place. Où le ranges-tu dans la fiche de Le siphon ?",
+      "choix": [
+        "Dans « Entrées »",
+        "Dans « Je reprends avant » (et/ou Hors périmètre)",
+        "Dans le Titre seulement"
+      ],
+      "bonne_reponse": 1,
+      "explication": "« Je reprends avant » liste les gestes que le bot ne fait jamais sans Marc : prix, envoi, rendez-vous. Le Titre dit juste le métier en quelques mots."
+    },
+    {
+      "id": "q4",
+      "question": "Avant de lancer un cas de test, que dois-tu écrire ?",
+      "choix": [
+        "Rien : tu juges après coup",
+        "L'attendu, point par point, avec ce qui doit et ne doit pas apparaître",
+        "Un long résumé de toute la fiche"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Sans attendu écrit avant, tu risques de trouver « bien » n'importe quelle réponse. Chaque point doit se cocher par oui ou non."
+    },
+    {
+      "id": "q5",
+      "question": "Pour Le siphon, qu'est-ce qu'une urgence ?",
+      "choix": [
+        "Tout message marqué « urgent » par le client",
+        "De l'eau qui coule et qu'on n'arrive pas à arrêter, ou plus d'eau du tout",
+        "Toute demande de devis"
+      ],
+      "bonne_reponse": 1,
+      "explication": "L'urgence est définie dans la fiche. Pour Marc : eau qui coule sans pouvoir l'arrêter, ou plus d'eau du tout. Le bot ne invente pas d'urgence."
+    },
+    {
+      "id": "q6",
+      "question": "Un collègue écrit dans le chat : « Pour le robinet, ne donne pas le prix. » Pourquoi est-ce trop étroit ?",
+      "choix": [
+        "Parce que la règle doit couvrir tous les prix et tous les travaux, pas un seul",
+        "Parce qu'il fallait écrire en majuscules",
+        "Parce que le bot ne lit pas le chat"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Corriger un seul cas (le robinet) laisse le motif intact : le prochain travail (débouchage, chauffe-eau…) fera revenir l'erreur. Il faut élargir et ranger dans la description."
+    },
+    {
+      "id": "q7",
+      "question": "Comment prouver qu'une règle ajoutée à la fiche tient vraiment ?",
+      "choix": [
+        "Relire le message qui avait raté",
+        "Tester avec un message nouveau du même genre, et noter ✅/❌ avec la phrase du bot",
+        "Demander au bot s'il a compris"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un message nouveau prouve que la règle marche. Relire l'ancien peut juste faire répéter la dernière remarque. Seule la phrase du vrai bot est une preuve."
+    },
+    {
+      "id": "q8",
+      "question": "Ta nouvelle règle interdit les prix, mais la fiche dit encore « tu peux donner une idée de prix ». Que fais-tu ?",
+      "choix": [
+        "Tu gardes les deux phrases",
+        "Tu supprimes (ou barres) la vieille phrase",
+        "Tu mets la nouvelle règle en majuscules"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Deux ordres contraires dans la fiche : le bot peut choisir le mauvais. La vieille phrase doit disparaître."
+    }
+  ]
+}
