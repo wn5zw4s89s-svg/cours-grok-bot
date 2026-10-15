@@ -24,7 +24,7 @@ Objectif inchangé : fiche · 5 cas · skill · garde-fou brouillon. Rien d'envo
 | Fiche claire (métier, fini quand, je reprends avant) | 25 |
 | 5 cas + 3 lancés avec ✅/❌ et phrase | 25 |
 | Skill + 2e exemple réussi | 25 |
-| Garde-fou brouillon / Ask first prouvé | 25 |
+| Garde-fou brouillon / demander d'abord prouvé | 25 |
 
 Réussi à partir de **90 %** (90 points). Pas de chrono.
 

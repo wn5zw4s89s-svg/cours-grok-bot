@@ -2,52 +2,37 @@
 import Base from '../layouts/Base.astro';
 import site from '../data/site.json';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const premiere = site.lecons.find((l) => l.disponible) || site.lecons[0];
 ---
 <Base page="accueil">
-  <section class="hero hero-min">
+  <section class="hero-min">
     <h1>Cours Grok Bot</h1>
-    <div class="carte-progres">
-      <div class="progres-ligne"><strong data-niveau-nom>Niveau 1 · Débutant</strong><span data-compte></span></div>
-      <div class="barre"><span data-barre></span></div>
-      <a class="btn btn-large" data-continuer href={`${base}lecon/${premiere.id}/`}>Continuer</a>
-    </div>
+    <p class="objectif" data-objectif>0/5 avant Apprenti</p>
+    <div class="barre"><span data-barre-niv></span></div>
+    <a class="btn btn-large" data-continuer href={`${base}lecon/${site.lecons[0].id}/`}>Commencer</a>
+    <p class="prochain-badge" data-prochain-badge></p>
   </section>
 
   {site.niveaux.map((niv) => {
     const lecs = site.lecons.filter((l) => l.niveau === niv.id);
     const quiz = site.quiz.find((q) => q.id === niv.quizId);
     return (
-      <section class="bloc-min" data-niveau-bloc={niv.id}>
-        <div class="niv-ligne">
-          <h2>Niveau {niv.id} · {niv.nom}</h2>
-          <span class="niv-count" data-niv-compte={niv.id}></span>
-        </div>
-        <div class="mini-barre large"><span data-niv-barre={niv.id}></span></div>
+      <details class="niv" data-niveau-bloc={niv.id}>
+        <summary><span class="niv-nom">Niveau {niv.id} · {niv.nom}</span><span class="niv-etat" data-niv-etat={niv.id}>{lecs.length} leçons</span></summary>
         <ol class="liste-compacte">
           {lecs.map((l) => (
-            <li class:list={['item-lecon', { bientot: !l.disponible }]} data-lecon-carte={l.id}>
-              {l.disponible ? (
-                <a href={`${base}lecon/${l.id}/`}>
-                  <span class="pastille" data-etat>{l.num}</span>
-                  <span class="titre">{l.court}</span>
-                  <span class="cadenas" aria-hidden="true">🔒</span>
-                </a>
-              ) : (
-                <span class="bientot-ligne"><span class="pastille muted">{l.num}</span><span class="titre muted">Bientôt</span></span>
-              )}
+            <li class="item-lecon" data-lecon-carte={l.id}>
+              <a href={`${base}lecon/${l.id}/`}>
+                <span class="pastille" data-etat>{l.num}</span>
+                <span class="titre">{l.court}</span>
+                <span class="cadenas" aria-hidden="true">🔒</span>
+              </a>
             </li>
           ))}
         </ol>
-        {quiz ? (
-          <a class="lien-quiz" href={`${base}quiz/${quiz.slug}/`} data-quiz-score={quiz.id}>Quiz</a>
-        ) : (
-          <span class="lien-quiz mute">Quiz · bientôt</span>
-        )}
-      </section>
+        {quiz && <a class="lien-quiz" href={`${base}quiz/${quiz.slug}/`} data-quiz-lien={quiz.id} data-quiz-niv={niv.id}>Quiz</a>}
+      </details>
     );
   })}
 
   <p class="discret centre"><button class="lien" data-reset>Recommencer</button></p>
-  <div class="badges" data-badges hidden></div>
 </Base>

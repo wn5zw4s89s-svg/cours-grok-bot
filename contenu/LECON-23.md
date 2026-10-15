@@ -4,12 +4,12 @@
 
 ## Où la trouver
 
-Clique sur le nom du bot en haut -> onglet **Details** -> **Routines**. *Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
+Clique sur le nom du bot en haut du fil (ou `Cmd+Shift+I`). Ses routines sont listées dans ce panneau.
 
-Ouvre la routine : **Instruction**, **When to run**. En bas : **Pause**, **Test**, **Edit**, **Delete routine**.
+Ouvre la routine : la consigne, la fréquence. En bas : mettre en pause, tester, modifier, supprimer.
 
 <div class="box attention" markdown="1">
-**Test** fait un vrai travail et consomme. Un seul test. Supprimer une routine ne s'annule pas.
+Un test fait un vrai travail et consomme. Un seul test. Supprimer une routine ne s'annule pas.
 </div>
 
 <div class="box atoi" markdown="1">
@@ -17,8 +17,8 @@ Ouvre la routine : **Instruction**, **When to run**. En bas : **Pause**, **Test*
 
 1. Mets `fournitures-test.csv` sur l'ordinateur du bot : joins-le et demande « Enregistre ce fichier dans /workspace/fournitures-test.csv. »
 2. Envoie ta demande de routine (leçon 22).
-3. Ouvre la routine. Vérifie que **When to run** dit bien « du lundi au vendredi à 7 h ».
-4. Clique **Test**. Attends la fin de « Running… ». Le résultat arrive dans le chat.
+3. Ouvre la routine. Vérifie que la fréquence dit bien « du lundi au vendredi à 7 h ».
+4. Lance un test. Attends la fin de « Running… ». Le résultat arrive dans le chat.
 5. Compare à l'attendu. Note ✅/❌ + la phrase du bot.
 6. Mets la routine en **pause** (interrupteur sur sa ligne).
 
@@ -27,17 +27,17 @@ Ouvre la routine : **Instruction**, **When to run**. En bas : **Pause**, **Test*
 
 <div class="box corrige" markdown="1">
 **Attendu :** Joint fibre 1/2" (3/5) · Siphon évier PVC 40 mm (2/4) · Mitigeur lavabo (1/2). Aucune commande.  
-**Ligne de la routine :** Paused.
+**Ligne de la routine :** en pause.
 </div>
 
 <div class="box preuve" markdown="1">
-Bons articles ✅ « Joint fibre 1/2" : 3 / 5… » · Aucune commande ✅ · Paused ✅
+Bons articles ✅ « Joint fibre 1/2" : 3 / 5… » · Aucune commande ✅ · En pause ✅
 </div>
 
 <div class="fin" markdown="1">
 ## En résumé
 
-- Details -> Routines -> Test.
+- Nom du bot -> routine -> un test.
 - Un test, une relecture, puis pause.
 - Niveau 3 terminé.
 

@@ -28,23 +28,23 @@
       "id": "q3",
       "question": "Quel bouton est risqué sur un envoi ?",
       "choix": [
-        "Allow once",
-        "Always allow",
-        "Deny"
+        "Autoriser une fois",
+        "Autoriser toujours",
+        "Refuser"
       ],
       "bonne_reponse": 1,
       "explication": "Il enregistre une règle : les prochains envois passent sans toi."
     },
     {
       "id": "q4",
-      "question": "Une règle Ask first et une règle Allow automatically visent la même action. Qui gagne ?",
+      "question": "Une règle « demander d'abord » et une règle « autoriser automatiquement » visent la même action. Qui gagne ?",
       "choix": [
-        "Allow automatically",
-        "Ask first",
+        "Autoriser automatiquement",
+        "Demander d'abord",
         "La plus récente"
       ],
       "bonne_reponse": 1,
-      "explication": "Ask first gagne toujours."
+      "explication": "Demander d'abord gagne toujours."
     },
     {
       "id": "q5",
@@ -62,7 +62,7 @@
       "question": "Un site demande un mot de passe. Tu…",
       "choix": [
         "Le colles dans le chat",
-        "Prends la main (Take over) et le tapes toi-même",
+        "Reprends la main et le tapes toi-même",
         "Demandes au bot de deviner"
       ],
       "bonne_reponse": 1,
@@ -81,7 +81,7 @@
     },
     {
       "id": "q8",
-      "question": "Le bouton Test d'une routine…",
+      "question": "Tester une routine…",
       "choix": [
         "Ne coûte rien",
         "Fait un vrai travail et consomme",

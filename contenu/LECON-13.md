@@ -11,7 +11,7 @@ Pas de formulaire : tu demandes au bot.
 Pour l'appeler : tape `/` dans la zone de message, puis choisis le skill.
 
 <div class="box question" markdown="1">
-**Le skill n'apparaît pas dans `/` ?** Barre de gauche : **Connect apps** -> **Your plugins** -> **Manage plugins and skills** -> **Private skills**. *Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
+**Le skill n'apparaît pas dans `/` ?** Dans la barre de gauche, ouvre tes apps connectées, puis tes skills privés.
 </div>
 
 <div class="box atoi" markdown="1">

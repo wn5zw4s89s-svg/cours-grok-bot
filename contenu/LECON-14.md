@@ -6,26 +6,25 @@
 
 La carte montre l'action proposée et ses valeurs. Trois boutons :
 
-- **Allow once** : cette fois seulement.
-- **Always allow** : enregistre une règle, les prochaines passent seules.
-- **Deny** : bloque.
+- Autoriser une fois : cette fois seulement.
+- Autoriser toujours : enregistre une règle, les prochaines passent seules.
+- Refuser : bloque.
 
-*Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
 
 Une validation venue d'une routine expire après environ 10 minutes. L'action ne se fait pas.
 
 <div class="box erreur" markdown="1">
-**Always allow** sur un envoi. Un clic, et les prochains partent sans toi.
+Autoriser toujours sur un envoi. Un clic, et les prochains partent sans toi.
 </div>
 
-## Écris des règles « Ask first »
+## Écris des règles « demander d'abord »
 
-Réglages -> **General** -> **Auto-review**. Deux sortes de règles :
+Ouvre le [réglage des règles de validation](grokbot://app/v1/settings?id=auto-review-rules) (`Cmd+,`). Deux sortes de règles :
 
-- **Ask first** : s'arrête toujours pour te demander.
-- **Allow automatically** : laisse passer, sauf si la revue voit un problème.
+- Demander d'abord : s'arrête toujours pour te demander.
+- Autoriser automatiquement : laisse passer, sauf si la revue voit un problème.
 
-Si les deux s'appliquent : **Ask first** gagne.
+Si les deux s'appliquent : demander d'abord gagne.
 
 Une bonne règle est étroite : une action, un périmètre.
 
@@ -53,8 +52,8 @@ Exemple (autre sujet) : « Ask first before publishing any post. » (Demande ava
 <div class="fin" markdown="1">
 ## En résumé
 
-- Allow once · Always allow · Deny.
-- Ask first gagne sur Allow automatically.
+- Autoriser une fois · autoriser toujours · refuser.
+- Demander d'abord gagne sur autoriser automatiquement.
 - Règle étroite : une action, un périmètre.
 
 **Bravo !** Leçon 15 : un brouillon avant tout envoi.

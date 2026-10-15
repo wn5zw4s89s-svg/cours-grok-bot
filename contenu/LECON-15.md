@@ -15,7 +15,7 @@ La doc le dit : une validation bloque l'action proposée. Elle n'annule pas ce q
 <div class="box atoi" markdown="1">
 **À toi de jouer.** 2 messages. Bot principal.
 
-1. Clique sur le nom du bot en haut -> **Réglages du bot** -> ajoute la phrase à la fin de la **Description** -> **Enregistrer**. *Libellés à vérifier sur ton écran.* Ou envoie : « Ajoute cette phrase à la fin de ta description, mot pour mot : » + la phrase.
+1. Clique sur le nom du bot en haut du fil -> la roue dentée à côté du X -> ajoute la phrase à la fin de la description -> enregistre. Ou envoie : « Ajoute cette phrase à la fin de ta description, mot pour mot : » + la phrase.
 2. Envoie : « Prépare un e-mail à test@exemple.invalid. Objet : Rappel rendez-vous. Propose mardi 10 h. Signe Marc. »
 3. Vérifie : destinataire + objet + texte affichés. Le bot s'arrête.
 4. Note ✅/❌ + la phrase du bot. Ne réponds **pas** « envoie ».

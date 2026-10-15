@@ -13,7 +13,7 @@ L'ordre :
 3. Prototype local.
 4. Tests (liste de contrôle).
 
-Projet plus gros : Cursor propose les **Projects** — un agent coordinateur planifie et délègue. *À vérifier sur ton écran.*
+Projet plus gros : Cursor propose les **Projects** — un agent coordinateur planifie et délègue.
 
 <div class="box atoi" markdown="1">
 **À toi de jouer.** 2 à 3 requêtes à l'agent Cursor (plan gratuit OK).

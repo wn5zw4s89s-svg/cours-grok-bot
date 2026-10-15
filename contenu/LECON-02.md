@@ -26,7 +26,7 @@ Le siphon ne parle pas aux clients. Marc colle. Le bot prépare.
 **À toi de jouer.** 3 messages.
 
 1. Nom : **Le siphon**. Titre : 6 mots max. 7 rubriques + définition d'urgent : « eau qu'on n'arrive pas à arrêter, ou plus d'eau ».
-2. Nouveau -> Créer un bot. Clique sur le nom en haut -> **Réglages du bot**. Colle Nom, Titre, **Description**, **Enregistrer**. *Libellés à vérifier sur ton écran.*
+2. Crée un nouveau bot. Clique sur son nom en haut du fil -> la roue dentée à côté du X. Colle nom, titre, description. Enregistre.
 3. Envoie : « Message reçu : "Mme Lefèvre, ça goutte sous l'évier. Vous passez quand ? C'est combien ?" »
 4. Envoie : « Message reçu : "Le tuyau a éclaté, ça inonde !" »
 

@@ -13,7 +13,7 @@
 2. Relis ce que l'agent a changé. Un seul fichier créé ? ✅/❌
 3. Ouvre `index.html` dans ton navigateur (double-clic dans le Finder). Note : titre ✅/❌ · téléphone fictif ✅/❌ · bouton ✅/❌.
 4. Requête 2 : « Mets le fond de la page en rouge vif. »
-5. Clique le checkpoint d'avant la requête 2 -> **Restore Checkpoint**.
+5. Clique le checkpoint d'avant la requête 2 -> le bouton Restore Checkpoint de Cursor (retour à l'état d'avant).
 6. Recharge la page. Le fond rouge a disparu ? ✅/❌
 
 **C'est réussi si :** page ouverte dans le navigateur (3) ; 3 points notés (3) ; changement annulé par checkpoint (5-6).

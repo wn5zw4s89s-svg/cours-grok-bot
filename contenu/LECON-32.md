@@ -14,9 +14,8 @@ Trois pièces : **instructions** (règles), **outils** (fichiers, terminal, rech
 
 Avant un gros changement, l'agent crée un **checkpoint** : une photo des fichiers.
 
-Il se trompe ? Clique le checkpoint dans le fil -> **Restore Checkpoint**. Les fichiers reviennent. Les messages restent.
+Il se trompe ? Clique le checkpoint dans le fil -> le bouton Restore Checkpoint de Cursor, qui revient à l'état d'avant. Les fichiers reviennent. Les messages restent.
 
-*Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
 
 <div class="box info" markdown="1">
 Plan gratuit : requêtes d'agent limitées. Une demande courte et précise par exercice.
@@ -26,7 +25,7 @@ Plan gratuit : requêtes d'agent limitées. Une demande courte et précise par e
 **À toi de jouer.** Aucune requête à l'agent.
 
 1. Crée un dossier vide `page-marc` sur le Bureau.
-2. Ouvre Cursor -> **Open Folder** -> `page-marc`.
+2. Ouvre Cursor -> le bouton Open Folder de Cursor, qui ouvre un dossier -> `page-marc`.
 3. Appuie sur `Cmd+I`. Le panneau de l'agent s'ouvre. N'envoie rien.
 4. Écris dans Notes ta première demande. Forme : « Crée un fichier index.html : … . Une seule page. Pas de bibliothèque externe. »
 

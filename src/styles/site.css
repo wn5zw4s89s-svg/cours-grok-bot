@@ -98,3 +98,17 @@ details.solution[open]>summary{background:var(--fond2);color:var(--texte)}
 .telechargements{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
 .telechargements .dl,.contenu a[href*="/fichiers/"]{display:inline-block;padding:8px 12px;border:1px solid var(--ligne);border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;color:var(--texte);background:var(--fond2)}
 .telechargements .dl:hover,.contenu a[href*="/fichiers/"]:hover{border-color:var(--texte)}
+
+.top{position:sticky;top:0}
+.objectif{margin:0 0 10px;font-weight:600;color:var(--gris)}
+.prochain-badge{margin:16px 0 0;color:var(--gris);font-size:14px;text-align:center}
+.silhouette{filter:grayscale(1) brightness(0);opacity:.25}
+details.niv{border-bottom:1px solid var(--ligne)}
+details.niv>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-weight:700}
+details.niv>summary::-webkit-details-marker{display:none}
+details.niv.verrouille>summary{color:var(--gris);font-weight:600}
+.niv-etat{font-size:13px;color:var(--gris);font-weight:600}
+details.niv[open]{padding-bottom:16px}
+details.niv[open] .item-lecon:last-child a{border-bottom:0}
+.hero-min .barre{margin-bottom:20px}
+.hero-min{margin-bottom:24px}

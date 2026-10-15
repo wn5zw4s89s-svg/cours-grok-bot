@@ -4,7 +4,7 @@
 
 ## Où regarder
 
-**Usage & Billing** (Réglages) et **Weekly usage** (menu du compte). L'usage se recharge chaque semaine. *Libellés à vérifier sur ton écran.*
+Ouvre le [réglage de l'usage](grokbot://app/v1/settings?id=usage) (`Cmd+,`, ou le bouton compte en bas à gauche). L'usage se recharge chaque semaine.
 
 ## Ce qui coûte
 
@@ -12,7 +12,7 @@ La doc des routines :
 
 - Chaque passage de routine consomme. Toutes les heures = cher.
 - Un déclencheur Slack sur un canal actif peut manger une semaine en un jour.
-- Une routine qui ne tourne jamais ne coûte rien. **Test** coûte.
+- Une routine qui ne tourne jamais ne coûte rien. Un test coûte.
 
 Aussi : appels vocaux, navigateur, longs chats.
 
@@ -38,7 +38,7 @@ Règle : au-delà de 70 % avant jeudi, je mets en pause les routines non essenti
 <div class="fin" markdown="1">
 ## En résumé
 
-- Usage & Billing / Weekly usage.
+- Usage : Réglages ou bouton compte.
 - Fréquence des routines = premier levier.
 - Tu décides, la leçon ne coupe rien.
 

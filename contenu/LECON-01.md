@@ -33,7 +33,7 @@ C'est un collègue : un nom, un métier, une mémoire.
 <div class="box atoi" markdown="1">
 **À toi de jouer.** 1 message.
 
-1. Barre de gauche : **Nouveau** -> **Créer un bot** (`Cmd + N`). *Libellés à vérifier sur ton écran.*
+1. Barre de gauche : crée un nouveau bot (`Cmd + N`).
 2. Nom : **Essai**.
 3. Envoie : « Bonjour, qui es-tu ? »
 

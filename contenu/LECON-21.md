@@ -5,7 +5,7 @@
 ## Le déroulé de la doc
 
 1. Conversation seul à seul + ordinateur ouvert.
-2. **Teach a task**.
+2. Lance l'enregistrement : montre une tâche.
 3. Décris le résultat que tu vas montrer.
 4. Fais la tâche une fois.
 5. Arrête l'enregistrement. Relis le skill créé.
@@ -18,7 +18,7 @@
 <div class="box atoi" markdown="1">
 **À toi de jouer.**
 
-1. Avec **Teach a task** : étapes 1 à 5 ci-dessus. Plan B : fais remplir le formulaire au bot, puis « Crée un skill nommé formulaire-test à partir de la tâche qu'on vient de réussir. »
+1. En montrant la tâche : étapes 1 à 5 ci-dessus. Plan B : fais remplir le formulaire au bot, puis « Crée un skill nommé formulaire-test à partir de la tâche qu'on vient de réussir. »
 2. Relis le brouillon. Ajoute : « Si le formulaire ne charge pas -> préviens-moi, n'essaie pas un autre site. »
 3. Ajoute : « Ne clique jamais sur Submit order. »
 4. Teste le skill avec d'autres valeurs (autre nom, Large, Onion). Note ✅/❌ + la phrase du bot.

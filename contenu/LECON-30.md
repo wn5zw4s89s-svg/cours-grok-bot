@@ -26,7 +26,7 @@ Grille (chaque ligne ✅ ou ❌ + phrase ou note) :
 2. 5 cas écrits.
 3. 3 cas lancés au bot, attendus comparés.
 4. Skill enregistré + 2e exemple.
-5. Règle brouillon / Ask first dans la description.
+5. Règle brouillon / demander d'abord dans la description.
 6. Liste « à revoir » : ce qui est ❌.
 
 **C'est réussi si :** grille remplie (même avec des ❌) ; liste « à revoir » écrite.
@@ -36,7 +36,7 @@ Grille (chaque ligne ✅ ou ❌ + phrase ou note) :
 Exemple de liste à revoir :  
 - Cas urgent : définition trop floue.  
 - Skill : échec si fichier vide manquant.  
-- Ask first : pas encore dans Auto-review.
+- Demander d'abord : pas encore dans tes règles de validation.
 </div>
 
 <div class="box preuve" markdown="1">

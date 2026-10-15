@@ -4,9 +4,9 @@
 
 ## Ce qu'un modèle montre
 
-**Share** -> **Create template**. Le lien peut être **Public link** ou **Team-only**.
+Partage le bot comme modèle. Le lien est public ou réservé à ton équipe.
 
-Le destinataire ouvre une page sur x.ai, puis **Add to Grok Bot**. Il obtient une **copie**. Pas ton ordinateur, pas tes connexions, pas ton historique.
+Le destinataire ouvre une page sur x.ai, puis l'ajoute à son Grok Bot. Il obtient une **copie**. Pas ton ordinateur, pas tes connexions, pas ton historique.
 
 Le modèle montre : identité, description, skills, routines.
 
@@ -34,7 +34,7 @@ Exemple (autre sujet) : « - Aucune clé API dans la description. »
 - Aucune URL interne.  
 - Skills : uniquement des recettes sans données personnelles.  
 - Routines : aucune qui lit un fichier privé.  
-- Lien : Public ou Team-only — je choisis avant de créer le lien.
+- Lien : public ou équipe seulement — je choisis avant de créer le lien.
 </div>
 
 <div class="fin" markdown="1">

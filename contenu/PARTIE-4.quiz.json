@@ -4,11 +4,11 @@
   "questions": [
     {"id":"q1","question":"Dans un groupe, comment donner une tâche à un bot précis ?","choix":["Écrire son nom en majuscules","Taper @ et le choisir","Lui envoyer un e-mail"],"bonne_reponse":1,"explication":"@ désigne le bot responsable."},
     {"id":"q2","question":"Combien de bots dans un groupe ?","choix":["Exactement 2","De 2 à 6","Illimité"],"bonne_reponse":1,"explication":"La doc : deux à six bots."},
-    {"id":"q3","question":"Duplicate d'un bot copie…","choix":["Historique et mémoire apprise","Profil, skills, routines — pas l'historique ni la mémoire","Seulement le nom"],"bonne_reponse":1,"explication":"La copie part sans conversation ni mémoire apprise."},
-    {"id":"q4","question":"Un modèle partagé donne à l'autre…","choix":["Ton ordinateur et tes logins","Une copie de la config (identité, description, skills, routines)","Accès à tes chats"],"bonne_reponse":1,"explication":"Add to Grok Bot crée une copie. Pas ton ordi ni tes connexions."},
+    {"id":"q3","question":"Dupliquer un bot copie…","choix":["Historique et mémoire apprise","Profil, skills, routines — pas l'historique ni la mémoire","Seulement le nom"],"bonne_reponse":1,"explication":"La copie part sans conversation ni mémoire apprise."},
+    {"id":"q4","question":"Un modèle partagé donne à l'autre…","choix":["Ton ordinateur et tes logins","Une copie de la config (identité, description, skills, routines)","Accès à tes chats"],"bonne_reponse":1,"explication":"L'ajouter à son Grok Bot crée une copie. Pas ton ordi ni tes connexions."},
     {"id":"q5","question":"Team Bot : la mémoire d'équipe…","choix":["Est lue par tous les chats de l'équipe","Remplace les notes privées","Est visible par le propriétaire dans les chats des autres"],"bonne_reponse":0,"explication":"Team memory = partagée. Chaque chat reste privé."},
     {"id":"q6","question":"Séparer les bots protège-t-il les fichiers du cloud ?","choix":["Oui","Non : tous partagent le même ordinateur","Seulement la nuit"],"bonne_reponse":1,"explication":"Ne pas utiliser des bots séparés comme frontière de sécurité."},
-    {"id":"q7","question":"Réglage sûr pour l'exécution sur ton Mac local ?","choix":["Always allow","Never allow (sauf besoin précis)","Peu importe"],"bonne_reponse":1,"explication":"La doc conseille Never allow sauf raison précise. Défaut : Ask every time."},
+    {"id":"q7","question":"Réglage sûr pour l'exécution sur ton Mac local ?","choix":["Toujours autoriser","Ne jamais autoriser (sauf besoin précis)","Peu importe"],"bonne_reponse":1,"explication":"La doc conseille de ne jamais autoriser, sauf raison précise. Défaut : demander à chaque fois."},
     {"id":"q8","question":"Dans un groupe, les cartes d'approbation…","choix":["Apparaissent normalement","N'apparaissent pas","N'existent que sur iPhone"],"bonne_reponse":1,"explication":"Pas d'approbations, secrets ni brouillons e-mail/Slack dans un groupe."}
   ]
 }

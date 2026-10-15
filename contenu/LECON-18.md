@@ -14,11 +14,10 @@ Depuis la conversation, ouvre l'ordinateur pour **regarder** : clics, frappe, na
 
 Pour un mot de passe, un code, un CAPTCHA, un paiement :
 
-1. **Take over** sur la demande, ou **Take control** dans l'ordinateur.
+1. Reprends la main, depuis la demande ou dans l'ordinateur.
 2. Fais seulement l'étape bloquée.
-3. **I'm done**, puis dis au bot de continuer.
+3. Rends la main au bot, puis dis-lui de continuer.
 
-*Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
 
 <div class="box erreur" markdown="1">
 Coller un mot de passe dans le chat. Jamais. Tu prends la main et tu tapes toi-même.
@@ -46,7 +45,7 @@ Formulaire de test public : https://httpbin.org/forms/post (une fausse commande 
 ## En résumé
 
 - Un ordinateur cloud, partagé par tous tes bots.
-- Take over -> étape sensible -> I'm done.
+- Reprends la main -> étape sensible -> rends la main.
 - Mot de passe : jamais dans le chat.
 
 **Bravo !** Leçon 19 : regarde-le faire.

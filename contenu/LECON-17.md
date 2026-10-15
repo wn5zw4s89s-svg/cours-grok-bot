@@ -29,7 +29,7 @@ Post 1 ✅ lien « x.com/… » + phrase du bot · Post 2 ✅ lien « x.com/… 
 </div>
 
 <div class="box question" markdown="1">
-**Et pour lire mes e-mails ou mes fichiers ?** Il faudrait un connecteur (barre de gauche : **Connect apps**, *à vérifier sur ton écran*). Pas dans ce cours aujourd'hui.
+**Et pour lire mes e-mails ou mes fichiers ?** Il faudrait un connecteur. Pas dans ce cours aujourd'hui.
 </div>
 
 <div class="fin" markdown="1">

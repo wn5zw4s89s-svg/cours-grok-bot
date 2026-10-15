@@ -18,7 +18,7 @@ Champs : Customer name, Telephone, E-mail address, Pizza Size, Pizza Toppings, P
 1. Lance un minuteur de 5 min.
 2. Envoie ta consigne de la leçon 18.
 3. Ouvre l'ordinateur du bot. Regarde.
-4. Au champ choisi : **Take control**. Tape l'heure (ex. 19:30). Puis **I'm done**.
+4. Au champ choisi : reprends la main. Tape l'heure (ex. 19:30). Puis rends la main au bot.
 5. Vérifie : formulaire rempli, pas envoyé.
 6. Note ton usage après. Écart = coût.
 

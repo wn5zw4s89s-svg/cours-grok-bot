@@ -11,7 +11,7 @@
 - Re-tester après un changement.
 
 <div class="box info" markdown="1">
-Une routine se crée en le demandant au bot. Elle ne tourne pas à la création. Un seul **Test**, puis pause, si tu le décides.
+Une routine se crée en le demandant au bot. Elle ne tourne pas à la création. Un seul test, puis pause, si tu le décides.
 </div>
 
 <div class="box atoi" markdown="1">

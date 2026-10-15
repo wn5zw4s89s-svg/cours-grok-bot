@@ -31,6 +31,7 @@ export const MASKED_SECTIONS = [
   '☐ — cases à cocher d’objectifs',
   '<small>…</small> — sources et notes de bas de page',
   'Fiche résumé du niveau — encadré méta',
+  '*Libellés / mots … à vérifier sur ton écran* — mentions italiques (leçons 1, 2, 8, 13, 14, 15, 17, 18, 20, 23)',
 ];
 
 const NOMS = {
@@ -83,6 +84,10 @@ function stripReussi(lines) {
 
 function masquer(src) {
   let t = src.replace(/\r\n/g, '\n');
+  // Mentions « à vérifier sur ton écran » (libellés) masquées
+  t = t.replace(/,?\s*\*[^*\n]*vérifier sur ton écran[^*\n]*\*\.?/gi, '');
+  // Flèches
+  t = t.replace(/(?<![-<!])->/g, '→');
   t = t.replace(/<p\s+class="chapeau"[^>]*>[\s\S]*?<\/p>\s*/gi, '\n');
   t = t.replace(/<small\b[^>]*>[\s\S]*?<\/small>\s*/gi, '\n');
   t = t.replace(/<div\s+class="fin"[^>]*>[\s\S]*?<\/div>\s*/gi, '\n');

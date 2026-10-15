@@ -1,49 +1,35 @@
 ---
 import Base from '../../layouts/Base.astro';
 import site from '../../data/site.json';
-
 export function getStaticPaths() {
-  const { lecons, niveaux } = site;
-  return lecons.map((l, i) => ({
-    params: { id: l.id },
-    props: { l, prev: lecons[i - 1], next: lecons[i + 1], niv: niveaux.find((x) => x.id === l.niveau) },
-  }));
+  const { lecons, quiz } = site;
+  return lecons.map((l, i) => {
+    const next = lecons[i + 1];
+    const q = quiz.find((x) => x.niveau === l.niveau);
+    const dernierDuNiveau = !next || next.niveau !== l.niveau;
+    let suite;
+    if (dernierDuNiveau && q) suite = { href: `quiz/${q.slug}/`, label: 'Terminé → Quiz' };
+    else if (next) suite = { href: `lecon/${next.id}/`, label: `Terminé → Leçon ${next.num}` };
+    else suite = { href: '', label: 'Terminé → Accueil' };
+    return { params: { id: l.id }, props: { l, prev: lecons[i - 1], suite } };
+  });
 }
-const { l, prev, next, niv } = Astro.props;
+const { l, prev, suite } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base title={l.title} page="lecon">
-  <article class="lecon" data-lecon={l.id} data-num={l.num} data-disponible={l.disponible ? '1' : '0'}>
-    <a class="retour" href={base}>←</a>
-    <p class="surtitre">{l.numLabel}</p>
-    <h1>{l.disponible ? l.court : `Leçon ${l.num}`}</h1>
-
-    {!l.disponible && (
-      <div class="verrou bientot-page">
-        <p>Bientôt.</p>
-        <a class="btn" href={base}>Accueil</a>
-      </div>
-    )}
-
-    {l.disponible && (
-      <>
-        <div class="verrou" hidden>
-          <p>🔒 Termine d'abord {prev?.numLabel || 'la précédente'}.</p>
-          {prev?.disponible && <a class="btn" href={`${base}lecon/${prev.id}/`}>{prev.numLabel}</a>}
-          <p><button class="lien" data-forcer>Lire quand même</button></p>
-        </div>
-        <div class="contenu" set:html={l.html} />
-        <div class="fin-lecon">
-          <button class="btn btn-large" data-terminer>J'ai terminé</button>
-          <p class="bravo" hidden>🎉 {next?.disponible ? 'Suivante débloquée.' : next ? 'Prochaine bientôt.' : 'Niveau terminé.'}</p>
-          <div class="nav-lecons">
-            {prev ? <a class="btn-sec" href={`${base}lecon/${prev.id}/`}>←</a> : <span />}
-            {next?.disponible
-              ? <a class="btn" data-suivante href={`${base}lecon/${next.id}/`}>Suivante</a>
-              : <a class="btn-sec" href={base}>Accueil</a>}
-          </div>
-        </div>
-      </>
-    )}
+  <article class="lecon" data-lecon={l.id}>
+    <a class="retour" href={base}>← Accueil</a>
+    <p class="surtitre">Leçon {l.num}</p>
+    <h1>{l.court}</h1>
+    <div class="verrou" hidden>
+      <p>🔒 Termine d'abord la leçon {prev?.num}.</p>
+      {prev && <a class="btn" href={`${base}lecon/${prev.id}/`}>Leçon {prev.num}</a>}
+      <p><button class="lien" data-forcer>Lire quand même</button></p>
+    </div>
+    <div class="contenu" set:html={l.html} />
+    <div class="fin-lecon">
+      <a class="btn btn-large" data-terminer href={`${base}${suite.href}`}>{suite.label}</a>
+    </div>
   </article>
 </Base>

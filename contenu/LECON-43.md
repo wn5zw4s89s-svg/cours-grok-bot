@@ -17,7 +17,7 @@ Pas un vrai client aujourd'hui. Plus tard, avec un vrai : même grille, données
 | 1 | Fiche : métier, sortie, fini quand, je reprends avant | Description collée |
 | 2 | 5 cas en fichier, rejoués | 3 ✅/❌ + phrases |
 | 3 | 1 skill + 2e exemple | Phrase du bot |
-| 4 | Garde-fou brouillon / Ask first | Phrase où il s'arrête |
+| 4 | Garde-fou brouillon / demander d'abord | Phrase où il s'arrête |
 | 5 | 1 routine écrite (créée si tu le décides) | Texte + 6 points |
 | 6 | Liste « avant de partager » | 6 lignes |
 | 7 | Mode d'emploi client | 5 lignes max |

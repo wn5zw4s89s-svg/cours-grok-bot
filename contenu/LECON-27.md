@@ -4,7 +4,7 @@
 
 ## Dupliquer
 
-**Duplicate** crée une copie nommée « … copy ».
+Dupliquer un bot crée une copie, avec « copy » à la fin du nom.
 
 Elle garde : profil, réglages, skills activés, routines, avatar.
 
@@ -14,21 +14,21 @@ Renomme. Donne le nouveau périmètre **avant** de lui confier du travail.
 
 ## Partager (optionnel)
 
-Share -> Create template -> Copy link. Destinataire : Add to Grok Bot.
+Partage le bot comme modèle, copie le lien. Le destinataire l'ajoute à son Grok Bot.
 
 <div class="box attention" markdown="1">
-Tu n'es **pas** obligé de créer le lien aujourd'hui. Dupliquer + liste suffit. Si tu crées le lien : Public = n'importe qui avec le lien.
+Tu n'es **pas** obligé de créer le lien aujourd'hui. Dupliquer + liste suffit. Si tu crées le lien : lien public = n'importe qui avec le lien.
 </div>
 
 <div class="box atoi" markdown="1">
 **À toi de jouer.** 1 ou 2 messages.
 
-1. Duplique **Le devis** (menu du bot -> Duplicate). *Libellé à vérifier sur ton écran.*
+1. Duplique **Le devis**.
 2. Renomme : **Le devis urgences** (périmètre : fiches marquées URGENT seulement).
 3. Mets à jour la description : « Tu ne traites que les fiches URGENT : oui. »
 4. Applique ta liste de la leçon 26. Vérifie chaque ligne.
 5. Envoie un cas fictif URGENT. Note ✅/❌ + phrase.
-6. (Facultatif) Create template. Ne copie le lien que si tu veux. Sinon note « pas de lien ».
+6. (Facultatif) Partage-le comme modèle. Ne copie le lien que si tu veux. Sinon note « pas de lien ».
 
 **C'est réussi si :** copie renommée (1-2) ; description mise à jour (3) ; liste appliquée (4) ; test ✅/❌ (5).
 </div>
@@ -46,7 +46,7 @@ Périmètre URGENT ✅ « … » · Liste appliquée ✅ · Lien : non / oui (to
 <div class="fin" markdown="1">
 ## En résumé
 
-- Duplicate = départ, sans mémoire ni historique.
+- Dupliquer = départ, sans mémoire ni historique.
 - Liste avant tout template.
 - Le lien est un choix, pas une obligation.
 

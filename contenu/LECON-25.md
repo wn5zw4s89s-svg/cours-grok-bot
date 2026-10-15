@@ -4,11 +4,10 @@
 
 ## Groupe et relais
 
-1. **Nouveau** dans la barre de gauche.
-2. Dans **New chat**, coche 2 à 6 bots.
+1. Barre de gauche : nouvelle conversation.
+2. Coche 2 à 6 bots.
 3. Ouvre le groupe. Renomme-le si besoin.
 
-*Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
 
 Un bot peut écrire à un autre bot. Le destinataire se réveille. Tu vois le relais dans la conversation.
 
@@ -19,8 +18,8 @@ Dans un groupe : pas de cartes d'approbation, pas de brouillons e-mail/Slack, pa
 <div class="box atoi" markdown="1">
 **À toi de jouer.** Peu de crédits. Données fictives.
 
-1. Crée le bot **Le devis** (Nouveau -> Créer un bot). Colle Nom, Titre, Description (leçon 24).
-2. Nouveau -> coche **Le siphon** et **Le devis** -> ouvre le groupe. Nom : `Atelier Marc`.
+1. Crée le bot **Le devis** (crée un nouveau bot). Colle Nom, Titre, Description (leçon 24).
+2. Nouvelle conversation -> coche **Le siphon** et **Le devis** -> ouvre le groupe. Nom : `Atelier Marc`.
 3. Envoie ton message de lancement + ce SMS fictif : « Mme Roux, 06 00 00 00 01, 12 rue Test. Ça goutte sous l'évier. C'est combien ? »
 4. Relis le fil. Note : qui a répondu en premier · le relais visible · aucun prix ferme · rien d'envoyé.
 5. Note ✅/❌ + une phrase de chaque bot.

@@ -13,24 +13,23 @@ Fichiers, sessions navigateur, identifiants en ligne de commande : visibles par 
 
 ## Ordinateur local
 
-Réglages -> **General** -> **Bot** -> **Execution on Local Computer** :
+Ouvre le [réglage d'exécution sur ton ordinateur](grokbot://app/v1/settings?id=local-execution) (`Cmd+,`). Trois choix :
 
-- **Ask every time** (défaut)
-- **Always allow**
-- **Never allow**
+- demander à chaque fois (défaut)
+- toujours autoriser
+- ne jamais autoriser
 
-*Noms de la doc en anglais : les mots français sont à vérifier sur ton écran.*
 
-Si ton Mac est déjà enregistré : Réglages -> **Computer** -> **Computers** -> **Execution on this computer**.
+Si ton Mac est déjà enregistré : vois aussi [tes ordinateurs](grokbot://app/v1/settings?id=computers).
 
-Utilise **Never allow** sauf besoin précis. Ce réglage ne bloque pas l'ordinateur cloud.
+Choisis ne jamais autoriser, sauf besoin précis. Ce réglage ne bloque pas l'ordinateur cloud.
 
 <div class="box atoi" markdown="1">
 **À toi de jouer.** Audit en lecture. 0 message. **Aucun réglage changé aujourd'hui.**
 
-1. Liste les **plugins** installés (Connect apps -> Installed). Pour chacun : « je garderais » ou « je retirerais, si je le décide ».
+1. Liste les **plugins** installés (barre de gauche : tes apps connectées). Pour chacun : « je garderais » ou « je retirerais, si je le décide ».
 2. Liste les **routines**. Pour chacune : « je garderais » ou « je mettrais en pause, si je le décide ».
-3. Note la valeur actuelle de **Execution on Local Computer**. Écris celle que tu choisirais, si tu le décides.
+3. Note le choix actuel pour l'exécution sur ton ordinateur. Écris celle que tu choisirais, si tu le décides.
 4. Regarde `/workspace` sur l'ordinateur du bot. Note les fichiers sensibles éventuels : « je garderais » ou « je supprimerais, si je le décide ».
 5. Écris 3 actions possibles, chacune avec « si je le décide ».
 
@@ -40,9 +39,9 @@ Utilise **Never allow** sauf besoin précis. Ce réglage ne bloque pas l'ordinat
 <div class="box corrige" markdown="1">
 Plugins : Drive — je garderais · X — je retirerais, si je le décide.  
 Routines : stock-marc — je mettrais en pause, si je le décide.  
-Local : Ask every time aujourd'hui · Never allow, si je le décide.  
+Local : demander à chaque fois aujourd'hui · ne jamais autoriser, si je le décide.  
 `/workspace` : fournitures-test.csv — je garderais (fictif).  
-Actions possibles : 1) Never allow 2) pause de stock-marc 3) retrait du plugin X — chacune si je le décide.
+Actions possibles : 1) ne jamais autoriser 2) pause de stock-marc 3) retrait du plugin X — chacune si je le décide.
 </div>
 
 <div class="box preuve" markdown="1">
@@ -53,7 +52,7 @@ La preuve, c'est ta liste notée : 4 listes + 3 actions « si je le décide ». 
 ## En résumé
 
 - Un ordinateur cloud pour tous tes bots.
-- Ask every time / Always / Never pour le Mac local.
+- Demander à chaque fois / toujours / jamais pour le Mac local.
 - Audit en lecture : tu notes, tu ne changes rien.
 
 **Bravo !** Leçon 30 : essai blanc.

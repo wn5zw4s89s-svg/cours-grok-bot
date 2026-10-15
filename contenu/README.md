@@ -109,7 +109,7 @@ Pas de cases à cocher d'objectifs, pas de listes « ce que tu auras à la fin �
 | 43 | Livre un bot complet et suis-le (grille, client fictif) |
 
 Fil rouge : **Marc Garnier** / **Le siphon**.  
-App en **français** : libellés FR (Nouveau, Réglages du bot, Description, Enregistrer, Appel vocal…). Note « à vérifier sur ton écran » si le libellé exact varie.  
+App en **français** : jamais de libellé inventé. Lien direct (grokbot://…) > position/geste (carte /home/box/reference/app-ui.md) > action en mots simples. Aucune mention d'incertitude.  
 Leçon 10 : vérif mémoire en **nouvelle conversation**.
 
 ## Fichiers d'exercice (à proposer en téléchargement)
@@ -142,7 +142,7 @@ Données inventées (Sanitaire Exemple SA, Robinetterie Test Sàrl, Quincailleri
 - cursor.com/pricing : Free 0 $ (agent limité, pas d'agents cloud) ; Premium 30 $/mois avec « Cloud agents & automations » et Grok Bot (prix hors taxes).
 - https://httpbin.org/forms/post : formulaire de test de la leçon 19 (répond).
 
-La doc est en anglais. Les leçons gardent les noms anglais des boutons, avec « à vérifier sur ton écran » pour le libellé français.
+La doc est en anglais. Les leçons ne donnent pas de libellé non vérifié.
 
 ## Format leçon
 
@@ -166,3 +166,6 @@ Lire ce dossier `contenu/`. Les anciennes leçons dans `/workspace/grokbot-live/
 ## Lots suivants
 
 Aucun. Cours complet.
+
+15/10 : mentions « à vérifier sur ton écran » retirées (demande d'Yvan). Sauvegarde : /workspace/backup-avant-libelles/.
+15/10 : noms de boutons anglais de Grok Bot remplacés par l'action en mots simples (Cursor : Restore Checkpoint / Open Folder gardés, expliqués). Sauvegarde : /workspace/backup-avant-boutons/.

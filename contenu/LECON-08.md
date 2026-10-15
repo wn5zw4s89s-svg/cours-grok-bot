@@ -4,7 +4,7 @@
 
 ## Dicter ≠ appeler
 
-**Dicter :** voix -> texte. Tu relis. Tu envoies (ou pas). Réponse écrite. Mac : **Dictée** / `Cmd+D`. *À vérifier sur ton écran.*
+**Dicter :** voix -> texte. Tu relis. Tu envoies (ou pas). Réponse écrite. Mac : **Dictée** / `Cmd+D`.
 
 **Appeler :** conversation en direct. Réponse à voix haute. Bouton **Appel vocal** : zone **vide**. Muet, Raccrocher, Transcription. Un seul bot à la fois.
 
