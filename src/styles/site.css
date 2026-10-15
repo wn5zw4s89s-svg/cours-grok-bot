@@ -437,3 +437,14 @@ textarea.ecrit:focus{outline:none;border-color:var(--c)}
 .copier{display:block;width:100%;min-height:44px;margin:8px 0 12px;border:2px solid var(--c,#FF6B5A);border-radius:14px;background:transparent;color:var(--c,#FF6B5A);font:inherit;font-weight:800;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
 .copier.ok{border-color:var(--ok,#3DDC97);color:var(--ok,#3DDC97)}
 .ico-liste{min-width:44px;min-height:44px}
+
+/* remarque */
+.remarque-btn{position:fixed;left:max(12px,env(safe-area-inset-left));bottom:max(12px,env(safe-area-inset-bottom));z-index:40;min-width:44px;min-height:44px;padding:10px 14px;border:0;border-radius:999px;background:transparent;color:var(--m);font:inherit;font-size:13px;font-weight:600;opacity:.55;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.remarque-btn:active,.remarque-btn:focus-visible{opacity:1;outline:none}
+.remarque-feuille{text-align:left}
+.remarque-feuille h2{text-align:center}
+.remarque-feuille>p{text-align:center}
+.remarque-ta{display:block;width:100%;box-sizing:border-box;margin:0 0 16px;font:inherit;font-size:17px;color:var(--t);background:var(--bg,#06161A);border:2px solid var(--edge);border-radius:14px;padding:12px 14px;resize:vertical;min-height:120px}
+.remarque-ta:focus{outline:none;border-color:var(--c)}
+.remarque-feuille .btn{width:100%}
+.remarque-feuille .btn:disabled{opacity:.4}

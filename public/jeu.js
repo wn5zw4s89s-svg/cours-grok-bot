@@ -548,6 +548,8 @@
       const last = n === secs.length - 1;
       nxt.hidden = last; fin.hidden = !last;
       bar.forEach((b) => b.style.setProperty('--p', (n + 1) / secs.length));
+      art.dataset.etape = String(n + 1);
+      art.dataset.etapes = String(secs.length);
       scrollTo(0, 0);
       secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
     };
@@ -591,6 +593,72 @@
   sheet?.addEventListener('click', (e) => { if (e.target === sheet || e.target.closest('[data-sheet-close]')) ferme(); });
   // Boutons 3D : effet pression tactile
   document.addEventListener('pointerdown', (e) => { const b = e.target.closest('.btn,.node,.q-choix button'); if (b) pressFx(b); });
+
+  // Remarque : feuille + mailto (aucune donnée tierce)
+  (function remarque() {
+    const TO = 'leopold@mail.grokbot.com';
+    const btn = $('button', {
+      type: 'button',
+      class: 'remarque-btn',
+      'aria-label': 'Une remarque ?',
+    }, 'Une remarque ?');
+    document.body.append(btn);
+
+    const parisNow = () => {
+      try {
+        return new Intl.DateTimeFormat('fr-FR', {
+          timeZone: 'Europe/Paris',
+          dateStyle: 'short',
+          timeStyle: 'short',
+        }).format(new Date());
+      } catch {
+        return new Date().toLocaleString('fr-FR');
+      }
+    };
+
+    const ouvrir = () => {
+      const fermer = () => { voile.remove(); document.body.classList.remove('fige'); };
+      const ta = $('textarea', {
+        class: 'remarque-ta',
+        rows: '5',
+        placeholder: 'Écris ta remarque…',
+        autocomplete: 'off',
+      });
+      const envoyer = $('button', { type: 'button', class: 'btn btn-large', disabled: 'disabled' }, 'Envoyer');
+      const maj = () => { envoyer.disabled = !ta.value.trim(); };
+      ta.addEventListener('input', maj);
+      envoyer.addEventListener('click', () => {
+        const texte = ta.value.trim();
+        if (!texte) return;
+        const titre = (document.title || 'OctoBoss').replace(/\s*·\s*OctoBoss\s*$/, '').trim() || 'OctoBoss';
+        const art = document.querySelector('.lecon');
+        const etape = art?.dataset?.etape;
+        const lignes = [texte, '', '—', `Page : ${location.href}`];
+        if (etape) lignes.push(`Étape : ${etape}${art.dataset.etapes ? ` / ${art.dataset.etapes}` : ''}`);
+        lignes.push(`Date : ${parisNow()} (Europe/Paris)`);
+        const href = `mailto:${TO}?subject=${encodeURIComponent(`Remarque cours · ${titre}`)}&body=${encodeURIComponent(lignes.join('\n'))}`;
+        fermer();
+        const a = $('a', { href, style: 'display:none', 'data-remarque-mail': '1' });
+        document.body.append(a);
+        a.click();
+        a.remove();
+      });
+      const voile = $('div', {
+        class: 'confirme-voile remarque-voile',
+        on: { click: (e) => { if (e.target === voile) fermer(); } },
+      },
+        $('div', { class: 'confirme remarque-feuille', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Une remarque ?' },
+          $('h2', {}, 'Une remarque ?'),
+          $('p', {}, 'Elle part dans ton app Mail.'),
+          ta,
+          envoyer,
+          $('button', { type: 'button', class: 'lien', on: { click: fermer } }, 'Annuler')));
+      document.body.append(voile);
+      document.body.classList.add('fige');
+      ta.focus();
+    };
+    btn.addEventListener('click', ouvrir);
+  })();
 
   // Sync badges déjà mérités (migration)
   ecrire((d) => { syncBadges(d); });
