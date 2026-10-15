@@ -1,4 +1,4 @@
-# Leçon 2 : Écris la description de ton bot (son ADN)
+# Leçon 2 : Range le métier de ton bot dans sa description (son ADN)
 
 <p class="chapeau">Sans description, ton bot improvise. La description lui dit quoi faire, toujours.</p>
 

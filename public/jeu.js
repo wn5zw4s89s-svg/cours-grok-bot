@@ -371,8 +371,17 @@
     });
   }
 
+  // Recommencer à zéro : confirmation en feuille (pas de confirm() natif)
   document.querySelectorAll('[data-reset]').forEach((b) => b.addEventListener('click', () => {
-    localStorage.removeItem(K); location.href = M.base;
+    const fermer = () => voile.remove();
+    const voile = $('div', { class: 'confirme-voile', on: { click: (e) => { if (e.target === voile) fermer(); } } },
+      $('div', { class: 'confirme', role: 'alertdialog', 'aria-modal': 'true', 'aria-label': 'Recommencer à zéro ?' },
+        $('h2', {}, 'Tout effacer ?'),
+        $('p', {}, 'Ta progression sera perdue.'),
+        $('button', { type: 'button', class: 'btn btn-large btn-danger', on: { click: () => { localStorage.removeItem(K); location.href = M.base; } } }, 'Recommencer à zéro'),
+        $('button', { type: 'button', class: 'lien', on: { click: fermer } }, 'Annuler')));
+    document.body.append(voile);
+    voile.querySelector('.lien').focus();
   }));
 
   document.querySelectorAll('[data-lecon-carte]').forEach((c) => {
@@ -559,6 +568,21 @@
     ta.addEventListener('input', () => { try { localStorage.setItem(key, ta.value); } catch {} ok.textContent = ta.value.trim() ? 'Enregistré ✓' : ''; });
     if (ta.value.trim()) ok.textContent = 'Enregistré ✓';
     box.append($('label', { class: 'sr', for: id }, 'Ta phrase'), ta, ok);
+  });
+  // Bouton COPIER sur les messages à envoyer (citation dans un « À toi » qui dit copie/envoie)
+  document.querySelectorAll('.lecon .box.atoi').forEach((box) => {
+    if (!/copie/i.test(box.textContent)) return;
+    box.querySelectorAll('blockquote').forEach((bq) => {
+      const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
+      b.addEventListener('click', async () => {
+        const txt = bq.innerText.trim();
+        try { await navigator.clipboard.writeText(txt); }
+        catch { const r = document.createRange(); r.selectNodeContents(bq); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); s.removeAllRanges(); }
+        b.textContent = 'Copié ✓'; b.classList.add('ok');
+        setTimeout(() => { b.textContent = 'Copier'; b.classList.remove('ok'); }, 1800);
+      });
+      bq.classList.add('a-copier'); bq.after(b);
+    });
   });
   // Liste des leçons (feuille)
   const sheet = document.querySelector('[data-sheet]');

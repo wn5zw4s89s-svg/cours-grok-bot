@@ -83,17 +83,18 @@ const PAREN_OCTO = /\s*\((?:[^()]*\b(?:tentacules?|pieuvre|OctoBoss|ADN|kraken|v
 export const nettoyerTitre = (t) => String(t).replace(PAREN_OCTO, '').replace(/\s*\(\d+\s*min\)/gi, '').trim();
 
 // Retouches d'affichage demandées par Joseph (16/10) — sources intactes.
-const FIN_L1 = 'Bravo, ton premier bot travaille.';
 function retouches(src, num) {
   let t = src.replace(/\r\n/g, '\n').replace(/\s*\(\d+\s*min\)/gi, '');
   // Ligne « Objectif : … » -> paragraphe stylé (n'est pas masquée)
   t = t.replace(/^Objectif\s*:\s*(.+)$/m, (m, x) => `<p class="objectif">${x.charAt(0).toUpperCase() + x.slice(1)}</p>`);
+  // Réplique finale (croissance) : son texte (écrit par Prof Groksky) devient le récap de l'écran de fin ;
+  // la bulle est retirée de la dernière étape. Numéro de bot gardé pour l'animation.
+  t = t.replace(/<div class="pieuvre" data-reaction="croissance"([^>]*)>([\s\S]*?)<\/div>\s*$/, (m, a, body) => {
+    const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '1'])[1];
+    const recap = body.replace(/\s*Bot\s+\d+\s+sur\s+\d+\.?(\s*\([^)]*\))?\.?/i, '').replace(/[*`]/g, '').trim();
+    return `<!-- RECAP:${n}:${recap} -->\n`;
+  });
   if (num === 1) {
-    // Réplique finale (croissance) : exactement la phrase demandée ; numéro de bot gardé en attribut pour l'animation
-    t = t.replace(/<div class="pieuvre" data-reaction="croissance"([^>]*)>([\s\S]*?)<\/div>/g, (m, a, body) => {
-      const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '1'])[1];
-      return `<div class="pieuvre" data-reaction="croissance" data-n="${n}"${a}>\n${FIN_L1}\n</div>`;
-    });
     t = t.replace(/\s*\(?ta première tentacule\)?/gi, '');
   }
   return t;
@@ -242,9 +243,12 @@ for (const f of files) {
   const fm = raw.match(/<div\s+class="fin"[^>]*>([\s\S]*?)<\/div>/i);
   const rb = fm && fm[1].match(/^\s*[-*]\s+(.+)$/m);
   let recap = rb ? nettoyerTitre(rb[1].replace(/\*\*/g, '').replace(/`/g, '')) : '';
-  if (!recap && num === 1 && /data-n=/.test(raw)) recap = FIN_L1;
+  // Récap pluggable : bulle finale de Groksky > liste « fin » > Objectif
+  const rc = raw.match(/<!-- RECAP:\d+:([\s\S]*?) -->/);
+  if (rc && rc[1]) recap = rc[1].trim();
+  if (!recap && objm) recap = objm[1];
   const bm = raw.match(/badge\s*:?\s*\*\*([^*]+)\*\*/i);
-  dispo.set(num, { id, num, title, court, html, recap, objectif: objm ? objm[1] : '', disponible: true, _badge: bm ? bm[1].trim() : null });
+  dispo.set(num, { id, num, title, court, html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap, objectif: objm ? objm[1] : '', disponible: true, _badge: bm ? bm[1].trim() : null });
 }
 
 let quizFiles = files

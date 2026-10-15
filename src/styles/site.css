@@ -428,3 +428,12 @@ textarea.ecrit:focus{outline:none;border-color:var(--c)}
 .gb-badge-carte .btn-x{display:flex;align-items:center;justify-content:center;width:100%;box-sizing:border-box;min-height:48px;border:2px solid var(--edge);border-radius:14px;background:transparent;color:var(--t);text-decoration:none;font-weight:800;font-size:15px}
 .termine a.btn,.gb-badge-carte button.btn{display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none}
 .gb-badge-pop .gb-badge-carte a.btn-x{background:transparent!important;color:var(--t)!important;box-shadow:none!important;border:2px solid var(--edge)}
+/* cobaye1 */
+.confirme-voile{position:fixed;inset:0;z-index:60;background:rgba(3,10,12,.72);display:flex;align-items:flex-end;justify-content:center}
+.confirme{background:var(--card,#0F2A30);width:100%;max-width:480px;border-radius:22px 22px 0 0;padding:28px 22px calc(22px + env(safe-area-inset-bottom));text-align:center}
+.confirme h2{margin:0 0 6px}.confirme p{color:var(--m);margin:0 0 22px}
+.confirme .btn{width:100%}.confirme .lien{display:block;margin:14px auto 0;min-height:44px;padding:0 20px}
+.btn-danger{background:#FF6B5A}
+.copier{display:block;width:100%;min-height:44px;margin:8px 0 12px;border:2px solid var(--c,#FF6B5A);border-radius:14px;background:transparent;color:var(--c,#FF6B5A);font:inherit;font-weight:800;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+.copier.ok{border-color:var(--ok,#3DDC97);color:var(--ok,#3DDC97)}
+.ico-liste{min-width:44px;min-height:44px}
