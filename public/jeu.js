@@ -510,7 +510,7 @@
     p.append(h, b);
     const o = makeOcto(h, UNITES.filter((n) => nivFini(etat(), n.id)).length);
     if (p.dataset.reaction === 'croissance') {
-      const m = p.textContent.match(/(?:Bot|Tentacule)\s+(\d+)\s+sur/i); p._n = m ? +m[1] : null;
+      const m = p.textContent.match(/(?:Bot|Tentacule)\s+(\d+)\s+sur/i); p._n = p.dataset.n ? +p.dataset.n : m ? +m[1] : null;
       if (p._n) octoGrow(o, p._n - 1);
     }
     p._o = o;

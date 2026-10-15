@@ -82,6 +82,23 @@ function stripReussi(lines) {
 const PAREN_OCTO = /\s*\((?:[^()]*\b(?:tentacules?|pieuvre|OctoBoss|ADN|kraken|vagues?|ventouses?|r\u00e9flexes?|r\u00e9flexe nocturne|poche d.encre|proies?)\b[^()]*)\)/gi;
 export const nettoyerTitre = (t) => String(t).replace(PAREN_OCTO, '').replace(/\s*\(\d+\s*min\)/gi, '').trim();
 
+// Retouches d'affichage demandées par Joseph (16/10) — sources intactes.
+const FIN_L1 = 'Bravo, ton premier bot travaille.';
+function retouches(src, num) {
+  let t = src.replace(/\r\n/g, '\n').replace(/\s*\(\d+\s*min\)/gi, '');
+  // Ligne « Objectif : … » -> paragraphe stylé (n'est pas masquée)
+  t = t.replace(/^Objectif\s*:\s*(.+)$/m, (m, x) => `<p class="objectif">${x.charAt(0).toUpperCase() + x.slice(1)}</p>`);
+  if (num === 1) {
+    // Réplique finale (croissance) : exactement la phrase demandée ; numéro de bot gardé en attribut pour l'animation
+    t = t.replace(/<div class="pieuvre" data-reaction="croissance"([^>]*)>([\s\S]*?)<\/div>/g, (m, a, body) => {
+      const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '1'])[1];
+      return `<div class="pieuvre" data-reaction="croissance" data-n="${n}"${a}>\n${FIN_L1}\n</div>`;
+    });
+    t = t.replace(/\s*\(?ta première tentacule\)?/gi, '');
+  }
+  return t;
+}
+
 function masquer(src) {
   let t = src.replace(/\r\n/g, '\n');
   // Titres : sans « (2 min) » ni parenthèse OctoBoss
@@ -216,15 +233,18 @@ for (const f of files) {
   if (!m) continue;
   const num = parseInt(m[1], 10);
   const id = `lecon-${String(num).padStart(2, '0')}`;
-  const { title, html } = transformer(fs.readFileSync(path.join(SRC, f), 'utf8'), id);
-  let court = title.replace(/^Leçon\s+\d+\s*:\s*/i, '');
+  const raw0 = retouches(fs.readFileSync(path.join(SRC, f), 'utf8'), num);
+  const { title, html } = transformer(raw0, id);
+  const objm = raw0.match(/<p class="objectif">([^<]+)<\/p>/);
+  let court = title.replace(/^Leçon\s+\d+\s*[:·]\s*/i, '');
   court = court.charAt(0).toUpperCase() + court.slice(1);
-  const raw = fs.readFileSync(path.join(SRC, f), 'utf8');
+  const raw = raw0;
   const fm = raw.match(/<div\s+class="fin"[^>]*>([\s\S]*?)<\/div>/i);
   const rb = fm && fm[1].match(/^\s*[-*]\s+(.+)$/m);
-  const recap = rb ? nettoyerTitre(rb[1].replace(/\*\*/g, '').replace(/`/g, '')) : '';
+  let recap = rb ? nettoyerTitre(rb[1].replace(/\*\*/g, '').replace(/`/g, '')) : '';
+  if (!recap && num === 1 && /data-n=/.test(raw)) recap = FIN_L1;
   const bm = raw.match(/badge\s*:?\s*\*\*([^*]+)\*\*/i);
-  dispo.set(num, { id, num, title, court, html, recap, disponible: true, _badge: bm ? bm[1].trim() : null });
+  dispo.set(num, { id, num, title, court, html, recap, objectif: objm ? objm[1] : '', disponible: true, _badge: bm ? bm[1].trim() : null });
 }
 
 let quizFiles = files
