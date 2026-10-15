@@ -19,7 +19,7 @@
       "choix": [
         "Dans le message du jour",
         "Dans la description",
-        "Sur le Bureau"
+        "Dans un e-mail"
       ],
       "bonne_reponse": 1,
       "explication": "Description = toujours vrai. Message = aujourd'hui."
@@ -73,7 +73,7 @@
       "question": "Comment prouver qu'une règle tient ?",
       "choix": [
         "Relire le message qui avait raté",
-        "Tester un message nouveau + ✅/❌ avec la phrase du bot",
+        "Tester un message nouveau et regarder la réponse",
         "Demander au bot s'il a compris"
       ],
       "bonne_reponse": 1,

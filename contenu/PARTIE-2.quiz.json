@@ -48,14 +48,14 @@
     },
     {
       "id": "q5",
-      "question": "Après un appel, quelle preuve compte ?",
+      "question": "Après un appel, que regardes-tu pour juger ?",
       "choix": [
-        "Ton impression",
-        "La transcription + ✅/❌ avec la phrase",
-        "Avoir raccroché à temps"
+        "Seulement la durée",
+        "La transcription et si les 3 points sont couverts",
+        "Uniquement le mémo vocal"
       ],
       "bonne_reponse": 1,
-      "explication": "La transcription montre ce qui a été compris."
+      "explication": "Tu juges sur la transcription, des yeux. Rien à coller."
     },
     {
       "id": "q6",
@@ -77,7 +77,7 @@
         "Tu demandes « tu as compris ? »"
       ],
       "bonne_reponse": 1,
-      "explication": "Même fil = il relit « Corrigé ». Nouveau fil = vraie preuve."
+      "explication": "Même fil = il relit « Corrigé ». Nouveau fil = vrai test."
     },
     {
       "id": "q8",

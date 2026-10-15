@@ -10,16 +10,15 @@ La carte montre l'action proposée et ses valeurs. Trois boutons :
 - Autoriser toujours : enregistre une règle, les prochaines passent seules.
 - Refuser : bloque.
 
-
 Une validation venue d'une routine expire après environ 10 minutes. L'action ne se fait pas.
 
 <div class="box erreur" markdown="1">
-Autoriser toujours sur un envoi. Un clic, et les prochains partent sans toi.
+Autoriser toujours sur un envoi. Un toucher, et les prochains partent sans toi.
 </div>
 
 ## Écris des règles « demander d'abord »
 
-Ouvre le [réglage des règles de validation](grokbot://app/v1/settings?id=auto-review-rules) (`Cmd+,`). Deux sortes de règles :
+Ouvre le [réglage des règles de validation](grokbot://app/v1/settings?id=auto-review-rules) (sur iPhone : le rond à tes initiales en haut à gauche -> Réglages). Deux sortes de règles :
 
 - Demander d'abord : s'arrête toujours pour te demander.
 - Autoriser automatiquement : laisse passer, sauf si la revue voit un problème.

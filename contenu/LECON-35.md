@@ -1,36 +1,31 @@
 # Leçon 35 : Prouve que l'agent suit tes règles
 
-<p class="chapeau">Avant la règle, pas de pied de page. Après, il doit apparaître. Seule la page le prouve.</p>
+<p class="chapeau">Avant la règle, pas de pied de page. Après, il doit apparaître. Seul le fichier le prouve.</p>
 
 <div class="box attention" markdown="1">
-1 requête à l'agent. Rien n'est mis en ligne.
+1 message. Rien n'est mis en ligne.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 1 requête.
+**À toi de jouer.** 1 message. Bot principal.
 
-1. Ouvre `index.html` (leçon 33). Le pied de page « Site fictif — exercice » est absent ? Note-le.
-2. Vérifie qu'`AGENTS.md` est à la racine de `page-marc`.
-3. Nouvelle conversation agent (`Cmd+I`). Demande : « Ajoute une section "Urgences" avec une phrase : eau qu'on n'arrive pas à arrêter -> appelez tout de suite. » Ne parle **pas** du pied de page.
-4. Recharge la page. Pied de page présent ✅/❌. Coordonnées fictives ✅/❌.
-5. Si ❌ : précise la règle dans AGENTS.md (une phrase), puis relance la même demande une fois.
+1. Demande le contenu de `index.html`. Le pied de page « Site fictif — exercice » est absent ? Note-le.
+2. Vérifie qu'`AGENTS.md` est dans `/workspace/page-marc` (demande au bot).
+3. Envoie : « Ajoute une section Urgences avec une phrase : eau qu'on n'arrive pas à arrêter -> appelez tout de suite. » Ne parle **pas** du pied de page.
+4. Demande de nouveau le contenu (ou une capture). Pied de page présent ? Coordonnées fictives ?
+5. Si ❌ : précise la règle dans AGENTS.md (une phrase, via le bot), puis relance la même demande une fois.
 
-**C'est réussi si :** absence notée avant (1) ; demande sans mention du pied de page (3) ; ✅/❌ après, sur la page (4).
+**C'est réussi si :** absence notée avant (1) ; demande sans mention du pied de page (3) ; contenu relu après (4).
 </div>
 
 <div class="box corrige" markdown="1">
 Avant : pas de pied de page.  
 Après : section Urgences + « Site fictif — exercice » en bas ✅.
 </div>
-
-<div class="box preuve" markdown="1">
-Pied de page ✅ (visible dans le navigateur) · Demande sans indice ✅
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 
-- Avant / après sur la vraie page.
+- Avant / après sur le vrai fichier.
 - La demande ne doit pas souffler la règle.
 - ❌ -> une phrase plus précise dans AGENTS.md.
 

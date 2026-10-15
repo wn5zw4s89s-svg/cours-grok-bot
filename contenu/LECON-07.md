@@ -4,7 +4,7 @@
 
 ## Joins et corrige
 
-Trombone, ou glisse depuis le Bureau. Max 6 fichiers.
+Joins depuis Fichiers ou Photos sur ton iPhone. Max 6 fichiers.
 
 Si le tableau rate : « Mets à jour le tableau que tu viens de créer… » Pas « refais-en un. »
 
@@ -16,9 +16,9 @@ Si le tableau rate : « Mets à jour le tableau que tu viens de créer… » Pas
 **Exercice 1 : envoie.** 1 message.
 
 1. Nouvelle conversation, bot principal.
-2. Joins les deux fichiers.
+2. Joins les deux fichiers (Fichiers ou Photos).
 3. Colle ta demande (leçon 6). Envoie.
-4. Coche ✅/❌ :
+4. Regarde, sans rien écrire :
    - 7 colonnes dans l'ordre ;
    - 7 lignes (4 facture + 3 ticket) ;
    - Affiches A2 : 10 × 12.50 = 125, facture 135 -> écart signalé ;
@@ -35,11 +35,6 @@ Ticket : Café crème 9 · Croissant 3.20 · Eau minérale illisible.
 **Déduit :** eau ≈ 3.50 ; café = 4.50.  
 **Pas pu vérifier :** Affiches A2 ; heure du ticket.
 </div>
-
-<div class="box preuve" markdown="1">
-Pour chaque ❌ : ce que le bot a écrit. Ex. : Affiches ❌ « écart non signalé ».
-</div>
-
 <div class="box atoi" markdown="1">
 **Exercice 2 : corrige.** 1 message.
 

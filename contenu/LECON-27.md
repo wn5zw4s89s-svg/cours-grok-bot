@@ -27,10 +27,10 @@ Tu n'es **pas** obligé de créer le lien aujourd'hui. Dupliquer + liste suffit.
 2. Renomme : **Le devis urgences** (périmètre : fiches marquées URGENT seulement).
 3. Mets à jour la description : « Tu ne traites que les fiches URGENT : oui. »
 4. Applique ta liste de la leçon 26. Vérifie chaque ligne.
-5. Envoie un cas fictif URGENT. Note ✅/❌ + phrase.
+5. Envoie un cas fictif URGENT. Regarde la réponse.
 6. (Facultatif) Partage-le comme modèle. Ne copie le lien que si tu veux. Sinon note « pas de lien ».
 
-**C'est réussi si :** copie renommée (1-2) ; description mise à jour (3) ; liste appliquée (4) ; test ✅/❌ (5).
+**C'est réussi si :** copie renommée (1-2) ; description mise à jour (3) ; liste appliquée (4) ; test jugé des yeux (5).
 </div>
 
 <div class="box corrige" markdown="1">
@@ -38,11 +38,6 @@ Bot « Le devis urgences ». Description limitée aux URGENT.
 Test : fiche URGENT -> brouillon sans prix ✅.  
 Liste 6/6 vérifiée. Lien : pas créé.
 </div>
-
-<div class="box preuve" markdown="1">
-Périmètre URGENT ✅ « … » · Liste appliquée ✅ · Lien : non / oui (ton choix)
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 

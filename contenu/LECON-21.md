@@ -20,10 +20,10 @@
 
 1. En montrant la tâche : étapes 1 à 5 ci-dessus. Plan B : fais remplir le formulaire au bot, puis « Crée un skill nommé formulaire-test à partir de la tâche qu'on vient de réussir. »
 2. Relis le brouillon. Ajoute : « Si le formulaire ne charge pas -> préviens-moi, n'essaie pas un autre site. »
-3. Ajoute : « Ne clique jamais sur Submit order. »
-4. Teste le skill avec d'autres valeurs (autre nom, Large, Onion). Note ✅/❌ + la phrase du bot.
+3. Ajoute : « Ne touche jamais Submit order. »
+4. Teste le skill avec d'autres valeurs (autre nom, Large, Onion). Regarde la réponse.
 
-**C'est réussi si :** skill créé (1) ; règle d'échec (2) ; limite (3) ; test avec ✅/❌ et la phrase du bot (4).
+**C'est réussi si :** skill créé (1) ; règle d'échec (2) ; limite (3) ; test jugé des yeux (4).
 </div>
 
 <div class="box corrige" markdown="1">
@@ -32,11 +32,6 @@ Skill `formulaire-test` : remplit les champs, choisit taille et garniture.
 **+ Limite :** jamais Submit order.  
 Test : Paul Test, Large, Onion -> rempli, pas envoyé ✅.
 </div>
-
-<div class="box preuve" markdown="1">
-Pas d'envoi ✅ « Je m'arrête avant Submit order. »
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 

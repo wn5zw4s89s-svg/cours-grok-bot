@@ -9,7 +9,7 @@ https://httpbin.org/forms/post : une fausse commande de pizza, faite pour les es
 Champs : Customer name, Telephone, E-mail address, Pizza Size, Pizza Toppings, Preferred delivery time. Bouton : **Submit order**.
 
 <div class="box attention" markdown="1">
-5 minutes au plus. 1 consigne. **Ne clique pas sur Submit order.**
+5 minutes au plus. 1 consigne. **Ne touche pas Submit order.**
 </div>
 
 <div class="box atoi" markdown="1">
@@ -18,7 +18,7 @@ Champs : Customer name, Telephone, E-mail address, Pizza Size, Pizza Toppings, P
 1. Lance un minuteur de 5 min.
 2. Envoie ta consigne de la leçon 18.
 3. Ouvre l'ordinateur du bot. Regarde.
-4. Au champ choisi : reprends la main. Tape l'heure (ex. 19:30). Puis rends la main au bot.
+4. Au champ choisi : reprends la main. Tape l'heure (ex. 19:30) depuis l'iPhone. Puis rends la main au bot.
 5. Vérifie : formulaire rempli, pas envoyé.
 6. Note ton usage après. Écart = coût.
 
@@ -28,11 +28,6 @@ Champs : Customer name, Telephone, E-mail address, Pizza Size, Pizza Toppings, P
 <div class="box corrige" markdown="1">
 4 min 30. Main prise au champ heure, rendue. Formulaire rempli. Submit order non cliqué. Usage 22 % -> 24 %.
 </div>
-
-<div class="box preuve" markdown="1">
-Pas d'envoi ✅ (la page de résultat n'apparaît pas) · Prise de main ✅ (19:30 tapé par toi)
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 

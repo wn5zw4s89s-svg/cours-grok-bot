@@ -1,6 +1,6 @@
 # Leçon 34 : Écris les règles de l'agent
 
-<p class="chapeau">Pour un bot : la description. Pour l'agent de code : AGENTS.md.</p>
+<p class="chapeau">Pour un bot : la description. Pour un agent de code : un fichier de règles à la racine.</p>
 
 ## AGENTS.md
 
@@ -8,7 +8,7 @@ Un simple fichier Markdown, à la racine du projet. Pas de réglages, pas d'en-t
 
 L'agent le lit à chaque demande. Le modèle ne garde aucune mémoire entre deux réponses : la règle, si.
 
-Autres types (pour plus tard) : règles de projet dans `.cursor/rules` (fichiers `.mdc`), règles utilisateur, règles d'équipe.
+Sur iPhone : tu fais créer le fichier **par ton bot** sur son ordinateur.
 
 ## Une bonne règle
 
@@ -16,18 +16,18 @@ Autres types (pour plus tard) : règles de projet dans `.cursor/rules` (fichiers
 - Ajoute une règle quand l'agent refait **la même erreur**.
 - Pas de guide de style entier.
 
-Exemple (doc) : « Use TypeScript for all new files. »
+Exemple (doc Cursor) : « Use TypeScript for all new files. »
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** Sans l'agent.
+**À toi de jouer.** 1 message. Bot principal.
 
-1. Dans `page-marc`, crée `AGENTS.md` (Cursor : **New File**).
-2. Écris un titre et **5 lignes** de règles.
-3. Une règle doit être nouvelle pour l'agent et vérifiable à l'œil. Ex. : « Chaque page finit par un pied de page "Site fictif — exercice". »
+1. Écris 5 lignes de règles dans Notes. Une doit être visible dans la page. Ex. : « Chaque page finit par un pied de page "Site fictif — exercice". »
+2. Envoie : « Crée /workspace/page-marc/AGENTS.md avec exactement ce texte : » + tes 5 lignes.
+3. Demande : « Affiche AGENTS.md. » Vérifie les 5 lignes.
 
 Exemple (autre sujet) : « Toutes les dates au format JJ.MM.AAAA. »
 
-**C'est réussi si :** fichier à la racine (1) ; 5 lignes (2) ; une règle visible dans la page (3).
+**C'est réussi si :** 5 lignes écrites (1) ; fichier créé et relu (2-3) ; une règle visible dans la page (1).
 </div>
 
 <div class="box corrige" markdown="1">
@@ -47,7 +47,7 @@ Exemple (autre sujet) : « Toutes les dates au format JJ.MM.AAAA. »
 
 - AGENTS.md = la description de l'agent.
 - 5 lignes, une règle visible.
-- Une règle naît d'une erreur qui revient.
+- Le bot crée le fichier sur son ordinateur.
 
 **Bravo !** Leçon 35 : prouve que l'agent la suit.
 </div>

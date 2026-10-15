@@ -4,7 +4,7 @@
 
 ## Une routine
 
-Une **routine** dit à **un** bot quand lancer un travail. Elle tourne même Mac fermé.
+Une **routine** dit à **un** bot quand lancer un travail. Elle tourne même si ton iPhone est verrouillé.
 
 Tu la crées en le demandant dans le chat. Pas de formulaire.
 

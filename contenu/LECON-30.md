@@ -20,16 +20,16 @@ Pas de chrono. Si tu bloques : note et passe. On reprend à l'examen (leçon 31)
 <div class="box atoi" markdown="1">
 **À toi de jouer.**
 
-Grille (chaque ligne ✅ ou ❌ + phrase ou note) :
+Grille (chaque ligne : OK ou à revoir, des yeux) :
 
 1. Fiche : Nom, Titre, 7 rubriques (ou équivalent clair).
 2. 5 cas écrits.
 3. 3 cas lancés au bot, attendus comparés.
 4. Skill enregistré + 2e exemple.
 5. Règle brouillon / demander d'abord dans la description.
-6. Liste « à revoir » : ce qui est ❌.
+6. Liste « à revoir » : ce qui rate.
 
-**C'est réussi si :** grille remplie (même avec des ❌) ; liste « à revoir » écrite.
+**C'est réussi si :** grille remplie (même avec des « à revoir ») ; liste « à revoir » écrite.
 </div>
 
 <div class="box corrige" markdown="1">
@@ -38,11 +38,6 @@ Exemple de liste à revoir :
 - Skill : échec si fichier vide manquant.  
 - Demander d'abord : pas encore dans tes règles de validation.
 </div>
-
-<div class="box preuve" markdown="1">
-Grille 6 lignes ✅/❌ · Liste à revoir non vide si un ❌
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 

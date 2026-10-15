@@ -40,7 +40,7 @@ const NOMS = {
 };
 
 const HEADING_DROP = /^(Comment marche une leçon|Comment travailler|Ce que tu auras|Objectif|À cocher|À la fin|On reprend|En résumé)\b/i;
-const KEEP_BOX = /\b(atoi|corrige|preuve)\b/;
+const KEEP_BOX = /\b(atoi|corrige)\b/;
 
 function skipDiv(lines, start) {
   let depth = 1;
@@ -151,7 +151,7 @@ function transformer(src, id) {
   }
   const out = [];
   const stack = [];
-  let nPreuve = 0;
+  let skip = 0;
   for (const l of lines) {
     const open = l.match(/^\s*<div([^>]*)>\s*$/);
     if (open) {
@@ -161,9 +161,7 @@ function transformer(src, id) {
         stack.push('</div></details>');
         out.push('', '<details class="solution"><summary>Voir la solution</summary><div class="box corrige">', '');
       } else if (cls.includes('preuve')) {
-        nPreuve++;
-        stack.push('PREUVE');
-        out.push('', `<div class="box preuve" data-preuve="${id}-p${nPreuve}">`, '');
+        stack.push('SKIP'); skip++;
       } else {
         stack.push('</div>');
         out.push('', `<div${attrs}>`, '');
@@ -172,25 +170,13 @@ function transformer(src, id) {
     }
     if (/^\s*<\/div>\s*$/.test(l) && stack.length) {
       const c = stack.pop();
-      out.push('', c === 'PREUVE' ? '<div class="preuve-widget"></div></div>' : c, '');
+      if (c === 'SKIP') { skip--; continue; }
+      if (!skip) out.push('', c, '');
       continue;
     }
-    out.push(l);
+    if (!skip) out.push(l);
   }
-  const body = out.join('\n');
-  // Preuve auto seulement si le contenu gardé le demande explicitement
-  if (nPreuve === 0 && /✅ ou ❌/.test(body)) {
-    out.push(
-      '',
-      `<div class="box preuve" data-preuve="${id}-p1">`,
-      '',
-      '**Preuve** : colle la phrase du bot, puis ✅ ou ❌.',
-      '',
-      '<div class="preuve-widget"></div></div>',
-      '',
-    );
-  }
-  let html = marked.parse(out.join('\n'));
+    let html = marked.parse(out.join('\n'));
   const used = [...FICHIERS].filter((f) => html.includes(`fichiers/${f}`) || src.includes(f));
   if (used.length) {
     const lis = used.map((f) => `<a class="dl" href="${BASE}fichiers/${f}" download>${f}</a>`).join(' ');

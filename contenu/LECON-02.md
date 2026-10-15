@@ -51,6 +51,8 @@ Si c'est flou : « manquant » + question dans le brouillon.
 - fiche collée, 1 ou 2 rubriques modifiées (étapes 1-2) ;
 - réponse 1 : aucun prix, aucun rendez-vous, adresse « manquant » (étape 3) ;
 - réponse 2 : URGENT en première ligne (étape 4).
+
+Regarde la réponse du bot. N'écris rien.
 </div>
 
 <div class="box corrige" markdown="1">
@@ -58,17 +60,11 @@ Exemple de changement : titre « Classe les SMS de dépannage » ; urgent inchan
 Réponse 1 : « Marc vous rappelle » ; pas de montant.  
 Réponse 2 : URGENT en 1re ligne.
 </div>
-
-<div class="box preuve" markdown="1">
-✅/❌ + phrase du bot. Ex. : Aucun prix ✅ « Marc vous rappelle. »
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 
 - Fiche = Nom, Titre, description (7 rubriques).
 - Colle le modèle. Change 1 ou 2 lignes.
-- Preuve = phrase du vrai bot.
 
 **Bravo !** Leçon 3 : teste Le siphon.
 </div>

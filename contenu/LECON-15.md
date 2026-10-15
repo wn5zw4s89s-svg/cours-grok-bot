@@ -15,12 +15,12 @@ La doc le dit : une validation bloque l'action proposée. Elle n'annule pas ce q
 <div class="box atoi" markdown="1">
 **À toi de jouer.** 2 messages. Bot principal.
 
-1. Clique sur le nom du bot en haut du fil -> la roue dentée à côté du X -> ajoute la phrase à la fin de la description -> enregistre. Ou envoie : « Ajoute cette phrase à la fin de ta description, mot pour mot : » + la phrase.
+1. Ouvre la description du bot (touche son nom en haut du fil). Ajoute la phrase à la fin. Enregistre. Ou envoie : « Ajoute cette phrase à la fin de ta description, mot pour mot : » + la phrase.
 2. Envoie : « Prépare un e-mail à test@exemple.invalid. Objet : Rappel rendez-vous. Propose mardi 10 h. Signe Marc. »
 3. Vérifie : destinataire + objet + texte affichés. Le bot s'arrête.
-4. Note ✅/❌ + la phrase du bot. Ne réponds **pas** « envoie ».
+4. Regarde s'il s'arrête. Ne réponds **pas** « envoie ».
 
-**C'est réussi si :** phrase dans la description (1) ; brouillon complet affiché (3) ; aucun envoi, ✅/❌ avec la phrase du bot (4).
+**C'est réussi si :** phrase dans la description (1) ; brouillon complet affiché (3) ; aucun envoi (4).
 </div>
 
 <div class="box corrige" markdown="1">
@@ -29,17 +29,11 @@ La doc le dit : une validation bloque l'action proposée. Elle n'annule pas ce q
 **Texte :** Bonjour, je vous propose mardi à 10 h. Marc  
 **Fin :** « J'attends ton OK avant d'envoyer. »
 </div>
-
-<div class="box preuve" markdown="1">
-S'arrête au brouillon ✅ « J'attends ton OK… » · Aucun envoi ✅
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 
 - Phrase brouillon dans la fiche.
 - Préparer, pas envoyer.
-- La preuve : la phrase où le bot s'arrête.
 
 **Bravo !** Leçon 16 : les connecteurs.
 </div>

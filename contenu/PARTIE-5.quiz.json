@@ -2,12 +2,82 @@
   "id": "PARTIE-5",
   "titre": "Niveau 5 — Expert, coder avec des agents",
   "questions": [
-    {"id":"q1","question":"Quel raccourci ouvre l'agent dans Cursor ?","choix":["Cmd+I","Cmd+D","Cmd+Q"],"bonne_reponse":0,"explication":"Cmd+I ouvre l'agent dans le panneau de côté."},
-    {"id":"q2","question":"À quoi sert un checkpoint ?","choix":["Mettre la page en ligne","Revenir aux fichiers d'avant un changement de l'agent","Remplacer Git"],"bonne_reponse":1,"explication":"Restore Checkpoint remet les fichiers. Il ne remplace pas Git."},
-    {"id":"q3","question":"Restaurer un checkpoint efface…","choix":["Les messages","Seulement les changements de fichiers","Tout le projet"],"bonne_reponse":1,"explication":"Les fichiers reviennent, les messages restent."},
-    {"id":"q4","question":"AGENTS.md, c'est…","choix":["Un fichier Markdown simple d'instructions pour l'agent","Un mot de passe","Un plugin payant"],"bonne_reponse":0,"explication":"L'équivalent de la description d'un bot, à la racine du projet."},
-    {"id":"q5","question":"Quand ajouter une règle ?","choix":["Avant toute chose, 50 lignes","Quand l'agent refait la même erreur","Jamais"],"bonne_reponse":1,"explication":"La doc : commence simple, ajoute quand l'erreur revient."},
-    {"id":"q6","question":"Pour prouver qu'une règle marche, la demande…","choix":["Rappelle la règle","Ne mentionne pas la règle","Est vide"],"bonne_reponse":1,"explication":"Sinon tu prouves la demande, pas la règle."},
-    {"id":"q7","question":"Selon cursor.com/pricing (15/10/2026), les agents cloud sont inclus…","choix":["Dans le plan Free","À partir de Premium","Jamais"],"bonne_reponse":1,"explication":"Free : non. Premium (30 $/mois) et au-dessus : oui."}
+    {
+      "id": "q1",
+      "question": "Sur iPhone, comment faire écrire une page web ?",
+      "choix": [
+        "Installer Cursor sur l'iPhone",
+        "Demander à ton bot de créer le fichier sur son ordinateur",
+        "Écrire le HTML dans Notes seulement"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le bot a son ordinateur cloud. Tu vérifies depuis l'iPhone (contenu, capture)."
+    },
+    {
+      "id": "q2",
+      "question": "À quoi sert une copie d'avant (checkpoint) ?",
+      "choix": [
+        "Mettre la page en ligne",
+        "Revenir aux fichiers d'avant un changement",
+        "Remplacer Git"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Tu annules le dernier changement. Ce n'est pas Git."
+    },
+    {
+      "id": "q3",
+      "question": "Annuler un changement efface…",
+      "choix": [
+        "Les messages",
+        "Seulement les changements de fichiers",
+        "Tout le projet"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Les fichiers reviennent, les messages restent."
+    },
+    {
+      "id": "q4",
+      "question": "AGENTS.md, c'est…",
+      "choix": [
+        "Un fichier Markdown simple d'instructions pour l'agent",
+        "Un mot de passe",
+        "Un plugin payant"
+      ],
+      "bonne_reponse": 0,
+      "explication": "L'équivalent de la description d'un bot, à la racine du projet."
+    },
+    {
+      "id": "q5",
+      "question": "Quand ajouter une règle ?",
+      "choix": [
+        "Avant toute chose, 50 lignes",
+        "Quand l'agent refait la même erreur",
+        "Jamais"
+      ],
+      "bonne_reponse": 1,
+      "explication": "La doc : commence simple, ajoute quand l'erreur revient."
+    },
+    {
+      "id": "q6",
+      "question": "Pour prouver qu'une règle marche, la demande…",
+      "choix": [
+        "Rappelle la règle",
+        "Ne mentionne pas la règle",
+        "Est vide"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Sinon tu prouves la demande, pas la règle."
+    },
+    {
+      "id": "q7",
+      "question": "Selon cursor.com/pricing (15/10/2026), les agents cloud Cursor sont inclus…",
+      "choix": [
+        "Dans le plan Free",
+        "À partir de Premium",
+        "Jamais"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Free : non. Premium (30 $/mois) et au-dessus : oui. Démo lecture sur iPhone."
+    }
   ]
 }

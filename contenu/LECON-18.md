@@ -6,7 +6,7 @@
 
 Tous tes bots partagent **le même** ordinateur : fichiers, sessions du navigateur.
 
-Chaque bot a son propre écran. Ton Mac peut rester fermé.
+Chaque bot a son propre écran. Ton iPhone peut rester verrouillé.
 
 Depuis la conversation, ouvre l'ordinateur pour **regarder** : clics, frappe, navigation.
 
@@ -17,7 +17,6 @@ Pour un mot de passe, un code, un CAPTCHA, un paiement :
 1. Reprends la main, depuis la demande ou dans l'ordinateur.
 2. Fais seulement l'étape bloquée.
 3. Rends la main au bot, puis dis-lui de continuer.
-
 
 <div class="box erreur" markdown="1">
 Coller un mot de passe dans le chat. Jamais. Tu prends la main et tu tapes toi-même.

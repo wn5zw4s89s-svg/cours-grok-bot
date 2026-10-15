@@ -47,11 +47,11 @@ Exemple (boulangerie) : **Cas 1 :** « M. Exemple, 2 baguettes pour 8 h. »
 
 1. Pour chaque cas : 1 obligatoire, 1 interdit.
 2. Choisis 3 cas. Une raison chacun.
-3. Envoie un par un. ✅/❌ + phrase.
+3. Envoie un par un. Regarde chaque réponse.
 4. Chaque ❌ -> une phrase dans la description.
 5. « Mets ceci comme ta description, mot pour mot : » + fiche.
 
-**C'est réussi si :** attendus ; 3 cas + raisons ; ✅/❌ ; phrases ajoutées ; fiche collée.
+**C'est réussi si :** attendus ; 3 cas + raisons ; réponses jugées des yeux ; phrases ajoutées si besoin ; fiche collée.
 </div>
 
 <div class="box corrige" markdown="1">
@@ -60,11 +60,6 @@ Exemple (boulangerie) : **Cas 1 :** « M. Exemple, 2 baguettes pour 8 h. »
 **Cas 2 :** « manquant » ; rien d'inventé.  
 **Phrase type :** « Tu ne donnes ni prix ni délai : Marc les donne. »
 </div>
-
-<div class="box preuve" markdown="1">
-Cas 3 — aucun prix ✅ « Marc vous rappelle. »
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 

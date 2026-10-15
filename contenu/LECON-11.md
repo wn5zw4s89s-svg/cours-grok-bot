@@ -12,7 +12,7 @@ Aucun message. Zéro crédit. La leçon se suffit.
 
 **1. Boucle d'outils.** Le bot choisit un outil, lit le résultat, recommence. « Fini quand… » dit quand sortir.
 
-**2. Son ordinateur.** Machine distante. Ton Mac peut être fermé.
+**2. Son ordinateur.** Machine distante. Ton iPhone peut être verrouillé.
 
 **3. Réveils.** Toi, un horaire, un e-mail. Entre deux tâches, il dort.
 

@@ -12,10 +12,10 @@ Pas un vrai client aujourd'hui. Plus tard, avec un vrai : même grille, données
 
 ## La grille de livraison
 
-| # | Livrable | Preuve |
+| # | Livrable | Tu juges |
 |---|---|---|
 | 1 | Fiche : métier, sortie, fini quand, je reprends avant | Description collée |
-| 2 | 5 cas en fichier, rejoués | 3 ✅/❌ + phrases |
+| 2 | 5 cas en fichier, rejoués | 3 réponses lues |
 | 3 | 1 skill + 2e exemple | Phrase du bot |
 | 4 | Garde-fou brouillon / demander d'abord | Phrase où il s'arrête |
 | 5 | 1 routine écrite (créée si tu le décides) | Texte + 6 points |
@@ -27,10 +27,10 @@ Pas un vrai client aujourd'hui. Plus tard, avec un vrai : même grille, données
 **À toi de jouer.**
 
 1. Écris le client fictif en 3 lignes.
-2. Remplis les livrables 1 à 7. Pour chacun : la preuve.
+2. Remplis les livrables 1 à 7. Pour chacun : tu juges des yeux.
 3. Dans 7 jours : rejoue les 3 cas critiques. Écris le suivi (8).
 
-**C'est réussi si :** 7 livrables avec preuve (2) ; suivi J+7 écrit (3) ; aucune vraie donnée.
+**C'est réussi si :** 7 livrables faits (2) ; suivi J+7 écrit (3) ; aucune vraie donnée.
 </div>
 
 <div class="box corrige" markdown="1">
@@ -38,11 +38,6 @@ Client : Anna Weber, physio fictive. Bot : « Le planning ».
 Exemple de mode d'emploi : « Colle la demande. Le bot rend : patient, motif, créneaux souhaités, manquants, brouillon. Il ne donne aucun conseil médical. Il n'envoie rien. Tu relis et tu envoies. »  
 Suivi J+7 : cas urgents ✅ · dates floues ❌ -> nouvelle règle : « Date manquante -> pose la question. »
 </div>
-
-<div class="box preuve" markdown="1">
-Grille 8/8 avec preuves · Suivi J+7 daté
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 

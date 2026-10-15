@@ -8,7 +8,7 @@ Marc reçoit des factures fournisseurs et des tickets photo. Il veut un tableau 
 
 Lire des factures n'est pas le métier de Le siphon. Tu travailles avec ton **bot principal**.
 
-Fichiers d'exercice (fictifs) : `facture-fictive-imprimerie-exemple.pdf` et `ticket-fictif-cafe-exemple.png`. Sur le Bureau.
+Fichiers d'exercice (fictifs) : `facture-fictive-imprimerie-exemple.pdf` et `ticket-fictif-cafe-exemple.png`. Télécharge-les depuis cette page (puis Fichiers ou Photos sur ton iPhone). La photo du ticket, tu peux aussi la prendre avec l'iPhone.
 
 ## Le fichier ne parle pas
 
@@ -23,7 +23,7 @@ Laisser le bot « deviner » un chiffre. Non : mot fixe, toujours le même.
 <div class="box atoi" markdown="1">
 **Exercice 1 : nomme chaque fichier.** Sans le bot.
 
-1. Ouvre les deux fichiers.
+1. Ouvre les deux fichiers (Fichiers ou Photos).
 2. « Le PDF est … . Sers-t'en pour … . »
 3. « La photo est … . Sers-t'en pour … . »
 4. Une phrase qui commence par « Ne … ».
@@ -42,7 +42,7 @@ Ne modifie pas les originaux.
 <div class="box atoi" markdown="1">
 **Exercice 2 : assemble.** Sans le bot.
 
-1. 7 colonnes : Fichier | Fournisseur | Date | Désignation | Quantité | Prix unitaire CHF | Montant CHF. (`|` = Option+Maj+L)
+1. 7 colonnes : Fichier | Fournisseur | Date | Désignation | Quantité | Prix unitaire CHF | Montant CHF.
 2. « Une ligne par … . Recopie les chiffres … . »
 3. « Si tu ne peux pas lire un chiffre, tu écris … , tu n'inventes rien. »
 4. Liste à part : « Déduit » et « Pas pu vérifier » + vérifie les calculs.

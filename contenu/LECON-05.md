@@ -46,28 +46,21 @@ Exemple (boulangerie) : « C'est combien, un gâteau pour 10 ? »
 3. Ajoute « Sortie : » URGENT · Client · Problème · Infos manquantes · Brouillon.
 4. Prédits 5 lignes.
 5. « Mets ceci comme ta description, mot pour mot : » + fiche.
-6. Envoie ton SMS. ✅/❌ + phrase pour « aucun montant » et « signé Marc ».
+6. Envoie ton SMS. Regarde : aucun montant ? signé Marc ?
 
 Si ❌ : recopie la phrase. Pas d'autre message.
 
-**C'est réussi si :** vieille phrase partie ; qui à la place ; prédiction ; 2 messages + ✅/❌.
+**C'est réussi si :** vieille phrase partie ; qui à la place ; prédiction ; 2 messages ; réponse lue des yeux.
 </div>
 
 <div class="box corrige" markdown="1">
 **+ Je reprends avant :** prix -> Marc. Conseil -> Marc. RDV -> Marc. Envoi -> Marc.  
 **+ Sortie :** 1) URGENT 2) Client 3) Problème 4) Infos manquantes 5) Brouillon.
 </div>
-
-<div class="box preuve" markdown="1">
-Aucun montant ✅ « Marc vous rappelle. » · Signé Marc ✅ « … Marc »
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 
-- Preuve = message **nouveau**.
 - Vieille phrase contraire = hors fiche.
-- ✅/❌ + phrase du bot.
 
 **Bravo !** Niveau 1 terminé. Quiz, puis niveau 2.
 </div>

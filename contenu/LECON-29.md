@@ -11,26 +11,23 @@ Fichiers, sessions navigateur, identifiants en ligne de commande : visibles par 
 - Retire les fichiers sensibles de `/workspace` après usage.
 - Désinstalle un connecteur / révoque l'accès dans le service source.
 
-## Ordinateur local
+## Ordinateur local (lecture)
 
-Ouvre le [réglage d'exécution sur ton ordinateur](grokbot://app/v1/settings?id=local-execution) (`Cmd+,`). Trois choix :
+Si tu as un ordinateur (Mac ou PC) enregistré dans Grok Bot, un réglage contrôle l'exécution **sur cette machine** :
 
 - demander à chaque fois (défaut)
 - toujours autoriser
 - ne jamais autoriser
 
-
-Si ton Mac est déjà enregistré : vois aussi [tes ordinateurs](grokbot://app/v1/settings?id=computers).
-
-Choisis ne jamais autoriser, sauf besoin précis. Ce réglage ne bloque pas l'ordinateur cloud.
+Sur iPhone seul, ce réglage ne s'applique pas. L'ordinateur cloud du bot reste actif. **Aujourd'hui : lecture seulement. Aucun réglage changé.**
 
 <div class="box atoi" markdown="1">
 **À toi de jouer.** Audit en lecture. 0 message. **Aucun réglage changé aujourd'hui.**
 
-1. Liste les **plugins** installés (barre de gauche : tes apps connectées). Pour chacun : « je garderais » ou « je retirerais, si je le décide ».
+1. Liste les **plugins** installés (tes apps connectées). Pour chacun : « je garderais » ou « je retirerais, si je le décide ».
 2. Liste les **routines**. Pour chacune : « je garderais » ou « je mettrais en pause, si je le décide ».
-3. Note le choix actuel pour l'exécution sur ton ordinateur. Écris celle que tu choisirais, si tu le décides.
-4. Regarde `/workspace` sur l'ordinateur du bot. Note les fichiers sensibles éventuels : « je garderais » ou « je supprimerais, si je le décide ».
+3. Si tu as un ordinateur enregistré : note le choix actuel pour l'exécution locale. Sinon écris « pas d'ordinateur — iPhone seulement ».
+4. Demande au bot de lister `/workspace`. Note les fichiers sensibles éventuels : « je garderais » ou « je supprimerais, si je le décide ».
 5. Écris 3 actions possibles, chacune avec « si je le décide ».
 
 **C'est réussi si :** 4 listes notées (1-4) ; 3 actions écrites avec « si je le décide » (5) ; aucun réglage modifié.
@@ -39,20 +36,15 @@ Choisis ne jamais autoriser, sauf besoin précis. Ce réglage ne bloque pas l'or
 <div class="box corrige" markdown="1">
 Plugins : Drive — je garderais · X — je retirerais, si je le décide.  
 Routines : stock-marc — je mettrais en pause, si je le décide.  
-Local : demander à chaque fois aujourd'hui · ne jamais autoriser, si je le décide.  
+Local : pas d'ordinateur — iPhone seulement.  
 `/workspace` : fournitures-test.csv — je garderais (fictif).  
-Actions possibles : 1) ne jamais autoriser 2) pause de stock-marc 3) retrait du plugin X — chacune si je le décide.
+Actions possibles : 1) pause de stock-marc 2) retrait du plugin X 3) supprimer un fichier sensible — chacune si je le décide.
 </div>
-
-<div class="box preuve" markdown="1">
-La preuve, c'est ta liste notée : 4 listes + 3 actions « si je le décide ». Aucun réglage changé ✅
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 
 - Un ordinateur cloud pour tous tes bots.
-- Demander à chaque fois / toujours / jamais pour le Mac local.
+- Exécution locale : lecture, si tu as un ordinateur.
 - Audit en lecture : tu notes, tu ne changes rien.
 
 **Bravo !** Leçon 30 : essai blanc.

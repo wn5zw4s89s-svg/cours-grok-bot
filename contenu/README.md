@@ -146,7 +146,7 @@ La doc est en anglais. Les leçons ne donnent pas de libellé non vérifié.
 
 ## Format leçon
 
-- Encadrés : `<div class="box info|question|attention|erreur|atoi|plus|corrige|preuve" markdown="1">`
+- Encadrés : `<div class="box info|question|attention|erreur|atoi|plus|corrige" markdown="1">`
 - Aussi : `chapeau`, `schema`, `apercu`, `fin`
 - Flèches : ASCII `->` uniquement
 - Pas de GIF
@@ -170,3 +170,15 @@ Aucun. Cours complet.
 15/10 : mentions « à vérifier sur ton écran » retirées (demande d'Yvan). Sauvegarde : /workspace/backup-avant-libelles/.
 15/10 : noms de boutons anglais de Grok Bot remplacés par l'action en mots simples (Cursor : Restore Checkpoint / Open Folder gardés, expliqués). Sauvegarde : /workspace/backup-avant-boutons/.
 15/10 : L01 mobile (pas de Cmd+N) ; L02 modèle à coller + 4 étapes / 2 messages ; L08 dictée iPhone. Sauvegarde : /workspace/backup-avant-mobile-n1/.
+
+## Règle iPhone (15/10)
+
+Tout le cours est faisable **100 % depuis l'iPhone**.  
+Accueil vérifié : rond initiales (compte) · loupe (recherche) · **+** (créer) · bots en sections.  
+Fichiers : le bot crée sur son ordinateur, ou tu télécharges depuis le site puis tu joins depuis Fichiers / Photos.  
+Cursor / site local : le bot code sur son ordinateur ; tu vérifies depuis l'iPhone. Impossible = démo lecture.  
+Sauvegarde avant cette passe : `/workspace/backup-avant-iphone-100/`.
+
+15/10 : passe iPhone 100 % (L03–L43 + quiz). Sauvegarde : /workspace/backup-avant-iphone-100/.
+
+15/10 : case Preuve retirée du cours (blocs + consignes). On juge des yeux, on n'écrit nulle part. Sauvegarde : /workspace/backup-avant-sans-preuve/.

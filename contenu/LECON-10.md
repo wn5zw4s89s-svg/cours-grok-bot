@@ -55,11 +55,6 @@ Même fil = le bot relit « Corrigé » au-dessus. Nouvelle conversation = vraie
 <div class="box corrige" markdown="1">
 Réponse : « 06 00 00 00 02. » Verdict : souvenir corrigé.
 </div>
-
-<div class="box preuve" markdown="1">
-Si 06 00 00 00 01 revient : refais 2, puis 3 en nouveau fil. Sinon : pour une vraie décision, rouvre la source.
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 

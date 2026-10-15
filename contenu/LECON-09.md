@@ -43,28 +43,22 @@ Appel lancé. Points dits. Raccroché à 4 min 10.
 <div class="box atoi" markdown="1">
 **Exercice 3 : transcription + mémo + coût.**
 
-1. Durée. Chaque point : ✅/❌ + phrase.
+1. Durée. Pour chaque point : la réponse était bonne ? (des yeux)
 2. Une phrase mal comprise (ou « aucune »).
 3. Mémo : écoute. Sinon 1 message : « Envoie-moi un mémo vocal de 3 phrases. »
 4. « 3 phrases : oui/non. Points repris : oui/non. »
 5. Usage après. Écart.
 
-**C'est réussi si :** durée ≤ 5 ; 3 ✅/❌ ; mémo lu ; écart calculé ; ≤ 1 message écrit.
+**C'est réussi si :** durée ≤ 5 ; 3 points jugés ; mémo lu ; écart calculé ; ≤ 1 message écrit.
 </div>
 
 <div class="box corrige" markdown="1">
 Durée : 4 min 10. Points ✅. Mémo : 3 phrases, oui. Usage après : 21 %. Coût ≈ 2.
 </div>
-
-<div class="box preuve" markdown="1">
-Un ✅ sans phrase = pas une preuve.
-</div>
-
 <div class="fin" markdown="1">
 ## En résumé
 
 - ≤ 5 min. Plan sous les yeux.
-- Preuve = transcription + phrase.
 - Coût = avant / après.
 
 **Bravo !** Leçon 10 : la mémoire.

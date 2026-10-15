@@ -26,7 +26,7 @@ D'abord une tâche réussie une fois. Ensuite le skill. Après seulement, l'auto
 <div class="box atoi" markdown="1">
 **À toi de jouer.** Sans le bot.
 
-Cas : Marc veut savoir quoi recommander. Fichier : `fournitures-test.csv` (à télécharger sur cette page).
+Cas : Marc veut savoir quoi recommander. Fichier : `fournitures-test.csv` (télécharge-le depuis cette page, puis Fichiers sur ton iPhone).
 
 1. Nom du skill : 2 ou 3 mots reliés par des tirets (ex. `liste-prod`).
 2. Remplis les 6 rubriques. Une ou deux phrases chacune.

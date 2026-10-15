@@ -4,7 +4,7 @@
 
 ## Où regarder
 
-Ouvre le [réglage de l'usage](grokbot://app/v1/settings?id=usage) (`Cmd+,`, ou le bouton compte en bas à gauche). L'usage se recharge chaque semaine.
+Ouvre le [réglage de l'usage](grokbot://app/v1/settings?id=usage) (sur iPhone : le rond à tes initiales en haut à gauche). L'usage se recharge chaque semaine.
 
 ## Ce qui coûte
 
@@ -38,7 +38,7 @@ Règle : au-delà de 70 % avant jeudi, je mets en pause les routines non essenti
 <div class="fin" markdown="1">
 ## En résumé
 
-- Usage : Réglages ou bouton compte.
+- Usage : rond aux initiales -> Réglages.
 - Fréquence des routines = premier levier.
 - Tu décides, la leçon ne coupe rien.
 

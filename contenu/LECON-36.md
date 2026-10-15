@@ -4,11 +4,11 @@
 
 ## Agent cloud
 
-Même agent, mais sur une machine dans le cloud. Ton Mac peut être éteint.
+Même agent, mais sur une machine dans le cloud. Ton iPhone peut être verrouillé.
 
 Il clone le dépôt, travaille sur une branche, teste, et rend son travail (avec captures, vidéos, journaux).
 
-Lancement : cursor.com/agents, Cursor (choix **Cloud** sous la zone de demande), Slack, GitHub…
+Lancement (sur ordinateur ou web) : cursor.com/agents, Cursor (choix Cloud), Slack, GitHub… **Pas depuis l'app iPhone Grok Bot aujourd'hui** — démo lecture.
 
 <div class="box attention" markdown="1">
 **Aucun achat. Aucun lancement aujourd'hui.**  

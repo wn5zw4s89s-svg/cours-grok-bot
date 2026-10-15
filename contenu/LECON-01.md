@@ -24,7 +24,6 @@ C'est un collègue : un nom, un métier, une mémoire.
 
 Sur l'accueil : en haut à gauche, le rond à tes initiales (compte) ; en haut à droite, la loupe (recherche) et le **+** (créer). En dessous, tes bots par sections.
 
-
 <div class="schema">
   <div class="etape"><b>1</b>+</div>
   <div class="fleche">-></div>

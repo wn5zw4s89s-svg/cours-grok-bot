@@ -1,4 +1,4 @@
-// Cours Grok Bot — progression anonyme, une leçon à la fois, preuves, badges.
+// Cours Grok Bot — progression anonyme, une leçon à la fois, badges.
 (function () {
   const M = JSON.parse(document.getElementById('gb-meta').textContent);
   const K = 'gb2:progression';
@@ -19,7 +19,6 @@
   const nivCourant = (d) => M.niveaux.find((n) => !nivFini(d, n.id)) || null;
   const BADGES = [
     ['🌱', 'Premier pas', (d) => !!d.lecons['lecon-01']],
-    ['🧪', 'Première preuve', (d) => Object.values(d.preuves).some((p) => p.resultat === 'ok' || p.resultat === 'ko')],
     ...M.niveaux.map((n) => ['🏅', `Fin du niveau ${n.id}`, (d) => nivFini(d, n.id), n.id]),
     ['⭐', 'Quiz parfait', (d) => Object.values(d.quiz).some((q) => q.score === q.total)],
   ];
@@ -87,7 +86,7 @@
   }
 
   document.querySelectorAll('[data-reset]').forEach((b) => b.addEventListener('click', () => {
-    if (confirm('Effacer ta progression sur cet appareil ?')) { localStorage.removeItem(K); rafraichir(); }
+    localStorage.removeItem(K); location.href = M.base;
   }));
 
   // Bloquer clics sur leçons verrouillées
@@ -97,59 +96,16 @@
     }, true);
   });
 
-  function preuvesOk() {
-    const boxes = [...document.querySelectorAll('.box.preuve')];
-    if (!boxes.length) return true;
-    const d = etat();
-    return boxes.every((box) => {
-      const id = box.dataset.preuve;
-      const ta = box.querySelector('textarea');
-      const phrase = (ta?.value || d.preuves[id]?.phrase || '').trim();
-      const res = d.preuves[id]?.resultat;
-      // aussi lire l'état UI des boutons
-      const onOk = box.querySelector('.choix-preuve button.on');
-      const r = res || (onOk ? (onOk.textContent.includes('✅') ? 'ok' : 'ko') : null);
-      return phrase.length > 0 && (r === 'ok' || r === 'ko');
-    });
-  }
-
   document.querySelectorAll('.lecon').forEach((art) => {
     const id = art.dataset.lecon, i = idx(id);
     if (!debloquee(etat(), i)) { art.classList.add('bloquee'); art.querySelector('.verrou').hidden = false; }
     art.querySelector('[data-forcer]')?.addEventListener('click', () => { art.classList.remove('bloquee'); art.querySelector('.verrou').hidden = true; });
     const btn = art.querySelector('[data-terminer]');
-    const msg = art.querySelector('[data-msg-preuve]');
     btn?.addEventListener('click', (ev) => {
       ev.preventDefault();
-      if (!preuvesOk()) {
-        if (msg) { msg.hidden = false; msg.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-        document.querySelector('.box.preuve')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
-      }
-      if (msg) msg.hidden = true;
       ecrire((d) => { d.lecons[id] ??= { date: new Date().toISOString() }; });
       location.href = btn.dataset.suite || M.base;
     });
-  });
-
-  document.querySelectorAll('.box.preuve').forEach((box) => {
-    const id = box.dataset.preuve, w = box.querySelector('.preuve-widget'); if (!w) return;
-    const cur = etat().preuves[id] || {};
-    const ta = $('textarea', { placeholder: 'Colle ici la phrase exacte de ton bot…' }); ta.value = cur.phrase || '';
-    const bOk = $('button', { type: 'button' }, '✅ Ça passe'), bKo = $('button', { type: 'button' }, '❌ Ça rate');
-    const aff = (r) => { bOk.classList.toggle('on', r === 'ok'); bKo.classList.toggle('on', r === 'ko'); };
-    const save = (r) => {
-      ecrire((d) => (d.preuves[id] = { phrase: ta.value, resultat: r, date: new Date().toISOString() }));
-      aff(r);
-      const msg = document.querySelector('[data-msg-preuve]');
-      if (msg && preuvesOk()) msg.hidden = true;
-    };
-    bOk.onclick = () => save('ok'); bKo.onclick = () => save('ko');
-    ta.addEventListener('input', () => {
-      const r = etat().preuves[id]?.resultat;
-      if (r) ecrire((d) => { d.preuves[id] = { ...d.preuves[id], phrase: ta.value }; });
-    });
-    w.append(ta, $('div', { class: 'choix-preuve' }, bOk, bKo)); aff(cur.resultat);
   });
 
   document.querySelectorAll('.quiz').forEach((el) => {

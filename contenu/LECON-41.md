@@ -12,7 +12,7 @@
 Agents cloud : plan payant (Premium, 30 $/mois hors taxes sur cursor.com/pricing, lu le 15/10/2026). Facturés au tarif API du modèle, avec une limite de dépense.
 
 <div class="box attention" markdown="1">
-Lecture et démo. **Aucun achat, aucun dépôt public, aucune mise en ligne aujourd'hui.** Chaque geste réel : si tu le décides.
+Lecture et démo (agents cloud Cursor : pas depuis l'app iPhone). **Aucun achat, aucun dépôt public, aucune mise en ligne aujourd'hui.** Chaque geste réel : si tu le décides.
 </div>
 
 <div class="box atoi" markdown="1">
