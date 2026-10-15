@@ -119,7 +119,7 @@
   };
 
   const BADGES = [
-    ['🫧', 'Première bulle', (d) => !!d.lecons['lecon-01']],
+    ['🫧', 'Première leçon', (d) => !!d.lecons['lecon-01']],
     ...UNITES.map((n) => [TENT(n.id).emoji, (n.badge && !/^Fin du /.test(n.badge)) ? n.badge : TENT(n.id).nom, (d) => nivFini(d, n.id), n.id]),
     ['🎯', 'Sans fausse note', (d) => Object.values(d.quiz).some((q) => q.meilleur === q.total && q.total > 0)],
   ];
@@ -207,7 +207,7 @@
 
   function badgeTexte(b) {
     const [, nom, , projId] = b;
-    if (nom === 'Première bulle') return 'Tu as terminé ta première leçon.';
+    if (nom === 'Première leçon') return 'Tu as terminé ta première leçon.';
     if (nom === 'Sans fausse note') return 'Tu as eu un quiz sans aucune erreur.';
     if (projId) {
       const p = UNITES.find((n) => n.id === projId);
