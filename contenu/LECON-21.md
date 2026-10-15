@@ -2,7 +2,9 @@
 
 <p class="chapeau">Si tu ne peux pas la dire en une phrase, personne ne l'achètera.</p>
 
-## La phrase
+## Étape 1 · Cinq offres (2 min)
+
+### La phrase
 
 « Pour ___ qui veulent ___, je propose ___. »
 
@@ -14,23 +16,42 @@ Puis 3 preuves concrètes. Puis un seul bouton.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 2 messages.
+**À toi.** Envoie : « Propose 5 versions de mon offre avec la phrase : Pour ___ qui veulent ___, je propose ___. »
 
-1. Envoie : « Propose 5 versions de mon offre avec la phrase : Pour ___ qui veulent ___, je propose ___. »
-2. Garde la plus concrète. Envoie : « Ajoute 3 preuves vérifiables et un seul appel à l'action. »
-3. Fixe toi-même ton prix, ou écris « sur demande ». Le bot n'invente pas de prix.
-
-**C'est réussi si :**
-
-- une phrase complète, sans mot vide (étapes 1-2) ;
-- 3 preuves et un appel à l'action (étape 2) ;
-- le prix vient de toi (étape 3).
+**C'est réussi si :** une phrase complète, sans mot vide.
 </div>
 
 <div class="box corrige" markdown="1">
-« Pour celles et ceux qui offrent souvent, je propose des bougies au parfum choisi, coulées à la main. »  
+« Pour celles et ceux qui offrent souvent, je propose des bougies au parfum choisi, coulées à la main. »
+</div>
+
+## Étape 2 · Trois preuves, un bouton (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Garde la plus concrète. Envoie : « Ajoute 3 preuves vérifiables et un seul appel à l'action. »
+
+**C'est réussi si :** 3 preuves et un appel à l'action.
+</div>
+
+<div class="box corrige" markdown="1">
 Preuves : cire végétale, parfum choisi parmi 6, emballage cadeau.  
-Bouton : « Écrire à Lune Douce ». Prix : sur demande.
+Bouton : « Écrire à Lune Douce ».
+</div>
+
+## Étape 3 · Ton prix (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Fixe toi-même ton prix, ou écris « sur demande ». Le bot n'invente pas de prix.
+
+**C'est réussi si :** le prix vient de toi.
+</div>
+
+<div class="box corrige" markdown="1">
+Prix : sur demande. Écrit par Léa, pas par le bot.
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« Encore une brique. »
 </div>
 
 <div class="fin" markdown="1">

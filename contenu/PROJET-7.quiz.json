@@ -1,6 +1,6 @@
 {
   "id": "PROJET-7",
-  "titre": "Projet 7 : Ma boîte en 3 jours 100 % bots",
+  "titre": "Projet 7 : Ta boîte en 3 jours, 100 % bots (tentacule 7)",
   "questions": [
     {
       "id": "q1",
@@ -59,7 +59,7 @@
     },
     {
       "id": "q6",
-      "question": "Une bonne routine d'équipe…",
+      "question": "Une bonne routine (un réflexe) d'équipe…",
       "choix": [
         "écoute tout",
         "appartient à un seul bot, avec un but précis",
@@ -70,7 +70,7 @@
     },
     {
       "id": "q7",
-      "question": "Pourquoi une skill « goût maison » ?",
+      "question": "Top 1 % (mode Kraken) : pourquoi une skill « goût maison » ?",
       "choix": [
         "Pour que chaque bot ait son style",
         "Pour un seul style, partagé par toute l'équipe",

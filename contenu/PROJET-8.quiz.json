@@ -1,6 +1,6 @@
 {
   "id": "PROJET-8",
-  "titre": "Projet 8 : Ma plateforme de camping 100 % IA",
+  "titre": "Projet 8 : Ta plateforme de camping 100 % IA (tentacule 8)",
   "questions": [
     {
       "id": "q1",
@@ -89,6 +89,17 @@
       ],
       "bonne_reponse": 1,
       "explication": "Aucun avis inventé, règles publiées."
+    },
+    {
+      "id": "q9",
+      "question": "Top 1 % (mode Kraken) : la revue anti-slop, c'est…",
+      "choix": [
+        "Plus d'emojis sur l'accueil",
+        "Un bot Critique, une grille, des captures avant / après",
+        "Republier sans relire"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Accueil : où, pour qui, quand. Pas de promesse vague."
     }
   ]
 }

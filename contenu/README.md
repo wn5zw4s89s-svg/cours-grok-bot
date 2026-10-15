@@ -62,7 +62,7 @@ Format : `## Étape N · titre (2 min)`, puis une boîte atoi (un critère lié 
 
 Badges : 1 Premier bot · 2 Bureau ouvert · 3 Chasseur de nuit · 4 Marque lancée · 5 Studio 3 bots · 6 Premier euro · 7 Chef d'orchestre · 8 Fondateur.
 
-Statut OctoBoss : projets 1 à 3 convertis (01-18). Projets 4 à 8 au format précédent, à convertir.
+Statut OctoBoss : les 58 leçons (projets 1 à 8) et les 8 quiz sont au format micro-étapes, vrai terme d'abord.
 
 ## Balise de réaction (pour Le Bâtisseur)
 

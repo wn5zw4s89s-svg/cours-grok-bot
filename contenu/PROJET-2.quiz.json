@@ -1,6 +1,6 @@
 {
   "id": "PROJET-2",
-  "titre": "Projet 2 : Mon bot a son adresse email (tentacule 2)",
+  "titre": "Projet 2 : Donne une adresse email à ton bot (tentacule 2)",
   "questions": [
     {
       "id": "q1",
@@ -59,7 +59,7 @@
     },
     {
       "id": "q6",
-      "question": "Sans routine, que fait le bot quand un email arrive ?",
+      "question": "Sans routine (un réflexe), que fait le bot quand un email arrive ?",
       "choix": [
         "Il répond",
         "Rien, jusqu'à ce que tu demandes",
@@ -78,6 +78,17 @@
       ],
       "bonne_reponse": 1,
       "explication": "Formule de chatbot : à couper."
+    },
+    {
+      "id": "q8",
+      "question": "Top 1 % (mode Kraken) : un email au ton humain, c'est…",
+      "choix": [
+        "Plein de formules polies",
+        "Un fait par phrase, zéro formule de chatbot",
+        "Des emojis pour la chaleur"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Un fait par phrase. « N'hésitez pas… » se coupe."
     }
   ]
 }

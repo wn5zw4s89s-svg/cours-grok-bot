@@ -2,13 +2,19 @@
 
 <p class="chapeau">Projet final. Une vraie plateforme de camping chez l'habitant, dans ta région. Construite et tenue par des bots.</p>
 
-## Ne copie pas les grands
+<div class="pieuvre" data-reaction="accueil" markdown="1">
+« Projet 8. On construit ta plateforme ? »
+</div>
+
+## Étape 1 · Le marché (2 min)
+
+### Ne copie pas les grands
 
 Hipcamp et Campspace existent. Tu ne gagnes pas en faisant pareil, en plus petit.
 
 Tu gagnes avec un angle : une niche, une région, une promesse.
 
-## L'angle en une phrase
+### L'angle en une phrase
 
 « Pour ___ qui veulent ___ en ___ (région), on propose ___. »
 
@@ -18,17 +24,33 @@ Tu gagnes avec un angle : une niche, une région, une promesse.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 2 messages.
+**À toi.** Envoie à Chef : « Lis les pages publiques de Hipcamp et Campspace. Liste ce qu'ils proposent dans ma région ___, avec les liens. N'invente rien. »
 
-1. Envoie à Chef : « Lis les pages publiques de Hipcamp et Campspace. Liste ce qu'ils proposent dans ma région ___, avec les liens. N'invente rien. »
-2. Envoie : « Propose 5 angles qu'ils ne couvrent pas ici : niche, région, promesse. »
-3. Choisis un angle. Écris ta phrase. Donne un nom à ta plateforme.
+**C'est réussi si :** une liste avec liens, rien d'inventé.
+</div>
 
-**C'est réussi si :**
+<div class="box corrige" markdown="1">
+Chef liste ce que Hipcamp et Campspace proposent dans la région, liens à l'appui.
+</div>
 
-- une liste avec liens, rien d'inventé (étape 1) ;
-- 5 angles différents (étape 2) ;
-- une phrase et un nom choisis par toi (étape 3).
+## Étape 2 · Cinq angles (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie : « Propose 5 angles qu'ils ne couvrent pas ici : niche, région, promesse. »
+
+**C'est réussi si :** 5 angles différents.
+</div>
+
+<div class="box corrige" markdown="1">
+Angle gardé : les cyclistes de la véloroute, réservation le jour même.
+</div>
+
+## Étape 3 · Ton angle (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Choisis un angle. Écris ta phrase. Donne un nom à ta plateforme.
+
+**C'est réussi si :** une phrase et un nom choisis par toi.
 </div>
 
 <div class="box corrige" markdown="1">
@@ -37,6 +59,10 @@ Phrase : « Pour les cyclistes qui traversent le Val-Test, on propose un coin de
 </div>
 
 <div class="box info" markdown="1">
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« La plateforme prend forme. »
 </div>
 
 <div class="fin" markdown="1">

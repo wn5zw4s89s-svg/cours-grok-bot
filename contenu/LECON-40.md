@@ -2,7 +2,9 @@
 
 <p class="chapeau">Tu ne pars pas de zéro. Tes anciens bots deviennent ton équipe.</p>
 
-## Qui fait quoi
+## Étape 1 · Crée Ops (2 min)
+
+### Qui fait quoi
 
 | Rôle | Bot | Vient de |
 |---|---|---|
@@ -10,7 +12,7 @@
 | Contenu | Plume | projet 5 |
 | Opérations | Ops, nouveau | commandes, emails, PDF du projet 6 |
 
-## Deux lignes de plus par fiche
+### Deux lignes de plus par fiche
 
 - **Je reçois de** : qui me donne le travail.
 - **Je rends à** : à qui je le rends.
@@ -18,17 +20,33 @@
 Sans ces lignes, chacun te répond à toi. Tu redeviens le standard.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 2 messages.
+**À toi.** Crée le bot **Ops** avec le +. Description : « Métier : commandes, emails acheteurs, envoi du PDF en brouillon. Interdits : envoyer sans validation. »
 
-1. Crée le bot **Ops** avec le +. Description : « Métier : commandes, emails acheteurs, envoi du PDF en brouillon. Interdits : envoyer sans validation. »
-2. Ajoute à Lumen, Plume et Ops : « Je reçois de : Chef. Je rends à : Chef. » Enregistre chaque fiche.
-3. Envoie à chacun : « Qui te donne le travail, et à qui le rends-tu ? »
+**C'est réussi si :** Ops existe avec sa fiche.
+</div>
 
-**C'est réussi si :**
+<div class="box corrige" markdown="1">
+Ops existe avec sa description.
+</div>
 
-- Ops existe avec sa fiche (étape 1) ;
-- les 3 fiches ont les deux lignes (étape 2) ;
-- les 3 répondent « Chef » aux deux questions (étape 3).
+## Étape 2 · Les relais (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Ajoute à Lumen, Plume et Ops : « Je reçois de : Chef. Je rends à : Chef. » Enregistre chaque fiche.
+
+**C'est réussi si :** les 3 fiches ont les deux lignes.
+</div>
+
+<div class="box corrige" markdown="1">
+Les 3 fiches contiennent « Je reçois de : Chef. Je rends à : Chef. »
+</div>
+
+## Étape 3 · Vérifie (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie à chacun : « Qui te donne le travail, et à qui le rends-tu ? »
+
+**C'est réussi si :** les 3 répondent « Chef » aux deux questions.
 </div>
 
 <div class="box corrige" markdown="1">
@@ -38,6 +56,10 @@ Pareil pour Plume et Ops.
 
 <div class="box info" markdown="1">
 Tous tes bots partagent le même ordinateur : fichiers, sessions, connexions. Pratique pour les relais. Ne mets rien dessus que tous ne doivent pas voir.
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« L'équipe se met en place. »
 </div>
 
 <div class="fin" markdown="1">

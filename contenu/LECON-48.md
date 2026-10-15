@@ -2,7 +2,9 @@
 
 <p class="chapeau">Une plateforme qui met en relation hôtes et campeurs a des obligations. Lis-les avant de lancer.</p>
 
-## Une phrase par point
+## Étape 1 · Lis les sources (2 min)
+
+### Une phrase par point
 
 Sources officielles, relevées le 15 octobre 2026. Ce n'est pas un conseil juridique.
 
@@ -15,22 +17,41 @@ Sources officielles, relevées le 15 octobre 2026. Ce n'est pas un conseil jurid
 - **Responsabilité et assurance.** Chaque hôte vérifie avec son assureur que l'accueil de campeurs chez lui est couvert ; ta plateforme le lui demande avant de publier.
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 2 messages.
+**À toi.** Ouvre 2 des liens ci-dessus sur ton iPhone. Lis-les.
 
-1. Ouvre 2 des liens ci-dessus sur ton iPhone. Lis-les.
-2. Envoie à Chef : « Fais une liste de contrôle légale de 7 lignes à partir de ces sources : » + les liens. « Cite chaque source. »
-3. Choisis ton mode de lancement : **en vrai** (statut déclaré), **test** (paiement simulé) ou **réservation par email** (aucun paiement en ligne).
-
-**C'est réussi si :**
-
-- tu as lu 2 sources officielles (étape 1) ;
-- une liste de 7 lignes, chaque ligne sourcée (étape 2) ;
-- un mode choisi par toi (étape 3).
+**C'est réussi si :** tu as lu 2 sources officielles.
 </div>
 
 <div class="box corrige" markdown="1">
-Mode de Léa : réservation par email tant que son statut n'est pas déclaré.  
-Liste : statut, CGU, classement, DAC7, mentions légales, confidentialité, assurance hôte.
+Léa lit la fiche Service Public et la page DAC7.
+</div>
+
+## Étape 2 · La liste (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie à Chef : « Fais une liste de contrôle légale de 7 lignes à partir de ces sources : » + les liens. « Cite chaque source. »
+
+**C'est réussi si :** une liste de 7 lignes, chaque ligne sourcée.
+</div>
+
+<div class="box corrige" markdown="1">
+Liste : statut, CGU, classement, DAC7, mentions légales, confidentialité, assurance hôte. Chaque ligne cite sa source.
+</div>
+
+## Étape 3 · Ton mode (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Choisis ton mode de lancement : **en vrai** (statut déclaré), **test** (paiement simulé) ou **réservation par email** (aucun paiement en ligne).
+
+**C'est réussi si :** un mode choisi par toi.
+</div>
+
+<div class="box corrige" markdown="1">
+Mode de Léa : réservation par email tant que son statut n'est pas déclaré.
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">
+« La plateforme prend forme. »
 </div>
 
 <div class="fin" markdown="1">

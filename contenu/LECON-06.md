@@ -51,7 +51,7 @@ Top 1 % : « Mince ! Elle a brûlé combien de temps ? Souvent il faut 2 h pour 
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 1 sur 8 au top (tentacule 1 sur 8). « Plus que 7. »
+Bot 1 sur 8 (tentacule 1 sur 8). « Plus que 7. »
 </div>
 
 <div class="box attention" markdown="1">

@@ -1,6 +1,6 @@
 {
   "id": "PROJET-6",
-  "titre": "Projet 6 : Mon premier euro gagné par un bot",
+  "titre": "Projet 6 : Ton premier euro gagné avec un bot (tentacule 6)",
   "questions": [
     {
       "id": "q1",
@@ -70,7 +70,7 @@
     },
     {
       "id": "q7",
-      "question": "Version A contre version B, combien de changements ?",
+      "question": "Top 1 % (mode Kraken) : version A contre version B, combien de changements ?",
       "choix": [
         "Un seul",
         "Tous à la fois",

@@ -70,7 +70,7 @@
     },
     {
       "id": "q7",
-      "question": "Qu'est-ce qui rend les critères top 1 % ?",
+      "question": "Qu'est-ce qui rend les critères top 1 % (mode Kraken) ?",
       "choix": [
         "Plus de prospects",
         "Qui, quand, exclusions, pièges, note",
@@ -78,6 +78,17 @@
       ],
       "bonne_reponse": 1,
       "explication": "Moins de prospects, mais tous vrais."
+    },
+    {
+      "id": "q8",
+      "question": "Qu'est-ce qu'un prospect (une proie) ?",
+      "choix": [
+        "Quelqu'un qui écrit son problème sur X",
+        "N'importe quel compte qui parle de bougies",
+        "Une concurrente"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Un futur client dit son problème, pas « je veux acheter »."
     }
   ]
 }

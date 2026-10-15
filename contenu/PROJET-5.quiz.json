@@ -1,10 +1,10 @@
 {
   "id": "PROJET-5",
-  "titre": "Projet 5 : 1 photo -> 1 pub TikTok",
+  "titre": "Projet 5 : 1 photo -> 1 pub TikTok (tentacule 5)",
   "questions": [
     {
       "id": "q1",
-      "question": "Pourquoi 3 bots plutôt qu'un ?",
+      "question": "Pourquoi 3 bots (3 tentacules) plutôt qu'un ?",
       "choix": [
         "C'est plus joli",
         "Un métier par bot : message, montage, contrôle",
@@ -70,7 +70,7 @@
     },
     {
       "id": "q7",
-      "question": "La méthode top 1 % ?",
+      "question": "La méthode top 1 % (mode Kraken) ?",
       "choix": [
         "1 idée, montée vite",
         "10 idées, 1 gardée par un critique, 3 tours de retouche",

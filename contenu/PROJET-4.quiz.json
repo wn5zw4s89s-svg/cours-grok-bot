@@ -1,6 +1,6 @@
 {
   "id": "PROJET-4",
-  "titre": "Projet 4 : Ma marque en 1 week-end",
+  "titre": "Projet 4 : Ta marque en un week-end (tentacule 4)",
   "questions": [
     {
       "id": "q1",
@@ -39,7 +39,7 @@
       "id": "q4",
       "question": "Comment vérifies-tu la page avant publication ?",
       "choix": [
-        "Sur un Mac",
+        "Sur un écran d'ordinateur",
         "Sur la capture téléphone envoyée par le bot",
         "Tu ne vérifies pas"
       ],
@@ -70,7 +70,7 @@
     },
     {
       "id": "q7",
-      "question": "Quelle consigne évite le slop design ?",
+      "question": "Top 1 % (mode Kraken) : quelle consigne évite le design qui sent l'IA ?",
       "choix": [
         "« Fais moderne et élégant »",
         "3 références précises et des interdits explicites",

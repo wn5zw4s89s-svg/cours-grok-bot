@@ -1,8 +1,10 @@
-# Leçon 58 : Top 1 % : la grande revue anti-slop
+# Leçon 58 : Top 1 % (mode Kraken) : la grande revue anti-slop
 
 <p class="chapeau">Un critique impitoyable relit tout le site. Ce qui reste est à toi.</p>
 
-## Côte à côte
+## Étape 1 · Les captures avant (2 min)
+
+### Côte à côte
 
 | Site moyen | Site top 1 % |
 |---|---|
@@ -11,7 +13,19 @@
 | 3 cartes à icônes centrées | La carte de ta région en premier |
 | Boutons « Découvrir » | « Réserver ce soir » |
 
-## La grille du critique
+<div class="box atoi" markdown="1">
+**À toi.** Envoie à Chef : « Fais une capture téléphone de chaque page du site. » Garde-les : version avant.
+
+**C'est réussi si :** les captures d'avant.
+</div>
+
+<div class="box corrige" markdown="1">
+Accueil, avant : « 🏕️ Vivez l'aventure autrement ! »
+</div>
+
+## Étape 2 · Critique (2 min)
+
+### La grille du critique
 
 Pour chaque page :
 
@@ -22,21 +36,24 @@ Pour chaque page :
 5. Le campeur sait-il réserver en 5 secondes ?
 
 <div class="box atoi" markdown="1">
-**À toi de jouer.** 3 étapes. 3 messages.
+**À toi.** Crée un bot **Critique** avec le +. Fiche : la grille ci-dessus et la skill Goût maison. Envoie-lui le lien du site : « Revois chaque page. Une liste de corrections par page. »
 
-1. Envoie à Chef : « Fais une capture téléphone de chaque page du site. » Garde-les : version avant.
-2. Crée un bot **Critique** avec le +. Fiche : la grille ci-dessus et la skill Goût maison. Envoie-lui le lien du site : « Revois chaque page. Une liste de corrections par page. »
-3. Envoie la liste à Chef : « Fais corriger, republie, envoie les captures avant / après. »
-
-**C'est réussi si :**
-
-- les captures d'avant (étape 1) ;
-- une liste de corrections par page, selon la grille (étape 2) ;
-- le site republié, avant et après côte à côte (étape 3).
+**C'est réussi si :** une liste de corrections par page, selon la grille.
 </div>
 
 <div class="box corrige" markdown="1">
-Accueil, avant : « 🏕️ Vivez l'aventure autrement ! »  
+Critique : « Accueil : emoji + promesse vague. Dis où, pour qui, quand. »
+</div>
+
+## Étape 3 · Corrige et republie (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi.** Envoie la liste à Chef : « Fais corriger, republie, envoie les captures avant / après. »
+
+**C'est réussi si :** le site republié, avant et après côte à côte.
+</div>
+
+<div class="box corrige" markdown="1">
 Accueil, après : « Une nuit sous tente chez l'habitant, sur la véloroute du Val-Test. Réservée ce soir. »
 </div>
 
@@ -44,6 +61,10 @@ Accueil, après : « Une nuit sous tente chez l'habitant, sur la véloroute du V
 **Défi X final.** Capture avant / après de l'accueil, et le lien de ta plateforme.  
 Phrase type : « J'ai lancé une vraie plateforme de camping chez l'habitant, tenue par 6 bots. Avant la revue anti-slop, après. Voici le lien. »  
 C'est toi qui postes. Le bot ne poste jamais à ta place.
+</div>
+
+<div class="pieuvre" data-reaction="croissance" markdown="1">
+Bot 8 sur 8 (tentacule 8 sur 8). « Projet 8 terminé. »
 </div>
 
 <div class="fin" markdown="1">
