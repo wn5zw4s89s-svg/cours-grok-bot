@@ -8,7 +8,16 @@ import { marked } from 'marked';
 const APP = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(APP, 'contenu');
 const OUT = path.join(APP, 'src/data');
+const FICH = path.join(SRC, 'fichiers');
+const PUB_FICH = path.join(APP, 'public/fichiers');
+const BASE = (process.env.BASE_PATH || '/cours-grok-bot').replace(/\/?$/, '/');
 fs.mkdirSync(OUT, { recursive: true });
+// Copie les fournitures vers public/ pour téléchargement
+if (fs.existsSync(FICH)) {
+  fs.rmSync(PUB_FICH, { recursive: true, force: true });
+  fs.cpSync(FICH, PUB_FICH, { recursive: true });
+}
+const FICHIERS = fs.existsSync(FICH) ? new Set(fs.readdirSync(FICH)) : new Set();
 
 // Sections / motifs masqués à l'import — pour que Prof Groksky allège à la source.
 export const MASKED_SECTIONS = [
@@ -118,8 +127,17 @@ function masquer(src) {
   return stripReussi(out).join('\n').replace(/\n{3,}/g, '\n\n');
 }
 
+function linkifyFichiers(text) {
+  if (!FICHIERS.size) return text;
+  // `nom.ext` -> lien de téléchargement
+  return text.replace(/`([A-Za-z0-9._-]+\.(?:csv|pdf|png|jpg|jpeg|webp))`/g, (m, name) => {
+    if (!FICHIERS.has(name)) return m;
+    return `[${name}](${BASE}fichiers/${name})`;
+  });
+}
+
 function transformer(src, id) {
-  const lines = masquer(src).split('\n');
+  const lines = linkifyFichiers(masquer(src)).split('\n');
   let title = id;
   const h1 = lines.findIndex((l) => /^# /.test(l));
   if (h1 !== -1) {
@@ -167,7 +185,13 @@ function transformer(src, id) {
       '',
     );
   }
-  return { title, html: marked.parse(out.join('\n')) };
+  let html = marked.parse(out.join('\n'));
+  const used = [...FICHIERS].filter((f) => html.includes(`fichiers/${f}`) || src.includes(f));
+  if (used.length) {
+    const lis = used.map((f) => `<a class="dl" href="${BASE}fichiers/${f}" download>${f}</a>`).join(' ');
+    html = `<p class="telechargements">${lis}</p>` + html;
+  }
+  return { title, html };
 }
 
 const mapNiv = JSON.parse(fs.readFileSync(path.join(SRC, 'niveaux.json'), 'utf8'));

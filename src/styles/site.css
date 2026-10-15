@@ -94,3 +94,7 @@ details.solution[open]>summary{background:var(--fond2);color:var(--texte)}
 .toast.on{transform:translateX(-50%) translateY(0)}
 .badges{display:none}
 @media (max-width:560px){main{padding:20px 18px 80px}}
+
+.telechargements{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.telechargements .dl,.contenu a[href*="/fichiers/"]{display:inline-block;padding:8px 12px;border:1px solid var(--ligne);border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;color:var(--texte);background:var(--fond2)}
+.telechargements .dl:hover,.contenu a[href*="/fichiers/"]:hover{border-color:var(--texte)}
