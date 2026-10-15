@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
+        with: { node-version: 22 }
         env: { SITE_URL: "https://${{ github.repository_owner }}.github.io", BASE_PATH: "/${{ github.event.repository.name }}" }
   deploy:
     needs: build
