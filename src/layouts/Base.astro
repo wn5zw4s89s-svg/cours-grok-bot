@@ -40,6 +40,7 @@ const meta = {
     try {
       var u0 = new URL(location.href);
       if (u0.searchParams.get('v') === jsv) sessionStorage.removeItem(KEY);
+      var verifier = function () {
       fetch(base + 'version.json?_=' + Date.now(), { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (v) {
@@ -52,6 +53,11 @@ const meta = {
           location.replace(u.toString());
         })
         .catch(function () {});
+      };
+      verifier();
+      // Retour arrière (cache mémoire Safari) ou onglet repris : on revérifie.
+      addEventListener('pageshow', function (e) { if (e.persisted) verifier(); });
+      document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') verifier(); });
     } catch (e) {}
   })();
   </script>

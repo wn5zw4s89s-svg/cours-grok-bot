@@ -405,7 +405,7 @@
       $('div', { class: 'confirme', role: 'alertdialog', 'aria-modal': 'true', 'aria-label': 'Recommencer à zéro ?' },
         $('h2', {}, 'Tout effacer ?'),
         $('p', {}, 'Ta progression sera perdue.'),
-        $('button', { type: 'button', class: 'btn btn-large btn-danger', on: { click: () => { localStorage.removeItem(K); location.href = M.base; } } }, 'Recommencer à zéro'),
+        $('button', { type: 'button', class: 'btn btn-large btn-danger', on: { click: () => { localStorage.removeItem(K); Object.keys(localStorage).filter((k) => k.startsWith('gb2:vus:')).forEach((k) => localStorage.removeItem(k)); location.href = M.base; } } }, 'Recommencer à zéro'),
         $('button', { type: 'button', class: 'lien', on: { click: fermer } }, 'Annuler')));
     document.body.append(voile);
     voile.querySelector('.lien').focus();
@@ -461,6 +461,18 @@
             const titreFin = court ? `Leçon terminée : ${court}` : 'Leçon terminée';
             return [
               $('h2', {}, titreFin),
+              (() => {
+                const nE = +art.dataset.etapes || 0, vus = art._vus || new Set();
+                const manq = []; for (let j = 0; j < nE; j++) if (!vus.has(j)) manq.push(j);
+                if (!manq.length) return null;
+                const p = $('p', { class: 'termine-reste' }, manq.length > 1 ? 'Il te reste les étapes ' : 'Il te reste l’étape ');
+                manq.forEach((j, x) => {
+                  if (x) p.append(x === manq.length - 1 ? ' et ' : ', ');
+                  p.append($('a', { href: `#etape-${j + 1}`, on: { click: (e) => { e.preventDefault(); art._show && art._show(j); } } }, String(j + 1)));
+                });
+                p.append('.');
+                return p;
+              })(),
               recap ? $('p', { class: 'termine-recap' }, recap) : null,
             ];
           })(),
@@ -633,17 +645,19 @@
     c.replaceChildren(...secs);
     const nxt = art.querySelector('[data-suivant]'), fin = art.querySelector('[data-terminer]'), bar = art.querySelectorAll('[data-barre-lecon]');
     let k = 0;
-    const vus = (art._vus = new Set());
+    const VK = `gb2:vus:${art.dataset.lecon}`;
+    let vus0 = []; try { vus0 = JSON.parse(localStorage.getItem(VK)) || []; } catch {}
+    const vus = (art._vus = new Set(vus0.filter((x) => x < secs.length)));
     const compteur = $('div', { class: 'etape-n', 'aria-live': 'polite' });
     art.querySelector('.lh')?.append(compteur);
     const show = (n) => {
       const te = art.querySelector('.termine');
       if (te) { te.remove(); art.querySelector('.fin-lecon').hidden = false; compteur.hidden = false; }
-      vus.add(n);
+      vus.add(n); try { localStorage.setItem(VK, JSON.stringify([...vus])); } catch {}
       k = n; secs.forEach((s, i) => (s.hidden = i !== n));
       const last = n === secs.length - 1;
       nxt.hidden = last; fin.hidden = !last;
-      bar.forEach((b) => b.style.setProperty('--p', (n + 1) / secs.length));
+      bar.forEach((b) => b.style.setProperty('--p', vus.size / secs.length));
       art.dataset.etape = String(n + 1);
       art.dataset.etapes = String(secs.length);
       compteur.textContent = `Étape ${n + 1}/${secs.length}`;
@@ -658,6 +672,7 @@
       secs.forEach((_, i) => { const b = $('button', { type: 'button', class: 'dev-etape' }, String(i + 1)); b.addEventListener('click', () => show(i)); nav.append(b); });
       art.querySelector('.lh')?.append(nav);
     }
+    art._show = show;
     nxt.addEventListener('click', () => show(k + 1));
     show(0);
   });
