@@ -68,7 +68,7 @@ C'est réussi si la réponse a les 2 parties, signée Léa, sans date de livrais
 </div>
 
 <div class="box corrige" markdown="1">
-**Bonne réponse (exemple) :**
+**Exemple de réponse :**
 
 1) Marc n'a pas reçu sa bougie et veut savoir où elle en est.
 
