@@ -93,20 +93,31 @@ function retouches(src, num) {
   t = t.replace(/\*\*Réponse attendue \(exemple\)\s*:\*\*/gi, '**Exemple de réponse :**');
   t = t.replace(/Réponse attendue \(exemple\)\s*:/gi, 'Exemple de réponse :');
   // Bulle finale pieuvre → récap d'écran de fin (toutes réactions).
+  // On ne remplace que la DERNIÈRE pieuvre, et uniquement son propre </div>
+  // (un ancrage $ avalait fin + badge quand ils suivaient la pieuvre, ex. L18).
   // croissance / reussite : retirée de l'étape. accueil : gardée visible (ex. fin L7 / projet 2).
-  t = t.replace(/<div class="pieuvre" data-reaction="([^"]*)"([^>]*)>([\s\S]*?)<\/div>\s*$/i, (m, reaction, a, body) => {
-    const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '0'])[1];
-    let recap = body
-      .replace(/\s*Bot\s+\d+\s+sur\s+\d+(?:\s*terminé)?\.?(\s*\([^)]*\))?\.?/i, '')
-      .replace(/[*`]/g, '')
-      .trim();
-    recap = nettoyerTitre(recap);
-    const mark = `<!-- RECAP:${n}:${recap} -->\n`;
-    if (/^accueil$/i.test(reaction)) {
-      return `${mark}<div class="pieuvre" data-reaction="accueil"${a}>\n${body.trim()}\n</div>\n`;
+  {
+    const rePieuvre = /<div class="pieuvre" data-reaction="([^"]*)"([^>]*)>([\s\S]*?)<\/div>/gi;
+    let last = null;
+    let m;
+    while ((m = rePieuvre.exec(t)) !== null) last = m;
+    if (last) {
+      const reaction = last[1];
+      const a = last[2];
+      const body = last[3];
+      const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '0'])[1];
+      let recap = body
+        .replace(/\s*Bot\s+\d+\s+sur\s+\d+(?:\s*terminé)?\.?(\s*\([^)]*\))?\.?/i, '')
+        .replace(/[*`]/g, '')
+        .trim();
+      recap = nettoyerTitre(recap);
+      const mark = `<!-- RECAP:${n}:${recap} -->\n`;
+      const repl = /^accueil$/i.test(reaction)
+        ? `${mark}<div class="pieuvre" data-reaction="accueil"${a}>\n${body.trim()}\n</div>\n`
+        : mark;
+      t = t.slice(0, last.index) + repl + t.slice(last.index + last[0].length);
     }
-    return mark;
-  });
+  }
   if (num === 1) {
     t = t.replace(/\s*\(?ta première tentacule\)?/gi, '');
   }
@@ -241,6 +252,37 @@ const mapRaw = JSON.parse(fs.readFileSync(useProjets ? mapPathProjets : mapPathN
 const labelUnite = useProjets ? 'Projet' : 'Niveau';
 const files = fs.readdirSync(SRC);
 
+/** Nom de badge dans une leçon : « Badge : **X** », « badge **X** », « Badge : X ». */
+function extraireBadge(raw) {
+  const patterns = [
+    /badge\s*:?\s*\*\*([^*]+)\*\*/i,
+    /badge\s*:\s*([^\n*.]+)/i,
+  ];
+  for (const re of patterns) {
+    const m = raw.match(re);
+    if (m) {
+      const nom = m[1].replace(/\s+/g, ' ').replace(/\.+\s*$/, '').trim();
+      if (nom) return nom;
+    }
+  }
+  return null;
+}
+
+/** Fallback README : « Badges : 1 Premier bot · 2 Bureau ouvert · … ». */
+function badgesDepuisReadme() {
+  const p = path.join(SRC, 'README.md');
+  if (!fs.existsSync(p)) return {};
+  const m = fs.readFileSync(p, 'utf8').match(/^Badges\s*:\s*(.+)$/m);
+  if (!m) return {};
+  const out = {};
+  for (const part of m[1].split(/\s*·\s*/)) {
+    const bm = part.trim().match(/^(\d+)\s+(.+)$/);
+    if (bm) out[parseInt(bm[1], 10)] = bm[2].trim();
+  }
+  return out;
+}
+const badgesReadme = badgesDepuisReadme();
+
 const dispo = new Map();
 for (const f of files) {
   const m = f.match(/^LECON-(\d+)\.md$/i);
@@ -260,8 +302,9 @@ for (const f of files) {
   const rc = raw.match(/<!-- RECAP:\d+:([\s\S]*?) -->/);
   if (rc && rc[1]) recap = rc[1].trim();
   if (!recap && objm) recap = objm[1];
-  const bm = raw.match(/badge\s*:?\s*\*\*([^*]+)\*\*/i);
-  dispo.set(num, { id, num, title, court, html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap, objectif: objm ? objm[1] : '', disponible: true, _badge: bm ? bm[1].trim() : null });
+  // Badge : lu sur le fichier brut (avant retouches), formats L6/L12/L18/L24…
+  const bm = extraireBadge(fs.readFileSync(path.join(SRC, f), 'utf8'));
+  dispo.set(num, { id, num, title, court, html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap, objectif: objm ? objm[1] : '', disponible: true, _badge: bm });
 }
 
 let quizFiles = files
@@ -287,6 +330,7 @@ const quiz = quizFiles.sort().map((p) => {
 });
 const quizParId = Object.fromEntries(quiz.map((q) => [q.niveau, q.id]));
 
+
 function parseEntry(raw) {
   if (Array.isArray(raw)) return { nom: null, badge: null, lecons: raw };
   if (raw && typeof raw === 'object' && Array.isArray(raw.lecons)) {
@@ -300,6 +344,7 @@ const projets = Object.keys(mapRaw).map(Number).sort((a, b) => a - b).map((id) =
   const qz = quiz.find((q) => q.niveau === id);
   if (!nom && qz?.titre) nom = String(qz.titre).replace(/^(Projet|Niveau)\s*\d+\s*[:—-]\s*/i, '');
   if (!badge) badge = lecons.map((n) => dispo.get(n)?._badge).filter(Boolean).pop() || null;
+  if (!badge) badge = badgesReadme[id] || null;
   return {
     id,
     nom: nom || `${labelUnite} ${id}`,
