@@ -5,13 +5,14 @@ import Octo from '../components/Octo.astro';
 import site from '../data/site.json';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const first = site.lecons[0];
+const NP = site.projets.filter((p) => Number.isInteger(p.id)).length;
 const nu = (t = '') => t.replace(/\s*\([^)]*\)/g, '');
 ---
 <Base page="accueil">
   <section class="home">
     <div class="octo-host octo-home" data-octo><Octo /></div>
-    <h1 class="home-titre" data-next-titre>Leçon {first.num} · {nu(clair(first).titre)}</h1>
-    <p class="home-promesse">En 8 projets, tu fais tourner une boîte de 8 bots, sans salarié.</p>
+    <h1 class="home-titre" data-next-titre>{first.label} · {nu(clair(first).titre)}</h1>
+    <p class="home-promesse">En {NP} projets, tu fais tourner une boîte de {NP} bots, sans salarié.</p>
     <p class="home-but" data-next-but>{clair(first).but}</p>
     <a class="btn btn-large btn-go" data-continuer href={`${base}lecon/${first.id}/`}>Commencer</a>
   </section>
@@ -28,7 +29,7 @@ const nu = (t = '') => t.replace(/\s*\([^)]*\)/g, '');
             <ol class="liste-compacte">
               {lecs.map((l) => (
                 <li class="item-lecon" data-lecon-carte={l.id}>
-                  <a href={`${base}lecon/${l.id}/`}><span class="pastille" data-etat aria-label={`Leçon ${l.num}`}>{l.num}</span><span class="titre">{nu(l.court)}</span></a>
+                  <a href={`${base}lecon/${l.id}/`}><span class="pastille" data-etat aria-label={l.label}>{l.pos}</span><span class="titre">{nu(l.court)}</span></a>
                 </li>
               ))}
             </ol>

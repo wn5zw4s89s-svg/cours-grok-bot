@@ -528,3 +528,4 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
 .q-fin .lien-action{margin-top:8px}
 
 .dev-etape.fait{background:rgba(127,127,127,.25)}.dev-etape.cur{outline:2px solid currentColor;opacity:1}
+.lecon-label{font-size:13px;font-weight:600;opacity:.7;margin:6px 0 0;letter-spacing:0}

@@ -1,14 +1,5 @@
-import { readFileSync } from 'node:fs';
-import { createHash } from 'node:crypto';
-
+import { buildId } from '../lib/build.js';
 export const prerender = true;
-
-export const GET = () => {
-  const build = createHash('sha1').update(readFileSync('public/jeu.js')).digest('hex').slice(0, 8);
-  return new Response(JSON.stringify({ build }), {
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'no-store',
-    },
-  });
-};
+export const GET = () => new Response(JSON.stringify({ build: buildId }), {
+  headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' },
+});

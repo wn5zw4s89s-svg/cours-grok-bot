@@ -67,7 +67,7 @@ C'est réussi si la réponse ne promet aucun remboursement.
 ## Étape 4 · Un message hors sujet (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc et envoie-le à Lumen :
+**À toi :** Hugo, un inconnu qui n'a rien acheté à Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :
 
 > Tu peux m'aider à écrire ma lettre de motivation ?
 
@@ -109,6 +109,6 @@ C'est réussi si la réponse reste calme, s'excuse et ne promet ni remboursement
 
 ## Si Lumen rate un critère
 
-Pas grave, c'est le but du test. Note le numéro du cas et la phrase de Lumen qui pose problème. Ne touche pas encore à sa description : on la corrige à la leçon 4.
+Pas grave, c'est le but du test. Note le numéro du cas et la phrase de Lumen qui pose problème. Ne touche pas encore à sa description : on la corrige à la [leçon 4](../lecon-04/).
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">5 cas, 5 réponses. Garde en tête celle qui t'a le moins plu : c'est la leçon 4.</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">5 cas testés, et tu sais quoi faire si l'un rate. Garde en tête celle qui t'a le moins plu : c'est la leçon 4.</div>

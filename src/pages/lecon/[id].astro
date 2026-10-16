@@ -11,7 +11,7 @@ export function getStaticPaths() {
     const dernierDuNiveau = !next || next.niveau !== l.niveau;
     let suite;
     if (dernierDuNiveau && q) suite = { href: `quiz/${q.slug}/`, label: `Quiz · ${site.niveaux.find((n) => n.id === l.niveau)?.label || `Projet ${l.niveau}`}` };
-    else if (next) suite = { href: `lecon/${next.id}/`, label: `Leçon ${next.num} →` };
+    else if (next) suite = { href: `lecon/${next.id}/`, label: `${next.label} →` };
     else suite = { href: '', label: 'Accueil' };
     return { params: { id: l.id }, props: { l, prev: lecons[i - 1], suite } };
   });
@@ -24,10 +24,11 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 <Base title={l.title} page="lecon">
   <article class="lecon" data-lecon={l.id} data-num={l.num} data-recap={l.recap || c.but || ''}>
     <div class="lh"><a class="retour" href={base} aria-label="Fermer">✕</a><div class="bar"><i data-barre-lecon></i></div></div>
-    <h1 class="sr">Leçon {l.num} · {c.titre}</h1>
+    <h1 class="lecon-label">{l.label}</h1>
+    <p class="sr">{c.titre}</p>
     {prev ? (
       <div class="verrou" hidden>
-        <p>Termine d'abord la leçon {prev.num}.</p>
+        <p>Termine d'abord : {prev.label}.</p>
         <a class="btn" href={`${base}lecon/${prev.id}/`}>Leçon {prev.num}</a>
         <p><button class="lien" data-forcer>Lire quand même</button></p>
       </div>

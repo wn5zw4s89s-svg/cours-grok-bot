@@ -82,6 +82,8 @@
   const L = M.lecons, idx = (id) => L.findIndex((l) => l.id === id);
   const UNITES = M.projets || M.niveaux || [];
   const labelU = M.labelUnite || (M.projets ? 'Projet' : 'Niveau');
+  const NP = UNITES.filter((n) => Number.isInteger(n.id)).length;
+  const lab = (l) => l.label || `Leçon ${l.num}`;
   const nomU = (u) => (u.label || `${labelU} ${u.id}`);
   const uSuiv = (id) => UNITES[UNITES.findIndex((n) => n.id === id) + 1];
   const lecNiv = (n) => L.filter((l) => l.niveau === n);
@@ -279,14 +281,14 @@
   function dessinerChemin(d, cur) {
     const host = document.querySelector('[data-chemin]');
     if (!host) return;
-    if (!cur) { host.replaceChildren($('li', { class: 'step' }, $('span', { class: 'step-txt' }, 'Cours terminé : 8 projets sur 8.'))); return; }
+    if (!cur) { host.replaceChildren($('li', { class: 'step' }, $('span', { class: 'step-txt' }, `Cours terminé : ${NP} projets sur ${NP}.`))); return; }
     const ls = lecNiv(cur.id);
     const nextIdx = ls.findIndex((l) => !d.lecons[l.id]);
     const items = ls.map((l, i) => {
       const fait = !!d.lecons[l.id], actuelle = i === nextIdx, ok = debloquee(d, idx(l.id));
       const cls = `node${fait ? ' done' : actuelle ? ' cur' : ''}${!ok ? ' lock' : ''}`;
       const t = l.clair || l.court || `Leçon ${l.num}`;
-      return $('li', { class: `step${actuelle ? ' cur' : ''}${fait ? ' done' : ''}` }, $('span', { class: cls }, fait ? '✓' : String(l.num)),
+      return $('li', { class: `step${actuelle ? ' cur' : ''}${fait ? ' done' : ''}` }, $('span', { class: cls }, fait ? '✓' : String(l.pos || l.num)),
         ok ? $('a', { class: 'step-lien', href: `${M.base}lecon/${l.id}/` }, t) : $('span', { class: 'step-txt' }, t));
     });
     const q = M.quiz.find((x) => x.niveau === cur.id), quizOk = q && (DEV || ls.every((l) => d.lecons[l.id])), fini = nivFini(d, cur.id);
@@ -303,7 +305,7 @@
     const nbT = UNITES.filter((n) => nivFini(d, n.id)).length;
     octos().forEach((o) => { if (!o.closest('.gb-badge-pop')) octoGrow(o, nbT); });
     document.querySelectorAll('[data-hero-tag]').forEach((e) => {
-      { const NP = UNITES.filter((n) => Number.isInteger(n.id)).length; e.textContent = !cur ? `${NP} bots sur ${NP} 🐙` : Number.isInteger(cur.id) ? `Bot ${cur.id} sur ${NP} (tentacule ${cur.id} sur ${NP})` : `${nomU(cur)} · ${cur.nom}`; }
+      { e.textContent = !cur ? `${NP} bots sur ${NP} 🐙` : Number.isInteger(cur.id) ? `Bot ${cur.id} sur ${NP} (tentacule ${cur.id} sur ${NP})` : `${nomU(cur)} · ${cur.nom}`; }
     });
     document.querySelectorAll('[data-projet-nom]').forEach((e) => { e.textContent = cur ? `${nomU(cur)} · ${cur.nom}` : 'Cours terminé'; });
     document.querySelectorAll('[data-t]').forEach((e) => e.classList.toggle('on', nivFini(d, +e.dataset.t)));
@@ -311,11 +313,11 @@
       const ls = lecNiv(cur.id), f = ls.filter((l) => d.lecons[l.id]).length;
       const suiv = uSuiv(cur.id);
       const nxt = ls.find((l) => !d.lecons[l.id]), debut = !L.some((l) => d.lecons[l.id]);
-      document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `${Number.isInteger(cur.id) ? `Projet ${cur.id} sur ${UNITES.filter((n) => Number.isInteger(n.id)).length}` : nomU(cur)} (${cur.nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
+      document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `${Number.isInteger(cur.id) ? `Projet ${cur.id} sur ${NP}` : nomU(cur)} (${cur.nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
       document.querySelectorAll('[data-next-kick]').forEach((e) => (e.textContent = debut ? 'Ta première leçon · 2\u00a0min par étape' : nxt ? 'Ta prochaine leçon' : 'Dernière étape'));
-      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · ${nomU(cur)}`));
+      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `${lab(nxt)} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · ${nomU(cur)}`));
       document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
-      document.querySelectorAll('[data-t-ligne]').forEach((e) => (e.textContent = `🐙 Bots créés : ${nbT} sur ${UNITES.length} (tentacules ${nbT} sur ${UNITES.length}). 1 projet terminé = 1 bot.`));
+      document.querySelectorAll('[data-t-ligne]').forEach((e) => (e.textContent = `🐙 Bots créés : ${nbT} sur ${NP} (tentacules ${nbT} sur ${NP}). 1 projet terminé = 1 bot.`));
       document.querySelectorAll('[data-dire]').forEach((e) => (e.textContent = debut ? 'Salut boss ! Crée ton premier bot en 2\u00a0min.' : nxt ? `Bien joué boss ! ${f} leçon${f > 1 ? 's' : ''} faite${f > 1 ? 's' : ''}. On continue ?` : 'Tout est fait ! Passe le quiz pour gagner ton badge.'));
       document.querySelectorAll('[data-objectif]').forEach((e) => (e.textContent = `${f} leçon${f > 1 ? 's' : ''} sur ${ls.length} faite${f > 1 ? 's' : ''}`));
       document.querySelectorAll('[data-barre-niv]').forEach((b) => (b.style.setProperty('--p', f / ls.length)));
@@ -375,9 +377,9 @@
       c.classList.toggle('verrouillee', !ok);
       c.classList.toggle('actuelle', i === nextIdx);
       const et = c.querySelector('[data-etat]');
-      if (et) et.textContent = d.lecons[l.id] ? '✓' : String(l.num);
+      if (et) et.textContent = d.lecons[l.id] ? '✓' : String(l.pos || l.num);
       let vt = c.querySelector('.verrou-txt');
-      if (!ok && !vt) { vt = $('span', { class: 'verrou-txt' }, i > 0 ? `Finis la leçon ${L[i - 1].num}` : ''); c.querySelector('.titre')?.after(vt); }
+      if (!ok && !vt) { vt = $('span', { class: 'verrou-txt' }, i > 0 ? `Finis d'abord : ${lab(L[i - 1])}` : ''); c.querySelector('.titre')?.after(vt); }
       if (ok && vt) vt.remove();
       const a = c.querySelector('a');
       if (a) {
@@ -417,7 +419,7 @@
     // Première leçon (i<=0) ou leçon hors liste : jamais de verrou. Sinon numéro = leçon précédente.
     if (verrou && i > 0 && L[i - 1] && !debloquee(etat(), i)) {
       const p = verrou.querySelector('p');
-      if (p) p.textContent = `Termine d'abord la leçon ${L[i - 1].num}.`;
+      if (p) p.textContent = `Termine d'abord : ${lab(L[i - 1])}.`;
       art.classList.add('bloquee');
       verrou.hidden = false;
     } else if (verrou) {
@@ -452,7 +454,7 @@
               return [$('h2', {}, 'Leçon 2 terminée : le métier de ton bot est dans sa description.')];
             }
             // Titre de fin = titre du menu (court). L1 : « Crée ton premier bot ».
-            const titreFin = court ? `Leçon ${L[i].num} terminée : ${court}` : `Leçon ${L[i].num} terminée`;
+            const titreFin = court ? `Leçon terminée : ${court}` : 'Leçon terminée';
             return [
               $('h2', {}, titreFin),
               recap ? $('p', { class: 'termine-recap' }, recap) : null,
@@ -461,7 +463,10 @@
           $('a', { class: 'btn btn-large', href: btn.dataset.suite || M.base }, btn.dataset.suiteLabel || 'Continuer'));
         art.querySelector('.contenu').replaceChildren(ecran);
         art.querySelector('.fin-lecon').hidden = true;
-        art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = true; });
+        // Fin : compte tiré du nombre réel d'étapes ; tous les points cochés.
+        const nE = +art.dataset.etapes || 1;
+        art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; e.textContent = `${nE} étape${nE > 1 ? 's' : ''} sur ${nE} ✓`; });
+        art.querySelectorAll('.dev-etape').forEach((b) => { b.classList.add('fait'); b.classList.remove('cur'); b.removeAttribute('aria-current'); b.textContent = '✓'; });
         art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', 1));
         scrollTo(0, 0);
       };
@@ -484,7 +489,7 @@
       const msg = v.querySelector('[data-quiz-msg]');
       if (msg) msg.textContent = `Finis les ${nb} leçons de ce projet pour débloquer le quiz (${faites}/${nb}).`;
       const a = v.querySelector('[data-quiz-suite]');
-      if (next) { a.href = `${M.base}lecon/${next.id}/`; a.textContent = `Continuer · Leçon ${next.num}`; }
+      if (next) { a.href = `${M.base}lecon/${next.id}/`; a.textContent = `Continuer · ${lab(next)}`; }
       else { a.href = M.base; a.textContent = 'Accueil'; }
       el.replaceChildren();
       return;
@@ -531,7 +536,7 @@
         }, `${b[0]} Partager sur X`));
       }
       actions.push(
-        nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `${nomU(nU)} · Leçon ${nextL.num} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
+        nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `${lab(nextL)} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
         $('p', {}, $('button', { type: 'button', class: 'remarque-lien lien-action', on: { click: () => jouer(0, 0, []) } }, 'Rejouer'))
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));
@@ -633,7 +638,7 @@
       art.dataset.etape = String(n + 1);
       art.dataset.etapes = String(secs.length);
       compteur.textContent = `Étape ${n + 1}/${secs.length}`;
-      compteur.hidden = !!art.querySelector('.termine');
+      if (art.querySelector('.termine')) return;
       art.querySelectorAll('.dev-etape').forEach((b, i) => { b.classList.toggle('fait', i < n); b.classList.toggle('cur', i === n); b.textContent = i < n ? '✓' : String(i + 1); if (i === n) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
       scrollTo(0, 0);
       secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
@@ -787,4 +792,10 @@
   // Démo : ?badge=N affiche la carte du badge du projet N (sans rien enregistrer)
   const qb = new URLSearchParams(location.search).get('badge');
   if (qb) { const b = BADGES.find((x) => x[3] === +qb); if (b) setTimeout(() => montrerBadge(b), 200); }
+  // Liens internes versionnés (?v=<build>) : chaque page ouverte contourne le HTML périmé du CDN.
+  const versionner = (a) => { try { const u = new URL(a.href, location.href); if (u.origin !== location.origin || !u.pathname.startsWith(M.base) || /\.[a-z0-9]+$/i.test(u.pathname)) return; u.searchParams.set('v', M.build); a.href = u.toString(); } catch {} };
+  document.querySelectorAll('a[href]').forEach(versionner);
+  document.addEventListener('click', (e) => { const a = e.target.closest && e.target.closest('a[href]'); if (a) versionner(a); }, true);
+  // Bouton « Terminer » : suite versionnée aussi
+  document.querySelectorAll('[data-terminer]').forEach((b) => { if (b.dataset.suite) { const u = new URL(b.dataset.suite, location.href); u.searchParams.set('v', M.build); b.dataset.suite = u.pathname + u.search; } });
 })();

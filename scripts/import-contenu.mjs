@@ -503,6 +503,11 @@ for (const proj of projets) {
   }
 }
 // Ordre = ordre des unités (parcours inséré avant son projet cible).
+// Libellé « Projet X, leçon Y sur Z » (Y local au projet) — affichage seulement.
+for (const proj of projets) {
+  const ls = lecons.filter((l) => l.niveau === proj.id);
+  ls.forEach((l, k) => { l.pos = k + 1; l.tot = ls.length; l.label = `${proj.label || `Projet ${proj.id}`}, leçon ${k + 1} sur ${ls.length}`; });
+}
 
 const site = {
   projets,
