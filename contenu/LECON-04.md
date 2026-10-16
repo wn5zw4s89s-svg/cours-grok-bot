@@ -1,4 +1,4 @@
-# Leçon 4 · Transforme un raté en règle
+# Projet 1, leçon 4 · Transforme un raté en règle
 
 Objectif : à la fin, Lumen ne refait plus la même erreur.
 
@@ -32,37 +32,28 @@ Une bonne règle dit ce qui est interdit, et quoi faire à la place.
 C'est réussi si tu trouves dans la règle l'interdit et ce qu'il faut faire à la place.
 </div>
 
-## Étape 3 · Ajoute-la à la fiche (2 min)
+## Étape 3 · Fais-la retenir (2 min)
 
 <div class="box atoi" markdown="1">
 **À toi :**
-1. Copie cette ligne :
+1. Copie ce bloc, complète-le si besoin, et envoie-le à Lumen :
 
+> Retiens cette règle pour toujours, en plus de ton métier :
+>
 > Tu n'inventes jamais un prix, un délai ou un stock. Si tu ne sais pas, ta réponse pose une question au client ou dit « Je reviens vers vous ».
 
-2. Touche le nom de Lumen en haut de la conversation -> la roue dentée -> le champ **Description** (à vérifier sur ton écran).
-3. Va à la fin du texte, saute une ligne, colle la règle. Ne change rien d'autre.
+2. Puis envoie : « Répète ton métier et tes règles. »
 
-C'est réussi si la règle est la dernière ligne du champ Description.
+C'est réussi si tu retrouves les 4 points de ton métier, puis chaque point de la nouvelle règle.
 </div>
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-**Ce que tu dois voir :** tes 4 lignes de la leçon 2, puis « Tu n'inventes jamais un prix… » en dernier.
-
-**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute cette ligne à la fin de ta description, sans rien changer d'autre : » suivi de la règle. Puis vérifie à l'étape 4.
+**Si ça rate :** Lumen oublie un morceau ? Renvoie le bloc, avec avant : « C'est une règle durable, retiens-la pour toujours : ». Puis redemande-lui de la répéter.
 
 </div></details>
 
-## Étape 4 · Vérifie la fiche (1 min)
-
-<div class="box atoi" markdown="1">
-**À toi :** ferme la fiche. Rouvre-la : nom de Lumen -> roue dentée (à vérifier sur ton écran).
-
-C'est réussi si le champ Description montre 5 lignes : les 4 de la leçon 2, puis la nouvelle règle.
-</div>
-
-## Étape 5 · Retente le raté (2 min)
+## Étape 4 · Retente le raté (2 min)
 
 <div class="box atoi" markdown="1">
 **À toi :** Chloé, une cliente de Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :

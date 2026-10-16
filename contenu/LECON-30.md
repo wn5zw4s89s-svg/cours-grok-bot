@@ -1,64 +1,49 @@
-# Leçon 30 : La légende, et c'est toi qui postes
+# Projet 5, leçon 6 · La légende, et c'est toi qui postes
 
-<p class="chapeau">Une vidéo sans légende, c'est une vitrine sans porte.</p>
+<div class="box info resultat" markdown="1">
+Ton résultat -> une légende validée par Juge, et ta décision de poster ou non.
+</div>
 
 ## Étape 1 · Trois légendes (2 min)
 
-### La légende
-
-Une phrase. Une question qui fait répondre. Quelques mots-clés que ton client taperait.
-
-<div class="box attention" markdown="1">
-Aucun bot ne poste sur TikTok à ta place. Tu ouvres l'app. Tu choisis la vidéo. Tu postes.
-</div>
+Une légende : une phrase, une question qui fait répondre, 3 mots-clés que ton client taperait.
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie à Plume : « 3 légendes TikTok pour cette vidéo : 1 phrase, 1 question, 3 mots-clés. »
+À toi
 
-**C'est réussi si :** 3 légendes reçues.
+Envoie à Plume :
+
+> 3 légendes TikTok pour cette vidéo : 1 phrase, 1 question, 3 mots-clés.
+
+C'est réussi si tu as 3 légendes avec phrase, question et mots-clés.
 </div>
 
 <div class="box corrige" markdown="1">
-Légende : « Elle sent dès la première minute. Tu préfères figue ou vanille ? #bougie #cadeau #faitmain »
+Exemple -> « Elle sent dès la première minute. Tu préfères figue ou vanille ? #bougie #cadeau #faitmain »
 </div>
 
-## Étape 2 · Juge relit (2 min)
+## Étape 2 · Juge relit (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Fais vérifier ta légende préférée par Juge : promesse fausse ? prix inventé ?
+À toi
 
-**C'est réussi si :** Juge a validé celle que tu gardes.
+Envoie ta légende préférée à Juge :
+
+> Vérifie cette légende : promesse fausse ? prix inventé ?
+
+C'est réussi si Juge répond OK pour celle que tu gardes.
 </div>
 
-<div class="box corrige" markdown="1">
-Juge : « OK. »
-</div>
+## Étape 3 · Ta décision (1 min)
 
-## Étape 3 · Ta décision (2 min)
+Dans ce cours, aucun bot ne poste à ta place. Tu ouvres TikTok, tu choisis la vidéo, tu postes. Ou pas.
 
 <div class="box atoi" markdown="1">
-**À toi.** Décide toi-même : poster sur TikTok maintenant, plus tard, ou pas.
+À toi
 
-**C'est réussi si :** la décision de poster est la tienne.
+Décide : poster maintenant, plus tard, ou pas du tout.
+
+C'est réussi si la décision est la tienne, et c'est toi qui postes si tu postes.
 </div>
 
-<div class="box corrige" markdown="1">
-Léa poste samedi matin, depuis l'app TikTok. Elle-même.
-</div>
-
-<div class="box info" markdown="1">
-Générer une vidéo animée par IA à partir de la photo ? Ça existe chez xAI (Grok Imagine), mais ce cours ne l'utilise pas : ce n'est pas confirmé dans Grok Bot. Le montage en code suffit.
-</div>
-
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Le studio tourne. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Légende : phrase, question, mots-clés.
-- Toi seul postes.
-
-**Bravo !** Leçon 31 : la pub top 1 %.
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Ta pub, ta décision. Prochaine étape : Projet 5, leçon 7, la pub top 1 %.</div>

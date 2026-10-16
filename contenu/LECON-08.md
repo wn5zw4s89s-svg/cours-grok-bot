@@ -1,4 +1,4 @@
-# Leçon 8 · Écris à ton bot
+# Projet 2, leçon 2 · Écris à ton bot
 
 Objectif : à la fin, tu as envoyé un email à ton adresse de bot, et Lumen t'a dit ce qu'il a reçu.
 
@@ -7,7 +7,7 @@ Objectif : à la fin, tu as envoyé un email à ton adresse de bot, et Lumen t'a
 L'app n'a pas de boîte de réception, ni de notification de nouvel email. Pour savoir ce qui est arrivé, tu demandes à Lumen.
 
 <div class="box atoi" markdown="1">
-**À toi :** tu joues Camille, une cliente de Léa. Ouvre l'app Mail de ton iPhone. Écris à ton adresse de bot (dans tes Notes, leçon 7). Objet : `Commande`. Message :
+**À toi :** tu joues Camille, une cliente de Léa. Ouvre l'app Mail de ton iPhone. Écris à ton adresse de bot (dans tes Notes, leçon 1). Objet : `Commande`. Message :
 
 > Bonjour, je voudrais 3 bougies vanille pour samedi. C'est possible ? Camille
 

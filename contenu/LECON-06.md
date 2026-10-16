@@ -1,10 +1,10 @@
-# Leçon 6 · Top 1 % : la description qui change tout
+# Projet 1, leçon 6 · Top 1 % : le métier qui change tout
 
 Objectif : à la fin, Lumen répond comme Léa (qui vend des bougies) répondrait, et tu as la preuve en capture.
 
-## Étape 1 · Compare deux descriptions (1 min)
+## Étape 1 · Compare deux métiers (1 min)
 
-Une description moyenne donne des consignes floues. Une description top 1 % donne des chiffres et un exemple.
+Un métier moyen donne des consignes floues. Un métier top 1 % donne des chiffres et un exemple.
 
 | Moyenne | Top 1 % |
 |---|---|
@@ -29,7 +29,7 @@ C'est réussi si ta réponse cite une seule consigne du tableau.
 <div class="box atoi" markdown="1">
 **À toi :** Lucas, un client de Léa, a écrit. Copie ce bloc en entier et envoie-le à Lumen :
 
-> Ne change pas ta description. Réponds deux fois à ce client. Version A : comme si ta description disait seulement « Tu aides Léa avec ses clients. Sois poli. » Version B : avec ta vraie description.
+> Ne change pas ton métier. Réponds deux fois à ce client. Version A : comme si ton métier disait seulement « Tu aides Léa avec ses clients. Sois poli. » Version B : avec ton vrai métier.
 >
 > Client : « Bonjour, ma bougie est arrivée sans couvercle. Lucas »
 
@@ -48,23 +48,22 @@ B : « Bonjour Lucas, désolée pour le couvercle manquant. Pouvez-vous m'envoye
 
 <div class="box atoi" markdown="1">
 **À toi :**
-1. Copie ces lignes :
+1. Copie ce bloc, complète-le si besoin, et envoie-le à Lumen :
 
+> Retiens ces règles pour toujours, en plus de ton métier :
+>
 > Ta réponse au client fait 3 phrases maximum. Tu vouvoies. Tu signes Léa.
 >
 > Exemple de bonne réponse : « Bonjour Sophie, désolée pour la bougie cassée. Pouvez-vous m'envoyer une photo ? Je reviens vers vous. Léa »
 
-2. Touche le nom de Lumen -> la roue dentée -> le champ **Description** (à vérifier sur ton écran).
-3. Colle-les à la fin du texte. Ne change rien d'autre.
+2. Puis envoie : « Répète tes règles de réponse. »
 
-C'est réussi si, en rouvrant la fiche, tu vois « 3 phrases maximum » et l'exemple à la fin de la description.
+C'est réussi si tu retrouves chaque point de la règle : 3 phrases maximum, vouvoiement, signature Léa, et l'exemple.
 </div>
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-**Ce que tu dois voir :** tes 5 lignes (leçons 2 et 4), puis « Ta réponse au client fait 3 phrases maximum… » et l'exemple.
-
-**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute ces lignes à la fin de ta description, sans rien changer d'autre : » suivi des lignes. Puis rouvre la fiche pour vérifier.
+**Si ça rate :** Lumen oublie un morceau ? Renvoie le bloc, avec avant : « C'est une règle durable, retiens-la pour toujours : ». Puis redemande-lui de la répéter.
 
 </div></details>
 
@@ -99,7 +98,7 @@ C'est réussi si les 2 réponses sont lisibles sur ta capture.
 
 Phrase type, à copier :
 
-> Mon premier bot. Même client, deux descriptions. A : moyenne. B : top 1 %.
+> Mon premier bot. Même client, deux métiers. A : moyenne. B : top 1 %.
 
 C'est toi qui postes, depuis l'app X. Dans ce cours, aucun bot ne poste à ta place.
 </div>

@@ -1,72 +1,59 @@
-# Leçon 23 : Mets-la en ligne, gratuitement
+# Projet 4, leçon 5 · Mets-la en ligne, gratuitement
 
-<p class="chapeau">Un vrai lien. Ouvert sur ton iPhone. Zéro euro.</p>
+<div class="box info resultat" markdown="1">
+Ton résultat -> ta page a un vrai lien en github.io, ouvert sur ton iPhone, pour 0 €.
+</div>
 
 ## Étape 1 · Un compte GitHub (2 min)
 
-### GitHub Pages
-
-Un service qui publie gratuitement une page à partir d'un dépôt public sur GitHub.
-
-Ton lien ressemblera à `ton-pseudo.github.io/lune-douce`.
+GitHub Pages publie gratuitement une page à partir d'un dépôt public. Ton lien ressemblera à `ton-pseudo.github.io/lune-douce`.
 
 <div class="box attention" markdown="1">
-GitHub Pages interdit les sites de vente en ligne. Ta page présente ta marque et renvoie vers un email : pas de panier, pas de paiement. La page Pages reste une vitrine sans vente.
+GitHub Pages n'est pas fait pour vendre en ligne. Ta page présente ta marque et renvoie vers un email : pas de panier, pas de paiement.
 </div>
-
-### Qui fait quoi
-
-- Toi : un compte GitHub gratuit, créé sur github.com depuis Safari.
-- Toi : tu acceptes la carte de connexion à GitHub quand le bot la montre.
-- Le bot : il crée le dépôt, publie, te donne le lien.
 
 <div class="box atoi" markdown="1">
-**À toi.** Crée un compte GitHub gratuit depuis Safari, si tu n'en as pas.
+À toi
 
-**C'est réussi si :** tu as un compte GitHub.
+Pas de compte GitHub ? Crée-en un gratuit sur github.com, depuis Safari. Ne choisis aucune offre payante.
+
+C'est réussi si tu peux te connecter à github.com.
 </div>
 
-<div class="box corrige" markdown="1">
-Compte créé dans Safari, gratuit.
-</div>
+## Étape 2 · Publie (3 min)
 
-## Étape 2 · Publie (2 min)
+Pour se connecter à GitHub, le bot te passe son ordinateur. Tu tapes toi-même ton mot de passe. Il ne le voit pas.
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie : « Publie la page sur GitHub Pages, dans un dépôt public nommé ___. Rien de payant. Montre-moi le lien avant d'annoncer que c'est fini. » Accepte la connexion GitHub si une carte s'affiche.
+À toi
 
-**C'est réussi si :** le bot donne un lien en `github.io`.
+Mets un nom de dépôt et envoie ce bloc à ton bot :
+
+> Publie la page sur GitHub Pages, dans un dépôt public nommé lune-douce. Rien de payant. Montre-moi le lien avant d'annoncer que c'est fini.
+
+S'il te passe la main pour te connecter, fais seulement la connexion, puis dis-lui de continuer.
+
+C'est réussi si le bot te donne un lien qui finit par github.io/ et le nom de ton dépôt.
 </div>
 
-<div class="box corrige" markdown="1">
-Lien : `lea-exemple.github.io/lune-douce` (fictif).
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-## Étape 3 · Teste sur l'iPhone (2 min)
+Le lien affiche une erreur 404 ? Attends quelques minutes : une page neuve met un peu de temps à apparaître. Puis rouvre le lien.
+
+</div></details>
+
+## Étape 3 · Teste sur l'iPhone (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Ouvre le lien sur ton iPhone. Touche le bouton : ton app mail s'ouvre-t-elle vers l'adresse du bot ?
+À toi
 
-**C'est réussi si :** la page s'ouvre sur ton iPhone et le bouton ouvre ton mail.
-</div>
+Ouvre le lien dans Safari. Touche le bouton.
 
-<div class="box corrige" markdown="1">
-Sur l'iPhone : logo, phrase, bouton. Le bouton ouvre un email vers `lea.bougies@mail.grokbot.com`.
+C'est réussi si la page s'ouvre et le bouton ouvre ton app Mail vers ton adresse de bot.
 </div>
 
 <div class="box info" markdown="1">
-Un nom de domaine à toi ? Optionnel et payant. C'est toi qui décides, plus tard. Le bot ne l'achète jamais.
+Un nom de domaine à toi ? Optionnel et payant. Tu décides plus tard. Le bot n'achète rien.
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Encore une brique. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- GitHub Pages : gratuit, dépôt public, pas de vente.
-- Vérifie le lien sur ton iPhone.
-
-**Bravo !** Leçon 24 : le design top 1 %.
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">En ligne. Prochaine étape : Projet 4, leçon 6, le design top 1 %.</div>

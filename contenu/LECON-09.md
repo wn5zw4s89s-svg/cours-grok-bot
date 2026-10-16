@@ -1,4 +1,4 @@
-# Leçon 9 · Apprends à ton bot à trier le courrier
+# Projet 2, leçon 3 · Apprends à ton bot à trier le courrier
 
 Objectif : à la fin, Lumen range chaque email dans la bonne pile.
 
@@ -22,25 +22,22 @@ Bruit : c'est une pub, rien à faire.
 
 </div></details>
 
-## Étape 2 · Ajoute le tri à la fiche (2 min)
+## Étape 2 · Fais retenir le tri (2 min)
 
 <div class="box atoi" markdown="1">
 **À toi :**
-1. Copie cette ligne :
+1. Copie ce bloc, complète-le si besoin, et envoie-le à Lumen :
 
-> Quand je demande le courrier, tu ranges chaque email dans une pile : À moi (remboursement, plainte, demande spéciale), Prêt (question simple sur un produit ou la livraison) ou Bruit (pub, newsletter). Pour chaque email : l'expéditeur, une ligne de résumé, la pile.
+> Retiens cette règle pour toujours : quand je demande le courrier, tu ranges chaque email dans une pile : À moi (remboursement, plainte, demande spéciale), Prêt (question simple sur un produit ou la livraison) ou Bruit (pub, newsletter). Pour chaque email : l'expéditeur, une ligne de résumé, la pile.
 
-2. Touche le nom de Lumen en haut de la conversation -> ses réglages -> le champ **Description** (à vérifier sur ton écran).
-3. Colle à la fin du texte. Ne change rien d'autre.
+2. Puis envoie : « Répète ta règle de tri. »
 
-C'est réussi si la règle des piles est la dernière ligne du champ Description.
+C'est réussi si Lumen te répète les 3 piles et ce qui va dans chacune.
 </div>
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-**Ce que tu dois voir :** ton texte d'avant, puis la nouvelle ligne en dernier.
-
-**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute cette ligne à la fin de ta description, sans rien changer d'autre : » suivi de la ligne. Puis rouvre sa fiche pour vérifier.
+**Si ça rate :** Lumen oublie un morceau ? Renvoie le bloc, avec avant : « C'est une règle durable, retiens-la pour toujours : ». Puis redemande-lui de la répéter.
 
 </div></details>
 

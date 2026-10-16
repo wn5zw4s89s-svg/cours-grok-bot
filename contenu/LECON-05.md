@@ -1,24 +1,24 @@
-# Leçon 5 · Fais retenir un fait à ton bot
+# Projet 1, leçon 5 · Fais retenir un fait à ton bot
 
 Objectif : à la fin, Lumen connaît une info du moment et s'en sert pour répondre.
 
 ## Étape 1 · Comprends la différence (1 min)
 
-La **description**, c'est ce qui est toujours vrai : son métier, ses règles.
+Une **règle durable**, c'est ce qui est toujours vrai : son métier, ses règles. Tu lui demandes de la retenir.
 
-Une **info du moment**, c'est ce qui peut changer. Tu la donnes au bot dans cette conversation, pas dans sa fiche.
+Une **info du moment**, c'est ce qui peut changer. Tu la donnes au bot dans cette conversation.
 
 Exemple, chez Léa, qui vend des bougies : « la bougie figue est en rupture de stock ». Vrai aujourd'hui, faux dans un mois.
 
 <div class="box atoi" markdown="1">
 **À toi :** classe cette info : « Lumen signe toujours Léa ».
 
-C'est réussi si ta réponse nomme un seul endroit : la description, ou un message du moment.
+C'est réussi si ta réponse dit une seule chose : règle durable, ou info du moment.
 </div>
 
 <details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
 
-La description : c'est toujours vrai.
+Règle durable : c'est toujours vrai.
 
 </div></details>
 
@@ -80,4 +80,4 @@ C'est réussi si Lumen dit que la figue est en stock, et ne parle plus de ruptur
 **Exemple de réponse :** « C'est mis à jour : la bougie figue est de nouveau en stock. »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">La fiche pour toujours, le message pour le moment.</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">La règle pour toujours, le message pour le moment.</div>

@@ -1,4 +1,4 @@
-# Leçon 16 · La routine de nuit
+# Projet 3, leçon 4 · La routine de nuit
 
 Objectif : à la fin, ton bot cherche des prospects chaque matin à 6 h, et tu l'as vu tourner une fois.
 
@@ -6,7 +6,7 @@ Objectif : à la fin, ton bot cherche des prospects chaque matin à 6 h, et tu l
 
 Une **routine** tourne seule, à heure fixe, même app fermée. Une bonne demande dit : quand, quoi chercher, quoi rendre, ne rien poster, quoi faire si ça échoue.
 
-Chaque exécution consomme de l'usage. Une fois par jour, c'est raisonnable. L'heure suit ton réglage **Timezone** : Settings -> Bot (à vérifier sur ton écran).
+Chaque exécution consomme de l'usage. Une fois par jour, c'est raisonnable. L'heure suit ton réglage **Timezone** : Settings -> General -> Timezone (à vérifier sur ton écran).
 
 <div class="box atoi" markdown="1">
 **À toi :** copie ce modèle dans tes Notes. Change l'heure si tu veux.
@@ -48,4 +48,4 @@ C'est réussi si le test rend une liste avec liens et brouillons, et rien de pos
 
 </div></details>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">Je chasserai cette nuit. Leçon 17 : le rapport du matin.</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Je chasserai cette nuit. Projet 3, leçon 5 : le rapport du matin.</div>

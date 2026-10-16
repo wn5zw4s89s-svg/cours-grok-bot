@@ -1,6 +1,6 @@
-# Leçon 13 · Trouve qui a besoin de toi
+# Projet 3, leçon 1 · Trouve qui a besoin de toi
 
-Objectif : à la fin, la fiche de ton bot sait reconnaître un futur client de Léa sur X.
+Objectif : à la fin, ton bot a retenu comment reconnaître un futur client de Léa sur X.
 
 <div class="pieuvre" data-reaction="accueil" markdown="1">Projet 3. On part à la pêche aux clients ?</div>
 
@@ -32,25 +32,25 @@ C'est réussi si tu as 2 phrases qui parlent de bougies sans venir d'un client.
 **Exemple :** « la bougie de mon anniversaire » (gâteau), « je vends mes bougies » (concurrente).
 </div>
 
-## Étape 3 · Range-les dans la fiche (2 min)
+## Étape 3 · Fais-les retenir (2 min)
 
 Ton bot peut chercher et lire des posts publics sur X. Il lit. Il ne poste pas.
 
 <div class="box atoi" markdown="1">
 **À toi :**
-1. Copie tes 7 phrases, avec ce titre au-dessus : `Prospects :`
-2. Touche le nom de ton bot en haut de la conversation -> ses réglages -> le champ **Description** (à vérifier sur ton écran).
-3. Colle-les à la fin. Ne change rien d'autre.
+1. Copie ce bloc, complète-le si besoin, et envoie-le à ton bot :
 
-C'est réussi si la rubrique Prospects, avec 5 signaux et 2 faux signaux, est à la fin du champ Description.
+> Retiens cette rubrique pour toujours. Prospects : signaux : ___ (tes 5 phrases). Faux signaux : ___ (tes 2 phrases).
+
+2. Puis envoie : « Répète ta rubrique Prospects. »
+
+C'est réussi si ton bot te répète tes 5 signaux et tes 2 faux signaux.
 </div>
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-**Ce que tu dois voir :** ton texte d'avant, puis « Prospects : » et tes 7 phrases.
-
-**Si ça rate :** pas de champ Description ? Envoie à ton bot : « Ajoute cette rubrique Prospects à la fin de ta description, sans rien changer d'autre : » suivi de ton texte. Puis rouvre sa fiche pour vérifier.
+**Si ça rate :** ton bot oublie un morceau ? Renvoie le bloc, avec avant : « C'est une règle durable, retiens-la pour toujours : ». Puis redemande-lui de la répéter.
 
 </div></details>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">Ton bot sait quoi chercher. Leçon 14 : une première chasse.</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Ton bot sait quoi chercher. Projet 3, leçon 2 : une première chasse.</div>

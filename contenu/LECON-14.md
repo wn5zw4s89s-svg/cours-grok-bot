@@ -1,4 +1,4 @@
-# Leçon 14 · Ta première chasse, à la main
+# Projet 3, leçon 2 · Ta première chasse, à la main
 
 Objectif : à la fin, tu as 5 prospects trouvés par ton bot, vérifiés et notés par toi.
 
@@ -44,4 +44,4 @@ C'est réussi si le bot a ton avis sur les 5.
 **Exemple :** « 3 bons, 2 hors sujet : coupure de courant, gâteau. »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">Première prise. Leçon 15 : des brouillons de réponse.</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Première prise. Projet 3, leçon 3 : des brouillons de réponse.</div>

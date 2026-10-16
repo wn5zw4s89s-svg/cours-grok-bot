@@ -1,96 +1,81 @@
-# Leçon 25 : Trois bots, trois métiers
+# Projet 5, leçon 1 · Trois bots, trois métiers
 
-<p class="chapeau">Une pub, c'est un message, une image, un contrôle. Trois métiers. Trois bots.</p>
-
-<div class="pieuvre" data-reaction="accueil" markdown="1">
-« Projet 5. On construit ton studio de 3 bots ? »
+<div class="box info resultat" markdown="1">
+Ton résultat -> ton studio de 3 bots existe : Plume, Monteur et Juge, un métier chacun.
 </div>
 
-## Étape 1 · Trois fiches (2 min)
+<div class="pieuvre" data-reaction="accueil" markdown="1">Projet 5. Une pub, c'est un message, une image, un contrôle. Trois métiers, trois bots.</div>
 
-### L'équipe
+## Étape 1 · Prépare les 3 métiers (2 min)
 
-- **Plume** pense le message.
+- **Plume** écrit le message.
 - **Monteur** fabrique la vidéo.
 - **Juge** vérifie avant que tu postes.
 
-Un bot qui fait tout fait tout moyennement.
-
-### Ils se parlent
-
-Tes bots peuvent s'envoyer des messages. Tu parles à Plume. Plume passe le texte à Monteur.
-
-### Modèles à coller
-
-```
-Nom : Plume
-Titre : Écrit les pubs courtes de ___
-Métier : 1 photo produit -> 3 accroches de 6 mots max + 3 phrases de 10 mots max.
-Interdits : promesse fausse, prix inventé, emoji.
-Fini quand : je choisis une accroche.
-```
-
-```
-Nom : Monteur
-Titre : Monte les vidéos verticales de ___
-Métier : photo + textes -> vidéo 9:16, montée en code sur ton ordinateur. Envoie la vidéo dans le chat.
-Interdits : musique sans licence. Pas de musique fournie -> silence.
-```
-
-```
-Nom : Juge
-Titre : Vérifie chaque pub avant publication
-Métier : vérifie la vidéo avec la liste de contrôle. Réponds OK ou une liste de corrections.
-Interdits : corriger toi-même. Tu juges, Monteur corrige.
-```
+Un bot qui fait tout fait tout moyennement. Tes bots peuvent aussi s'envoyer du travail : tu le vois dans la conversation.
 
 <div class="box atoi" markdown="1">
-**À toi.** Copie les 3 modèles. Remplace ___ par ta marque (projet 4).
+À toi
 
-**C'est réussi si :** les 3 fiches parlent de ta marque.
+Copie ces 3 blocs dans tes Notes. Remplace ___ par ta marque (Projet 4).
+
+> Ton métier : tu écris les pubs courtes de ___. 1 photo produit -> 3 accroches de 6 mots max et 3 phrases de 10 mots max. Jamais de promesse fausse, de prix inventé, d'emoji. Retiens ce métier.
+
+> Ton métier : tu montes les vidéos verticales de ___. Photo + textes -> vidéo 9:16, montée sur ton ordinateur, envoyée dans le chat. Pas de musique fournie -> silence. Retiens ce métier.
+
+> Ton métier : tu vérifies chaque pub de ___ avec ta liste de contrôle. Tu réponds OK ou une liste de corrections. Tu ne corriges jamais toi-même. Retiens ce métier.
+
+C'est réussi si tes 3 blocs parlent de ta marque.
+</div>
+
+## Étape 2 · Crée les 3 bots (3 min)
+
+<div class="box atoi" markdown="1">
+À toi
+
+Crée un nouveau bot : bouton de nouvelle conversation, puis Create new Bot (à vérifier sur ton écran). Appelle-le Plume. Envoie-lui son bloc. Fais pareil pour Monteur, puis Juge.
+
+C'est réussi si tu as 3 bots, chacun a reçu son bloc.
+</div>
+
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
+
+Tu ne trouves pas comment créer un bot ? Demande à un bot existant : « Comment je crée un nouveau bot ? » Pour le nom : touche le nom du bot en haut de la conversation, puis Edit name.
+
+</div></details>
+
+## Étape 3 · Vérifie leur métier (1 min)
+
+<div class="box atoi" markdown="1">
+À toi
+
+Envoie à chacun :
+
+> Résume ton métier en une phrase.
+
+C'est réussi si chacun décrit son seul métier, sans celui des autres.
 </div>
 
 <div class="box corrige" markdown="1">
-Les 3 fiches parlent de Lune Douce.
+Exemple -> Juge : « Je dis OK ou je liste les corrections. Je ne corrige pas. »
 </div>
 
-## Étape 2 · Crée les 3 bots (2 min)
+## Étape 4 · Réunis-les dans un groupe (2 min)
 
-Trois bots, un métier chacun.
+Un groupe réunit 2 à 6 bots autour d'un seul résultat. Tape @ pour confier la suite à un seul bot.
 
 <div class="box atoi" markdown="1">
-**À toi.** Crée les 3 bots avec le + en haut à droite. Colle chaque fiche dans sa description.
+À toi
 
-**C'est réussi si :** 3 bots existent avec leur fiche.
+Crée un groupe avec Plume, Monteur et Juge : **+**, puis **New Group Chat** (à vérifier sur ton écran), et choisis les 3 bots. Envoie :
+
+> @Plume tu écris le message. @Monteur tu fais la vidéo. @Juge tu vérifies avant moi. Ne publiez rien.
+
+C'est réussi si le groupe montre les 3 bots, et chacun confirme son rôle.
 </div>
 
-<div class="box corrige" markdown="1">
-Plume, Monteur et Juge existent, chacun avec sa fiche.
+<div class="box info" markdown="1">
+Dans un groupe, les relais entre bots sont du texte seulement. Une image passe en direct, de bot à bot.
 </div>
 
-## Étape 3 · Leur métier (2 min)
-
-<div class="box atoi" markdown="1">
-**À toi.** Envoie à chacun : « Résume ton métier en une phrase. »
-
-**C'est réussi si :** chacun décrit son seul métier.
-</div>
-
-<div class="box corrige" markdown="1">
-Plume : « J'écris les accroches des pubs Lune Douce. »  
-Monteur : « Je monte les vidéos verticales à partir de tes photos. »  
-Juge : « Je dis OK ou je liste les corrections. »
-</div>
-
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Le studio tourne. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Un métier par bot.
-- Ils se passent le travail entre eux.
-
-**Bravo !** Leçon 26 : la photo et le message.
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Le studio est monté. Prochaine étape : Projet 5, leçon 2, la photo et l'accroche.</div>

@@ -1,4 +1,4 @@
-# Leçon 11 · Crée une routine qui lit le courrier
+# Projet 2, leçon 5 · Crée une routine qui lit le courrier
 
 Objectif : à la fin, Lumen s'occupe seul de chaque nouvel email, et te fait un point chaque soir.
 
@@ -52,13 +52,13 @@ C'est réussi si tu y trouves le résumé de l'email de Nora et un brouillon, sa
 
 **Ce que tu dois voir :** « Nouvel email, Prêt : Nora demande si on livre en Belgique », et un brouillon. L'endroit exact où ça s'affiche : à vérifier sur ton écran.
 
-**Si ça rate :** dans la fiche de Lumen, ouvre la routine. **Run history** montre chaque exécution : réussie, ou ratée avec la raison.
+**Si ça rate :** touche le nom de Lumen en haut -> son profil -> **Routines** -> la routine. **Run history** montre chaque exécution : réussie, ou ratée avec la raison.
 
 </div></details>
 
 ## Étape 4 · Ajoute un point du soir (3 min)
 
-L'heure suit ton réglage **Timezone** : Settings -> Bot (à vérifier sur ton écran). Vérifie-le avant.
+L'heure suit ton réglage **Timezone** : Settings -> General -> Timezone (à vérifier sur ton écran). Vérifie-le avant.
 
 Une routine neuve attend sa première heure. Pour la voir tout de suite, tu la testes. Un test consomme aussi de l'usage.
 
@@ -79,7 +79,7 @@ C'est réussi si Lumen confirme la routine de 18 h et que tu reçois un point de
 </div></details>
 
 <div class="box info" markdown="1">
-Pour voir ou arrêter tes routines : la fiche de Lumen -> **Routines**. Couper **Active** (à vérifier sur ton écran) la met en pause. Supprimer une routine est définitif.
+Pour voir ou arrêter tes routines : touche le nom de Lumen -> son profil -> **Routines**. Couper **Active** (à vérifier sur ton écran) la met en pause. Supprimer une routine est définitif.
 </div>
 
 <div class="pieuvre" data-reaction="reussite" markdown="1">Lumen travaille même quand l'app est fermée.</div>

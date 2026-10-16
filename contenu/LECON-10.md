@@ -1,4 +1,4 @@
-# Leçon 10 · Ton bot prépare, tu valides
+# Projet 2, leçon 4 · Ton bot prépare, tu valides
 
 Objectif : à la fin, Lumen a préparé une réponse email, et c'est toi qui as décidé de l'envoyer ou non.
 
@@ -23,7 +23,7 @@ Toi. Lumen prépare, c'est toi qui envoies.
 ## Étape 2 · Demande un brouillon (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** Hugo, c'est le client de Léa de la leçon 9 (il demande si la cire est végétale). Copie ce bloc et envoie-le à Lumen :
+**À toi :** Hugo, c'est le client de Léa de la leçon 3 (il demande si la cire est végétale). Copie ce bloc et envoie-le à Lumen :
 
 > Prépare une réponse à l'email de Hugo, celui de la pile Prêt.
 

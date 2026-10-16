@@ -1,4 +1,4 @@
-# Leçon 7 · Donne une adresse email à tes bots
+# Projet 2, leçon 1 · Donne une adresse email à tes bots
 
 Objectif : à la fin, tu as ton adresse email de bot, et Lumen sait s'en servir.
 
@@ -55,7 +55,7 @@ C'est réussi si Lumen confirme ton adresse complète.
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-**Autre chemin, sans le chat :** Settings -> Connect apps -> Email. Tape ton nom dans **Choose a name**, puis touche **Create address**.
+**Autre chemin, sans le chat :** Settings -> Connect apps -> Email (à vérifier sur ton écran). Tape ton nom dans **Choose a name**, puis touche **Create address**.
 
 **Ce que tu dois voir :** ton adresse, avec un bouton pour la copier.
 

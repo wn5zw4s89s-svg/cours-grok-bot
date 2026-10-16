@@ -1,61 +1,39 @@
-# Leçon 29 : La vidéo sur ton iPhone
+# Projet 5, leçon 5 · La vidéo sur ton iPhone
 
-<p class="chapeau">Juge a dit OK. Récupère le fichier. Regarde-le comme un inconnu.</p>
+<div class="box info resultat" markdown="1">
+Ton résultat -> la vidéo validée est dans Photos, et tu as fait le test du pouce.
+</div>
 
-## Étape 1 · La version finale (2 min)
+## Étape 1 · Enregistre la version finale (2 min)
 
-### Le fichier
-
-Monteur t'envoie la version finale dans le chat. Tu l'enregistres sur ton iPhone.
-
-### Le test du pouce
-
-Fais défiler TikTok une minute. Puis lance ta vidéo. Ton pouce s'arrête-t-il ?
+Les fichiers envoyés dans le chat s'affichent en cartes : tu peux les ouvrir et les enregistrer.
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie à Monteur : « Envoie-moi la version finale validée par Juge. »
+À toi
 
-**C'est réussi si :** la version finale est dans le chat.
+Envoie à Monteur :
+
+> Envoie-moi la version finale validée par Juge.
+
+Ouvre la vidéo et enregistre-la dans Photos (à vérifier sur ton écran).
+
+C'est réussi si la vidéo est dans Photos.
 </div>
 
-<div class="box corrige" markdown="1">
-Monteur envoie la vidéo validée par Juge.
-</div>
-
-## Étape 2 · Sur ton iPhone (2 min)
+## Étape 2 · Le test du pouce (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Enregistre la vidéo sur ton iPhone.
+À toi
 
-**C'est réussi si :** elle est sur ton iPhone.
+Fais défiler TikTok une minute. Puis ouvre ta vidéo dans Photos, juste après.
+
+C'est réussi si tu as décidé : ton pouce se serait arrêté, ou non.
 </div>
 
-<div class="box corrige" markdown="1">
-La vidéo est dans Photos.
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-## Étape 3 · Le test du pouce (2 min)
+Ton pouce ne s'arrête pas ? Envoie à Plume : « 3 nouvelles accroches, plus surprenantes. » Puis refais le relais vers Monteur et Juge.
 
-<div class="box atoi" markdown="1">
-**À toi.** Fais le test du pouce. Si ton pouce ne s'arrête pas, renvoie une nouvelle accroche à Plume.
+</div></details>
 
-**C'est réussi si :** tu as fait le test du pouce et décidé : on garde ou on change l'accroche.
-</div>
-
-<div class="box corrige" markdown="1">
-Test : arrêt à « Ta bougie ne sent rien ? ». On garde.  
-Sinon : « Plume, 3 nouvelles accroches, plus surprenantes. »
-</div>
-
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Le studio tourne. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Fichier final -> ton iPhone.
-- Test du pouce avant de poster.
-
-**Bravo !** Leçon 30 : la légende et le post.
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Dans ta poche. Prochaine étape : Projet 5, leçon 6, la légende.</div>

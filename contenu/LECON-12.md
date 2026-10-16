@@ -1,4 +1,4 @@
-# Leçon 12 · Top 1 % : des emails qui sonnent humains
+# Projet 2, leçon 6 · Top 1 % : des emails qui sonnent humains
 
 Objectif : à la fin, les brouillons de Lumen ressemblent à un email écrit par Léa, qui vend des bougies.
 
@@ -38,25 +38,22 @@ C'est réussi si Lumen t'a écrit une réponse signée Léa.
 **Exemple de réponse :** « Bonjour, merci infiniment pour votre patience ! Nous mettons tout en œuvre pour que votre commande vous parvienne au plus vite. N'hésitez pas à revenir vers nous. Léa »
 </div>
 
-## Étape 3 · Ajoute la règle de ton à la fiche (2 min)
+## Étape 3 · Fais retenir la règle de ton (2 min)
 
 <div class="box atoi" markdown="1">
 **À toi :**
-1. Copie cette ligne :
+1. Copie ce bloc, complète-le si besoin, et envoie-le à Lumen :
 
-> Dans tes emails : une idée par phrase, 3 phrases maximum. Jamais « n'hésitez pas », « ravi », « je reste à votre disposition ». Tu signes Léa.
+> Retiens cette règle pour toujours : dans tes emails, une idée par phrase, 3 phrases maximum. Jamais « n'hésitez pas », « ravi », « je reste à votre disposition ». Tu signes Léa.
 
-2. Touche le nom de Lumen en haut de la conversation -> ses réglages -> le champ **Description** (à vérifier sur ton écran).
-3. Colle à la fin du texte. Ne change rien d'autre.
+2. Puis envoie : « Répète ta règle de ton pour les emails. »
 
-C'est réussi si la règle de ton est la dernière ligne du champ Description.
+C'est réussi si Lumen te répète « 3 phrases maximum » et les 3 formules interdites.
 </div>
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-**Ce que tu dois voir :** ton texte d'avant, puis la nouvelle ligne en dernier.
-
-**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute cette ligne à la fin de ta description, sans rien changer d'autre : » suivi de la ligne. Puis rouvre sa fiche pour vérifier.
+**Si ça rate :** Lumen oublie un morceau ? Renvoie le bloc, avec avant : « C'est une règle durable, retiens-la pour toujours : ». Puis redemande-lui de la répéter.
 
 </div></details>
 

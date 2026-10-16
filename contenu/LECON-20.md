@@ -1,66 +1,59 @@
-# Leçon 20 : Un logo en un message
+# Projet 4, leçon 2 · Un logo en un message
 
-<p class="chapeau">Pas de graphiste. Un bot avec un ordinateur.</p>
+<div class="box info resultat" markdown="1">
+Ton résultat -> un logo simple, testé en petit et corrigé une fois.
+</div>
 
 ## Étape 1 · Trois logos (2 min)
 
-### Comment il fait
+Ton bot a un ordinateur dans le cloud. Il peut y dessiner un logo en code et t'envoyer l'image dans le chat.
 
-Ton bot a son propre ordinateur. Il dessine le logo en code, puis t'envoie l'image dans le chat.
-
-Un logo simple : un mot, une forme, deux couleurs.
-
-<div class="box info" markdown="1">
-Ton bot peut aussi proposer une image générée. Le logo en code reste plus net et plus facile à corriger.
-</div>
-
-### Demande précise
-
-Dis-lui ce que tu veux voir. Pas « fais-moi un beau logo ».
+Un logo simple : un mot, une forme, deux couleurs. Dis ce que tu veux voir, pas « fais-moi un beau logo ».
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie : « Dessine 3 logos pour ___ (ton nom) : le nom en lettres, une forme simple, 2 couleurs max. Envoie-les en image ici. »
+À toi
 
-**C'est réussi si :** 3 logos reçus en image.
+Mets ton nom et envoie ce bloc à ton bot :
+
+> Dessine 3 logos pour Lune Douce, en code : le nom en lettres, une forme simple, 2 couleurs max. Envoie-les en image ici.
+
+C'est réussi si tu reçois 3 images de logo dans le chat.
+</div>
+
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
+
+Pas d'image ? Écris : « Enregistre chaque logo en image PNG et envoie les 3 fichiers ici. » Les fichiers créés s'affichent en cartes, à ouvrir d'un toucher.
+
+</div></details>
+
+## Étape 2 · Le test en petit (1 min)
+
+Un logo vit en petit : photo de profil, onglet, étiquette.
+
+<div class="box atoi" markdown="1">
+À toi
+
+Regarde les 3 logos en petit sur ton iPhone, sans zoomer.
+
+C'est réussi si tu sais lequel reste lisible en petit.
 </div>
 
 <div class="box corrige" markdown="1">
-3 logos reçus. Logo 2 : « lune douce » en minuscules, un croissant fin, crème sur bleu nuit.
-</div>
-
-## Étape 2 · Le test en petit (2 min)
-
-<div class="box atoi" markdown="1">
-**À toi.** Regarde-les en petit sur ton écran, comme une photo de profil.
-
-**C'est réussi si :** tu as jugé en petit.
-</div>
-
-<div class="box corrige" markdown="1">
-En petit, le croissant fin du logo 2 disparaît presque.
+Exemple -> En petit, le croissant fin du logo 2 disparaît presque.
 </div>
 
 ## Étape 3 · Une seule correction (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Choisis-en un. Envoie une seule correction : couleur, forme ou police.
+À toi
 
-**C'est réussi si :** un logo final, corrigé une fois.
+Choisis un logo. Envoie une seule correction : couleur, forme ou police.
+
+C'est réussi si tu as un logo final, corrigé une fois, toujours lisible en petit.
 </div>
 
 <div class="box corrige" markdown="1">
-Correction : « Croissant plus épais : il disparaît en petit. »
+Exemple -> « Logo 2, croissant plus épais : il disparaît en petit. »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Encore une brique. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Le bot dessine sur son ordinateur et t'envoie l'image.
-- Juge en petit. Une correction à la fois.
-
-**Bravo !** Leçon 21 : l'offre.
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Un logo net. Prochaine étape : Projet 4, leçon 3, l'offre.</div>

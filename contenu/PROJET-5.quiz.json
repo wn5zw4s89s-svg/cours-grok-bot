@@ -22,18 +22,18 @@
         "montre le prix tout de suite"
       ],
       "bonne_reponse": 0,
-      "explication": "Tu as trois secondes. Un problème ou une surprise arrête le pouce. La marque et le prix viennent après."
+      "explication": "Tu as quelques secondes. Un problème ou une surprise arrête le pouce. La marque et le prix viennent après."
     },
     {
       "id": "q3",
-      "question": "Comment Monteur fabrique-t-il la vidéo ?",
+      "question": "Où Monteur fabrique-t-il la vidéo ?",
       "choix": [
         "Dans une appli de montage sur ton iPhone",
-        "En code, sur son ordinateur, au format 9:16",
-        "À partir d'un modèle TikTok"
+        "Sur son ordinateur dans le cloud, au format 9:16",
+        "Dans TikTok"
       ],
       "bonne_reponse": 1,
-      "explication": "Montage en code : photo, zoom, texte, vertical."
+      "explication": "Chaque bot a son ordinateur dans le cloud. Monteur y prépare la vidéo, puis te l'envoie en principe dans le chat."
     },
     {
       "id": "q4",
@@ -55,7 +55,7 @@
         "Monteur"
       ],
       "bonne_reponse": 2,
-      "explication": "Juge juge. Monteur corrige. Toi, tu valides."
+      "explication": "Juge juge. Monteur corrige. Toi, tu fais passer."
     },
     {
       "id": "q6",
@@ -66,7 +66,7 @@
         "Juge, après le OK"
       ],
       "bonne_reponse": 1,
-      "explication": "Aucun bot ne poste à ta place."
+      "explication": "Dans ce cours, aucun bot ne poste à ta place. Tu ouvres TikTok et tu postes, si tu le décides."
     },
     {
       "id": "q7",
@@ -78,6 +78,17 @@
       ],
       "bonne_reponse": 1,
       "explication": "La gagnante vient rarement de la première idée. Monter les 10 coûte trop."
+    },
+    {
+      "id": "q8",
+      "question": "Plume doit passer la photo à Monteur. Comment ?",
+      "choix": [
+        "En direct, de bot à bot",
+        "Dans un groupe, les relais entre bots passent les images",
+        "Tu dois toujours la renvoyer toi-même"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Un bot peut envoyer une image directement à un autre bot. Dans un groupe, les relais entre bots sont du texte seulement."
     }
   ]
 }

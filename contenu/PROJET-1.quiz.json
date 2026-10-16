@@ -15,36 +15,36 @@
     },
     {
       "id": "q2",
-      "question": "Où se règle la description de Lumen ?",
+      "question": "Comment donnes-tu une règle durable à Lumen ?",
       "choix": [
-        "Dans sa fiche",
-        "Réglages de ton iPhone",
-        "Dans le site du cours"
+        "Tu la lui dis dans le chat et tu lui demandes de la retenir",
+        "Tu l'écris dans les réglages de ton iPhone",
+        "Tu la mets sur le site du cours"
       ],
       "bonne_reponse": 0,
-      "explication": "La description se règle dans la fiche du bot. Les réglages de l'iPhone et le site du cours ne la contiennent pas."
+      "explication": "Pour une règle durable, tu la dis au bot et tu lui demandes de la retenir. Il la garde dans sa mémoire."
     },
     {
       "id": "q3",
-      "question": "Pourquoi ranger le métier dans la description plutôt que dans un message ?",
+      "question": "Pourquoi demander à Lumen de retenir son métier ?",
       "choix": [
-        "Un message se perd, la description reste",
-        "Un message coûte plus cher qu'une description",
-        "Le bot ne lit jamais ses anciens messages"
+        "Pour qu'il s'en serve sans que tu le redises",
+        "Parce qu'un message coûte plus cher",
+        "Parce qu'il ne lit jamais tes messages"
       ],
       "bonne_reponse": 0,
-      "explication": "La description, c'est la fiche de poste : elle s'applique à chaque conversation. Un message finit noyé dans la conversation. Le coût n'a rien à voir."
+      "explication": "Un message sert pour une tâche. Une règle retenue sert ensuite, sans la redire. Le coût n'a rien à voir."
     },
     {
       "id": "q4",
-      "question": "Comment vérifies-tu ce que contient la description de Lumen ?",
+      "question": "Comment vérifies-tu ce que Lumen a retenu ?",
       "choix": [
         "Tu relis toute la conversation depuis le début",
         "Tu ouvres les réglages de ton iPhone",
-        "Tu rouvres sa fiche"
+        "Tu lui demandes de répéter son métier"
       ],
       "bonne_reponse": 2,
-      "explication": "Rouvrir la fiche est le plus sûr : tu lis le texte enregistré de tes yeux. Relire la conversation montre des messages, pas la description. Les réglages de l'iPhone ne la contiennent pas."
+      "explication": "Tu lui demandes de répéter son métier ou sa règle, et tu vérifies que chaque point y est. Les réglages de l'iPhone ne le contiennent pas."
     },
     {
       "id": "q5",
@@ -81,25 +81,25 @@
     },
     {
       "id": "q8",
-      "question": "Fiche ou message : « la bougie figue est en rupture » va où ?",
+      "question": "Règle durable ou info du moment : « la bougie figue est en rupture » ?",
       "choix": [
-        "Dans la description, pour qu'il ne l'oublie pas",
-        "Dans un message, car c'est vrai aujourd'hui seulement",
-        "Dans chaque réponse, en première phrase"
+        "Règle durable, à retenir pour toujours",
+        "Info du moment, à donner dans un message",
+        "Ni l'un ni l'autre"
       ],
       "bonne_reponse": 1,
-      "explication": "Une rupture de stock est une info du moment : tu la donnes dans un message. La description garde ce qui reste vrai, comme le métier."
+      "explication": "Une rupture de stock change vite : c'est une info du moment. Le métier, lui, est une règle durable."
     },
     {
       "id": "q9",
-      "question": "Qu'est-ce qui fait une description top 1 % ?",
+      "question": "Qu'est-ce qui fait un métier de bot top 1 % ?",
       "choix": [
         "Des consignes polies comme « sois aimable »",
-        "Une description très longue et détaillée",
+        "Un texte très long et détaillé",
         "Des chiffres et un exemple de bonne réponse"
       ],
       "bonne_reponse": 2,
-      "explication": "« 3 phrases maximum » se vérifie, « sois aimable » non. Une description longue n'est pas plus précise."
+      "explication": "« 3 phrases maximum » se vérifie, « sois aimable » non. Un texte long n'est pas plus précis."
     },
     {
       "id": "q10",

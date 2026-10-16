@@ -1,4 +1,4 @@
-# Leçon 3 · Teste ton bot avec 5 cas pièges
+# Projet 1, leçon 3 · Teste ton bot avec 5 cas pièges
 
 Objectif : à la fin, tu sais où Lumen répond bien et où il se trompe.
 
@@ -6,7 +6,7 @@ Objectif : à la fin, tu sais où Lumen répond bien et où il se trompe.
 
 Un **cas de test**, c'est un faux message de client. Tu l'envoies pour voir comment ton bot réagit.
 
-Tu vas en envoyer 5, du plus simple au plus difficile. Ce sont des clients de Léa, qui vend des bougies. Reste dans la nouvelle conversation ouverte à la leçon 2, celle de la réponse à Marc. Sa description s'applique : pas besoin de redire son métier.
+Tu vas en envoyer 5, du plus simple au plus difficile. Ce sont des clients de Léa, qui vend des bougies. Reste dans la nouvelle conversation ouverte à la leçon 2, celle de la réponse à Marc. Lumen a retenu son métier : pas besoin de le redire.
 
 <div class="box atoi" markdown="1">
 **À toi :** Inès, une cliente de Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :
@@ -109,6 +109,6 @@ C'est réussi si la réponse reste calme, s'excuse et ne promet ni remboursement
 
 ## Si Lumen rate un critère
 
-Pas grave, c'est le but du test. Note le numéro du cas et la phrase de Lumen qui pose problème. Ne touche pas encore à sa description : on la corrige à la [leçon 4](../lecon-04/).
+Pas grave, c'est le but du test. Note le numéro du cas et la phrase de Lumen qui pose problème. Ne change pas encore son métier : on le corrige à la [leçon 4](../lecon-04/).
 
 <div class="pieuvre" data-reaction="reussite" markdown="1">Lumen est testé, et tu sais quoi faire s'il rate. Garde en tête la réponse qui t'a le moins plu : c'est la leçon 4.</div>

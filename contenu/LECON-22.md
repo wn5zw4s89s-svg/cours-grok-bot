@@ -1,65 +1,51 @@
-# Leçon 22 : Il construit ta page
+# Projet 4, leçon 4 · Il construit ta page
 
-<p class="chapeau">Nom, logo, offre. Le bot assemble. Tu regardes sur ton téléphone.</p>
+<div class="box info resultat" markdown="1">
+Ton résultat -> une page d'une seule page, vue sur une capture au format téléphone, corrigée une fois.
+</div>
 
-## Étape 1 · La page (2 min)
+## Étape 1 · Commande la page (2 min)
 
-### Une page, pas un site
+Une page suffit : logo, phrase, 3 preuves, un bouton. Le bouton ouvre un email vers ton adresse de bot (Projet 2, leçon 1).
 
-Une seule page suffit : logo, phrase, 3 preuves, un bouton.
-
-Le bouton ouvre un email vers l'adresse de ton bot (projet 2).
-
-### Comment tu vérifies
-
-Le bot construit sur son ordinateur. Il t'envoie une capture au format téléphone.
-
-Tu corriges par message.
+Le bot construit sur son ordinateur et t'envoie une capture.
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie : « Construis une page web d'une seule page avec notre nom, le logo, l'offre, les 3 preuves et un bouton qui écrit à ton adresse email. Pas de formulaire. Envoie-moi une capture au format téléphone. »
+À toi
 
-**C'est réussi si :** une capture au format téléphone.
+Copie ce bloc et envoie-le à ton bot :
+
+> Construis une page web d'une seule page : notre nom, le logo, l'offre, les 3 preuves et un bouton qui ouvre un email vers mon adresse de bot. Pas de formulaire, pas de paiement. Envoie-moi une capture au format téléphone.
+
+C'est réussi si tu reçois une capture au format téléphone, avec les 5 éléments.
+</div>
+
+## Étape 2 · Le test des 5 secondes (1 min)
+
+<div class="box atoi" markdown="1">
+À toi
+
+Regarde la capture 5 secondes, comme un inconnu. Puis cache-la et dis l'offre à voix haute.
+
+C'est réussi si tu peux redire l'offre, ou tu sais ce qui bloque.
 </div>
 
 <div class="box corrige" markdown="1">
-Capture 1 reçue : nom, logo, offre, preuves, bouton.
-</div>
-
-## Étape 2 · Le test des 5 secondes (2 min)
-
-<div class="box atoi" markdown="1">
-**À toi.** Regarde la capture. Lis la page comme un inconnu : comprends-tu l'offre en 5 secondes ?
-
-**C'est réussi si :** tu as fait le test des 5 secondes.
-</div>
-
-<div class="box corrige" markdown="1">
-Capture 1 : le bouton est sous la ligne de flottaison.
+Exemple -> Le bouton est trop bas : il faut faire défiler pour le voir.
 </div>
 
 ## Étape 3 · Une correction (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie une correction, puis demande une nouvelle capture.
+À toi
 
-**C'est réussi si :** une version corrigée.
+Envoie une seule correction, puis demande une nouvelle capture au format téléphone.
+
+C'est réussi si la nouvelle capture règle le problème de l'étape 2.
 </div>
 
 <div class="box corrige" markdown="1">
-Correction : « Monte le bouton juste sous la phrase d'offre. »  
-Capture 2 : logo, phrase, bouton visibles sans faire défiler.
+Exemple -> « Monte le bouton juste sous la phrase d'offre. » Capture 2 : logo, phrase, bouton visibles sans défiler.
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Encore une brique. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Une page : logo, phrase, preuves, bouton.
-- Test des 5 secondes sur la capture.
-
-**Bravo !** Leçon 23 : en ligne.
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">La page tient debout. Prochaine étape : Projet 4, leçon 5, en ligne.</div>

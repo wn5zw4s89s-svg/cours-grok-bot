@@ -1,4 +1,4 @@
-# Leçon 1 · Crée ton premier bot
+# Projet 1, leçon 1 · Crée ton premier bot
 
 Objectif : à la fin, tu as un bot, Lumen, qui a déjà rendu un vrai service.
 
@@ -22,23 +22,35 @@ C'est réussi si tu vois l'écran d'accueil de l'app.
 
 <div class="box atoi" markdown="1">
 **À toi :**
-1. Sur l'écran d'accueil, touche le bouton qui crée un nouveau bot (à vérifier sur ton écran).
-2. Si l'app demande un nom, écris : `Lumen`
+1. Crée un nouveau bot : **+** sur l'accueil, puis **New Bot** (à vérifier sur ton écran).
+2. Renomme-le : nom du bot -> profil -> **Edit name**, puis écris `Lumen`.
 
-Pas de champ pour le nom ? Touche le nom du bot en haut de la conversation -> la roue dentée -> le champ du nom, et écris `Lumen`.
-
-C'est réussi si une conversation avec ton nouveau bot est ouverte.
+C'est réussi si une conversation avec Lumen est ouverte, et que son nom s'affiche en haut.
 </div>
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-Tu ne trouves pas le bouton de création ? Pose la question dans un chat déjà ouvert, par exemple le chat principal de Grok Bot ou un autre bot : « Comment je crée un nouveau bot ? ». Suis sa réponse.
+Tu ne trouves pas comment créer un bot ? Pose la question dans un chat déjà ouvert, par exemple un autre bot : « Comment je crée un nouveau bot ? ». Suis sa réponse.
 
-Le nom ne se change pas dans la fiche ? Envoie au bot : « Tu t'appelles Lumen. »
+Pas d'Edit name ? Touche bien le nom du bot tout en haut de la conversation : c'est là que s'ouvre son profil.
 
 </div></details>
 
-## Étape 3 · Donne-lui son métier (2 min)
+## Étape 3 · Donne-lui un visage (2 min)
+
+Un avatar aide à reconnaître ton bot d'un coup d'œil. Generate fabrique une image à partir d'une courte description. Jamais le visage d'une vraie personne.
+
+<div class="box atoi" markdown="1">
+**À toi :** touche le nom de Lumen en haut de la conversation -> son profil -> touche sa photo -> **Generate**. Décris l'image :
+
+> Une petite bougie allumée, style dessin, fond crème.
+
+Garde l'image qui te plaît.
+
+C'est réussi si la nouvelle image de Lumen s'affiche en haut de la conversation.
+</div>
+
+## Étape 4 · Donne-lui son métier (2 min)
 
 Le métier, c'est un court message : ce qu'il fait, et ce qu'il ne fait jamais.
 
@@ -50,7 +62,7 @@ Le métier, c'est un court message : ce qu'il fait, et ce qu'il ne fait jamais.
 C'est réussi si Lumen répond qu'il a compris son métier.
 </div>
 
-## Étape 4 · Teste-le (2 min)
+## Étape 5 · Teste-le (2 min)
 
 <div class="box atoi" markdown="1">
 **À toi :** envoie à Lumen ce faux message de client :

@@ -1,4 +1,4 @@
-# Leçon 18 · Top 1 % : des prospects ciblés
+# Projet 3, leçon 6 · Top 1 % : des prospects ciblés
 
 Objectif : à la fin, ton bot trouve moins de prospects, mais tous vrais, et tu as la preuve côte à côte.
 
@@ -19,24 +19,24 @@ Objectif : à la fin, ton bot trouve moins de prospects, mais tous vrais, et tu 
 C'est réussi si tu as la capture de la liste d'avant.
 </div>
 
-## Étape 2 · Réécris les critères dans la fiche (3 min)
+## Étape 2 · Réécris ses critères (3 min)
 
 Un cas piège ressemble à un prospect sans en être un : une concurrente, un concours « RT pour gagner » (RT = repartage le post), une blague.
 
 <div class="box atoi" markdown="1">
 **À toi :**
-1. Dans tes Notes, réécris la rubrique Prospects : qui, quand, 3 exclusions, 3 cas pièges, une note de 1 à 3.
-2. Touche le nom de ton bot en haut de la conversation -> ses réglages -> le champ **Description** (à vérifier sur ton écran).
-3. Remplace l'ancienne rubrique Prospects par la nouvelle. Ne touche pas au reste.
+1. Copie ce bloc, complète-le si besoin, et envoie-le à ton bot :
 
-C'est réussi si la rubrique contient qui, quand, exclusions, cas pièges et note.
+> Remplace ta rubrique Prospects par celle-ci, et retiens-la pour toujours : qui ___, quand ___, 3 exclusions ___, 3 cas pièges ___, une note de 1 à 3 avec la raison.
+
+2. Puis envoie : « Répète ta rubrique Prospects. »
+
+C'est réussi si ton bot te répète qui, quand, exclusions, cas pièges et note.
 </div>
 
 <details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-**Ce que tu dois voir :** par exemple les pièges « RT pour gagner une bougie », « ma boutique de bougies ouvre », « coupure de courant ».
-
-**Si ça rate :** pas de champ Description ? Envoie à ton bot : « Remplace ta rubrique Prospects par celle-ci, sans rien changer d'autre : » suivi de ton texte. Puis rouvre sa fiche pour vérifier.
+**Si ça rate :** ton bot oublie un morceau ? Renvoie le bloc, avec avant : « C'est une règle durable, retiens-la pour toujours : ». Puis redemande-lui de la répéter.
 
 </div></details>
 

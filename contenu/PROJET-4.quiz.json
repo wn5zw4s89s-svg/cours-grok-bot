@@ -4,14 +4,14 @@
   "questions": [
     {
       "id": "q1",
-      "question": "Un nom libre sur X est-il libre partout ?",
+      "question": "Ton bot ne trouve aucun compte avec ce nom. Le nom est-il libre ?",
       "choix": [
-        "Oui, s'il est libre sur X",
-        "Non : vérifie aussi les marques déposées",
-        "Oui, si le bot le confirme"
+        "Oui, c'est sûr",
+        "Pas forcément : vérifie aussi les marques déposées",
+        "Oui, si le bot le dit deux fois"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot regarde X. Les marques déposées se vérifient à part."
+      "explication": "Rien trouvé ne veut pas dire libre. Les marques déposées se vérifient à part, auprès de l'INPI."
     },
     {
       "id": "q2",
@@ -44,18 +44,18 @@
         "Sur la capture téléphone envoyée par le bot"
       ],
       "bonne_reponse": 2,
-      "explication": "Le bot construit sur son ordinateur et t'envoie une capture téléphone. Un résumé ne montre pas le rendu."
+      "explication": "Le bot construit sur son ordinateur et t'envoie une capture au format téléphone. Un résumé ne montre pas le rendu."
     },
     {
       "id": "q5",
-      "question": "Que n'as-tu pas le droit de faire sur GitHub Pages ?",
+      "question": "À quoi sert ta page GitHub Pages dans ce projet ?",
       "choix": [
-        "Une page de présentation",
-        "Un site de vente en ligne",
-        "Une page avec ton email"
+        "Présenter ta marque et renvoyer vers un email",
+        "Vendre en ligne avec un panier",
+        "Encaisser des paiements"
       ],
-      "bonne_reponse": 1,
-      "explication": "GitHub Pages interdit les sites de commerce. Ta page renvoie vers un email."
+      "bonne_reponse": 0,
+      "explication": "GitHub Pages n'est pas fait pour vendre en ligne. Ta page présente et renvoie vers un email."
     },
     {
       "id": "q6",
@@ -66,7 +66,7 @@
         "Offert avec GitHub Pages"
       ],
       "bonne_reponse": 0,
-      "explication": "Un nom de domaine est optionnel et payant. Le bot n'achète jamais rien."
+      "explication": "Un nom de domaine est optionnel et payant. Le bot n'achète rien."
     },
     {
       "id": "q7",
