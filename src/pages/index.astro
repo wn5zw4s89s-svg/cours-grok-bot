@@ -25,7 +25,7 @@ const nu = (t = '') => t.replace(/\s*\([^)]*\)/g, '');
         const quiz = site.quiz.find((q) => q.id === niv.quizId);
         return (
           <details class="niv" data-niveau-bloc={niv.id}>
-            <summary><span class="niv-nom">{niv.label || `Projet ${niv.id}`} · {nu(niv.nom)}</span><span class="niv-etat" data-niv-etat={niv.id}></span></summary>
+            <summary><span class="niv-nom">{niv.menu || niv.label || `Projet ${niv.id}`} · {nu(niv.nom)}</span><span class="niv-etat" data-niv-etat={niv.id}></span></summary>
             <ol class="liste-compacte">
               {lecs.map((l) => (
                 <li class="item-lecon" data-lecon-carte={l.id}>

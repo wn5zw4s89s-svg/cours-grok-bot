@@ -423,7 +423,7 @@ for (const [dir, cfg] of Object.entries(PARCOURS_CFG)) {
     lecs.push(num);
   }
   for (const f of fl.filter((f) => /^PARCOURS-.+\.quiz\.json$/i.test(f))) parcoursQuiz.push([path.join(d, f), cfg.id]);
-  parcoursUnites.push({ id: cfg.id, label: cfg.label || null, lecons: lecs, apres: cfg.position === 'fin' });
+  parcoursUnites.push({ id: cfg.id, label: cfg.label || null, lecons: lecs, apres: cfg.position === 'fin', menu: cfg.menu || null });
 }
 
 let quizFiles = files
@@ -474,6 +474,7 @@ const projets = Object.keys(mapRaw).map(Number).sort((a, b) => a - b).map((id) =
     badge: typoTexte(badge || (pu ? 'Fin du parcours' : `Fin du ${labelUnite.toLowerCase()} ${id}`)),
     lecons,
     label: pu ? (pu.label || null) : null,
+    menu: pu ? (pu.menu || null) : null,
     quizId: quizParId[id] || null,
     total: lecons.length,
   };
