@@ -542,3 +542,4 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
 .sheet-tete{position:sticky;top:calc(-14px - env(safe-area-inset-top));z-index:3;background:var(--bg);margin:0 -20px;padding:calc(6px + env(safe-area-inset-top)) 20px 6px}
 .termine-reste{font-size:16px;margin:0 auto 12px;color:var(--t)}.termine-reste a{color:var(--c);font-weight:800;padding:6px 4px}
 .termine-incomplet .btn{margin-top:16px}
+.btn,button.btn,a.btn{text-align:center;justify-content:center;align-items:center}button.btn.btn-large{display:flex;width:100%}

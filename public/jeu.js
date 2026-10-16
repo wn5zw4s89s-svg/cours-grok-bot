@@ -450,7 +450,7 @@
           const cc = art.querySelector('.contenu');
           cc.querySelectorAll('.etape-sec').forEach((x) => (x.hidden = true)); cc.querySelector('.termine')?.remove(); cc.append(ecran);
           art.querySelector('.fin-lecon').hidden = true;
-          art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; e.textContent = `${vus.size} étape${vus.size > 1 ? 's' : ''} sur ${nE}`; });
+          art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; e.textContent = `${vus.size} vue${vus.size > 1 ? 's' : ''} sur ${nE}`; });
           art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', vus.size / nE));
           art.querySelectorAll('.dev-etape').forEach((b, j) => { const v = vus.has(j); b.classList.toggle('fait', v); b.classList.remove('cur'); b.removeAttribute('aria-current'); b.textContent = v ? '✓' : String(j + 1); });
           scrollTo(0, 0);
@@ -505,7 +505,7 @@
         art.querySelector('.fin-lecon').hidden = true;
         // Fin : compte tiré du nombre réel d'étapes ; tous les points cochés.
         const nE = +art.dataset.etapes || 1;
-        art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; const nv = (art._vus || new Set()).size || nE; e.textContent = `${nv} étape${nv > 1 ? 's' : ''} sur ${nE}${nv === nE ? ' ✓' : ''}`; });
+        art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; const nv = (art._vus || new Set()).size || nE; e.textContent = `${nv} vue${nv > 1 ? 's' : ''} sur ${nE}${nv === nE ? ' ✓' : ''}`; });
         const vus = art._vus || new Set();
         art.querySelectorAll('.dev-etape').forEach((b, j) => { const v = vus.has(j); b.classList.toggle('fait', v); b.classList.remove('cur'); b.removeAttribute('aria-current'); b.textContent = v ? '✓' : String(j + 1); });
         art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', ((art._vus || new Set()).size || 1) / (+art.dataset.etapes || 1)));
