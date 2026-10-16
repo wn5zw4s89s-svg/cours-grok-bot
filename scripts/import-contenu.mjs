@@ -395,7 +395,13 @@ for (const f of files) {
   recap = typoTexte(recap);
   // Badge : lu sur le fichier brut (avant retouches), formats L6/L12/L18/L24…
   const bm = extraireBadge(fs.readFileSync(path.join(SRC, f), 'utf8'));
-  dispo.set(num, { id, num, title, court: typoTexte(court), html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap, objectif: objm ? typoTexte(objm[1]) : '', disponible: true, _badge: bm });
+  dispo.set(num, { id, num, title, court: typoTexte(court), html: marquerFormat(html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, '')), recap, objectif: objm ? typoTexte(objm[1]) : '', disponible: true, _badge: bm });
+}
+
+// Lot 3 — format de leçon : repère, sans toucher au texte, le critère « C'est réussi si… »
+// (paragraphe qui commence par ces mots) pour l'afficher comme un bloc distinct.
+function marquerFormat(h) {
+  return h.replace(/<p>(\s*(?:<strong>)?C(?:&#39;|'|’)est réussi si)/g, '<p class="reussi">$1');
 }
 
 // Parcours (sous-dossiers de contenu/, déclarés dans parcours.json) : seuls XXX-NN.md
@@ -419,7 +425,7 @@ for (const [dir, cfg] of Object.entries(PARCOURS_CFG)) {
     const objm = raw0.match(/<p class="objectif">([^<]+)<\/p>/);
     let court = title.replace(/^[^·:]+\s*[:·]\s*/, '');
     court = court.charAt(0).toUpperCase() + court.slice(1);
-    dispo.set(num, { id, num, title, court: typoTexte(court), html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap: objm ? typoTexte(objm[1]) : '', objectif: objm ? typoTexte(objm[1]) : '', disponible: true, _badge: null });
+    dispo.set(num, { id, num, title, court: typoTexte(court), html: marquerFormat(html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, '')), recap: objm ? typoTexte(objm[1]) : '', objectif: objm ? typoTexte(objm[1]) : '', disponible: true, _badge: null });
     lecs.push(num);
   }
   for (const f of fl.filter((f) => /^PARCOURS-.+\.quiz\.json$/i.test(f))) parcoursQuiz.push([path.join(d, f), cfg.id]);

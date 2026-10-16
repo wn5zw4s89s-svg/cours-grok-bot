@@ -543,3 +543,39 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
 .termine-reste{font-size:16px;margin:0 auto 12px;color:var(--t)}.termine-reste a{color:var(--c);font-weight:800;padding:6px 4px}
 .termine-incomplet .btn{margin-top:16px}
 .btn,button.btn,a.btn{text-align:center;justify-content:center;align-items:center}button.btn.btn-large{display:flex;width:100%}
+
+/* ================= Lot 3 — responsive + format de leçon ================= */
+/* Cibles tactiles ≥ 44 px (WCAG 2.5.5 / Apple HIG) */
+.logo{display:inline-flex;align-items:center;min-height:44px}
+/* Contraste : texte secondaire ≥ 4,5:1 sur le fond */
+.home-promesse{opacity:1;font-size:14px}
+/* Résultat d'abord : la ligne « Objectif » devient la carte « Ton résultat » */
+.contenu .objectif{display:block;margin:4px 0 22px;padding:14px 16px;border-radius:16px;background:var(--card);border-left:4px solid var(--ok);color:var(--t);font-weight:700;font-size:17px;line-height:1.4}
+.contenu .objectif::before{content:"Ton résultat";display:block;margin-bottom:4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ok)}
+/* « À toi » : bloc nettement distinct de l'explication */
+.box.atoi{border:2px solid var(--c);background:var(--card);box-shadow:0 4px 0 var(--cs)}
+.box.atoi>p:first-child>strong:first-child{color:var(--c);font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+/* « C'est réussi si… » : critère vert, coché */
+.contenu p.reussi{position:relative;margin:16px 0 0;padding:12px 14px 12px 44px;border-radius:12px;background:rgba(61,220,151,.12);color:var(--t);font-weight:600}
+.contenu p.reussi::before{content:"✓";position:absolute;left:12px;top:12px;width:22px;height:22px;border-radius:50%;background:var(--ok);color:var(--bg);font-size:13px;font-weight:900;display:grid;place-items:center;line-height:1}
+
+/* Ordinateur : colonne de lecture ~70 caractères, rien d'étiré ni de minuscule */
+@media (min-width:900px){
+  main{max-width:760px;padding:24px 40px 112px}
+  .top{padding-left:max(32px,calc((100vw - 1180px)/2));padding-right:max(32px,calc((100vw - 1180px)/2))}
+  .contenu{font-size:18px;line-height:1.65}
+  .contenu>p,.contenu li,.box>p{max-width:70ch}
+  .lecon-label{font-size:14px}
+  .contenu h2{font-size:28px}
+  .lh{padding:14px 0 14px}
+  .fin-lecon{max-width:420px;margin-left:auto;margin-right:auto}
+  .home{max-width:620px;margin:0 auto}
+  .home .octo-home{width:160px;height:160px}
+  .home-titre{font-size:40px}
+  .home-but{font-size:19px;max-width:36ch}
+  .home-promesse{font-size:15px;max-width:44ch}
+  .home .btn-go{max-width:360px;margin-left:auto;margin-right:auto}
+  .q-texte{font-size:21px}
+  .q-choix button{font-size:17px;padding:16px 18px}
+  .sheet-in{max-width:720px;margin:0 auto}
+}
