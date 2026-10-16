@@ -80,4 +80,4 @@ C'est réussi si l'adresse est dans tes Notes, identique à celle de l'étape 4.
 Tu as déjà une adresse ? Saute les étapes 1 à 4. Commence à l'étape 5.
 </div>
 
-<div class="pieuvre" data-reaction="accueil" markdown="1">Projet 2 : Lumen a une adresse. Prochaine leçon : tu lui écris. (Chez OctoBoss, c'est la tentacule 2 qui démarre.)</div>
+<div class="pieuvre" data-reaction="accueil" markdown="1">Projet 2 : Lumen a une adresse. Prochaine leçon : tu lui écris.</div>

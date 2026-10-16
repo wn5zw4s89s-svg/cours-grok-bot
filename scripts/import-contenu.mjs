@@ -97,7 +97,7 @@ function retouches(src, num) {
   t = t.replace(/<div class="pieuvre" data-reaction="([^"]*)"([^>]*)>([\s\S]*?)<\/div>\s*$/i, (m, reaction, a, body) => {
     const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '0'])[1];
     let recap = body
-      .replace(/\s*Bot\s+\d+\s+sur\s+\d+\.?(\s*\([^)]*\))?\.?/i, '')
+      .replace(/\s*Bot\s+\d+\s+sur\s+\d+(?:\s*terminé)?\.?(\s*\([^)]*\))?\.?/i, '')
       .replace(/[*`]/g, '')
       .trim();
     recap = nettoyerTitre(recap);
@@ -109,6 +109,9 @@ function retouches(src, num) {
   });
   if (num === 1) {
     t = t.replace(/\s*\(?ta première tentacule\)?/gi, '');
+    // Affichage : aligner le teaser projet 3 sur le nom du menu (sources intactes)
+    t = t.replace(/«\s*Prospection de nuit\s*»/g, '« Un bot qui prospecte la nuit »');
+    t = t.replace(/Prospection de nuit/g, 'Un bot qui prospecte la nuit');
   }
   return t;
 }

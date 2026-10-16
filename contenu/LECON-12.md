@@ -43,7 +43,11 @@ C'est réussi si Lumen confirme l'ajout.
 ## Étape 4 · Compare (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** renvoie exactement le bloc de l'étape 2. Fais une capture de la nouvelle réponse.
+**À toi :** copie ce bloc et envoie-le à Lumen (c'est le même qu'à l'étape 2) :
+
+> Écris dans le chat, sans carte d'email, une réponse à une cliente qui demande où en est sa commande. Signe Léa.
+
+Fais une capture d'écran de la nouvelle réponse.
 
 C'est réussi si la nouvelle réponse fait 3 phrases au plus, sans aucun tic de l'étape 1, et ne promet aucune date.
 </div>
@@ -68,4 +72,4 @@ C'est toi qui postes. Le bot ne poste jamais à ta place.
 
 Projet 2 terminé. Badge : **Bureau ouvert**.
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">Bot 2 sur 8 (tentacule 2 sur 8). Lumen tient le bureau de Léa. Projet 3 : il cherche des clients la nuit.</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bot 2 sur 8 terminé. Lumen tient le bureau de Léa. Projet 3 : il cherche des clients la nuit.</div>

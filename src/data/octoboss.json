@@ -2,13 +2,53 @@
   "marque": "OctoBoss",
   "slogan": "8 tentacules, 8 bots, 0 salarié",
   "tentacules": [
-    {"projet": 1, "nom": "Le Stagiaire", "emoji": "🦑", "phrase": "Ton premier bot bosse pour toi."},
-    {"projet": 2, "nom": "Le Facteur", "emoji": "✉️", "phrase": "Ton bot trie tes mails pendant que tu dors."},
-    {"projet": 3, "nom": "Le Veilleur de nuit", "emoji": "🌙", "phrase": "Ton bot veille pendant que tu dors."},
-    {"projet": 4, "nom": "Le Graphiste", "emoji": "🎨", "phrase": "Ton bot crée tes visuels."},
-    {"projet": 5, "nom": "Le Caméraman", "emoji": "🎬", "phrase": "Ton bot tourne et monte tes vidéos."},
-    {"projet": 6, "nom": "Le Caissier", "emoji": "💶", "phrase": "Ton bot gère ta caisse."},
-    {"projet": 7, "nom": "Le DG", "emoji": "👔", "phrase": "Ton bot dirige les autres bots."},
-    {"projet": 8, "nom": "Le Gérant de camping", "emoji": "🏕️", "phrase": "Ton bot tient la boutique tout seul."}
+    {
+      "projet": 1,
+      "nom": "Premier bot",
+      "emoji": "🦑",
+      "phrase": "Ton premier bot bosse pour toi."
+    },
+    {
+      "projet": 2,
+      "nom": "Bureau ouvert",
+      "emoji": "✉️",
+      "phrase": "Ton bot trie tes mails pendant que tu dors."
+    },
+    {
+      "projet": 3,
+      "nom": "Chasseur de nuit",
+      "emoji": "🌙",
+      "phrase": "Ton bot veille pendant que tu dors."
+    },
+    {
+      "projet": 4,
+      "nom": "Marque lancée",
+      "emoji": "🎨",
+      "phrase": "Ton bot crée tes visuels."
+    },
+    {
+      "projet": 5,
+      "nom": "Studio 3 bots",
+      "emoji": "🎬",
+      "phrase": "Ton bot tourne et monte tes vidéos."
+    },
+    {
+      "projet": 6,
+      "nom": "Premier euro",
+      "emoji": "💶",
+      "phrase": "Ton bot gère ta caisse."
+    },
+    {
+      "projet": 7,
+      "nom": "Chef d'orchestre",
+      "emoji": "👔",
+      "phrase": "Ton bot dirige les autres bots."
+    },
+    {
+      "projet": 8,
+      "nom": "Fondateur",
+      "emoji": "🏕️",
+      "phrase": "Ton bot tient la boutique tout seul."
+    }
   ]
 }

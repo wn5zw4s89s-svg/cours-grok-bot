@@ -125,7 +125,7 @@
   const BADGES = [
     // Badges de leçon : config (id leçon -> emoji, nom, texte). Ajouter une ligne suffit.
     ...BADGES_LECON.map(([id, e, nom]) => [e, nom, (d) => !!d.lecons[id], undefined, id]),
-    ...UNITES.map((n) => [TENT(n.id).emoji, (n.badge && !/^Fin du /.test(n.badge)) ? n.badge : TENT(n.id).nom, (d) => nivFini(d, n.id), n.id]),
+    ...UNITES.map((n) => [TENT(n.id).emoji, n.badge || `Projet ${n.id}`, (d) => nivFini(d, n.id), n.id]),
     ['🎯', 'Sans fausse note', (d) => Object.values(d.quiz).some((q) => q.meilleur === q.total && q.total > 0)],
   ];
   // Prochain badge = premier non gagné (y compris celui du projet en cours).
@@ -297,7 +297,7 @@
       const ls = lecNiv(cur.id), f = ls.filter((l) => d.lecons[l.id]).length;
       const suiv = UNITES.find((n) => n.id === cur.id + 1);
       const nxt = ls.find((l) => !d.lecons[l.id]), debut = !L.some((l) => d.lecons[l.id]);
-      document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `Projet ${cur.id} sur ${UNITES.length} (${TENT(cur.id).nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
+      document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `Projet ${cur.id} sur ${UNITES.length} (${cur.nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
       document.querySelectorAll('[data-next-kick]').forEach((e) => (e.textContent = debut ? 'Ta première leçon · 2\u00a0min par étape' : nxt ? 'Ta prochaine leçon' : 'Dernière étape'));
       document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · Projet ${cur.id}`));
       document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
@@ -433,11 +433,14 @@
           $('div', { class: 'termine-ok', 'aria-hidden': 'true' }, '✓'),
           ...(() => {
             const recap = (art.dataset.recap || '').trim();
+            const court = (L[i].clair || L[i].court || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
             if (L[i].num === 2 && !recap) {
               return [$('h2', {}, 'Leçon 2 terminée : le métier de ton bot est dans sa description.')];
             }
+            // Titre de fin = titre du menu (court). L1 : « Crée ton premier bot ».
+            const titreFin = court ? `Leçon ${L[i].num} terminée : ${court}` : `Leçon ${L[i].num} terminée`;
             return [
-              $('h2', {}, `Leçon ${L[i].num} terminée`),
+              $('h2', {}, titreFin),
               recap ? $('p', { class: 'termine-recap' }, recap) : null,
             ];
           })(),
@@ -601,7 +604,10 @@
     box.append($('label', { class: 'sr', for: id }, 'Ta phrase'), ta, ok);
   });
   // Bouton COPIER sur les messages à envoyer (citation dans un « À toi » qui dit copie/envoie)
+  // Consigne seulement (avant le blockquote) : pas de COPIER sur « lis… » (L2 étape 2, L4 règle).
   document.querySelectorAll('.lecon .box.atoi').forEach((box) => {
+    const consigne = (box.innerHTML.split(/<blockquote/i)[0] || '').replace(/<[^>]+>/g, ' ');
+    if (!/copi|envoie/i.test(consigne)) return;
     box.querySelectorAll('blockquote').forEach((bq) => {
       const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
       b.addEventListener('click', async () => {

@@ -86,4 +86,4 @@ C'est réussi si la réponse a les 2 parties, signée Léa, sans date de livrais
 2) « Bonjour Marc, désolée pour l'attente. Je regarde votre commande et je reviens vers vous. Belle journée, Léa »
 </div>
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">Lumen connaît son métier par cœur. Sa description (son ADN, chez OctoBoss) est en place.</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Lumen connaît son métier par cœur. Sa description est en place.</div>

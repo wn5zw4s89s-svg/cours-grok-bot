@@ -74,4 +74,4 @@ C'est réussi si Lumen dit que la figue est en stock, et ne parle plus de ruptur
 **Exemple de réponse :** « C'est mis à jour : la bougie figue est de nouveau en stock. »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">La description pour toujours, la mémoire pour le moment. (Chez OctoBoss, la mémoire est la poche d'encre.)</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">La description pour toujours, la mémoire pour le moment.</div>

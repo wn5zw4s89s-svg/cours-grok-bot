@@ -22,7 +22,7 @@ C'est réussi si tu peux dire en une phrase ce qui ne va pas.
 
 Une bonne règle dit ce qui est interdit, et quoi faire à la place.
 
-« Sois prudent » ne marche pas. Trop vague.
+« Sois prudent » ne marche pas : le bot ne sait pas quoi faire.
 
 <div class="box atoi" markdown="1">
 **À toi :** lis cette règle. Elle corrige le raté le plus fréquent.
@@ -76,4 +76,4 @@ C'est réussi si la réponse ne donne ni prix ni délai, et dit « Je reviens ve
 2) « Bonjour Chloé, merci pour votre message. Je vérifie le prix et le délai, et je reviens vers vous. Léa »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">Un raté, une règle, plus d'erreur. (Chez OctoBoss, une règle s'appelle une ventouse.)</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Un raté, une règle, plus d'erreur.</div>

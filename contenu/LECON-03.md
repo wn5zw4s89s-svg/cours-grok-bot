@@ -100,4 +100,4 @@ C'est réussi si la réponse reste calme, s'excuse et ne promet ni remboursement
 2) « Bonjour Paul, je suis désolée pour votre bougie. Pouvez-vous m'envoyer une photo ? Je reviens vers vous. Léa »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">5 cas, 5 réponses. Garde en tête celle qui t'a le moins plu : c'est la leçon 4. (Chez OctoBoss, chaque cas est une vague.)</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">5 cas, 5 réponses. Garde en tête celle qui t'a le moins plu : c'est la leçon 4.</div>

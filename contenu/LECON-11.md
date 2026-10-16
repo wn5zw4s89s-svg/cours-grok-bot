@@ -74,4 +74,4 @@ C'est réussi si Lumen confirme la routine de 18 h et t'envoie tout de suite un 
 Pour arrêter une routine, écris à Lumen : « Arrête la routine email. »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">Lumen travaille même quand l'app est fermée. (Chez OctoBoss, une routine est un réflexe.)</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Lumen travaille même quand l'app est fermée.</div>

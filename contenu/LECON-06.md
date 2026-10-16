@@ -4,7 +4,7 @@ Objectif : à la fin, Lumen répond comme Léa répondrait, et tu as la preuve e
 
 ## Étape 1 · Compare deux descriptions (1 min)
 
-Une description moyenne donne des consignes vagues. Une description top 1 % donne des chiffres et un exemple.
+Une description moyenne donne des consignes floues. Une description top 1 % donne des chiffres et un exemple.
 
 | Moyenne | Top 1 % |
 |---|---|
@@ -90,4 +90,4 @@ C'est toi qui postes. Le bot ne poste jamais à ta place.
 
 Projet 1 terminé. Badge : **Premier bot**.
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">Bot 1 sur 8 (tentacule 1 sur 8). Lumen passe en mode Kraken : il répond comme Léa. Projet 2 : il reçoit une adresse email.</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bot 1 sur 8 terminé. Lumen répond comme Léa. Projet 2 : il reçoit une adresse email.</div>

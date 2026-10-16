@@ -407,9 +407,10 @@ body[data-page=lecon] main,body[data-page=quiz] main{padding-top:max(18px,env(sa
 .ico-liste{border-radius:14px}
 .ico-liste:active{background:var(--card)}
 .verrou-txt{display:block;font-size:12px;font-weight:600;color:var(--m);margin-top:2px}
-.item-lecon a{display:flex;align-items:center;gap:12px}
-.item-lecon .titre{flex:0 1 auto}
-.item-lecon a{flex-wrap:wrap}.item-lecon .verrou-txt{flex-basis:100%;padding-left:40px;margin-top:-8px}
+.item-lecon a{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;flex-wrap:nowrap}
+.item-lecon .pastille{grid-column:1;grid-row:1 / span 2;align-self:center}
+.item-lecon .titre{grid-column:2;grid-row:1;flex:none;min-width:0}
+.item-lecon .verrou-txt{grid-column:2;grid-row:2;padding-left:0;margin-top:2px;flex-basis:auto}
 .item-lecon.verrouillee a{opacity:.6}
 textarea.ecrit{display:block;width:100%;box-sizing:border-box;margin-top:12px;font:inherit;font-size:17px;color:var(--t);background:var(--card);border:2px solid var(--edge);border-radius:14px;padding:12px 14px;resize:vertical;min-height:56px}
 textarea.ecrit:focus{outline:none;border-color:var(--c)}
