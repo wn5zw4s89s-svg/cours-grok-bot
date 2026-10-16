@@ -67,4 +67,4 @@ C'est réussi si sa réponse contient les 2 parties : ce que veut Sophie, et un 
 2) « Bonjour Sophie, désolée pour la bougie ! Je vous en renvoie une neuve dès demain. Belle journée, Léa »
 </div>
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">Bravo ! Tu as créé Lumen, tu lui as donné un métier et il a traité son premier client. Bot 1 sur 8 (tentacule 1 sur 8).</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bravo ! Tu as créé Lumen, tu lui as donné un métier et il a répondu à un premier message test. Bot 1 sur 8 (tentacule 1 sur 8).</div>

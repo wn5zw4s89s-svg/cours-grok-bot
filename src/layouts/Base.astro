@@ -10,6 +10,7 @@ const { title, page = '' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const meta = {
   base,
+  build: jsv,
   octo,
   niveaux: site.niveaux,
   projets: site.projets,
@@ -37,5 +38,27 @@ const meta = {
   <main><slot /></main>
   <script type="application/json" id="gb-meta" set:html={JSON.stringify(meta)} />
   <script is:inline src={`${base}jeu.js?v=${jsv}`} defer></script>
+  <script is:inline define:vars={{ base, jsv }}>
+  // GitHub Pages / Fastly : HTML et JS ont max-age=600. Les <meta no-cache>
+  // ne sont PAS honorées par le CDN. Le ?v= sur jeu.js lie le HTML frais à
+  // l'asset courant ; version.json (fetch no-store + query) détecte un HTML
+  // périmé encore en cache Safari et recharge une seule fois.
+  (function () {
+    var KEY = 'gb2:build-reload';
+    try {
+      if (sessionStorage.getItem(KEY) === jsv) return;
+      fetch(base + 'version.json?_=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (v) {
+          if (!v || !v.build || v.build === jsv) return;
+          sessionStorage.setItem(KEY, v.build);
+          var u = new URL(location.href);
+          u.searchParams.set('_v', v.build);
+          location.replace(u.toString());
+        })
+        .catch(function () {});
+    } catch (e) {}
+  })();
+  </script>
 </body>
 </html>

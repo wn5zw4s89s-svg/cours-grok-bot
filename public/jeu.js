@@ -119,7 +119,7 @@
   };
 
   const BADGES = [
-    ['🫧', 'Première leçon', (d) => !!d.lecons['lecon-01']],
+    ['🐙', 'Première leçon', (d) => !!d.lecons['lecon-01']],
     ...UNITES.map((n) => [TENT(n.id).emoji, (n.badge && !/^Fin du /.test(n.badge)) ? n.badge : TENT(n.id).nom, (d) => nivFini(d, n.id), n.id]),
     ['🎯', 'Sans fausse note', (d) => Object.values(d.quiz).some((q) => q.meilleur === q.total && q.total > 0)],
   ];
@@ -225,7 +225,8 @@
     const overlay = $('div', { class: 'gb-badge-pop', role: 'dialog', 'aria-label': 'Badge débloqué' },
       host,
       $('div', { class: 'gb-badge-carte' },
-        $('div', { class: 'medal' }, emoji),
+        $('div', { class: 'medal', 'aria-hidden': 'true' },
+          $('span', { class: 'medal-face' }, emoji || '★')),
         $('div', { class: 'k' }, 'Badge débloqué'),
         $('div', { class: 'n' }, nom),
         $('p', { class: 'd' }, badgeTexte(badge)),
@@ -420,6 +421,7 @@
           $('a', { class: 'btn btn-large', href: btn.dataset.suite || M.base }, btn.dataset.suiteLabel || 'Continuer'));
         art.querySelector('.contenu').replaceChildren(ecran);
         art.querySelector('.fin-lecon').hidden = true;
+        art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = true; });
         art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', 1));
         scrollTo(0, 0);
       };
@@ -543,6 +545,8 @@
     c.replaceChildren(...secs);
     const nxt = art.querySelector('[data-suivant]'), fin = art.querySelector('[data-terminer]'), bar = art.querySelectorAll('[data-barre-lecon]');
     let k = 0;
+    const compteur = $('div', { class: 'etape-n', 'aria-live': 'polite' });
+    art.querySelector('.lh')?.append(compteur);
     const show = (n) => {
       k = n; secs.forEach((s, i) => (s.hidden = i !== n));
       const last = n === secs.length - 1;
@@ -550,6 +554,8 @@
       bar.forEach((b) => b.style.setProperty('--p', (n + 1) / secs.length));
       art.dataset.etape = String(n + 1);
       art.dataset.etapes = String(secs.length);
+      compteur.textContent = `Étape ${n + 1}/${secs.length}`;
+      compteur.hidden = !!art.querySelector('.termine');
       scrollTo(0, 0);
       secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
     };
@@ -573,7 +579,7 @@
   });
   // Bouton COPIER sur les messages à envoyer (citation dans un « À toi » qui dit copie/envoie)
   document.querySelectorAll('.lecon .box.atoi').forEach((box) => {
-    if (!/copie/i.test(box.textContent)) return;
+    if (!/(copie|envoie)/i.test(box.textContent)) return;
     box.querySelectorAll('blockquote').forEach((bq) => {
       const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
       b.addEventListener('click', async () => {
