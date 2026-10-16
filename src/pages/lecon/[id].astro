@@ -21,7 +21,7 @@ const c = clair(l);
 const tent = octo.tentacules.find((t) => t.projet === l.niveau);
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
-<Base title={l.title} page="lecon">
+<Base title={`${l.label} · ${c.titre}`} page="lecon">
   <article class="lecon" data-lecon={l.id} data-num={l.num} data-recap={l.recap || c.but || ''}>
     <div class="lh"><a class="retour" href={base} aria-label="Fermer">✕</a><div class="bar"><i data-barre-lecon></i></div></div>
     <h1 class="lecon-label">{l.label}</h1>

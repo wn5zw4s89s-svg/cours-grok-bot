@@ -423,7 +423,7 @@ for (const [dir, cfg] of Object.entries(PARCOURS_CFG)) {
     lecs.push(num);
   }
   for (const f of fl.filter((f) => /^PARCOURS-.+\.quiz\.json$/i.test(f))) parcoursQuiz.push([path.join(d, f), cfg.id]);
-  parcoursUnites.push({ id: cfg.id, label: cfg.label || null, lecons: lecs });
+  parcoursUnites.push({ id: cfg.id, label: cfg.label || null, lecons: lecs, apres: cfg.position === 'fin' });
 }
 
 let quizFiles = files
@@ -478,6 +478,8 @@ const projets = Object.keys(mapRaw).map(Number).sort((a, b) => a - b).map((id) =
     total: lecons.length,
   };
 });
+// Parcours sans « avant » : affichés après le dernier projet (ordre d'affichage et d'enchaînement).
+for (const u of parcoursUnites) if (u.apres) { const k = projets.findIndex((p) => p.id === u.id); projets.push(...projets.splice(k, 1)); }
 // Alias historique : niveaux === projets (même tableau) pour pages / jeu.js existants.
 const niveaux = projets;
 

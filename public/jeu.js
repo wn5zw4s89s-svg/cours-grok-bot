@@ -461,12 +461,13 @@
             ];
           })(),
           $('a', { class: 'btn btn-large', href: btn.dataset.suite || M.base }, btn.dataset.suiteLabel || 'Continuer'));
-        art.querySelector('.contenu').replaceChildren(ecran);
+        { const cc = art.querySelector('.contenu'); cc.querySelectorAll('.etape-sec').forEach((s) => (s.hidden = true)); cc.querySelector('.termine')?.remove(); cc.append(ecran); }
         art.querySelector('.fin-lecon').hidden = true;
         // Fin : compte tiré du nombre réel d'étapes ; tous les points cochés.
         const nE = +art.dataset.etapes || 1;
-        art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; e.textContent = `${nE} étape${nE > 1 ? 's' : ''} sur ${nE} ✓`; });
-        art.querySelectorAll('.dev-etape').forEach((b) => { b.classList.add('fait'); b.classList.remove('cur'); b.removeAttribute('aria-current'); b.textContent = '✓'; });
+        art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; const nv = (art._vus || new Set()).size || nE; e.textContent = `${nv} étape${nv > 1 ? 's' : ''} sur ${nE}${nv === nE ? ' ✓' : ''}`; });
+        const vus = art._vus || new Set();
+        art.querySelectorAll('.dev-etape').forEach((b, j) => { const v = vus.has(j); b.classList.toggle('fait', v); b.classList.remove('cur'); b.removeAttribute('aria-current'); b.textContent = v ? '✓' : String(j + 1); });
         art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', 1));
         scrollTo(0, 0);
       };
@@ -628,9 +629,13 @@
     c.replaceChildren(...secs);
     const nxt = art.querySelector('[data-suivant]'), fin = art.querySelector('[data-terminer]'), bar = art.querySelectorAll('[data-barre-lecon]');
     let k = 0;
+    const vus = (art._vus = new Set());
     const compteur = $('div', { class: 'etape-n', 'aria-live': 'polite' });
     art.querySelector('.lh')?.append(compteur);
     const show = (n) => {
+      const te = art.querySelector('.termine');
+      if (te) { te.remove(); art.querySelector('.fin-lecon').hidden = false; compteur.hidden = false; }
+      vus.add(n);
       k = n; secs.forEach((s, i) => (s.hidden = i !== n));
       const last = n === secs.length - 1;
       nxt.hidden = last; fin.hidden = !last;
@@ -638,8 +643,7 @@
       art.dataset.etape = String(n + 1);
       art.dataset.etapes = String(secs.length);
       compteur.textContent = `Étape ${n + 1}/${secs.length}`;
-      if (art.querySelector('.termine')) return;
-      art.querySelectorAll('.dev-etape').forEach((b, i) => { b.classList.toggle('fait', i < n); b.classList.toggle('cur', i === n); b.textContent = i < n ? '✓' : String(i + 1); if (i === n) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
+      art.querySelectorAll('.dev-etape').forEach((b, i) => { const v = vus.has(i) && i !== n; b.classList.toggle('fait', v); b.classList.toggle('cur', i === n); b.textContent = v ? '✓' : String(i + 1); if (i === n) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
       scrollTo(0, 0);
       secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
     };

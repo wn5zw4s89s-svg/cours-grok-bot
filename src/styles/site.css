@@ -537,3 +537,4 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
 .btn:focus-visible,.q-choix button:focus-visible,.copier:focus-visible,.btn-sec:focus-visible,.btn-x:focus-visible,.dev-etape:focus-visible,details.solution>summary:focus-visible{outline:3px solid var(--t);outline-offset:3px}
 .node.done,.node.cur,.item-lecon.fait .pastille,.chemin-dot.fait,.pieuvre[data-reaction=croissance] .pv-bulle{color:var(--bg)}
 .btn:disabled,.remarque-feuille .btn:disabled{opacity:1;background:var(--card);color:var(--t);box-shadow:0 5px 0 var(--edge);cursor:default}
+.sheet-in{max-height:none;height:100dvh;border-radius:0}
