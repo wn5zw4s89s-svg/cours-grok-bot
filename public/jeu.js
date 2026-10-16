@@ -222,7 +222,7 @@
   }
 
   function shareUrl(badgeNom, emoji) {
-    const text = `${emoji} J'ai débloqué « ${badgeNom} » sur OctoBoss 🐙 — ${OCTO.slogan || '8 tentacules, 8 bots, 0 salarié'}.`;
+    const text = `${emoji} J'ai débloqué « ${badgeNom} » sur OctoBoss 🐙 — ${(OCTO.slogan || '{N} tentacules, {N} bots, 0 salarié').replaceAll('{N}', NP)}.`;
     return `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://wn5zw4s89s-svg.github.io/cours-grok-bot/')}`;
   }
 

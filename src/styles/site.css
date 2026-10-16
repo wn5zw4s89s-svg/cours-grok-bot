@@ -529,3 +529,5 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
 
 .dev-etape.fait{background:rgba(127,127,127,.25)}.dev-etape.cur{outline:2px solid currentColor;opacity:1}
 .lecon-label{font-size:13px;font-weight:600;opacity:.7;margin:6px 0 0;letter-spacing:0}
+/* Fin de leçon : état final opaque + contraste AA (texte sombre sur corail = 6,7:1) */
+.termine{opacity:1;animation-fill-mode:both}.termine a.btn{color:var(--bg)}

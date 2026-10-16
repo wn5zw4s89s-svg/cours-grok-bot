@@ -1,6 +1,6 @@
 {
   "marque": "OctoBoss",
-  "slogan": "8 tentacules, 8 bots, 0 salarié",
+  "slogan": "{N} tentacules, {N} bots, 0 salarié",
   "tentacules": [
     {
       "projet": 1,
