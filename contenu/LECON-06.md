@@ -1,70 +1,93 @@
-# Leçon 6 : Top 1 % (mode Kraken) : la description qui change tout
+# Leçon 6 · Top 1 % : la description qui change tout
 
-<p class="chapeau">Même bot, même client. Deux descriptions. Deux résultats.</p>
+Objectif : à la fin, Lumen répond comme Léa répondrait, et tu as la preuve en capture.
 
-## Étape 1 · La version moyenne (2 min)
+## Étape 1 · Compare deux descriptions (1 min)
 
-Le **top 1 %** (mode Kraken) : faire mieux que presque tout le monde.
+Une description moyenne donne des consignes vagues. Une description top 1 % donne des chiffres et un exemple.
 
-| Description moyenne | Description top 1 % |
+| Moyenne | Top 1 % |
 |---|---|
-| « Sois sympa. » | « Tutoie si le client tutoie. 3 phrases max. » |
-| « Ne fais pas d'erreur. » | « Jamais de remboursement. Dis : "Léa revient vers vous." » |
-| Aucun exemple | 2 exemples : message -> réponse idéale |
+| « Sois poli. » | « Tu vouvoies. » |
+| « Fais court. » | « 3 phrases maximum. » |
+| Pas d'exemple | Un exemple de bonne réponse |
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie un cas difficile. Garde la réponse dans tes Notes : c'est ta version moyenne.
+**À toi :** trouve dans le tableau la consigne qui se vérifie en comptant.
 
-**C'est réussi si :** la réponse est dans tes Notes.
+C'est réussi si tu réponds « 3 phrases maximum ».
+</div>
+
+## Étape 2 · Vois la différence (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+
+> Ne change pas ta description. Réponds deux fois à ce client. Version A : comme si ta description disait seulement « Tu aides Léa avec ses clients. Sois poli. ». Version B : avec ta vraie description.
+>
+> Client : « Bonjour, ma bougie est arrivée sans couvercle. Lucas »
+
+C'est réussi si tu reçois 2 réponses, A et B, et que B est plus courte et plus précise.
 </div>
 
 <div class="box corrige" markdown="1">
-Cas : « elle sent rien votre bougie »  
-Moyenne : « Bonjour ! Nous sommes vraiment désolés pour ce désagrément. Votre satisfaction est notre priorité absolue. N'hésitez pas à nous recontacter. »
+**Exemple de réponse :**
+
+A : « Bonjour Lucas ! Nous sommes vraiment navrés pour ce désagrément. N'hésitez surtout pas à nous recontacter si besoin, nous sommes là pour vous ! »
+
+B : « Bonjour Lucas, désolée pour le couvercle manquant. Pouvez-vous m'envoyer une photo ? Je reviens vers vous. Léa »
 </div>
 
-## Étape 2 · Chiffres et exemples (2 min)
-
-Le bot imite ce qu'il voit. Montre-lui.
+## Étape 3 · Passe Lumen en top 1 % (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Ajoute à la description 2 règles chiffrées et 2 exemples « message -> réponse idéale ». Enregistre.
+**À toi :** copie ce bloc en entier et envoie-le à Lumen :
 
-**C'est réussi si :** la description contient 2 règles chiffrées et 2 exemples.
+> Ajoute ces lignes à la fin de ta description, sans rien changer d'autre :
+>
+> Ta réponse au client fait 3 phrases maximum. Tu vouvoies. Tu signes Léa.
+>
+> Exemple de bonne réponse : « Bonjour Sophie, désolée pour la bougie cassée. Pouvez-vous m'envoyer une photo ? Je reviens vers vous. Léa »
+
+C'est réussi si Lumen confirme l'ajout.
 </div>
 
 <div class="box corrige" markdown="1">
-« 3 phrases max. » « Une seule question à la fois. »  
-« c'est pour quand ? » -> « Je regarde votre commande. Léa revient vers vous aujourd'hui. »
+**Exemple de réponse :** « C'est ajouté à la fin de ma description. »
 </div>
 
-## Étape 3 · Côte à côte (2 min)
+## Étape 4 · Le test final (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Renvoie le même cas. Mets les deux réponses côte à côte.
+**À toi :** copie ce bloc et envoie-le à Lumen :
 
-**C'est réussi si :** la nouvelle réponse est plus courte et plus précise.
+> Ça fait deux semaines que j'attends ma commande. Franchement, c'est n'importe quoi. Nadia
+
+C'est réussi si la réponse fait 3 phrases maximum, vouvoie, est signée Léa et ne promet ni date ni remboursement.
 </div>
 
 <div class="box corrige" markdown="1">
-Top 1 % : « Mince ! Elle a brûlé combien de temps ? Souvent il faut 2 h pour que le parfum sorte. Léa »
+**Exemple de réponse :**
+
+1) Nadia attend sa commande depuis deux semaines et elle est agacée.
+
+2) « Bonjour Nadia, je suis désolée pour cette attente. Je regarde votre commande et je reviens vers vous. Léa »
 </div>
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 1 sur 8 (tentacule 1 sur 8). « Plus que 7. »
+## Étape 5 · Montre-le sur X (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** fais une capture d'écran des réponses A et B de l'étape 2.
+
+C'est réussi si les 2 réponses sont lisibles sur ta capture.
 </div>
 
 <div class="box attention" markdown="1">
-**Défi X.** Capture côte à côte : réponse moyenne, réponse top 1 %.  
-Phrase type : « Mon premier bot, deux descriptions. À gauche, avant. À droite, top 1 %. #OctoBoss »  
+**Défi X.** Poste ta capture A / B sur X, depuis l'app X.  
+Phrase type : « Mon premier bot. Même client, deux descriptions. A : moyenne. B : top 1 %. »  
 C'est toi qui postes. Le bot ne poste jamais à ta place.
 </div>
 
-<div class="fin" markdown="1">
-## En résumé
+Projet 1 terminé. Badge : **Premier bot**.
 
-- Règles chiffrées + exemples > consignes vagues.
-- Badge : **Premier bot**.
-
-**Projet 2 : ton bot reçoit une adresse email.**
-</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bot 1 sur 8 (tentacule 1 sur 8). Lumen passe en mode Kraken : il répond comme Léa. Projet 2 : il reçoit une adresse email.</div>

@@ -90,12 +90,22 @@ function retouches(src, num) {
   // Libellé solution (affichage) — sources inchangées
   t = t.replace(/\*\*Bonne réponse \(exemple\)\s*:\*\*/gi, '**Exemple de réponse :**');
   t = t.replace(/Bonne réponse \(exemple\)\s*:/gi, 'Exemple de réponse :');
-  // Réplique finale (croissance) : son texte (écrit par Prof Groksky) devient le récap de l'écran de fin ;
-  // la bulle est retirée de la dernière étape. Numéro de bot gardé pour l'animation.
-  t = t.replace(/<div class="pieuvre" data-reaction="croissance"([^>]*)>([\s\S]*?)<\/div>\s*$/, (m, a, body) => {
-    const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '1'])[1];
-    const recap = body.replace(/\s*Bot\s+\d+\s+sur\s+\d+\.?(\s*\([^)]*\))?\.?/i, '').replace(/[*`]/g, '').trim();
-    return `<!-- RECAP:${n}:${recap} -->\n`;
+  t = t.replace(/\*\*Réponse attendue \(exemple\)\s*:\*\*/gi, '**Exemple de réponse :**');
+  t = t.replace(/Réponse attendue \(exemple\)\s*:/gi, 'Exemple de réponse :');
+  // Bulle finale pieuvre → récap d'écran de fin (toutes réactions).
+  // croissance / reussite : retirée de l'étape. accueil : gardée visible (ex. fin L7 / projet 2).
+  t = t.replace(/<div class="pieuvre" data-reaction="([^"]*)"([^>]*)>([\s\S]*?)<\/div>\s*$/i, (m, reaction, a, body) => {
+    const n = (body.match(/Bot\s+(\d+)\s+sur/i) || [, '0'])[1];
+    let recap = body
+      .replace(/\s*Bot\s+\d+\s+sur\s+\d+\.?(\s*\([^)]*\))?\.?/i, '')
+      .replace(/[*`]/g, '')
+      .trim();
+    recap = nettoyerTitre(recap);
+    const mark = `<!-- RECAP:${n}:${recap} -->\n`;
+    if (/^accueil$/i.test(reaction)) {
+      return `${mark}<div class="pieuvre" data-reaction="accueil"${a}>\n${body.trim()}\n</div>\n`;
+    }
+    return mark;
   });
   if (num === 1) {
     t = t.replace(/\s*\(?ta première tentacule\)?/gi, '');

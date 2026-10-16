@@ -1,62 +1,71 @@
-# Leçon 12 : Top 1 % (mode Kraken) : le ton qui sonne humain
+# Leçon 12 · Top 1 % : des emails qui sonnent humains
 
-<p class="chapeau">Tout le monde repère un email d'IA. Le tien, personne.</p>
+Objectif : à la fin, les brouillons de Lumen ressemblent à un email écrit par Léa.
 
-## Étape 1 · La version moyenne (2 min)
+## Étape 1 · Repère les tics (1 min)
 
-Tics à chasser (bonne pratique, d'après la skill *unslop*) : formules de chatbot (« N'hésitez pas »), mots gonflés (« soigneusement », « ravis »), groupes de trois forcés, tirets longs, conclusion vide.
+Un email écrit par une IA se repère à ses tics : « N'hésitez pas », « ravis de », « je reste à votre disposition », des phrases longues et vides.
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie : « Prépare une réponse à un client qui demande où en est sa commande. » Note le texte. Touche Discard.
+**À toi :** trouve le tic dans cette phrase : « Nous sommes ravis de votre message et restons à votre entière disposition. »
 
-**C'est réussi si :** tu as la version moyenne dans tes Notes.
+C'est réussi si tu cites « ravis » ou « à votre entière disposition ».
+</div>
+
+## Étape 2 · Garde la version moyenne (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc et envoie-le à Lumen :
+
+> Écris dans le chat, sans carte d'email, une réponse à une cliente qui demande où en est sa commande. Signe Léa.
+
+Fais une capture d'écran de la réponse.
+
+C'est réussi si la capture est dans tes Photos.
 </div>
 
 <div class="box corrige" markdown="1">
-« Merci infiniment pour votre patience ! Nous mettons tout en œuvre… »
+**Exemple de réponse :** « Bonjour, merci infiniment pour votre patience ! Nous mettons tout en œuvre pour que votre commande vous parvienne au plus vite. N'hésitez pas à revenir vers nous. Léa »
 </div>
 
-## Étape 2 · La règle de ton (2 min)
-
-Un fait par phrase. Signe comme toi.
+## Étape 3 · Ajoute la règle de ton (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Ajoute à la description : « Ton : 3 phrases max. Jamais "n'hésitez pas", "ravi", "je reste à votre disposition". Pas de tiret long. Un fait par phrase. Signe ___. » Enregistre.
+**À toi :** copie ce bloc en entier et envoie-le à Lumen :
 
-**C'est réussi si :** la règle de ton est dans la description.
+> Ajoute cette ligne à la fin de ta description, sans rien changer d'autre :
+>
+> Dans tes emails : une idée par phrase, 3 phrases maximum. Jamais « n'hésitez pas », « ravi », « je reste à votre disposition ». Tu signes Léa.
+
+C'est réussi si Lumen confirme l'ajout.
+</div>
+
+## Étape 4 · Compare (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** renvoie exactement le bloc de l'étape 2. Fais une capture de la nouvelle réponse.
+
+C'est réussi si la nouvelle réponse fait 3 phrases au plus, sans aucun tic de l'étape 1, et ne promet aucune date.
 </div>
 
 <div class="box corrige" markdown="1">
-« … Signe Léa. »
+**Exemple de réponse :** « Bonjour, merci pour votre message. Je regarde où en est votre commande et je reviens vers vous. Léa »
 </div>
 
-## Étape 3 · Côte à côte (2 min)
+## Étape 5 · Montre-le sur X (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Redemande la même réponse. Compare.
+**À toi :** mets tes 2 captures côte à côte (avant, après).
 
-**C'est réussi si :** la nouvelle version n'a aucun tic de la liste.
-</div>
-
-<div class="box corrige" markdown="1">
-« Bonjour, votre colis est parti hier. Le suivi arrive par email ce soir. Léa »
-</div>
-
-<div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 2 sur 8 (tentacule 2 sur 8). « Il écrit comme toi. »
+C'est réussi si les 2 réponses sont lisibles.
 </div>
 
 <div class="box attention" markdown="1">
-**Défi X.** Capture côte à côte des deux brouillons, ton adresse floutée si tu veux.  
-Phrase type : « Mon bot a son adresse email. Il trie, il prépare, je valide. Et il n'écrit plus comme un robot. #OctoBoss »  
+**Défi X.** Poste tes 2 captures sur X, depuis l'app X.  
+Phrase type : « Mon bot a son adresse email. Il trie, il prépare, je valide. Et il n'écrit plus comme un robot. »  
 C'est toi qui postes. Le bot ne poste jamais à ta place.
 </div>
 
-<div class="fin" markdown="1">
-## En résumé
+Projet 2 terminé. Badge : **Bureau ouvert**.
 
-- Un fait par phrase. Zéro formule de chatbot.
-- Badge : **Bureau ouvert**.
-
-**Projet 3 : un bot qui prospecte la nuit.**
-</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bot 2 sur 8 (tentacule 2 sur 8). Lumen tient le bureau de Léa. Projet 3 : il cherche des clients la nuit.</div>

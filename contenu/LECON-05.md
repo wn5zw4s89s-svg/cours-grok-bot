@@ -1,58 +1,77 @@
-# Leçon 5 : Vérifie avec un cas neuf et la mémoire (la poche d'encre)
+# Leçon 5 · Fais retenir un fait à ton bot
 
-<p class="chapeau">Ton bot réussit les cas qu'il connaît. Et les autres ?</p>
+Objectif : à la fin, Lumen connaît une info du moment et s'en sert pour répondre.
 
-## Étape 1 · Un cas jamais vu (2 min)
+## Étape 1 · Comprends la différence (1 min)
 
-Un cas répété peut réussir par habitude. Un cas neuf montre si la règle tient.
+La **description**, c'est ce qui est toujours vrai : son métier, ses règles.
+
+La **mémoire**, c'est ce que le bot retient en route : une info du moment, qui peut changer.
+
+Exemple : « la bougie figue est en rupture de stock ». Vrai aujourd'hui, faux dans un mois.
 
 <div class="box atoi" markdown="1">
-**À toi.** Écris un cas neuf qui vise ta règle, avec d'autres mots. Envoie-le.
+**À toi :** classe cette info : « Lumen signe toujours Léa ».
 
-**C'est réussi si :** la réponse respecte la règle.
+C'est réussi si tu réponds « description » : c'est toujours vrai.
+</div>
+
+## Étape 2 · Donne-lui le fait (1 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc et envoie-le à Lumen :
+
+> Retiens ce fait dans ta mémoire : la bougie figue est en rupture de stock. Léa ne sait pas encore quand elle revient.
+
+C'est réussi si Lumen confirme qu'il l'a retenu.
 </div>
 
 <div class="box corrige" markdown="1">
-« Le parfum ne me plaît pas, je peux être remboursée ? » -> « Léa regarde votre commande et revient vers vous. »
+**Exemple de réponse :** « C'est noté : la bougie figue est en rupture, sans date de retour. »
 </div>
 
-## Étape 2 · Lis la mémoire (2 min)
-
-La **mémoire** (la poche d'encre) garde des préférences d'une conversation à l'autre. Pas toujours juste.
+## Étape 3 · Vérifie qu'il l'a retenu (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie : « Qu'as-tu retenu sur mon projet ? »
+**À toi :** copie ce bloc et envoie-le à Lumen :
 
-**C'est réussi si :** tu lis sa liste en entier.
+> Qu'est-ce que tu as retenu sur la bougie figue ?
+
+C'est réussi si Lumen redit : rupture de stock, pas de date de retour.
+</div>
+
+## Étape 4 · Teste avec un client (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc et envoie-le à Lumen :
+
+> Bonjour, je voudrais 2 bougies figue pour un cadeau. Vous les avez ? Emma
+
+C'est réussi si la réponse dit que la figue est en rupture, sans inventer de date de retour.
 </div>
 
 <div class="box corrige" markdown="1">
-« Tu vends des bougies. Tu livres en Europe. Tu signes Léa. »
+**Exemple de réponse :**
+
+1) Emma veut 2 bougies figue pour un cadeau.
+
+2) « Bonjour Emma, la bougie figue est en rupture pour le moment. Je reviens vers vous dès qu'elle revient. Belle journée, Léa »
 </div>
 
-## Étape 3 · Corrige la mémoire (2 min)
+## Étape 5 · Mets le fait à jour (2 min)
 
-Un fait important ne reste pas seulement en mémoire : il va dans la description.
+Un fait change ? Tu le dis au bot.
 
 <div class="box atoi" markdown="1">
-**À toi.** Corrige un souvenir faux. S'il est important, ajoute-le aussi à la description.
+**À toi :** copie ce bloc et envoie-le à Lumen :
 
-**C'est réussi si :** le bot confirme ta correction.
+> Mets ta mémoire à jour : la bougie figue est de nouveau en stock. Oublie l'ancienne info. Qu'est-ce que tu sais maintenant sur la bougie figue ?
+
+C'est réussi si Lumen dit que la figue est en stock, et ne parle plus de rupture.
 </div>
 
 <div class="box corrige" markdown="1">
-« Non, je ne livre qu'en France. » Ajouté à la description : « Livraison en France uniquement. »
+**Exemple de réponse :** « C'est mis à jour : la bougie figue est de nouveau en stock. »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Mémoire à jour. Place au top 1 %. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Cas neuf = vrai test.
-- Fait important -> description.
-
-**Leçon 6 : le top 1 %.**
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">La description pour toujours, la mémoire pour le moment. (Chez OctoBoss, la mémoire est la poche d'encre.)</div>

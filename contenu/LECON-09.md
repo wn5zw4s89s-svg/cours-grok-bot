@@ -1,62 +1,73 @@
-# Leçon 9 : Apprends-lui à trier
+# Leçon 9 · Apprends à ton bot à trier le courrier
 
-<p class="chapeau">Dix emails. Lequel d'abord ? Ton bot décide pour toi.</p>
+Objectif : à la fin, Lumen range chaque email dans la bonne pile.
 
-## Étape 1 · Ajoute la rubrique Emails (2 min)
+## Étape 1 · Comprends les 3 piles (1 min)
 
-3 piles : **À moi** (ta décision), **Prêt** (réponse simple), **Bruit** (pub).
-
-```
-Emails : quand je demande le courrier, classe chaque email en À moi, Prêt ou Bruit.
-Pour chacun : expéditeur, 1 ligne de résumé, la pile.
-À moi : remboursement, plainte, demande spéciale.
-Prêt : question simple sur produit, prix affiché, livraison.
-Bruit : pub, newsletter. Ne les détaille pas.
-```
+- **À moi** : Léa doit décider (remboursement, plainte).
+- **Prêt** : question simple, Lumen peut préparer la réponse.
+- **Bruit** : pub, newsletter.
 
 <div class="box atoi" markdown="1">
-**À toi.** Colle le modèle dans la description. Adapte À moi et Prêt à ton projet. Enregistre.
+**À toi :** classe cet email : « -50 % sur nos stylos ce week-end ! »
 
-**C'est réussi si :** la rubrique Emails parle de ton projet.
+C'est réussi si tu réponds « Bruit ».
+</div>
+
+## Étape 2 · Ajoute le tri à la description (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+
+> Ajoute cette ligne à la fin de ta description, sans rien changer d'autre :
+>
+> Quand je demande le courrier, tu ranges chaque email dans une pile : À moi (remboursement, plainte, demande spéciale), Prêt (question simple sur un produit ou la livraison) ou Bruit (pub, newsletter). Pour chaque email : l'expéditeur, une ligne de résumé, la pile.
+
+C'est réussi si Lumen confirme l'ajout.
 </div>
 
 <div class="box corrige" markdown="1">
-À moi : remboursement, plainte. Prêt : question sur la cire, la livraison.
+**Exemple de réponse :** « C'est ajouté à la fin de ma description. »
 </div>
 
-## Étape 2 · Envoie 3 emails (2 min)
+## Étape 3 · Envoie 3 emails (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Depuis ton app mail, envoie au bot : une plainte, une question simple, une fausse pub.
+**À toi :** depuis l'app Mail, envoie 3 emails séparés à Lumen. Copie chaque bloc dans un email différent.
 
-**C'est réussi si :** les 3 emails sont partis.
+Email 1 :
+
+> Ma bougie est arrivée cassée, je veux être remboursée. Julie
+
+Email 2 :
+
+> Bonjour, la cire de vos bougies est végétale ? Hugo
+
+Email 3 :
+
+> -50 % sur nos stylos ce week-end !
+
+C'est réussi si les 3 emails sont dans tes messages envoyés.
+</div>
+
+## Étape 4 · Demande le tri (1 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** attends une minute. Copie ce bloc et envoie-le à Lumen :
+
+> Trie le courrier du jour.
+
+C'est réussi si Julie est dans À moi, Hugo dans Prêt et la pub dans Bruit.
 </div>
 
 <div class="box corrige" markdown="1">
-« Bougie cassée, je veux être remboursée. » · « La cire est végétale ? » · « -50 % sur nos stylos ! »
+**Exemple de réponse :**
+
+**À moi** : Julie, bougie cassée, veut un remboursement.
+
+**Prêt** : Hugo, demande si la cire est végétale.
+
+**Bruit** : 1 pub pour des stylos.
 </div>
 
-## Étape 3 · Demande le tri (2 min)
-
-<div class="box atoi" markdown="1">
-**À toi.** Envoie au bot : « Trie ton courrier du jour. »
-
-**C'est réussi si :** chaque email est dans la bonne pile.
-</div>
-
-<div class="box corrige" markdown="1">
-**À moi** : bougie cassée, remboursement. **Prêt** : cire végétale ? **Bruit** : 1 pub.
-</div>
-
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Trié. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- 3 piles : À moi, Prêt, Bruit.
-- Les règles de tri vont dans la description.
-
-**Leçon 10 : il prépare, tu valides.**
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Trois piles, zéro panique. Léa sait par où commencer.</div>

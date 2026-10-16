@@ -1,61 +1,79 @@
-# Leçon 4 : Transforme un raté en règle (une ventouse)
+# Leçon 4 · Transforme un raté en règle
 
-<p class="chapeau">Tu corriges dans le chat. Demain, même erreur. Une règle dans la description, elle, tient.</p>
+Objectif : à la fin, Lumen ne refait plus la même erreur.
 
-## Étape 1 · Nomme l'erreur (2 min)
+## Étape 1 · Choisis le raté (1 min)
 
-Une **règle** (une ventouse) est une phrase dans la description. Le chat aide maintenant. La règle aide toujours.
+Un raté, c'est une réponse qui ne va pas : un prix inventé, une promesse, un ton sec.
 
 <div class="box atoi" markdown="1">
-**À toi.** Reprends un cas raté. Écris ce que le bot ne doit pas faire.
+**À toi :** relis les 5 réponses de la leçon 3. Choisis la moins bonne.
 
-**C'est réussi si :** l'erreur tient en une phrase.
+Tout était bon ? Prends le client flou de l'étape 2 (« C'est combien ? »). C'est le piège le plus fréquent.
+
+C'est réussi si tu peux dire en une phrase ce qui ne va pas.
 </div>
 
 <div class="box corrige" markdown="1">
-« Il promet un remboursement. »
+**Exemple :** « Lumen a répondu "15 €" alors que Léa ne lui a jamais donné de prix. »
 </div>
 
 ## Étape 2 · Écris la règle (2 min)
 
-Une bonne règle = l'interdit + la phrase à dire à la place.
+Une bonne règle dit ce qui est interdit, et quoi faire à la place.
 
-<div class="box erreur" markdown="1">
-« Sois prudent avec les remboursements. » Trop vague.  
-« Jamais de remboursement promis. Dis : "Léa regarde votre commande et revient vers vous." » Clair.
-</div>
+« Sois prudent » ne marche pas. Trop vague.
 
 <div class="box atoi" markdown="1">
-**À toi.** Écris ta règle. Ajoute-la à la description. Enregistre.
+**À toi :** lis cette règle. Elle corrige le raté le plus fréquent.
 
-**C'est réussi si :** ta règle a une phrase de remplacement et elle est dans la description.
+> Tu n'inventes jamais un prix, un délai ou un stock. Si tu ne sais pas, ta réponse pose une question au client ou dit « Je reviens vers vous ».
+
+C'est réussi si tu trouves dans la règle l'interdit et ce qu'il faut faire à la place.
+</div>
+
+## Étape 3 · Ajoute-la à la description (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+
+> Ajoute cette ligne à la fin de ta description, sans rien changer d'autre :
+>
+> Tu n'inventes jamais un prix, un délai ou un stock. Si tu ne sais pas, ta réponse pose une question au client ou dit « Je reviens vers vous ».
+
+C'est réussi si Lumen confirme l'ajout.
 </div>
 
 <div class="box corrige" markdown="1">
-« Tu ne promets jamais de remboursement. Tu écris : "Léa regarde votre commande et revient vers vous." »
+**Exemple de réponse :** « C'est ajouté à la fin de ma description. »
 </div>
 
-## Étape 3 · Renvoie le cas (2 min)
+## Étape 4 · Vérifie la description (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Renvoie le même cas.
+**À toi :** copie ce bloc et envoie-le à Lumen :
 
-**C'est réussi si :** la réponse suit la règle.
+> Montre-moi ta description, telle qu'elle est enregistrée.
+
+C'est réussi si tu vois 5 lignes : les 4 de la leçon 2, puis la nouvelle règle.
+</div>
+
+## Étape 5 · Retente le raté (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc et envoie-le à Lumen :
+
+> Bonjour, la bougie figue, elle coûte combien ? Et vous l'envoyez en combien de jours ? Chloé
+
+C'est réussi si la réponse ne donne ni prix ni délai, et dit « Je reviens vers vous » ou pose une question.
 </div>
 
 <div class="box corrige" markdown="1">
-« Désolée pour la bougie ! Léa regarde votre commande et revient vers vous. »
+**Exemple de réponse :**
+
+1) Chloé veut le prix de la bougie figue et le délai d'envoi.
+
+2) « Bonjour Chloé, merci pour votre message. Je vérifie le prix et le délai, et je reviens vers vous. Léa »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« La règle tient. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Règle = phrase dans la description.
-- Interdit + phrase à dire.
-
-**Leçon 5 : la mémoire.**
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Un raté, une règle, plus d'erreur. (Chez OctoBoss, une règle s'appelle une ventouse.)</div>

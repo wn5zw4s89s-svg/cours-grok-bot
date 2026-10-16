@@ -118,9 +118,9 @@
     d.streak.last = today;
   };
 
+  // Badges de leçon : L1 seulement (OK Joseph). Les badges de projet viennent du contenu via projets.badge.
   const BADGES_LECON = [
     ['lecon-01', '🐙', 'Première leçon', 'Tu as terminé ta première leçon.'],
-    ['lecon-02', '🧬', 'Deuxième leçon', 'Le métier de ton bot est dans sa description.'],
   ];
   const BADGES = [
     // Badges de leçon : config (id leçon -> emoji, nom, texte). Ajouter une ligne suffit.
@@ -284,7 +284,7 @@
   function rafraichir() {
     const d = etat(), cur = nivCourant(d);
     majStats(d);
-    const pill = document.querySelector('[data-niveau]');
+    const pill = document.querySelector('[data-niveau-pill], [data-niveau]:not(.quiz)');
     if (pill) pill.textContent = cur ? `${labelU} ${cur.id} · ${cur.nom}` : 'Cours terminé 🏆';
     const nbT = UNITES.filter((n) => nivFini(d, n.id)).length;
     octos().forEach((o) => { if (!o.closest('.gb-badge-pop')) octoGrow(o, nbT); });
@@ -431,8 +431,16 @@
       const termine = () => {
         const ecran = $('section', { class: 'termine', role: 'status' },
           $('div', { class: 'termine-ok', 'aria-hidden': 'true' }, '✓'),
-          $('h2', {}, `Leçon ${L[i].num} terminée`),
-          art.dataset.recap ? $('p', { class: 'termine-recap' }, art.dataset.recap) : null,
+          ...(() => {
+            const recap = (art.dataset.recap || '').trim();
+            if (L[i].num === 2 && !recap) {
+              return [$('h2', {}, 'Leçon 2 terminée : le métier de ton bot est dans sa description.')];
+            }
+            return [
+              $('h2', {}, `Leçon ${L[i].num} terminée`),
+              recap ? $('p', { class: 'termine-recap' }, recap) : null,
+            ];
+          })(),
           $('a', { class: 'btn btn-large', href: btn.dataset.suite || M.base }, btn.dataset.suiteLabel || 'Continuer'));
         art.querySelector('.contenu').replaceChildren(ecran);
         art.querySelector('.fin-lecon').hidden = true;
@@ -448,7 +456,7 @@
   });
 
   document.querySelectorAll('.quiz').forEach((el) => {
-    const q = JSON.parse(el.dataset.quiz), N = q.questions.length, niv = +el.dataset.niveau;
+    const q = JSON.parse(el.dataset.quiz), N = q.questions.length, niv = +el.dataset.quizNiveau;
     const nb = +el.dataset.nb || lecNiv(niv).length;
     const d0 = etat();
     if (!nivFini(d0, niv)) {
@@ -594,7 +602,6 @@
   });
   // Bouton COPIER sur les messages à envoyer (citation dans un « À toi » qui dit copie/envoie)
   document.querySelectorAll('.lecon .box.atoi').forEach((box) => {
-    if (!/(copie|envoie)/i.test(box.textContent)) return;
     box.querySelectorAll('blockquote').forEach((bq) => {
       const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
       b.addEventListener('click', async () => {

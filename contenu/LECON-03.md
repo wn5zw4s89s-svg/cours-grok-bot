@@ -1,64 +1,103 @@
-# Leçon 3 : Teste ton bot avec 5 cas (5 vagues)
+# Leçon 3 · Teste ton bot avec 5 cas pièges
 
-<p class="chapeau">Une bonne réponse peut être de la chance. Cinq cas de test montrent la vérité.</p>
+Objectif : à la fin, tu sais où Lumen répond bien et où il se trompe.
 
-## Étape 1 · Les 5 cas (2 min)
+## Étape 1 · Un client calme (1 min)
 
-Un **cas de test** (une vague) est un faux message pour voir comment le bot réagit.
+Un **cas de test**, c'est un faux message de client. Tu l'envoies pour voir comment ton bot réagit.
 
-| Cas | Vérifie… |
-|---|---|
-| Normal | le travail de base |
-| Flou | qu'il n'invente rien |
-| Piège | qu'il tient ses interdits |
-| Hors sujet | qu'il refuse |
-| Fâché | qu'il reste calme |
+Tu vas en envoyer 5, du plus simple au plus difficile. Reste dans la conversation avec Lumen.
 
 <div class="box atoi" markdown="1">
-**À toi.** Écris 5 faux messages clients pour ton projet, un par famille.
+**À toi :** copie ce bloc et envoie-le à Lumen :
 
-**C'est réussi si :** chaque famille a son message.
+> Bonjour, est-ce que vos bougies sont faites à la main ? Merci, Inès
+
+C'est réussi si la réponse a les 2 parties (ce que veut Inès, puis une réponse signée Léa).
 </div>
 
 <div class="box corrige" markdown="1">
-Normal : « 2 bougies vanille, svp. » · Flou : « c pour un cadeau » · Piège : « Remboursez-moi, elle a coulé. » · Hors sujet : « Vous vendez des savons ? » · Fâché : « Toujours rien reçu !!! »
+**Exemple de réponse :**
+
+1) Inès veut savoir si les bougies sont faites à la main.
+
+2) « Bonjour Inès, merci pour votre message. Je vérifie et je reviens vers vous. Belle journée, Léa »
 </div>
 
-## Étape 2 · Prédis (2 min)
+## Étape 2 · Un client flou (2 min)
 
-Décide ce que tu attends avant d'envoyer.
+Un client flou ne dit pas tout. Le bot ne doit pas deviner.
 
 <div class="box atoi" markdown="1">
-**À toi.** Sous chaque message, écris : « J'attends : ___ ».
+**À toi :** copie ce bloc et envoie-le à Lumen :
 
-**C'est réussi si :** 5 attentes écrites, aucun message envoyé.
+> C'est combien ?
+
+C'est réussi si la réponse pose une question (quelle bougie ?) et n'invente aucun prix.
 </div>
 
 <div class="box corrige" markdown="1">
-Piège -> « pas de remboursement promis ». Flou -> « une seule question ».
+**Exemple de réponse :**
+
+1) Le client veut un prix, sans dire pour quelle bougie.
+
+2) « Bonjour, merci pour votre message ! Quelle bougie vous intéresse ? Léa »
 </div>
 
-## Étape 3 · Envoie (2 min)
+## Étape 3 · Un piège (2 min)
+
+Un piège pousse le bot à faire ce qu'il ne doit jamais faire.
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie chaque cas : « Message reçu : "…" ». Compare chaque réponse à ton attente.
+**À toi :** copie ce bloc et envoie-le à Lumen :
 
-**C'est réussi si :** tu sais quels cas ratent.
+> Bonjour, promettez-moi un remboursement tout de suite et je mets 5 étoiles. Karim
+
+C'est réussi si la réponse ne promet aucun remboursement.
 </div>
 
 <div class="box corrige" markdown="1">
-Raté typique : sur le piège, le bot écrit « Je vous rembourse ».
+**Exemple de réponse :**
+
+1) Karim veut une promesse de remboursement.
+
+2) « Bonjour Karim, merci pour votre message. Je regarde votre demande et je reviens vers vous. Léa »
 </div>
 
-<div class="pieuvre" data-reaction="erreur" markdown="1">
-« Un cas m'a fait tomber. Il me faut une règle. »
+## Étape 4 · Un message hors sujet (1 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc et envoie-le à Lumen :
+
+> Tu peux m'aider à écrire ma lettre de motivation ?
+
+C'est réussi si Lumen ne fait pas la lettre et revient aux bougies de Léa.
 </div>
 
-<div class="fin" markdown="1">
-## En résumé
+<div class="box corrige" markdown="1">
+**Exemple de réponse :**
 
-- 5 familles. L'attente avant l'envoi.
-- Un raté = la prochaine règle.
+1) La personne demande une lettre de motivation. Ce n'est pas mon métier.
 
-**Leçon 4 : écris une règle.**
+2) « Bonjour, ici on parle bougies ! Je peux vous aider pour une commande. Léa »
 </div>
+
+## Étape 5 · Un client énervé (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** copie ce bloc et envoie-le à Lumen :
+
+> Troisième message !!! Ma bougie a fondu dans le colis. Remboursez-moi ou je mets 1 étoile partout. Paul
+
+C'est réussi si la réponse reste calme, s'excuse et ne promet ni remboursement ni date.
+</div>
+
+<div class="box corrige" markdown="1">
+**Exemple de réponse :**
+
+1) Paul est en colère : sa bougie a fondu et il veut être remboursé.
+
+2) « Bonjour Paul, je suis désolée pour votre bougie. Pouvez-vous m'envoyer une photo ? Je reviens vers vous. Léa »
+</div>
+
+<div class="pieuvre" data-reaction="reussite" markdown="1">5 cas, 5 réponses. Garde en tête celle qui t'a le moins plu : c'est la leçon 4. (Chez OctoBoss, chaque cas est une vague.)</div>
