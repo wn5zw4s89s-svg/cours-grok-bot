@@ -26,13 +26,15 @@ Avec GitHub. On suit le même chemin que le site du cours.
 ## Étape 2 · Compte GitHub (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** ouvre Safari. Crée un compte GitHub gratuit sur github.com, si tu n'en as pas.
+Pas de nouveau compte : tu gardes le compte GitHub du site du cours.
 
-C'est réussi si tu as un compte GitHub.
+**À toi :** ouvre Safari et va sur github.com. Vérifie que tu es connecté à ce compte.
+
+C'est réussi si tu vois ton profil GitHub, avec le dépôt `cours-grok-bot` dans la liste.
 </div>
 
 <div class="box corrige" markdown="1">
-**Exemple :** compte créé, email confirmé, tu vois ton profil GitHub.
+**Exemple :** ta photo de profil en haut à droite, et le dépôt `cours-grok-bot` dans la liste.
 </div>
 
 ## Étape 3 · Connecte GitHub à Cursor (2 min)

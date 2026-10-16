@@ -66,18 +66,20 @@ Oui. C'est du code. L'agent de code construit. Ton bot pilote.
 
 Sans ça, l'agent ne démarre pas :
 
-1. Un compte Cursor **payant** (les agents cloud demandent un plan payant).
-2. Grok Bot (inclus dans les plans Cursor payants individuels et Teams).
-3. Plus tard : un dépôt GitHub (ou « partir de zéro » sans dépôt).
+1. Ton forfait actuel, avec l'usage Cursor qu'il inclut. On ne prend pas de forfait en plus.
+2. Grok Bot, que tu utilises déjà.
+3. Ton compte GitHub, le même que celui du site du cours.
 
 <div class="box attention" markdown="1">
-Aucun achat dans ce parcours. Si tu n'as pas de plan payant, arrête-toi ici et décide avec Joseph avant de continuer.
+Aucun achat dans ce parcours. Si un écran te demande de payer ou de changer de forfait, arrête-toi et demande à Yvan.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi :** as-tu déjà un plan Cursor payant (ou un accès Grok Bot qui en dépend) ?
+**À toi :** copie ce message et envoie-le à Yvan :
 
-C'est réussi si tu réponds oui, non, ou « je dois vérifier ».
+> Est-ce que mon forfait inclut les agents cloud Cursor, et combien d'usage il me reste ? Tu ne paies rien et tu ne changes rien.
+
+C'est réussi si Yvan te répond oui ou non, avec ce qu'il te reste d'usage, ou qu'il te dit ce qu'il n'a pas pu vérifier.
 </div>
 
 <div class="pieuvre" data-reaction="accueil" markdown="1">Le bot parle. L'agent code. Toi, tu décides.</div>
@@ -87,5 +89,5 @@ C'est réussi si tu réponds oui, non, ou « je dois vérifier ».
 
 - Ton bot Grok Bot pilote. L'agent de code écrit le code.
 - L'agent tourne dans le cloud. Ton iPhone peut être fermé.
-- Plan Cursor payant requis. Aucun achat dans le cours : Joseph décide.
+- Ton forfait actuel suffit a priori. Aucun achat dans le cours.
 </div>

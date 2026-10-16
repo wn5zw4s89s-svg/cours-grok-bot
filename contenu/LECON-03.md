@@ -111,4 +111,4 @@ C'est réussi si la réponse reste calme, s'excuse et ne promet ni remboursement
 
 Pas grave, c'est le but du test. Note le numéro du cas et la phrase de Lumen qui pose problème. Ne touche pas encore à sa description : on la corrige à la [leçon 4](../lecon-04/).
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">6 étapes faites : 5 cas testés et un plan si l'un rate. Garde en tête celle qui t'a le moins plu : c'est la leçon 4.</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Lumen est testé, et tu sais quoi faire s'il rate. Garde en tête la réponse qui t'a le moins plu : c'est la leçon 4.</div>

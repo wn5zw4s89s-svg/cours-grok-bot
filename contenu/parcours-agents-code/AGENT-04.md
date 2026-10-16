@@ -75,7 +75,7 @@ C'est réussi si tu as un lien, ou si tu as demandé au bot : « Donne-moi le li
 </div>
 
 <div class="box attention" markdown="1">
-Facturation : les agents cloud sont facturés au prix API du modèle choisi. Cursor demande une limite de dépense au premier usage. Aucun achat dans le cours : Joseph fixe la limite.
+Les agents cloud puisent dans l'usage inclus dans ton forfait. Si Cursor te demande de payer ou de fixer une limite de dépense, ne valide rien : arrête-toi et demande à Yvan.
 </div>
 
 <div class="pieuvre" data-reaction="reussite" markdown="1">Lancé. Tu attends le résultat, pas le code ligne à ligne.</div>

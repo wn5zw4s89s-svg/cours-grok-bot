@@ -103,14 +103,14 @@
     },
     {
       "id": "q10",
-      "question": "Que décide Joseph avant que tu enchaînes les agents cloud ?",
+      "question": "Cursor te demande de payer en plein exercice. Que fais-tu ?",
       "choix": [
-        "Rien : le cours paie à ta place",
-        "Le prénom du prochain bot de Léa seulement",
-        "Le plan / la limite de dépense Cursor, et le compte GitHub"
+        "Je paie pour ne pas perdre le travail",
+        "Je change de forfait pour aller plus vite",
+        "Je ne valide rien et je demande à Yvan"
       ],
       "bonne_reponse": 2,
-      "explication": "Agents cloud = plan payant + limite de dépense. Aucun achat dans le cours. Joseph tranche."
+      "explication": "Le cours se fait avec l'usage inclus dans ton forfait. Aucun achat : on s'arrête et on demande."
     }
   ]
 }
