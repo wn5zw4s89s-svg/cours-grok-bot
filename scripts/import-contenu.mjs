@@ -123,6 +123,8 @@ function ordreDefiPuisFin(src) {
 function retouches(src, num) {
   let t = ordreDefiPuisFin(src).replace(/\r\n/g, '\n').replace(/\s*\(\d+\s*min\)/gi, '');
   // Ligne « Objectif : … » -> paragraphe stylé (n'est pas masquée)
+  // Carte « Ton résultat » (nouveau format) : le libellé vient du CSS, on retire « Ton résultat -> » du texte affiché.
+  t = t.replace(/(<div[^>]*class="[^"]*\bresultat\b[^"]*"[^>]*>\s*\n\s*)Ton résultat\s*(?:->|→|:)\s*(\S)/gi, (m, a, c) => a + c.toUpperCase());
   t = t.replace(/^Objectif\s*:\s*(.+)$/m, (m, x) => `<p class="objectif">${x.charAt(0).toUpperCase() + x.slice(1)}</p>`);
   // Libellé solution (affichage) — sources inchangées
   t = t.replace(/\*\*Bonne réponse \(exemple\)\s*:\*\*/gi, '**Exemple de réponse :**');
@@ -315,6 +317,8 @@ function transformer(src, id) {
       if (pm) { out.push(pm[1], '', `> ${pm[2]}`, ''); continue; }
     }
     if (!skip && enAtoi) {
+      // Nouveau format : ligne seule « À toi » -> même libellé gras que l'ancien « **À toi :** » (un seul libellé).
+      if (/^\s*À toi\s*:?\s*$/.test(l)) { out.push('**À toi**'); continue; }
       // « Ma réponse → … » : vrai champ. Le critère « C'est réussi si » reste visible
       // (Groksky l'a reformulé ; la réponse est dans le <details class="solution"> du contenu).
       if (/^\s*Ma réponse\s*(→|->|:)/i.test(l)) { aReponse = true; out.push('', '<div class="ma-reponse" data-ma-reponse></div>', ''); continue; }
@@ -382,7 +386,8 @@ for (const f of files) {
   const raw0 = retouches(fs.readFileSync(path.join(SRC, f), 'utf8'), num);
   const { title, html } = transformer(raw0, id);
   const objm = raw0.match(/<p class="objectif">([^<]+)<\/p>/);
-  let court = title.replace(/^Leçon\s+\d+\s*[:·]\s*/i, '');
+  // Ancien format « Leçon N · titre » et nouveau « Projet X, leçon Y · titre » : numéro retiré (le site affiche le sien).
+  let court = title.replace(/^(?:Leçon\s+\d+|Projet\s+\d+\s*,\s*leçon\s+\d+)\s*[:·]\s*/i, '');
   court = court.charAt(0).toUpperCase() + court.slice(1);
   const raw = raw0;
   const fm = raw.match(/<div\s+class="fin"[^>]*>([\s\S]*?)<\/div>/i);

@@ -550,8 +550,8 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
 /* Contraste : texte secondaire ≥ 4,5:1 sur le fond */
 .home-promesse{opacity:1;font-size:14px}
 /* Résultat d'abord : la ligne « Objectif » devient la carte « Ton résultat » */
-.contenu .objectif{display:block;margin:4px 0 22px;padding:14px 16px;border-radius:16px;background:var(--card);border-left:4px solid var(--ok);color:var(--t);font-weight:700;font-size:17px;line-height:1.4}
-.contenu .objectif::before{content:"Ton résultat";display:block;margin-bottom:4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ok)}
+.contenu .objectif,.contenu .box.resultat{display:block;margin:4px 0 22px;padding:14px 16px;border-radius:16px;background:var(--card);border-left:4px solid var(--ok);color:var(--t);font-weight:700;font-size:17px;line-height:1.4}
+.contenu .objectif::before,.contenu .box.resultat::before{content:"Ton résultat";display:block;margin-bottom:4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ok)}
 /* « À toi » : bloc nettement distinct de l'explication */
 .box.atoi{border:2px solid var(--c);background:var(--card);box-shadow:0 4px 0 var(--cs)}
 .box.atoi>p:first-child>strong:first-child{color:var(--c);font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
@@ -579,3 +579,6 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
   .q-choix button{font-size:17px;padding:16px 18px}
   .sheet-in{max-width:720px;margin:0 auto}
 }
+.contenu .box.resultat>p{margin:0}
+/* Un seul libellé « À toi » (celui du contenu) */
+.box.atoi::before{content:none;display:none}
