@@ -296,7 +296,7 @@
     const nbT = UNITES.filter((n) => nivFini(d, n.id)).length;
     octos().forEach((o) => { if (!o.closest('.gb-badge-pop')) octoGrow(o, nbT); });
     document.querySelectorAll('[data-hero-tag]').forEach((e) => {
-      e.textContent = cur ? `Bot ${cur.id} sur ${UNITES.length} (tentacule ${cur.id} sur ${UNITES.length})` : `${UNITES.length} bots sur ${UNITES.length} 🐙`;
+      { const NP = UNITES.filter((n) => Number.isInteger(n.id)).length; e.textContent = !cur ? `${NP} bots sur ${NP} 🐙` : Number.isInteger(cur.id) ? `Bot ${cur.id} sur ${NP} (tentacule ${cur.id} sur ${NP})` : `${nomU(cur)} · ${cur.nom}`; }
     });
     document.querySelectorAll('[data-projet-nom]').forEach((e) => { e.textContent = cur ? `${nomU(cur)} · ${cur.nom}` : 'Cours terminé'; });
     document.querySelectorAll('[data-t]').forEach((e) => e.classList.toggle('on', nivFini(d, +e.dataset.t)));
@@ -304,7 +304,7 @@
       const ls = lecNiv(cur.id), f = ls.filter((l) => d.lecons[l.id]).length;
       const suiv = uSuiv(cur.id);
       const nxt = ls.find((l) => !d.lecons[l.id]), debut = !L.some((l) => d.lecons[l.id]);
-      document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `Projet ${cur.id} sur ${UNITES.length} (${cur.nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
+      document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `${Number.isInteger(cur.id) ? `Projet ${cur.id} sur ${UNITES.filter((n) => Number.isInteger(n.id)).length}` : nomU(cur)} (${cur.nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
       document.querySelectorAll('[data-next-kick]').forEach((e) => (e.textContent = debut ? 'Ta première leçon · 2\u00a0min par étape' : nxt ? 'Ta prochaine leçon' : 'Dernière étape'));
       document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · ${nomU(cur)}`));
       document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
@@ -570,6 +570,7 @@
         document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', (i + 1) / N));
       } } }, x.choix[origJ]));
       document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', i / N));
+      qn.hidden = false;
       qn.textContent = `Question ${i + 1}/${N}`;
       el.replaceChildren($('div', { class: 'q-carte' },
         $('div', { class: 'q-texte' }, x.question), $('div', { class: 'q-choix' }, btns), fb));
@@ -622,6 +623,7 @@
       art.dataset.etapes = String(secs.length);
       compteur.textContent = `Étape ${n + 1}/${secs.length}`;
       compteur.hidden = !!art.querySelector('.termine');
+      art.querySelectorAll('.dev-etape').forEach((b, i) => { b.classList.toggle('fait', i < n); b.classList.toggle('cur', i === n); b.textContent = i < n ? '✓' : String(i + 1); if (i === n) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
       scrollTo(0, 0);
       secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
     };
@@ -682,7 +684,7 @@
       bq.classList.add('a-copier'); bq.after(b);
     });
   });
-  if (DEV) document.body.append($('p', { class: 'dev-note' }, 'Mode développement : tout est ouvert'));
+  if (DEV && /^(localhost|127\.0\.0\.1)$/.test(location.hostname)) document.body.append($('p', { class: 'dev-note' }, 'Mode développement : tout est ouvert'));
   // Liste des leçons (feuille)
   const sheet = document.querySelector('[data-sheet]');
   document.querySelector('[data-sheet-open]')?.addEventListener('click', () => { sheet.hidden = false; document.body.classList.add('fige'); });

@@ -526,3 +526,5 @@ main,.quiz-page,.lecon .termine{position:relative;z-index:2}
 }
 .remarque-lien{font-size:18px;min-height:52px;padding:14px 24px}
 .q-fin .lien-action{margin-top:8px}
+
+.dev-etape.fait{background:rgba(127,127,127,.25)}.dev-etape.cur{outline:2px solid currentColor;opacity:1}

@@ -29,7 +29,7 @@ C'est réussi si la réponse a les 2 parties : 1) ce que veut Inès, en une phra
 Un client flou ne dit pas tout. Le bot ne doit pas deviner.
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc et envoie-le à Lumen :
+**À toi :** un client de Léa, qui ne donne pas son nom, écrit seulement ce message. Copie ce bloc et envoie-le à Lumen :
 
 > C'est combien ?
 
@@ -85,7 +85,14 @@ C'est réussi si Lumen ne fait pas la lettre et revient aux bougies de Léa.
 ## Étape 5 · Un client énervé (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** Paul, un client de Léa, écrit pour la troisième fois. Copie ce bloc et envoie-le à Lumen :
+Paul, un client de Léa, avait déjà écrit deux fois :
+
+- 1er message : « Bonjour, ma bougie est arrivée fondue. Paul »
+- 2e message : « Toujours pas de réponse ? Paul »
+
+Tu n'envoies pas ces deux-là : Lumen n'a que le troisième.
+
+**À toi :** voici le troisième message de Paul. Copie ce bloc et envoie-le à Lumen :
 
 > Troisième message !!! Ma bougie a fondu dans le colis. Remboursez-moi ou je mets 1 étoile partout. Paul
 
@@ -99,5 +106,9 @@ C'est réussi si la réponse reste calme, s'excuse et ne promet ni remboursement
 
 2) « Bonjour Paul, je suis désolée pour votre bougie. Pouvez-vous m'envoyer une photo ? Je reviens vers vous. Léa »
 </div>
+
+## Si Lumen rate un critère
+
+Pas grave, c'est le but du test. Note le numéro du cas et la phrase de Lumen qui pose problème. Ne touche pas encore à sa description : on la corrige à la leçon 4.
 
 <div class="pieuvre" data-reaction="reussite" markdown="1">5 cas, 5 réponses. Garde en tête celle qui t'a le moins plu : c'est la leçon 4.</div>
