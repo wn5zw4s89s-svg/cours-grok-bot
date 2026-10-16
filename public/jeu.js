@@ -150,8 +150,15 @@
     return nouveaux;
   };
 
+  let sansConfetti = false;
+  function stopConfetti() {
+    document.querySelectorAll('.conf, .gb-confetti').forEach((c) => { c.getAnimations({ subtree: true }).forEach((a) => a.cancel()); c.remove(); });
+  }
+  addEventListener('pagehide', stopConfetti);
+  addEventListener('pageshow', (e) => { if (e.persisted) stopConfetti(); });
+  document.addEventListener('click', (e) => { if (e.target.closest && e.target.closest('a[href]')) stopConfetti(); }, true);
   function confetti(n = 48, top = 40, derriere = false) {
-    if (RM) return;
+    if (RM || sansConfetti) return;
     const c = document.createElement('div');
     c.className = derriere ? 'conf derriere' : 'conf';
     document.body.appendChild(c);
@@ -494,6 +501,8 @@
         } else if (score === N && (p?.meilleur ?? 0) < N) {
           d.xp = (d.xp || 0) + XP_QUIZ_PARFAIT;
         }
+        // Seuil de réussite du site (★★ = 60 %) : en dessous, aucun confetti (même badge).
+        sansConfetti = score < Math.ceil(N * 0.6);
         nouveaux = syncBadges(d);
       });
       confetti(score === N ? 40 : 20, 8, true);
@@ -527,7 +536,7 @@
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));
       octoMood(octos()[0], score / N >= 0.6 ? 'happy' : 'sad');
-      if (nouveaux.length) setTimeout(() => montrerBadge(nouveaux[nouveaux.length - 1]), 400);
+      if (nouveaux.length) tBadge = setTimeout(() => montrerBadge(nouveaux[nouveaux.length - 1]), 400);
       rafraichir();
     };
     // Compteur visible : même N que le score (questions réellement affichées)
@@ -543,7 +552,9 @@
       }
       return a;
     };
+    let tBadge = 0;
     const jouer = (i, score, rates = []) => {
+      if (i === 0) { clearTimeout(tBadge); stopConfetti(); sansConfetti = false; }
       if (i === N) { qn.hidden = true; document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', 1)); return fin(score, rates); }
       const x = q.questions[i], fb = $('div');
       pret = performance.now() + 450;
