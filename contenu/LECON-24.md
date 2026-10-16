@@ -1,4 +1,4 @@
-# Leçon 24 : Top 1 % (mode Kraken) : un design qui ne sent pas l'IA
+# Leçon 24 : Top 1 % : un design qui ne sent pas l'IA
 
 <p class="chapeau">Tout le monde reconnaît une page faite par IA. Fais celle qu'on ne reconnaît pas.</p>
 
@@ -65,6 +65,8 @@ Avant : dégradé violet, « ✨ Sublimez votre intérieur ✨ ».
 Après : fond crème, titre en typo machine, « Elles sentent dès la première minute. »
 </div>
 
+## Étape 4 · Poste-le sur X (facultatif, 2 min)
+
 <div class="box info" markdown="1">
 **Défi X (facultatif).** Poste une capture côte à côte : page avant, page après. Ajoute ton lien.
 
@@ -76,7 +78,7 @@ C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 4 sur 8 (tentacule 4 sur 8). « Projet 4 terminé. »
+Bot 4 sur 8. « Projet 4 terminé. »
 </div>
 
 <div class="fin" markdown="1">

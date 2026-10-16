@@ -1,4 +1,4 @@
-# Leçon 31 : Top 1 % (mode Kraken) : 10 idées, 1 gagnante, 3 retouches
+# Leçon 31 : Top 1 % : 10 idées, 1 gagnante, 3 retouches
 
 <p class="chapeau">La première idée est celle de tout le monde. La gagnante vient après.</p>
 
@@ -53,6 +53,8 @@ Tour 1 : « Ta bougie ne sent rien ? » -> « Elle sent. Vraiment. »
 Tour 3 : 10 s -> 7 s.
 </div>
 
+## Étape 4 · Poste-le sur X (facultatif, 2 min)
+
 <div class="box info" markdown="1">
 **Défi X (facultatif).** Poste les deux vidéos l'une après l'autre, ou une capture côte à côte.
 
@@ -64,7 +66,7 @@ C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 5 sur 8 (tentacule 5 sur 8). « Projet 5 terminé. »
+Bot 5 sur 8. « Projet 5 terminé. »
 </div>
 
 <div class="fin" markdown="1">

@@ -1,4 +1,4 @@
-# Leçon 38 : Top 1 % (mode Kraken) : comprendre pourquoi ça vend
+# Leçon 38 : Top 1 % : comprendre pourquoi ça vend
 
 <p class="chapeau">0 vente ou 3 ventes. Le chiffre ne suffit pas. Il faut le pourquoi.</p>
 
@@ -60,6 +60,8 @@ B : « Tes bougies ne sentent rien ? 6 mélanges qui marchent. »
 Comparaison : tu gardes celle qui vend le plus. Peu de ventes ? Le résultat reste fragile : continue.
 </div>
 
+## Étape 4 · Poste-le sur X (facultatif, 2 min)
+
 <div class="box info" markdown="1">
 **Défi X (facultatif).** Poste une capture côte à côte des pages A et B, et ton premier euro si tu l'as (montants seulement, rien de personnel).
 
@@ -71,7 +73,7 @@ C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 6 sur 8 (tentacule 6 sur 8). « Projet 6 terminé. »
+Bot 6 sur 8. « Projet 6 terminé. »
 </div>
 
 <div class="fin" markdown="1">

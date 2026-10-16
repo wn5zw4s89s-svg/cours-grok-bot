@@ -11,7 +11,7 @@ Un **tic**, c'est une formule toute faite qu'on répète sans y penser. Un email
 
 Ma réponse -> …
 
-C'est réussi si tu cites « ravis » ou « à votre entière disposition ».
+C'est réussi si tu cites au moins un groupe de mots de la phrase.
 </div>
 
 <details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">

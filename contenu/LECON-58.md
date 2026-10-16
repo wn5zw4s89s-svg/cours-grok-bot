@@ -1,4 +1,4 @@
-# Leçon 58 : Top 1 % (mode Kraken) : la grande revue anti-slop
+# Leçon 58 : Top 1 % : la grande revue anti-slop
 
 <p class="chapeau">Un critique impitoyable relit tout le site. Ce qui reste est à toi.</p>
 
@@ -57,6 +57,8 @@ Critique : « Accueil : emoji + promesse vague. Dis où, pour qui, quand. »
 Accueil, après : « Une nuit sous tente chez l'habitant, sur la véloroute du Val-Test. Réservée ce soir. »
 </div>
 
+## Étape 4 · Poste-le sur X (facultatif, 2 min)
+
 <div class="box info" markdown="1">
 **Défi X (facultatif).** Poste une capture avant / après de l'accueil, et le lien de ta plateforme.
 
@@ -68,7 +70,7 @@ C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 8 sur 8 (tentacule 8 sur 8). « Projet 8 terminé. »
+Bot 8 sur 8. « Projet 8 terminé. »
 </div>
 
 <div class="fin" markdown="1">

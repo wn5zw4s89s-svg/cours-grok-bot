@@ -37,14 +37,14 @@
     },
     {
       "id": "q4",
-      "question": "Où vois-tu les emails reçus par Lumen ?",
+      "question": "Lumen est ton bot. Il a reçu des emails à son adresse. Comment les vois-tu ?",
       "choix": [
         "Dans une boîte de réception de l'app",
-        "Tu demandes à Lumen",
+        "Tu demandes à Lumen : « Montre-moi les emails reçus aujourd'hui. »",
         "Dans l'app Mail de ton iPhone"
       ],
       "bonne_reponse": 1,
-      "explication": "Pas de boîte de réception dans l'app, et l'adresse du bot n'est pas dans ton app Mail : tu demandes à Lumen."
+      "explication": "L'app n'a pas de boîte de réception, et l'adresse du bot n'est pas dans ton app Mail. Les emails arrivent chez Lumen : tu lui demandes, il te les résume."
     },
     {
       "id": "q5",

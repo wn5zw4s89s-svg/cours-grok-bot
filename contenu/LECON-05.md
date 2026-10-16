@@ -13,8 +13,14 @@ Exemple, chez Léa, qui vend des bougies : « la bougie figue est en rupture de 
 <div class="box atoi" markdown="1">
 **À toi :** classe cette info : « Lumen signe toujours Léa ».
 
-C'est réussi si tu réponds « description » : c'est toujours vrai.
+C'est réussi si ta réponse nomme un seul endroit : description ou mémoire.
 </div>
+
+<details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
+
+Description : c'est toujours vrai.
+
+</div></details>
 
 ## Étape 2 · Donne-lui le fait (1 min)
 

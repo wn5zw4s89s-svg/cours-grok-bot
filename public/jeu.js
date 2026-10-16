@@ -634,7 +634,7 @@
     if (ta.value.trim()) ok.textContent = 'Enregistré ✓';
     box.append($('label', { class: 'sr', for: id }, 'Ta phrase'), ta, ok);
   });
-  // « Ma réponse → … » : vrai champ d'écriture (la réponse attendue reste cachée derrière « Voir la réponse »)
+  // « Ma réponse → … » : vrai champ d'écriture (corrigé dans le « Voir la réponse » du contenu)
   document.querySelectorAll('.lecon [data-ma-reponse]').forEach((h, n) => {
     const key = `gb2:ecrit:${h.closest('.lecon').dataset.lecon}:r${n}`, id = `ma-rep-${n}`;
     const ta = $('textarea', { class: 'ecrit', id, rows: '2', placeholder: 'Ma réponse…', autocomplete: 'off' });
@@ -650,6 +650,11 @@
     const defi = box.classList.contains('defi');
     if (!defi && (!/copi|envoie|colle|ajoute/i.test(consigne) || /^\s*(À toi :)?\s*lis\b/i.test(consigne.trim()))) return;
     box.querySelectorAll('blockquote').forEach((bq) => {
+      // Défi X : COPIER seulement sur le bloc marqué « à copier » / Phrase type (ex. L45 post 1 seul).
+      if (defi) {
+        const pe = bq.previousElementSibling;
+        if (!pe || !/à\s*copier|Phrase\s*type/i.test(pe.textContent || '')) return;
+      }
       const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
       b.addEventListener('click', async () => {
         const ps = [...bq.querySelectorAll('p')];

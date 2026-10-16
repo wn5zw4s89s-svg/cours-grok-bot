@@ -1,4 +1,4 @@
-# Leçon 45 : Top 1 % (mode Kraken) : la skill du goût maison
+# Leçon 45 : Top 1 % : la skill du goût maison
 
 <p class="chapeau">Quatre bots, quatre styles. Le client le sent. Donne-leur un seul goût.</p>
 
@@ -68,24 +68,26 @@ Skill Goût maison créée par Chef, visible par tous tes bots.
 Après : Plume « Figue sort jeudi. Elle sent dès la première minute. Léa » / Lumen « Je regarde votre commande et je vous donne le jour exact. Léa »
 </div>
 
+## Étape 4 · Poste-le sur X (facultatif, 2 min)
+
 <div class="box info" markdown="1">
 **Défi X (facultatif).** Poste un fil « comment je l'ai fait » : 5 posts, captures à l'appui.
 
-Phrase type, à copier :
+Post 1, à copier :
 
 > J'ai monté ma boîte en 3 jours avec 4 bots. Voici comment.
 
-Puis 4 posts :
-1. Jour 1 : capture de l'équipe et des rôles.
-2. Jour 2 : capture du groupe en action.
-3. Jour 3 : capture du point du matin.
-4. Le goût maison : avant / après.
+Les posts 2 à 5 n'ont pas de bloc à copier : écris-les toi-même, une capture par post.
+- Post 2 : jour 1, l'équipe et les rôles.
+- Post 3 : jour 2, le groupe en action.
+- Post 4 : jour 3, le point du matin.
+- Post 5 : le goût maison, avant / après.
 
-Le bot peut rédiger le fil. C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
+Le bot peut rédiger ces posts. C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 7 sur 8 (tentacule 7 sur 8). « Projet 7 terminé. »
+Bot 7 sur 8. « Projet 7 terminé. »
 </div>
 
 <div class="fin" markdown="1">

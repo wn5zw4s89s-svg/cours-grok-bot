@@ -1,4 +1,4 @@
-# Leçon 18 : Top 1 % (mode Kraken) : des prospects ciblés
+# Leçon 18 : Top 1 % : des prospects ciblés
 
 <p class="chapeau">Cinquante prospects moyens ou cinq vrais acheteurs ? Tout se joue dans les critères.</p>
 
@@ -48,8 +48,10 @@ Pièges : « RT pour gagner une bougie », « ma boutique de bougies ouvre », �
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 3 sur 8 (tentacule 3 sur 8). « Je ne rate plus rien. »
+Bot 3 sur 8. « Je ne rate plus rien. »
 </div>
+
+## Étape 4 · Poste-le sur X (facultatif, 2 min)
 
 <div class="box info" markdown="1">
 **Défi X (facultatif).** Poste une capture côte à côte des 2 listes, pseudos floutés.

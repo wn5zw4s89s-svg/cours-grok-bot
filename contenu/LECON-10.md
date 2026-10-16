@@ -11,8 +11,14 @@ Sur iPhone, la carte a deux boutons, affichés en anglais à l'écran : **Send E
 <div class="box atoi" markdown="1">
 **À toi :** dis à voix haute qui envoie l'email : toi ou Lumen ?
 
-C'est réussi si tu réponds « moi ».
+C'est réussi si ta réponse tient en un mot : toi ou Lumen.
 </div>
+
+<details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
+
+Toi. Lumen prépare, c'est toi qui envoies.
+
+</div></details>
 
 ## Étape 2 · Demande un brouillon (2 min)
 

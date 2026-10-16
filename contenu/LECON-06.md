@@ -15,8 +15,14 @@ Une description moyenne donne des consignes floues. Une description top 1 % donn
 <div class="box atoi" markdown="1">
 **À toi :** trouve dans le tableau la consigne qui se vérifie en comptant.
 
-C'est réussi si tu réponds « 3 phrases maximum ».
+C'est réussi si ta réponse cite une seule consigne du tableau.
 </div>
+
+<details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
+
+« 3 phrases maximum » : tu peux compter les phrases.
+
+</div></details>
 
 ## Étape 2 · Vois la différence (2 min)
 

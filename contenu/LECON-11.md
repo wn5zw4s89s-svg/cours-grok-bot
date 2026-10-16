@@ -13,8 +13,14 @@ Tu la crées en la demandant à Lumen.
 <div class="box atoi" markdown="1">
 **À toi :** sans routine, Lumen réagit-il seul à un nouvel email ?
 
-C'est réussi si tu réponds « non ».
+C'est réussi si tu réponds par oui ou par non.
 </div>
+
+<details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
+
+Non. Sans routine, Lumen attend que tu lui parles.
+
+</div></details>
 
 ## Étape 2 · Crée la routine email (2 min)
 

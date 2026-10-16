@@ -56,7 +56,7 @@ Les 3 fiches parlent de Lune Douce.
 
 ## Étape 2 · Crée les 3 bots (2 min)
 
-Trois bots (trois tentacules), un métier chacun.
+Trois bots, un métier chacun.
 
 <div class="box atoi" markdown="1">
 **À toi.** Crée les 3 bots avec le + en haut à droite. Colle chaque fiche dans sa description.

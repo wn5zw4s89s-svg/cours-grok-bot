@@ -13,8 +13,14 @@ Une **pile**, c'est un groupe d'emails qui demandent la même suite. Léa, qui v
 <div class="box atoi" markdown="1">
 **À toi :** classe cet email : « -50 % sur nos stylos ce week-end ! »
 
-C'est réussi si tu réponds « Bruit ».
+C'est réussi si ta réponse nomme une seule pile.
 </div>
+
+<details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
+
+Bruit : c'est une pub, rien à faire.
+
+</div></details>
 
 ## Étape 2 · Ajoute le tri à la description (2 min)
 
@@ -59,7 +65,7 @@ C'est réussi si les 3 emails sont dans tes messages envoyés.
 
 > Trie le courrier du jour.
 
-C'est réussi si Julie est dans À moi, Hugo dans Prêt et la pub dans Bruit.
+C'est réussi si les 3 emails sont rangés, un dans chaque pile.
 </div>
 
 <div class="box corrige" markdown="1">

@@ -267,14 +267,12 @@ function transformer(src, id) {
       if (pm) { out.push(pm[1], '', `> ${pm[2]}`, ''); continue; }
     }
     if (!skip && enAtoi) {
-      // Exercice avec « Ma réponse → … » : la réponse attendue (C'est réussi si…) est cachée.
+      // « Ma réponse → … » : vrai champ. Le critère « C'est réussi si » reste visible
+      // (Groksky l'a reformulé ; la réponse est dans le <details class="solution"> du contenu).
       if (/^\s*Ma réponse\s*(→|->|:)/i.test(l)) { aReponse = true; out.push('', '<div class="ma-reponse" data-ma-reponse></div>', ''); continue; }
       if (aReponse && /^\s*C'est réussi si\b/i.test(l)) {
-        // Si le contenu donne déjà son corrigé juste après l'exercice, on ne double pas.
-        let j = li + 1; while (j < lines.length && !/^\s*<\/div>\s*$/.test(lines[j])) j++;
-        j++; while (j < lines.length && !lines[j].trim()) j++;
-        if (/^\s*<details[^>]*class="[^"]*solution/.test(lines[j] || '')) continue;
-        out.push('', '<details class="solution"><summary>Voir la réponse</summary><div class="box corrige">', '', l, '', '</div></details>', '');
+        // Ne plus masquer ni envelopper : le contenu fournit déjà « Voir la réponse ».
+        out.push(l);
         continue;
       }
     }

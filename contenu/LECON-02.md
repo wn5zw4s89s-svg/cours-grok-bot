@@ -13,7 +13,7 @@ La **description**, c'est la fiche de poste du bot. Il la relit à chaque fois.
 <div class="box atoi" markdown="1">
 **À toi :** ouvre Lumen dans l'app Grok Bot.
 
-C'est réussi si tu vois ta conversation de la leçon 1, avec la réponse à Sophie (la cliente à la bougie cassée).
+C'est réussi si tu vois la conversation où tu as écrit « Tu t'appelles Lumen. », avec sa réponse à Sophie (la cliente à la bougie cassée).
 </div>
 
 ## Étape 2 · Prépare la fiche (2 min)
