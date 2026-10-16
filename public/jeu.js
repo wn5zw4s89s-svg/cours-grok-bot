@@ -433,6 +433,30 @@
     const btn = art.querySelector('[data-terminer]');
     btn?.addEventListener('click', (ev) => {
       ev.preventDefault();
+      // Étapes non vues : écran « Presque fini », rien n'est enregistré (ni XP, ni confettis, ni badge).
+      {
+        const nE = +art.dataset.etapes || 0, vus = art._vus || new Set();
+        const manq = []; for (let j = 0; j < nE; j++) if (!vus.has(j)) manq.push(j);
+        if (manq.length && art._show) {
+          const p = $('p', { class: 'termine-reste' }, manq.length > 1 ? 'Il te reste les étapes ' : 'Il te reste l’étape ');
+          manq.forEach((j, x) => {
+            if (x) p.append(x === manq.length - 1 ? ' et ' : ', ');
+            p.append($('a', { href: `#etape-${j + 1}`, on: { click: (e) => { e.preventDefault(); art._show(j); } } }, String(j + 1)));
+          });
+          p.append('.');
+          const ecran = $('section', { class: 'termine termine-incomplet', role: 'status' },
+            $('h2', {}, 'Presque fini'), p,
+            $('button', { type: 'button', class: 'btn btn-large', on: { click: () => art._show(manq[0]) } }, `Finir l’étape ${manq[0] + 1}`));
+          const cc = art.querySelector('.contenu');
+          cc.querySelectorAll('.etape-sec').forEach((x) => (x.hidden = true)); cc.querySelector('.termine')?.remove(); cc.append(ecran);
+          art.querySelector('.fin-lecon').hidden = true;
+          art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; e.textContent = `${vus.size} étape${vus.size > 1 ? 's' : ''} sur ${nE}`; });
+          art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', vus.size / nE));
+          art.querySelectorAll('.dev-etape').forEach((b, j) => { const v = vus.has(j); b.classList.toggle('fait', v); b.classList.remove('cur'); b.removeAttribute('aria-current'); b.textContent = v ? '✓' : String(j + 1); });
+          scrollTo(0, 0);
+          return;
+        }
+      }
       const deja = !!etat().lecons[id];
       const niv = L[i]?.niveau;
       let nouveaux = [];
