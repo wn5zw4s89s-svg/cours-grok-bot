@@ -87,6 +87,8 @@
   const nomU = (u) => (u.label || `${labelU} ${u.id}`);
   const uSuiv = (id) => UNITES[UNITES.findIndex((n) => n.id === id) + 1];
   const lecNiv = (n) => L.filter((l) => l.niveau === n);
+  // Quiz réussi = meilleur score >= 60 % (seuil ★★ du site).
+  const quizReussi = (r) => !!r && r.total > 0 && r.meilleur >= Math.ceil(r.total * 0.6);
   const nivFini = (d, n) => {
     const ls = lecNiv(n);
     return ls.length > 0 && ls.every((l) => d.lecons[l.id]);
@@ -292,8 +294,10 @@
         ok ? $('a', { class: 'step-lien', href: `${M.base}lecon/${l.id}/` }, t) : $('span', { class: 'step-txt' }, t));
     });
     const q = M.quiz.find((x) => x.niveau === cur.id), quizOk = q && (DEV || ls.every((l) => d.lecons[l.id])), fini = nivFini(d, cur.id);
-    items.push($('li', { class: `step${quizOk && !fini ? ' cur' : ''}` }, $('span', { class: `node${fini ? ' done' : quizOk ? ' cur' : ' lock'}` }, '✓'),
-      quizOk ? $('a', { class: 'step-lien', href: `${M.base}quiz/${q.slug}/` }, 'Quiz : vérifie ce que tu as appris') : $('span', { class: 'step-txt' }, 'Quiz : vérifie ce que tu as appris')));
+    const rq = q && d.quiz[q.id], qr = quizReussi(rq);
+    const qTxt = `Quiz : vérifie ce que tu as appris${rq ? ` · ${rq.meilleur}/${rq.total}` : ''}`;
+    items.push($('li', { class: `step${quizOk && !qr ? ' cur' : ''}` }, $('span', { class: `node${qr ? ' done' : quizOk ? ' cur' : ' lock'}` }, qr ? '✓' : 'Q'),
+      quizOk ? $('a', { class: 'step-lien', href: `${M.base}quiz/${q.slug}/` }, qTxt) : $('span', { class: 'step-txt' }, 'Quiz : vérifie ce que tu as appris')));
     host.replaceChildren(...items);
   }
 
@@ -390,7 +394,7 @@
     document.querySelectorAll('[data-quiz-lien]').forEach((a) => {
       const n = +a.dataset.quizNiv, ok = DEV || nivFini(d, n), q = d.quiz[a.dataset.quizLien];
       a.classList.toggle('mute', !ok);
-      a.textContent = ok ? (q ? `Quiz ✓ ${q.meilleur}/${q.total} · meilleur score` : 'Quiz →') : 'Quiz 🔒';
+      a.textContent = ok ? (q ? `Quiz${quizReussi(q) ? ' ✓' : ''} ${q.meilleur}/${q.total} · meilleur score` : 'Quiz →') : 'Quiz 🔒';
     });
   }
 
