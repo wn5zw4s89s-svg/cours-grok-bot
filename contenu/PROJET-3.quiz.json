@@ -4,14 +4,14 @@
   "questions": [
     {
       "id": "q1",
-      "question": "Comment ton bot lit-il X ?",
+      "question": "Que fait ton bot sur X dans ce projet ?",
       "choix": [
-        "Il cherche et lit les posts publics, sans connexion",
-        "Il faut connecter ton compte X",
-        "Il lit seulement les posts de tes abonnés"
+        "Il cherche et lit des posts publics",
+        "Il poste à ta place",
+        "Il suit des comptes pour toi"
       ],
       "bonne_reponse": 0,
-      "explication": "Le bot lit les posts publics de X sans connexion. Il ne voit pas tes abonnés et ne poste pas."
+      "explication": "Il cherche et lit des posts publics, puis te prépare des brouillons. Dans ce cours, aucun bot ne poste à ta place."
     },
     {
       "id": "q2",
@@ -22,7 +22,7 @@
         "La routine de nuit"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot prépare un brouillon. Toi seul postes, depuis l'app X."
+      "explication": "Le bot prépare un brouillon. Toi seul postes, depuis l'app X. Dans ce cours, aucun bot ne poste à ta place."
     },
     {
       "id": "q3",
@@ -44,7 +44,7 @@
         "Ce soir à 18 h"
       ],
       "bonne_reponse": 1,
-      "explication": "Demain à 6 h : 6 h est déjà passé, et une routine neuve attend sa prochaine heure. Elle ne tourne maintenant que si tu demandes un test."
+      "explication": "Demain à 6 h : 6 h est déjà passé, et une routine neuve attend sa prochaine heure. Elle ne tourne maintenant que si tu la testes."
     },
     {
       "id": "q5",

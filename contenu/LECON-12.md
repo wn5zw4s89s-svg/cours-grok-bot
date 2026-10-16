@@ -38,17 +38,27 @@ C'est réussi si Lumen t'a écrit une réponse signée Léa.
 **Exemple de réponse :** « Bonjour, merci infiniment pour votre patience ! Nous mettons tout en œuvre pour que votre commande vous parvienne au plus vite. N'hésitez pas à revenir vers nous. Léa »
 </div>
 
-## Étape 3 · Ajoute la règle de ton (2 min)
+## Étape 3 · Ajoute la règle de ton à la fiche (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+**À toi :**
+1. Copie cette ligne :
 
-> Ajoute cette ligne à la fin de ta description, sans rien changer d'autre :
->
 > Dans tes emails : une idée par phrase, 3 phrases maximum. Jamais « n'hésitez pas », « ravi », « je reste à votre disposition ». Tu signes Léa.
 
-C'est réussi si Lumen confirme l'ajout.
+2. Touche le nom de Lumen en haut de la conversation -> ses réglages -> le champ **Description** (à vérifier sur ton écran).
+3. Colle à la fin du texte. Ne change rien d'autre.
+
+C'est réussi si la règle de ton est la dernière ligne du champ Description.
 </div>
+
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
+
+**Ce que tu dois voir :** ton texte d'avant, puis la nouvelle ligne en dernier.
+
+**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute cette ligne à la fin de ta description, sans rien changer d'autre : » suivi de la ligne. Puis rouvre sa fiche pour vérifier.
+
+</div></details>
 
 ## Étape 4 · Compare (2 min)
 
@@ -81,7 +91,7 @@ Phrase type, à copier :
 
 > Mon bot a son adresse email. Il trie, il prépare, je valide. Et il n'écrit plus comme un robot.
 
-C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
+C'est toi qui postes, depuis l'app X. Dans ce cours, aucun bot ne poste à ta place.
 </div>
 
 Projet 2 terminé. Badge : **Bureau ouvert**.

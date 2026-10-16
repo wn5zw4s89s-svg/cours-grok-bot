@@ -1,60 +1,51 @@
-# Leçon 16 : La routine de nuit (un réflexe nocturne)
+# Leçon 16 · La routine de nuit
 
-<p class="chapeau">Tu dors. Ton bot cherche. Au réveil, la liste t'attend.</p>
+Objectif : à la fin, ton bot cherche des prospects chaque matin à 6 h, et tu l'as vu tourner une fois.
 
 ## Étape 1 · Prépare la demande (2 min)
 
-Une **routine** (un réflexe) tourne seule, à heure fixe, même app fermée. Une bonne demande dit : quand, quoi chercher, quoi rendre, ne rien poster, quoi faire si X ne répond pas.
+Une **routine** tourne seule, à heure fixe, même app fermée. Une bonne demande dit : quand, quoi chercher, quoi rendre, ne rien poster, quoi faire si ça échoue.
 
-```
-Crée une routine : chaque jour à 6 h (heure de Paris), cherche sur X les posts publics des dernières 24 h qui collent à ta rubrique Prospects. Garde les 5 meilleurs : lien, résumé, pourquoi, brouillon de réponse. Ne poste rien. Si la recherche échoue, dis-le au lieu d'inventer.
-```
+Chaque exécution consomme de l'usage. Une fois par jour, c'est raisonnable. L'heure suit ton réglage **Timezone** : Settings -> Bot (à vérifier sur ton écran).
 
 <div class="box atoi" markdown="1">
-**À toi.** Copie le modèle. Adapte l'heure et le fuseau.
+**À toi :** copie ce modèle dans tes Notes. Change l'heure si tu veux.
 
-**C'est réussi si :** l'heure et le fuseau sont les tiens.
-</div>
+> Crée une routine : chaque jour à 6 h, cherche sur X les posts publics des dernières 24 h qui collent à ta rubrique Prospects. Garde les 5 meilleurs : lien, résumé, pourquoi, brouillon de réponse. Ne poste rien. Si la recherche échoue, dis-le au lieu d'inventer.
 
-<div class="box corrige" markdown="1">
-« chaque jour à 6 h (heure de Paris) ».
+C'est réussi si ton modèle a ton heure et le Timezone est le tien.
 </div>
 
 ## Étape 2 · Crée-la (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie le modèle. Lis le résumé du bot.
+**À toi :** envoie ton modèle à ton bot. Lis sa réponse.
 
-**C'est réussi si :** le bot confirme l'heure, la tâche et la prochaine exécution.
+C'est réussi si le bot confirme l'heure, la tâche et la prochaine exécution.
 </div>
 
 <div class="box corrige" markdown="1">
-« Routine créée. Chaque jour à 6 h, heure de Paris. Prochaine : demain 6 h. Résultat dans ce chat. »
+**Exemple de réponse :** « Routine créée. Chaque jour à 6 h. Prochaine : demain 6 h. Résultat dans ce chat. »
 </div>
 
 ## Étape 3 · Teste-la (2 min)
 
-Une routine neuve attend sa prochaine heure. Elle ne tourne pas à la création.
+Une routine neuve ne tourne pas à sa création. Elle attend sa prochaine heure. Un test la lance tout de suite, et consomme de l'usage.
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie : « Lance un test de cette routine maintenant. »
+**À toi :** copie ce bloc et envoie-le à ton bot :
 
-**C'est réussi si :** le test rend une liste avec liens et brouillons.
+> Lance un test de cette routine maintenant.
+
+C'est réussi si le test rend une liste avec liens et brouillons, et rien de posté.
 </div>
 
-<div class="box corrige" markdown="1">
-5 posts, 5 liens, 5 brouillons, rien de posté.
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« Je chasserai cette nuit. »
-</div>
+**Ce que tu dois voir :** 5 posts, 5 liens, 5 brouillons.
 
-<div class="fin" markdown="1">
-## En résumé
+**Si le test ne part pas :** redemande le test à ton bot ; le bouton **Test** est sur ordinateur.
 
-- Quand, quoi, rendu, limite, échec.
-- Une routine neuve attend : teste-la.
+</div></details>
 
-**Leçon 17 : le rapport du matin.**
-</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">Je chasserai cette nuit. Leçon 17 : le rapport du matin.</div>

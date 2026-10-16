@@ -1,83 +1,82 @@
-# Leçon 7 · Donne une adresse email à ton bot
+# Leçon 7 · Donne une adresse email à tes bots
 
-Objectif : à la fin, Lumen a sa propre adresse email, choisie par toi.
+Objectif : à la fin, tu as ton adresse email de bot, et Lumen sait s'en servir.
 
 ## Étape 1 · Comprends la règle (1 min)
 
-Ton bot peut avoir une adresse email, du type `nom@mail.grokbot.com`.
+Tu peux avoir une adresse du type `nom@mail.grokbot.com`.
 
-Trois choses à savoir avant de choisir :
+- Elle est **à toi**, pas à Lumen. Tous tes bots la partagent.
+- **Une seule** par compte.
+- **Définitive** : ni changement, ni suppression.
+- Aucun email ne part sans ton accord.
 
-- **une seule** adresse par compte : tu ne pourras pas en réserver une deuxième pour un autre bot ;
-- elle est **définitive** : tu ne pourras ni la changer ni la supprimer ;
-- aucun email ne part sans ton accord.
+Règles du nom : minuscules, chiffres, points, tirets, tirets bas. Commence et finis par une lettre ou un chiffre. 64 caractères au plus. Mots réservés : support, admin, billing, security, help, info, team, cursor, grok, xai.
 
 <div class="box atoi" markdown="1">
-**À toi :** écris dans tes Notes 3 noms possibles pour l'adresse de Léa, qui vend des bougies. Minuscules, chiffres, points ou tirets. Évite les mots comme support, admin, info.
+**À toi :** écris dans tes Notes 3 noms possibles pour Léa, qui vend des bougies.
 
-C'est réussi si tu as 3 noms qui suivent ces règles.
+C'est réussi si tes 3 noms suivent ces règles.
 </div>
 
 <div class="box corrige" markdown="1">
-**Exemple :** `lea.bougies`, `bougies-lea`, `atelier-lea`.
+**Exemple :** `lea.bougies`, `bougies-lea`, `atelier_lea`.
 </div>
 
 ## Étape 2 · Vérifie s'ils sont libres (2 min)
 
-Vérifier ne réserve rien. Tu peux tester autant de noms que tu veux.
+Vérifier ne réserve rien.
 
 <div class="box atoi" markdown="1">
-**À toi :** remplace les 3 noms par les tiens, copie ce bloc et envoie-le à Lumen :
+**À toi :** mets tes 3 noms, copie ce bloc et envoie-le à Lumen :
 
-> Vérifie si ces adresses sont libres, sans rien réserver : lea.bougies, bougies-lea, atelier-lea.
+> Vérifie si ces adresses sont libres, sans rien réserver : lea.bougies, bougies-lea, atelier_lea.
 
-C'est réussi si Lumen te dit, pour chaque nom, s'il est libre ou pris.
+C'est réussi si Lumen dit, pour chaque nom, s'il est libre ou pris.
 </div>
 
 <div class="box corrige" markdown="1">
-**Exemple de réponse :** « lea.bougies est libre. bougies-lea est libre. atelier-lea est pris. »
+**Exemple de réponse :** « lea.bougies est libre. bougies-lea est libre. atelier_lea est pris. »
 </div>
 
-## Étape 3 · Choisis le nom (1 min)
+## Étape 3 · Réserve-la (2 min)
+
+Choisis un seul nom libre. Relis-le lettre par lettre. Il est définitif.
 
 <div class="box atoi" markdown="1">
-**À toi :** choisis un seul nom libre. Relis-le lettre par lettre. Il est définitif.
-
-C'est réussi si tu as un nom libre, sans faute de frappe.
-</div>
-
-## Étape 4 · Réserve-le (2 min)
-
-Lumen va afficher une carte de confirmation. Rien n'est réservé tant que tu ne l'approuves pas.
-
-<div class="box atoi" markdown="1">
-**À toi :** remplace le nom par le tien, copie ce bloc et envoie-le à Lumen :
+**À toi :** mets ton nom, copie ce bloc et envoie-le à Lumen :
 
 > Réserve l'adresse lea.bougies pour moi.
 
-Lis la carte. Approuve-la seulement si le nom est exactement le bon.
+Une carte s'affiche. Approuve-la seulement si le nom est exactement le bon.
 
 C'est réussi si Lumen confirme ton adresse complète.
 </div>
 
-<div class="box corrige" markdown="1">
-**Exemple de réponse :** « C'est fait : mon adresse est lea.bougies@mail.grokbot.com. » (adresse fictive)
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-## Étape 5 · Garde-la (1 min)
+**Autre chemin, sans le chat :** Settings -> Connect apps -> Email. Tape ton nom dans **Choose a name**, puis touche **Create address**.
+
+**Ce que tu dois voir :** ton adresse, avec un bouton pour la copier.
+
+**Si ça rate :** nom refusé ? Relis les règles de l'étape 1. Toujours bloqué ? Demande à Lumen pourquoi le nom est refusé.
+
+</div></details>
+
+## Étape 4 · Garde-la (1 min)
 
 <div class="box atoi" markdown="1">
 **À toi :** copie ce bloc et envoie-le à Lumen :
 
-> Quelle est ton adresse email ?
+> Quelle est mon adresse email de bot ?
 
 Copie l'adresse dans tes Notes.
 
-C'est réussi si l'adresse est dans tes Notes, identique à celle de l'étape 4.
+C'est réussi si l'adresse est dans tes Notes, identique à celle de l'étape 3.
 </div>
 
 <div class="box info" markdown="1">
-Tu as déjà une adresse ? Saute les étapes 1 à 4. Commence à l'étape 5.
+Tu as déjà une adresse ? Va directement à l'étape 4.
 </div>
 
-<div class="pieuvre" data-reaction="accueil" markdown="1">Projet 2 : Lumen a une adresse. Prochaine leçon : tu lui écris.</div>
+<div class="pieuvre" data-reaction="accueil" markdown="1">Projet 2 : tu as une adresse, et Lumen peut l'utiliser. Prochaine leçon : tu lui écris.</div>

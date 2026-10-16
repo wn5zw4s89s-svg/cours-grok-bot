@@ -22,26 +22,32 @@ Bruit : c'est une pub, rien à faire.
 
 </div></details>
 
-## Étape 2 · Ajoute le tri à la description (2 min)
+## Étape 2 · Ajoute le tri à la fiche (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+**À toi :**
+1. Copie cette ligne :
 
-> Ajoute cette ligne à la fin de ta description, sans rien changer d'autre :
->
 > Quand je demande le courrier, tu ranges chaque email dans une pile : À moi (remboursement, plainte, demande spéciale), Prêt (question simple sur un produit ou la livraison) ou Bruit (pub, newsletter). Pour chaque email : l'expéditeur, une ligne de résumé, la pile.
 
-C'est réussi si Lumen confirme l'ajout.
+2. Touche le nom de Lumen en haut de la conversation -> ses réglages -> le champ **Description** (à vérifier sur ton écran).
+3. Colle à la fin du texte. Ne change rien d'autre.
+
+C'est réussi si la règle des piles est la dernière ligne du champ Description.
 </div>
 
-<div class="box corrige" markdown="1">
-**Exemple de réponse :** « C'est ajouté à la fin de ma description. »
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
+
+**Ce que tu dois voir :** ton texte d'avant, puis la nouvelle ligne en dernier.
+
+**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute cette ligne à la fin de ta description, sans rien changer d'autre : » suivi de la ligne. Puis rouvre sa fiche pour vérifier.
+
+</div></details>
 
 ## Étape 3 · Envoie 3 emails (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** tu joues 3 expéditeurs : Julie et Hugo, des clients de Léa, puis une pub. Depuis l'app Mail, envoie 3 emails séparés à Lumen. Copie chaque bloc dans un email différent.
+**À toi :** tu joues 3 expéditeurs : Julie et Hugo, des clients de Léa, puis une pub. Depuis l'app Mail, envoie 3 emails séparés à ton adresse de bot. Copie chaque bloc dans un email différent.
 
 Email 1 :
 

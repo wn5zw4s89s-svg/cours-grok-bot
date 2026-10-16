@@ -1,8 +1,8 @@
-# Leçon 18 : Top 1 % : des prospects ciblés
+# Leçon 18 · Top 1 % : des prospects ciblés
 
-<p class="chapeau">Cinquante prospects moyens ou cinq vrais acheteurs ? Tout se joue dans les critères.</p>
+Objectif : à la fin, ton bot trouve moins de prospects, mais tous vrais, et tu as la preuve côte à côte.
 
-## Étape 1 · La liste moyenne (2 min)
+## Étape 1 · Garde la liste moyenne (2 min)
 
 | Critères moyens | Critères top 1 % |
 |---|---|
@@ -12,62 +12,64 @@
 | « Les meilleurs » | Note de 1 à 3 avec la raison |
 
 <div class="box atoi" markdown="1">
-**À toi.** Envoie : « Cherche 5 prospects sur X avec tes critères actuels. » Garde la liste.
+**À toi :** copie ce bloc et envoie-le à ton bot. Fais une capture de la réponse.
 
-**C'est réussi si :** tu as la liste d'avant.
+> Cherche 5 prospects sur X avec tes critères actuels.
+
+C'est réussi si tu as la capture de la liste d'avant.
 </div>
 
-<div class="box corrige" markdown="1">
-5 posts, dont un concours et une concurrente.
-</div>
+## Étape 2 · Réécris les critères dans la fiche (3 min)
 
-## Étape 2 · Critères et cas pièges (2 min)
-
-Un cas piège ressemble à un prospect sans en être un : une concurrente, un concours « RT pour gagner », une blague.
+Un cas piège ressemble à un prospect sans en être un : une concurrente, un concours « RT pour gagner » (RT = repartage le post), une blague.
 
 <div class="box atoi" markdown="1">
-**À toi.** Réécris la rubrique Prospects : qui, quand, 3 exclusions, 3 cas pièges, une note de 1 à 3. Enregistre.
+**À toi :**
+1. Dans tes Notes, réécris la rubrique Prospects : qui, quand, 3 exclusions, 3 cas pièges, une note de 1 à 3.
+2. Touche le nom de ton bot en haut de la conversation -> ses réglages -> le champ **Description** (à vérifier sur ton écran).
+3. Remplace l'ancienne rubrique Prospects par la nouvelle. Ne touche pas au reste.
 
-**C'est réussi si :** la rubrique contient qui, quand, exclusions, cas pièges, note.
+C'est réussi si la rubrique contient qui, quand, exclusions, cas pièges et note.
 </div>
 
-<div class="box corrige" markdown="1">
-Pièges : « RT pour gagner une bougie », « ma boutique de bougies ouvre », « coupure de courant ».
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-## Étape 3 · Côte à côte (2 min)
+**Ce que tu dois voir :** par exemple les pièges « RT pour gagner une bougie », « ma boutique de bougies ouvre », « coupure de courant ».
+
+**Si ça rate :** pas de champ Description ? Envoie à ton bot : « Remplace ta rubrique Prospects par celle-ci, sans rien changer d'autre : » suivi de ton texte. Puis rouvre sa fiche pour vérifier.
+
+</div></details>
+
+## Étape 3 · Compare (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Renvoie la même demande. Compare les deux listes.
+**À toi :** renvoie la même demande qu'à l'étape 1. Fais une capture. Compare les deux listes.
 
-**C'est réussi si :** la nouvelle liste n'a aucun cas piège.
+C'est réussi si la nouvelle liste n'a aucun cas piège.
 </div>
 
 <div class="box corrige" markdown="1">
-3 posts notés 3/3, tous des cadeaux cherchés aujourd'hui. Moins, mais tous vrais.
+**Exemple :** 3 posts notés 3/3, tous des cadeaux cherchés aujourd'hui. Moins, mais tous vrais.
 </div>
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">
-Bot 3 sur 8. « Je ne rate plus rien. »
-</div>
+## Étape 4 · Montre-le sur X (facultatif, 2 min)
 
-## Étape 4 · Poste-le sur X (facultatif, 2 min)
+<div class="box atoi" markdown="1">
+**À toi :** mets tes 2 captures côte à côte. Floute les pseudos.
+
+C'est réussi si les 2 listes sont lisibles et aucun pseudo ne se lit.
+</div>
 
 <div class="box info" markdown="1">
-**Défi X (facultatif).** Poste une capture côte à côte des 2 listes, pseudos floutés.
+**Défi X (facultatif).** Poste ta capture sur X.
 
 Phrase type, à copier :
 
 > Mon bot prospecte pendant que je dors. Mêmes posts, critères différents : 5 prospects moyens ou 3 vrais acheteurs.
 
-C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
+C'est toi qui postes, depuis l'app X. Dans ce cours, aucun bot ne poste à ta place.
 </div>
 
-<div class="fin" markdown="1">
-## En résumé
+Projet 3 terminé. Badge : **Chasseur de nuit**.
 
-- Qui, quand, exclusions, pièges, note.
-- Badge : **Chasseur de nuit**.
-
-**Projet 4 : ta marque en un week-end.**
-</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bot 3 sur 8. Projet 4 : ta marque en un week-end.</div>

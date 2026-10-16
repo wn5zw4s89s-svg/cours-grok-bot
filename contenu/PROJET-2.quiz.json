@@ -4,14 +4,14 @@
   "questions": [
     {
       "id": "q1",
-      "question": "Combien d'adresses email de bot par compte ?",
+      "question": "Combien d'adresses email de bot peux-tu avoir ?",
       "choix": [
         "Une par bot",
         "Une par projet",
-        "Une seule par compte"
+        "Une seule, partagée par tous tes bots"
       ],
       "bonne_reponse": 2,
-      "explication": "Une seule adresse par compte, du type nom@mail.grokbot.com. Une deuxième réservation est refusée, même pour un autre bot ou un autre projet."
+      "explication": "Une seule adresse par compte, du type nom@mail.grokbot.com. Elle est à toi : tous tes bots la partagent."
     },
     {
       "id": "q2",
@@ -37,14 +37,14 @@
     },
     {
       "id": "q4",
-      "question": "Lumen est ton bot. Il a reçu des emails à son adresse. Comment les vois-tu ?",
+      "question": "Lumen est ton bot. Il a reçu des emails à ton adresse de bot. Comment les vois-tu ?",
       "choix": [
         "Tu demandes à Lumen : « Montre-moi les emails reçus aujourd'hui. »",
         "Dans une boîte de réception de l'app",
         "Dans l'app Mail de ton iPhone"
       ],
       "bonne_reponse": 0,
-      "explication": "L'app n'a pas de boîte de réception, et l'adresse du bot n'est pas dans ton app Mail. Les emails arrivent chez Lumen : tu lui demandes, il te les résume."
+      "explication": "L'app n'a pas de boîte de réception, et ton app Mail ne reçoit pas les emails du bot. Tu demandes à Lumen, il te les résume."
     },
     {
       "id": "q5",
@@ -73,11 +73,11 @@
       "question": "Qui envoie un email préparé par Lumen ?",
       "choix": [
         "Lumen, une fois le brouillon prêt",
-        "Toi, en touchant Send Email (le bouton affiché en anglais à l'écran) sur la carte",
+        "Toi, en touchant le bouton d'envoi de la carte",
         "La routine, quand l'email est Prêt"
       ],
       "bonne_reponse": 1,
-      "explication": "Lumen prépare seulement un brouillon. L'email ne part que quand tu touches Send Email, même avec une routine."
+      "explication": "Lumen prépare seulement un brouillon. L'email ne part que quand tu l'envoies toi-même, même avec une routine."
     },
     {
       "id": "q8",
@@ -99,7 +99,7 @@
         "Demain à 18 h seulement"
       ],
       "bonne_reponse": 0,
-      "explication": "Une routine neuve attend sa prochaine heure : 18 h aujourd'hui. Un test la lance tout de suite."
+      "explication": "Une routine neuve attend sa prochaine heure : 18 h aujourd'hui. Un test la lance tout de suite, et consomme de l'usage."
     },
     {
       "id": "q10",

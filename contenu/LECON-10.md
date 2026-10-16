@@ -6,7 +6,7 @@ Objectif : à la fin, Lumen a préparé une réponse email, et c'est toi qui as 
 
 Quand Lumen veut envoyer un email, il ne l'envoie pas. Il t'affiche un brouillon sous forme de carte.
 
-Sur iPhone, la carte a deux boutons, affichés en anglais à l'écran : **Send Email** (envoyer) et **Discard** (jeter).
+La carte a un bouton pour envoyer et un pour jeter. Leur texte exact : à vérifier sur ton écran.
 
 <div class="box atoi" markdown="1">
 **À toi :** dis à voix haute qui envoie l'email : toi ou Lumen ?
@@ -49,13 +49,13 @@ C'est réussi si tu as une réponse aux 3 questions.
 ## Étape 4 · Décide (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** tout est bon ? Touche **Send Email** (le bouton affiché en anglais à l'écran). Sinon, touche **Discard** (le bouton affiché en anglais à l'écran).
+**À toi :** tout est bon ? Touche le bouton d'envoi de la carte. Sinon, touche celui qui la jette.
 
 C'est réussi si la carte n'attend plus : envoyée ou jetée, par toi.
 </div>
 
 <div class="box corrige" markdown="1">
-**Exemple :** Send Email. La réponse arrive dans ta boîte perso.
+**Exemple :** tu envoies. La réponse arrive dans ta boîte perso (c'est toi qui jouais Hugo).
 </div>
 
 ## Étape 5 · Fais corriger (2 min)
