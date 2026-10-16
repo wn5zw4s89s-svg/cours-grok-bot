@@ -82,9 +82,46 @@ function stripReussi(lines) {
 const PAREN_OCTO = /\s*\((?:[^()]*\b(?:tentacules?|pieuvre|OctoBoss|ADN|kraken|vagues?|ventouses?|r\u00e9flexes?|r\u00e9flexe nocturne|poche d.encre|proies?)\b[^()]*)\)/gi;
 export const nettoyerTitre = (t) => String(t).replace(PAREN_OCTO, '').replace(/\s*\(\d+\s*min\)/gi, '').trim();
 
+
+// Défi X avant le bloc de fin de projet : si une pieuvre (ou « Projet N terminé »)
+// est placée avant le Défi X dans la source, on la déplace juste après la carte Défi X.
+function ordreDefiPuisFin(src) {
+  let t = src.replace(/\r\n/g, '\n');
+  const defiOpen = t.search(/<div[^>]*class="[^"]*\bbox\b[^"]*"[^>]*>\s*\n\s*\*\*D[ée]fi\s*X\b/i);
+  if (defiOpen < 0) {
+    // Variante : box déjà normalisée plus tard ; chercher le titre d'étape Poste-le / Défi
+    return t;
+  }
+  // Trouver la fin du </div> de cette box (profondeur 1 depuis defiOpen)
+  let i = t.indexOf('>', defiOpen) + 1;
+  let depth = 1;
+  while (i < t.length && depth > 0) {
+    const nextOpen = t.indexOf('<div', i);
+    const nextClose = t.indexOf('</div', i);
+    if (nextClose < 0) break;
+    if (nextOpen >= 0 && nextOpen < nextClose) {
+      depth++;
+      i = nextOpen + 4;
+    } else {
+      depth--;
+      i = t.indexOf('>', nextClose) + 1;
+    }
+  }
+  const defiEnd = i;
+  const before = t.slice(0, defiOpen);
+  const defi = t.slice(defiOpen, defiEnd);
+  const after = t.slice(defiEnd);
+  // Pieuvres entièrement avant le Défi X
+  const pieuvreRe = /<div\s+class="pieuvre"[^>]*>[\s\S]*?<\/div>\s*/gi;
+  let moved = '';
+  const before2 = before.replace(pieuvreRe, (m) => { moved += m; return ''; });
+  if (!moved) return t;
+  return before2 + defi + '\n' + moved + after;
+}
+
 // Retouches d'affichage demandées par Joseph (16/10) — sources intactes.
 function retouches(src, num) {
-  let t = src.replace(/\r\n/g, '\n').replace(/\s*\(\d+\s*min\)/gi, '');
+  let t = ordreDefiPuisFin(src).replace(/\r\n/g, '\n').replace(/\s*\(\d+\s*min\)/gi, '');
   // Ligne « Objectif : … » -> paragraphe stylé (n'est pas masquée)
   t = t.replace(/^Objectif\s*:\s*(.+)$/m, (m, x) => `<p class="objectif">${x.charAt(0).toUpperCase() + x.slice(1)}</p>`);
   // Libellé solution (affichage) — sources inchangées
@@ -134,7 +171,18 @@ function masquer(src) {
   t = t.replace(/(?<![-<!])->/g, '→');
   t = t.replace(/<p\s+class="chapeau"[^>]*>[\s\S]*?<\/p>\s*/gi, '\n');
   t = t.replace(/<small\b[^>]*>[\s\S]*?<\/small>\s*/gi, '\n');
-  t = t.replace(/<div\s+class="fin"[^>]*>[\s\S]*?<\/div>\s*/gi, '\n');
+  // Bloc <div class="fin"> : on garde une ligne « Projet N terminé / Badge » (après le Défi X),
+  // le reste (En résumé, Bravo…) reste masqué.
+  t = t.replace(/<div\s+class="fin"[^>]*>([\s\S]*?)<\/div>\s*/gi, (full, body) => {
+    const badge = body.match(/badge\s*:?\s*\*\*([^*]+)\*\*/i);
+    const proj = body.match(/Projet\s+(\d+)\s+termin/i);
+    if (!badge) return '\n';
+    const nom = badge[1].replace(/\s+/g, ' ').trim();
+    const ligne = proj
+      ? `Projet ${proj[1]} terminé. Badge : **${nom}**.`
+      : `Badge : **${nom}**.`;
+    return `\n\n${ligne}\n\n`;
+  });
   t = t.replace(/^[ \t]*[-*]\s*☐.*$/gm, '');
   t = t.replace(/☐[^\n]*\n?/g, '');
 

@@ -513,3 +513,16 @@ details.solution[open] .box.corrige{animation:none;transform:none}
 .lh{flex-wrap:wrap}.lh .bar{min-width:120px}.lh .dev-etapes{flex-basis:100%;order:9;margin:4px 0 0}
 .conf.derriere{z-index:0}main,.quiz-page{position:relative;z-index:1}
 .box.defi blockquote{background:#dfe9e8!important;color:#111!important;border-left:4px solid var(--c,#FF6B5A)}.box.defi blockquote p{color:#111!important}
+
+/* nuit9 */
+.conf.derriere{z-index:0}
+main,.quiz-page,.lecon .termine{position:relative;z-index:2}
+.quiz-page .q-fin,.lecon .termine{position:relative;z-index:2;isolation:isolate}
+.lien-action,.q-fin .lien,.remarque-lien{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;min-width:52px;padding:14px 24px;
+  font-size:18px;font-weight:800;line-height:1.2;
+  -webkit-tap-highlight-color:transparent
+}
+.remarque-lien{font-size:18px;min-height:52px;padding:14px 24px}
+.q-fin .lien-action{margin-top:8px}

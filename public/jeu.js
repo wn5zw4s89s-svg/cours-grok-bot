@@ -457,7 +457,7 @@
         scrollTo(0, 0);
       };
       octos().forEach((o) => octoMood(o, 'happy'));
-      if (!deja) { confetti(niveauComplete ? 72 : 40, 70); rafraichir(); }
+      if (!deja) { confetti(niveauComplete ? 72 : 40, 70, true); rafraichir(); }
       termine();
       if (nouveaux.length) montrerBadge(nouveaux[nouveaux.length - 1]);
     });
@@ -521,7 +521,7 @@
       }
       actions.push(
         nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `Projet ${niv + 1} · Leçon ${nextL.num} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
-        $('p', {}, $('button', { class: 'lien', on: { click: () => jouer(0, 0, []) } }, 'Rejouer'))
+        $('p', {}, $('button', { class: 'lien lien-action', on: { click: () => jouer(0, 0, []) } }, 'Rejouer'))
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));
       octoMood(octos()[0], score / N >= 0.6 ? 'happy' : 'sad');
@@ -550,7 +550,7 @@
           $('div', {}, x.explication || ''),
           $('button', { class: 'btn', on: { click: () => { if (parti) return; parti = true; jouer(i + 1, s, r2); } } }, i + 1 === N ? 'Voir mon score' : 'Suivante →')));
         const o = octos()[0]; octoMood(o, ok ? 'happy' : 'sad'); if (!ok) setTimeout(() => octoMood(o), 1400);
-        if (ok) confetti(16, 45);
+        if (ok) confetti(16, 45, true);
         fb.firstChild.classList.add(ok ? 'good' : 'bad');
         document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', (i + 1) / N));
       } } }, c));
@@ -690,7 +690,7 @@
     const TO = 'leopold@mail.grokbot.com';
     const btn = $('button', {
       type: 'button',
-      class: 'remarque-lien',
+      class: 'remarque-lien lien-action',
       'aria-label': 'Une remarque ?',
     }, 'Une remarque ?');
     const host = document.querySelector('main') || document.body;
