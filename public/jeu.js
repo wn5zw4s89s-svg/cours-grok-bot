@@ -508,7 +508,7 @@
         art.querySelectorAll('.etape-n').forEach((e) => { e.hidden = false; const nv = (art._vus || new Set()).size || nE; e.textContent = `${nv} étape${nv > 1 ? 's' : ''} sur ${nE}${nv === nE ? ' ✓' : ''}`; });
         const vus = art._vus || new Set();
         art.querySelectorAll('.dev-etape').forEach((b, j) => { const v = vus.has(j); b.classList.toggle('fait', v); b.classList.remove('cur'); b.removeAttribute('aria-current'); b.textContent = v ? '✓' : String(j + 1); });
-        art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', 1));
+        art.querySelectorAll('[data-barre-lecon]').forEach((b) => b.style.setProperty('--p', ((art._vus || new Set()).size || 1) / (+art.dataset.etapes || 1)));
         scrollTo(0, 0);
       };
       octos().forEach((o) => octoMood(o, 'happy'));
@@ -677,6 +677,7 @@
     const show = (n) => {
       const te = art.querySelector('.termine');
       if (te) { te.remove(); art.querySelector('.fin-lecon').hidden = false; compteur.hidden = false; }
+      const avant = vus.has(n);
       vus.add(n); try { localStorage.setItem(VK, JSON.stringify([...vus])); } catch {}
       k = n; secs.forEach((s, i) => (s.hidden = i !== n));
       const last = n === secs.length - 1;
@@ -684,8 +685,8 @@
       bar.forEach((b) => b.style.setProperty('--p', vus.size / secs.length));
       art.dataset.etape = String(n + 1);
       art.dataset.etapes = String(secs.length);
-      compteur.textContent = `Étape ${n + 1}/${secs.length}`;
-      art.querySelectorAll('.dev-etape').forEach((b, i) => { const v = vus.has(i) && i !== n; b.classList.toggle('fait', v); b.classList.toggle('cur', i === n); b.textContent = v ? '✓' : String(i + 1); if (i === n) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
+      compteur.textContent = `Étape ${n + 1} · ${vus.size} vue${vus.size > 1 ? 's' : ''} sur ${secs.length}`;
+      art.querySelectorAll('.dev-etape').forEach((b, i) => { const v = vus.has(i) && (i !== n || avant); b.classList.toggle('fait', v); b.classList.toggle('cur', i === n); b.textContent = v ? '✓' : String(i + 1); if (i === n) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
       scrollTo(0, 0);
       secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
     };
