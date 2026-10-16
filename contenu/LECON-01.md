@@ -8,7 +8,9 @@ Dans Grok Bot, tu crées des assistants qui travaillent pour toi : des **bots**.
 
 Un bot, c'est comme un employé à qui tu écris. Tu lui donnes un métier, il le fait.
 
-Exemple : un bot qui transforme les messages de tes clients en liste claire.
+Exemple : un bot qui lit le message d'un client et te propose une réponse.
+
+Différence avec un simple chat : un bot garde son métier et sa mémoire, et peut travailler sans toi, même la nuit.
 
 <div class="box atoi" markdown="1">
 **À toi :** ouvre l'app Grok Bot sur ton iPhone (pas le site du cours).
@@ -64,7 +66,7 @@ C'est réussi si sa réponse contient les 2 parties : ce que veut Sophie, et un 
 
 1) Sophie a reçu une bougie cassée et veut une solution.
 
-2) « Bonjour Sophie, désolée pour la bougie ! Je vous en renvoie une neuve dès demain. Belle journée, Léa »
+2) « Bonjour Sophie, désolée pour la bougie ! Pouvez-vous m'envoyer une photo ? Je reviens vers vous avec une solution. Belle journée, Léa »
 </div>
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">Bravo ! Tu as créé Lumen, tu lui as donné un métier et il a répondu à un premier message test. Bot 1 sur 8 (tentacule 1 sur 8).</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bravo ! Tu as créé Lumen, tu lui as donné un métier et il a répondu à un premier message test. Bot 1 sur 8 (tentacule 1 sur 8). Bientôt, un bot comme Lumen travaillera pendant que tu dors : tu le construis au projet 3, « Prospection de nuit ».</div>

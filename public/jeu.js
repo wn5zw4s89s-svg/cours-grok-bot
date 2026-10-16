@@ -393,7 +393,16 @@
 
   document.querySelectorAll('.lecon').forEach((art) => {
     const id = art.dataset.lecon, i = idx(id);
-    if (!debloquee(etat(), i)) { art.classList.add('bloquee'); art.querySelector('.verrou').hidden = false; }
+    const verrou = art.querySelector('.verrou');
+    // Première leçon (i<=0) ou leçon hors liste : jamais de verrou. Sinon numéro = leçon précédente.
+    if (verrou && i > 0 && L[i - 1] && !debloquee(etat(), i)) {
+      const p = verrou.querySelector('p');
+      if (p) p.textContent = `Termine d'abord la leçon ${L[i - 1].num}.`;
+      art.classList.add('bloquee');
+      verrou.hidden = false;
+    } else if (verrou) {
+      verrou.hidden = true;
+    }
     art.querySelector('[data-forcer]')?.addEventListener('click', () => { art.classList.remove('bloquee'); art.querySelector('.verrou').hidden = true; });
     const btn = art.querySelector('[data-terminer]');
     btn?.addEventListener('click', (ev) => {
@@ -597,18 +606,29 @@
   document.querySelector('[data-sheet-open]')?.addEventListener('click', () => { sheet.hidden = false; document.body.classList.add('fige'); });
   const ferme = () => { sheet.hidden = true; document.body.classList.remove('fige'); };
   sheet?.addEventListener('click', (e) => { if (e.target === sheet || e.target.closest('[data-sheet-close]')) ferme(); });
+  // Solution : ouverture sans saut de scroll
+  document.querySelectorAll('details.solution').forEach((d) => {
+    d.addEventListener('toggle', () => {
+      if (!d.open) return;
+      // garde le résumé sous le sticky header
+      const top = d.getBoundingClientRect().top;
+      if (top < 80) d.scrollIntoView({ block: 'nearest' });
+    });
+  });
   // Boutons 3D : effet pression tactile
   document.addEventListener('pointerdown', (e) => { const b = e.target.closest('.btn,.node,.q-choix button'); if (b) pressFx(b); });
 
-  // Remarque : feuille + mailto (aucune donnée tierce)
+  // Remarque : lien discret en bas de page + mailto (aucune donnée tierce)
   (function remarque() {
     const TO = 'leopold@mail.grokbot.com';
     const btn = $('button', {
       type: 'button',
-      class: 'remarque-btn',
+      class: 'remarque-lien',
       'aria-label': 'Une remarque ?',
     }, 'Une remarque ?');
-    document.body.append(btn);
+    const host = document.querySelector('main') || document.body;
+    const wrap = $('p', { class: 'remarque-pied' }, btn);
+    host.append(wrap);
 
     const parisNow = () => {
       try {

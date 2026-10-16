@@ -11,6 +11,7 @@ const nu = (t = '') => t.replace(/\s*\([^)]*\)/g, '');
   <section class="home">
     <div class="octo-host octo-home" data-octo><Octo /></div>
     <h1 class="home-titre" data-next-titre>Leçon {first.num} · {nu(clair(first).titre)}</h1>
+    <p class="home-promesse">En 8 projets, tu fais tourner une boîte de 8 bots, sans salarié.</p>
     <p class="home-but" data-next-but>{clair(first).but}</p>
     <a class="btn btn-large btn-go" data-continuer href={`${base}lecon/${first.id}/`}>Commencer</a>
   </section>

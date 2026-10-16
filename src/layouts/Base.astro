@@ -46,11 +46,13 @@ const meta = {
   (function () {
     var KEY = 'gb2:build-reload';
     try {
+      // Sur chaque page (accueil, leçon, quiz). Empêche une boucle de reload.
       if (sessionStorage.getItem(KEY) === jsv) return;
       fetch(base + 'version.json?_=' + Date.now(), { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (v) {
-          if (!v || !v.build || v.build === jsv) return;
+          if (!v || !v.build) return;
+          if (v.build === jsv) { sessionStorage.setItem(KEY, jsv); return; }
           sessionStorage.setItem(KEY, v.build);
           var u = new URL(location.href);
           u.searchParams.set('_v', v.build);

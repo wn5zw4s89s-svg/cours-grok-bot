@@ -87,6 +87,9 @@ function retouches(src, num) {
   let t = src.replace(/\r\n/g, '\n').replace(/\s*\(\d+\s*min\)/gi, '');
   // Ligne « Objectif : … » -> paragraphe stylé (n'est pas masquée)
   t = t.replace(/^Objectif\s*:\s*(.+)$/m, (m, x) => `<p class="objectif">${x.charAt(0).toUpperCase() + x.slice(1)}</p>`);
+  // Libellé solution (affichage) — sources inchangées
+  t = t.replace(/\*\*Bonne réponse \(exemple\)\s*:\*\*/gi, '**Exemple de réponse :**');
+  t = t.replace(/Bonne réponse \(exemple\)\s*:/gi, 'Exemple de réponse :');
   // Réplique finale (croissance) : son texte (écrit par Prof Groksky) devient le récap de l'écran de fin ;
   // la bulle est retirée de la dernière étape. Numéro de bot gardé pour l'animation.
   t = t.replace(/<div class="pieuvre" data-reaction="croissance"([^>]*)>([\s\S]*?)<\/div>\s*$/, (m, a, body) => {

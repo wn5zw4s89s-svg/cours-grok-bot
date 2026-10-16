@@ -1,67 +1,78 @@
-# Leçon 2 : Range le métier de ton bot dans sa description (son ADN)
+# Leçon 2 · Range le métier de ton bot dans sa description
 
-<p class="chapeau">Sans description, ton bot improvise. La description lui dit quoi faire, toujours.</p>
+Objectif : à la fin, Lumen garde son métier pour toujours, sans que tu le redises.
 
-## Étape 1 · Description ou message ? (2 min)
+## Étape 1 · Comprends la différence (1 min)
 
-La **description** (l'ADN) dit ce qui est vrai tout le temps. Le message dit ce qui se passe aujourd'hui.
+En leçon 1, tu as donné son métier à Lumen dans un message.
+
+Un message, ça se perd dans la conversation.
+
+La **description**, c'est la fiche de poste du bot. Il la relit à chaque fois.
 
 <div class="box atoi" markdown="1">
-**À toi.** Range ces 2 phrases : « Ne promets jamais de délai » et « Réponds à Mme Exemple ». Laquelle va dans la description ?
+**À toi :** ouvre Lumen dans l'app Grok Bot.
 
-**C'est réussi si :** tu as choisi la phrase vraie tout le temps.
+C'est réussi si tu vois ta conversation de la leçon 1, avec la réponse sur Sophie.
+</div>
+
+## Étape 2 · Prépare la fiche (2 min)
+
+Une bonne description tient en 4 lignes : qui il aide, ce qu'il fait, ce qu'il rend, ce qu'il ne fait jamais.
+
+<div class="box atoi" markdown="1">
+**À toi :** lis ce texte. Tu le copieras à l'étape suivante.
+
+> Tu es Lumen. Tu aides Léa, qui fabrique et vend des bougies.
+> Quand Léa te colle un message de client, tu réponds en 2 parties : 1) ce que veut le client, en une phrase ; 2) une réponse courte et polie qu'elle peut envoyer, signée Léa.
+> Tu ne promets jamais de remboursement, de renvoi ou de date : tu écris « Je reviens vers vous ».
+> Tu n'envoies jamais rien toi-même.
+
+C'est réussi si tu retrouves les 4 lignes : qui, quoi, ce qu'il rend, ce qu'il ne fait jamais.
+</div>
+
+## Étape 3 · Demande-lui de l'enregistrer (2 min)
+
+<div class="box atoi" markdown="1">
+**À toi :** envoie à Lumen ce message, avec le texte de l'étape 2 collé à la suite :
+
+> Enregistre ce texte comme ta description, mot pour mot :
+
+C'est réussi si Lumen confirme qu'il a enregistré sa description.
 </div>
 
 <div class="box corrige" markdown="1">
-Description : « Ne promets jamais de délai. » Message du jour : « Réponds à Mme Exemple. »
+**Réponse attendue (exemple) :** « C'est fait, ma description est enregistrée. »
 </div>
 
-## Étape 2 · Colle la description (2 min)
-
-Six rubriques : Métier · Entrées · Sortie · Interdits · Si c'est flou · Fini quand.
-
-```
-Titre : Répond aux clients de Bougies Lune
-
-Métier : pour Léa, créatrice fictive de bougies. Message client collé -> réponse prête.
-Entrées : messages de clients que Léa colle.
-Sortie : 1 ligne de résumé, puis la réponse, signée Léa.
-Interdits : aucune promo, aucun remboursement, aucun délai promis.
-Si c'est flou : une seule question au client.
-Fini quand : Léa n'a plus qu'à copier.
-```
+## Étape 4 · Vérifie qu'elle est bien là (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi.** Copie le modèle. Remplace Léa et les bougies par ton projet. Ouvre la description de ton bot, colle, enregistre.
+**À toi :** envoie :
 
-**C'est réussi si :** la description de ton bot parle de TON projet.
+> Montre-moi ta description, telle qu'elle est enregistrée.
+
+C'est réussi si Lumen te renvoie tes 4 lignes, avec « Tu ne promets jamais de remboursement ».
+</div>
+
+## Étape 5 · Teste-le sans rien réexpliquer (2 min)
+
+Le vrai test : Lumen sait-il son métier sans que tu le redises ?
+
+<div class="box atoi" markdown="1">
+**À toi :** n'explique rien. Envoie seulement le message du client :
+
+> Bonjour, j'ai commandé une bougie figue il y a 10 jours, toujours rien. C'est normal ? Marc
+
+C'est réussi si la réponse a les 2 parties, signée Léa, sans date de livraison promise.
 </div>
 
 <div class="box corrige" markdown="1">
-Exemple pour un prof de guitare : « Métier : pour Sam, prof de guitare fictif. Message d'élève collé -> réponse prête. »
+**Bonne réponse (exemple) :**
+
+1) Marc n'a pas reçu sa bougie et veut savoir où elle en est.
+
+2) « Bonjour Marc, désolée pour l'attente. Je regarde votre commande et je reviens vers vous. Belle journée, Léa »
 </div>
 
-## Étape 3 · Premier test (2 min)
-
-<div class="box atoi" markdown="1">
-**À toi.** Envoie : « Message reçu : "Vous livrez en Belgique ? Et vous faites -20 % ?" » (adapte à ton projet).
-
-**C'est réussi si :** la réponse ne promet ni promo ni délai.
-</div>
-
-<div class="box corrige" markdown="1">
-« Bonjour ! Je vérifie la livraison en Belgique et je reviens vers vous. Pas de code promo en ce moment. Léa »
-</div>
-
-<div class="pieuvre" data-reaction="reussite" markdown="1">
-« La description tient. Testons-la. »
-</div>
-
-<div class="fin" markdown="1">
-## En résumé
-
-- Description = toujours vrai. Message = aujourd'hui.
-- 6 rubriques. Le modèle suffit.
-
-**Leçon 3 : 5 cas de test.**
-</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Lumen connaît son métier par cœur. Sa description (son ADN, chez OctoBoss) est en place.</div>
