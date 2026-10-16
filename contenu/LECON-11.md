@@ -58,7 +58,7 @@ C'est réussi si tu y trouves le résumé de l'email de Nora et un brouillon, sa
 
 ## Étape 4 · Ajoute un point du soir (3 min)
 
-L'heure suit ton réglage **Timezone** : Settings -> General -> Timezone (à vérifier sur ton écran). Vérifie-le avant.
+L'heure suit ton réglage **Timezone** : Settings -> Bot -> Timezone. Vérifie-le avant.
 
 Une routine neuve attend sa première heure. Pour la voir tout de suite, tu la testes. Un test consomme aussi de l'usage.
 

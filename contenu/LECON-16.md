@@ -6,7 +6,7 @@ Objectif : à la fin, ton bot cherche des prospects chaque matin à 6 h, et tu l
 
 Une **routine** tourne seule, à heure fixe, même app fermée. Une bonne demande dit : quand, quoi chercher, quoi rendre, ne rien poster, quoi faire si ça échoue.
 
-Chaque exécution consomme de l'usage. Une fois par jour, c'est raisonnable. L'heure suit ton réglage **Timezone** : Settings -> General -> Timezone (à vérifier sur ton écran).
+Chaque exécution consomme de l'usage. Une fois par jour, c'est raisonnable. L'heure suit ton réglage **Timezone** : Settings -> Bot -> Timezone.
 
 <div class="box atoi" markdown="1">
 **À toi :** copie ce modèle dans tes Notes. Change l'heure si tu veux.
