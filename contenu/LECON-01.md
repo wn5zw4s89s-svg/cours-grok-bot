@@ -69,4 +69,4 @@ C'est réussi si sa réponse contient les 2 parties : ce que veut Sophie, et un 
 2) « Bonjour Sophie, désolée pour la bougie ! Pouvez-vous m'envoyer une photo ? Je reviens vers vous avec une solution. Belle journée, Léa »
 </div>
 
-<div class="pieuvre" data-reaction="croissance" markdown="1">Bravo ! Tu as créé Lumen, tu lui as donné un métier et il a répondu à un premier message test. Bot 1 sur 8 (tentacule 1 sur 8). Bientôt, un bot comme Lumen travaillera pendant que tu dors : tu le construis au projet 3, « Prospection de nuit » (leçons 13 à 18). Prochaine étape : la leçon 2.</div>
+<div class="pieuvre" data-reaction="croissance" markdown="1">Bravo ! Tu as créé Lumen, tu lui as donné un métier et il a répondu à un premier message test. Bot 1 sur 8 (tentacule 1 sur 8). Bientôt, un bot comme Lumen travaillera pendant que tu dors : tu le construis au projet 3, « Un bot qui prospecte la nuit » (leçons 13 à 18). Prochaine étape : la leçon 2.</div>

@@ -109,9 +109,6 @@ function retouches(src, num) {
   });
   if (num === 1) {
     t = t.replace(/\s*\(?ta première tentacule\)?/gi, '');
-    // Affichage : aligner le teaser projet 3 sur le nom du menu (sources intactes)
-    t = t.replace(/«\s*Prospection de nuit\s*»/g, '« Un bot qui prospecte la nuit »');
-    t = t.replace(/Prospection de nuit/g, 'Un bot qui prospecte la nuit');
   }
   return t;
 }

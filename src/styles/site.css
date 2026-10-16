@@ -481,3 +481,8 @@ details.solution>summary{list-style:none}
 details.solution .box.corrige{overflow:hidden}
 details.solution:not([open]) .box.corrige{display:none}
 details.solution[open] .box.corrige{animation:none;transform:none}
+
+/* Mode développement (DEV_TOUT_OUVERT) */
+.dev-etapes{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.dev-etape{min-width:36px;min-height:36px;border-radius:8px;border:1px solid currentColor;background:transparent;color:inherit;opacity:.75;font:inherit;font-size:14px}
+.dev-note{text-align:center;font-size:12px;opacity:.55;margin:16px 0 24px}

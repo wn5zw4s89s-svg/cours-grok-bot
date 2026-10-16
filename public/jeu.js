@@ -87,8 +87,9 @@
     const ls = lecNiv(n);
     return ls.length > 0 && ls.every((l) => d.lecons[l.id]);
   };
+  const DEV = !!M.dev;
   const debloquee = (d, i) => {
-    if (i <= 0) return true;
+    if (DEV || i <= 0) return true;
     if (d.lecons[L[i].id]) return true;
     if (!d.lecons[L[i - 1].id]) return false;
     return true;
@@ -275,7 +276,7 @@
       return $('li', { class: `step${actuelle ? ' cur' : ''}${fait ? ' done' : ''}` }, $('span', { class: cls }, fait ? '✓' : String(l.num)),
         ok ? $('a', { class: 'step-lien', href: `${M.base}lecon/${l.id}/` }, t) : $('span', { class: 'step-txt' }, t));
     });
-    const q = M.quiz.find((x) => x.niveau === cur.id), quizOk = q && ls.every((l) => d.lecons[l.id]), fini = nivFini(d, cur.id);
+    const q = M.quiz.find((x) => x.niveau === cur.id), quizOk = q && (DEV || ls.every((l) => d.lecons[l.id])), fini = nivFini(d, cur.id);
     items.push($('li', { class: `step${quizOk && !fini ? ' cur' : ''}` }, $('span', { class: `node${fini ? ' done' : quizOk ? ' cur' : ' lock'}` }, '✓'),
       quizOk ? $('a', { class: 'step-lien', href: `${M.base}quiz/${q.slug}/` }, 'Quiz : vérifie ce que tu as appris') : $('span', { class: 'step-txt' }, 'Quiz : vérifie ce que tu as appris')));
     host.replaceChildren(...items);
@@ -344,7 +345,7 @@
 
     UNITES.forEach((n) => {
       const ls = lecNiv(n.id), f = ls.filter((l) => d.lecons[l.id]).length, fini = ls.length > 0 && f === ls.length;
-      const ouvert = cur ? n.id <= cur.id : true;
+      const ouvert = DEV || (cur ? n.id <= cur.id : true);
       document.querySelectorAll(`[data-niveau-bloc="${n.id}"]`).forEach((b) => {
         b.open = !!(cur && n.id === cur.id);
         b.classList.toggle('verrouille', !ouvert && !fini);
@@ -372,7 +373,7 @@
       }
     }));
     document.querySelectorAll('[data-quiz-lien]').forEach((a) => {
-      const n = +a.dataset.quizNiv, ok = nivFini(d, n), q = d.quiz[a.dataset.quizLien];
+      const n = +a.dataset.quizNiv, ok = DEV || nivFini(d, n), q = d.quiz[a.dataset.quizLien];
       a.classList.toggle('mute', !ok);
       a.textContent = ok ? (q ? `Quiz ✓ ${q.meilleur}/${q.total}` : 'Quiz →') : 'Quiz 🔒';
     });
@@ -462,7 +463,7 @@
     const q = JSON.parse(el.dataset.quiz), N = q.questions.length, niv = +el.dataset.quizNiveau;
     const nb = +el.dataset.nb || lecNiv(niv).length;
     const d0 = etat();
-    if (!nivFini(d0, niv)) {
+    if (!DEV && !nivFini(d0, niv)) {
       const v = document.querySelector('[data-quiz-verrou]');
       v.hidden = false;
       const faites = lecNiv(niv).filter((l) => d0.lecons[l.id]).length;
@@ -586,6 +587,12 @@
       secs[n].querySelectorAll('.pieuvre').forEach((p) => p._o && reagir(p));
     };
     art.classList.add('pas-a-pas');
+    if (DEV && secs.length > 1) {
+      // Mode développement : numéros d'étape cliquables
+      const nav = $('nav', { class: 'dev-etapes', 'aria-label': 'Aller à une étape' });
+      secs.forEach((_, i) => { const b = $('button', { type: 'button', class: 'dev-etape' }, String(i + 1)); b.addEventListener('click', () => show(i)); nav.append(b); });
+      art.querySelector('.lh')?.append(nav);
+    }
     nxt.addEventListener('click', () => show(k + 1));
     show(0);
   });
@@ -621,6 +628,7 @@
       bq.classList.add('a-copier'); bq.after(b);
     });
   });
+  if (DEV) document.body.append($('p', { class: 'dev-note' }, 'Mode développement : tout est ouvert'));
   // Liste des leçons (feuille)
   const sheet = document.querySelector('[data-sheet]');
   document.querySelector('[data-sheet-open]')?.addEventListener('click', () => { sheet.hidden = false; document.body.classList.add('fige'); });

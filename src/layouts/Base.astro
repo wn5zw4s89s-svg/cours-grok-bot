@@ -3,6 +3,7 @@ import '../styles/site.css';
 import site from '../data/site.json';
 import octo from '../data/octoboss.json';
 import { clair } from '../lib/clair.js';
+import { DEV_TOUT_OUVERT } from '../config.js';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 const jsv = createHash('sha1').update(readFileSync('public/jeu.js')).digest('hex').slice(0, 8);
@@ -11,6 +12,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const meta = {
   base,
   build: jsv,
+  dev: DEV_TOUT_OUVERT,
   octo,
   niveaux: site.niveaux,
   projets: site.projets,
