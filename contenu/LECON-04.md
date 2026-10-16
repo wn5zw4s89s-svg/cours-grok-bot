@@ -18,7 +18,7 @@ C'est réussi si tu peux dire en une phrase ce qui ne va pas.
 **Exemple :** « Lumen a répondu "15 €" alors que Léa (qui vend des bougies) ne lui a jamais donné de prix. »
 </div>
 
-## Étape 2 · Écris la règle (2 min)
+## Étape 2 · Lis la règle (2 min)
 
 Une bonne règle dit ce qui est interdit, et quoi faire à la place.
 

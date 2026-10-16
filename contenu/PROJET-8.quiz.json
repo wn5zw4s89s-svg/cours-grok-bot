@@ -1,6 +1,6 @@
 {
   "id": "PROJET-8",
-  "titre": "Projet 8 : Ta plateforme de camping 100 % IA (tentacule 8)",
+  "titre": "Projet 8 : Ta plateforme de camping 100 % IA",
   "questions": [
     {
       "id": "q1",
@@ -8,18 +8,18 @@
       "choix": [
         "Faire pareil, en plus petit",
         "Un angle : niche, région, promesse",
-        "Baisser tous les prix"
+        "Plus d'annonces qu'eux"
       ],
       "bonne_reponse": 1,
-      "explication": "Un angle qu'ils ne couvrent pas chez toi."
+      "explication": "Un angle qu'ils ne couvrent pas chez toi. Le volume, ils l'ont déjà."
     },
     {
       "id": "q2",
       "question": "Qui écrit aux hôtes ?",
       "choix": [
-        "Recruteur",
+        "Recruteur, avec ton accord",
         "Toi, avec les brouillons du bot",
-        "Chef"
+        "Chef, après relecture"
       ],
       "bonne_reponse": 1,
       "explication": "Aucun bot n'écrit à un hôte."
@@ -28,9 +28,9 @@
       "id": "q3",
       "question": "Quand une annonce peut-elle être publiée ?",
       "choix": [
-        "Dès que le bot l'a écrite",
+        "Dès que le bot l'a relue",
         "Après l'accord écrit de l'hôte",
-        "Jamais"
+        "Après un accord oral de l'hôte"
       ],
       "bonne_reponse": 1,
       "explication": "Rien d'inventé, tout validé par écrit."
@@ -40,11 +40,11 @@
       "question": "Pourquoi Netlify Free plutôt que Vercel Hobby ?",
       "choix": [
         "Vercel Hobby interdit l'usage commercial",
-        "Netlify est plus joli",
+        "Netlify Free n'a aucune limite",
         "Vercel ne marche pas sur iPhone"
       ],
       "bonne_reponse": 0,
-      "explication": "Netlify autorise les projets commerciaux sur son offre gratuite, avec un plafond de crédits."
+      "explication": "Vercel Hobby est réservé au non commercial. Netlify autorise le commercial en gratuit, avec un plafond de crédits."
     },
     {
       "id": "q5",
@@ -52,7 +52,7 @@
       "choix": [
         "Stripe Connect en réel",
         "Réservation par email ou test Stripe",
-        "Paiement en espèces via le bot"
+        "Un lien de paiement Stripe réel"
       ],
       "bonne_reponse": 1,
       "explication": "Le paiement réel demande un statut."
@@ -61,20 +61,20 @@
       "id": "q6",
       "question": "Que doit faire une plateforme pour les revenus de ses hôtes (DAC7) ?",
       "choix": [
-        "Rien",
+        "Rien, c'est à l'hôte de déclarer",
         "Les informer et déclarer leurs opérations chaque année",
-        "Payer leurs impôts"
+        "Prélever leurs impôts"
       ],
       "bonne_reponse": 1,
-      "explication": "Source : impots.gouv.fr."
+      "explication": "La plateforme informe ses hôtes et déclare. Source : impots.gouv.fr."
     },
     {
       "id": "q7",
       "question": "Un campeur écrit qu'un enfant s'est brûlé. Support répond d'abord…",
       "choix": [
-        "« Désolé pour le désagrément »",
+        "« Désolé pour ce désagrément »",
         "« Appelez le 112 »",
-        "Rien, il attend"
+        "« Je préviens l'hôte tout de suite »"
       ],
       "bonne_reponse": 1,
       "explication": "Urgence : 112 d'abord, puis il te prévient."
@@ -83,23 +83,23 @@
       "id": "q8",
       "question": "Qui peut laisser un avis ?",
       "choix": [
-        "Un bot, pour lancer la plateforme",
+        "Un hôte, sur sa propre annonce",
         "Seulement un campeur qui a séjourné",
-        "N'importe qui"
+        "Tout campeur inscrit"
       ],
       "bonne_reponse": 1,
-      "explication": "Aucun avis inventé, règles publiées."
+      "explication": "Aucun avis inventé ou non vérifié. Règles publiées."
     },
     {
       "id": "q9",
-      "question": "Top 1 % (mode Kraken) : la revue anti-slop, c'est…",
+      "question": "Top 1 % : la revue anti-slop, c'est…",
       "choix": [
-        "Plus d'emojis sur l'accueil",
+        "Relire l'accueil soi-même une fois",
         "Un bot Critique, une grille, des captures avant / après",
-        "Republier sans relire"
+        "Demander au bot de rendre le texte plus pro"
       ],
       "bonne_reponse": 1,
-      "explication": "Accueil : où, pour qui, quand. Pas de promesse vague."
+      "explication": "Une grille et des captures rendent la revue vérifiable. Accueil : où, pour qui, quand."
     }
   ]
 }

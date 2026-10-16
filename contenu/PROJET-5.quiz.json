@@ -1,17 +1,17 @@
 {
   "id": "PROJET-5",
-  "titre": "Projet 5 : 1 photo -> 1 pub TikTok (tentacule 5)",
+  "titre": "Projet 5 : 1 photo -> 1 pub TikTok",
   "questions": [
     {
       "id": "q1",
-      "question": "Pourquoi 3 bots (3 tentacules) plutôt qu'un ?",
+      "question": "Pourquoi 3 bots plutôt qu'un ?",
       "choix": [
-        "C'est plus joli",
+        "Pour aller 3 fois plus vite",
         "Un métier par bot : message, montage, contrôle",
-        "Un bot ne sait pas faire de vidéo"
+        "Un bot seul ne sait pas faire de vidéo"
       ],
       "bonne_reponse": 1,
-      "explication": "Un bot qui fait tout fait tout moyennement."
+      "explication": "Un bot qui fait tout fait tout moyennement. La vitesse n'est pas le but."
     },
     {
       "id": "q2",
@@ -19,10 +19,10 @@
       "choix": [
         "commence par le nom de la marque",
         "dit un problème ou une surprise",
-        "liste les prix"
+        "montre le prix tout de suite"
       ],
       "bonne_reponse": 1,
-      "explication": "Tu as trois secondes. Le problème arrête le pouce."
+      "explication": "Tu as trois secondes. Un problème ou une surprise arrête le pouce. La marque et le prix viennent après."
     },
     {
       "id": "q3",
@@ -30,7 +30,7 @@
       "choix": [
         "Dans une appli de montage sur ton iPhone",
         "En code, sur son ordinateur, au format 9:16",
-        "Il la télécharge sur internet"
+        "À partir d'un modèle TikTok"
       ],
       "bonne_reponse": 1,
       "explication": "Montage en code : photo, zoom, texte, vertical."
@@ -39,9 +39,9 @@
       "id": "q4",
       "question": "Pas de musique fournie. Que fait Monteur ?",
       "choix": [
-        "Il prend un tube au hasard",
+        "Il prend une musique tendance",
         "Il laisse le silence",
-        "Il annule"
+        "Il te demande d'en choisir une sur TikTok"
       ],
       "bonne_reponse": 1,
       "explication": "Musique dont tu as le droit d'usage, ou silence."
@@ -52,10 +52,10 @@
       "choix": [
         "Juge",
         "Monteur",
-        "Personne"
+        "Toi"
       ],
       "bonne_reponse": 1,
-      "explication": "Juge juge. Monteur corrige."
+      "explication": "Juge juge. Monteur corrige. Toi, tu valides."
     },
     {
       "id": "q6",
@@ -70,14 +70,14 @@
     },
     {
       "id": "q7",
-      "question": "La méthode top 1 % (mode Kraken) ?",
+      "question": "La méthode top 1 % ?",
       "choix": [
-        "1 idée, montée vite",
+        "1 idée, retouchée 3 fois",
         "10 idées, 1 gardée par un critique, 3 tours de retouche",
-        "10 vidéos postées"
+        "10 idées, toutes montées et comparées"
       ],
       "bonne_reponse": 1,
-      "explication": "La gagnante vient après la première idée."
+      "explication": "La gagnante vient rarement de la première idée. Monter les 10 coûte trop."
     }
   ]
 }

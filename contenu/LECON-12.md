@@ -14,6 +14,12 @@ Ma réponse -> …
 C'est réussi si tu cites « ravis » ou « à votre entière disposition ».
 </div>
 
+<details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
+
+Deux tics : « ravis de » et « à votre entière disposition ».
+
+</div></details>
+
 ## Étape 2 · Garde la version moyenne (2 min)
 
 La **version moyenne**, c'est la réponse que Lumen écrit avant ta règle de ton. Tu la gardes pour comparer.
@@ -68,10 +74,14 @@ C'est réussi si la nouvelle réponse fait 3 phrases au plus, sans aucun tic de 
 C'est réussi si les 2 réponses sont lisibles.
 </div>
 
-<div class="box attention" markdown="1">
-**Défi X (facultatif).** Poste tes 2 captures sur X, depuis l'app X.  
-Phrase type : « Mon bot a son adresse email. Il trie, il prépare, je valide. Et il n'écrit plus comme un robot. »  
-C'est toi qui postes. Le bot ne poste jamais à ta place.
+<div class="box info" markdown="1">
+**Défi X (facultatif).** Poste tes 2 captures sur X.
+
+Phrase type, à copier :
+
+> Mon bot a son adresse email. Il trie, il prépare, je valide. Et il n'écrit plus comme un robot.
+
+C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 Projet 2 terminé. Badge : **Bureau ouvert**.

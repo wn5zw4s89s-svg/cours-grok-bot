@@ -7,110 +7,110 @@
       "question": "Qu'est-ce qu'un bot ?",
       "choix": [
         "Un assistant à qui tu donnes un métier",
-        "Une appli à télécharger en plus",
-        "Un compte X automatique"
+        "Une appli à installer en plus de Grok Bot",
+        "Un compte X qui publie tout seul"
       ],
       "bonne_reponse": 0,
-      "explication": "Un bot, c'est comme un employé à qui tu écris : tu lui donnes un métier, il le fait."
+      "explication": "Un bot, c'est un assistant à qui tu écris : tu lui donnes un métier, il le fait. Il vit dans l'app Grok Bot et ne publie rien sur X."
     },
     {
       "id": "q2",
       "question": "Sur l'écran d'accueil de l'app, comment crées-tu un bot ?",
       "choix": [
-        "Avec la loupe",
+        "Avec la loupe en haut de l'écran",
         "Avec le + en haut à droite",
         "Avec le rond à tes initiales"
       ],
       "bonne_reponse": 1,
-      "explication": "Le + crée un bot. La loupe cherche. Le rond ouvre ton compte."
+      "explication": "Le + crée un bot. La loupe sert à chercher. Le rond ouvre ton compte."
     },
     {
       "id": "q3",
       "question": "Pourquoi ranger le métier dans la description plutôt que dans un message ?",
       "choix": [
-        "Un message se perd dans la conversation, la description reste",
-        "C'est plus joli",
-        "Le bot ne lit pas les messages"
+        "Un message se perd, la description reste",
+        "Un message coûte plus cher qu'une description",
+        "Le bot ne relit jamais ses anciens messages"
       ],
       "bonne_reponse": 0,
-      "explication": "La description, c'est la fiche de poste. Le bot la relit à chaque fois."
+      "explication": "La description, c'est la fiche de poste : le bot la relit à chaque fois. Un message finit noyé dans la conversation. Le coût n'a rien à voir."
     },
     {
       "id": "q4",
       "question": "Comment vérifies-tu ce que contient la description de Lumen ?",
       "choix": [
-        "Tu devines",
+        "Tu relis toute la conversation depuis le début",
         "Tu lui demandes : « Montre-moi ta description »",
-        "Tu supprimes le bot"
+        "Tu ouvres les réglages de ton iPhone"
       ],
       "bonne_reponse": 1,
-      "explication": "Le plus simple est de demander : il te renvoie le texte enregistré, et tu vois tout de suite s'il manque quelque chose."
+      "explication": "Demander est le plus sûr : il renvoie le texte enregistré. Relire la conversation montre des messages, pas la description. Les réglages de l'iPhone ne la contiennent pas."
     },
     {
       "id": "q5",
       "question": "Qu'est-ce qu'un cas de test ?",
       "choix": [
         "Un faux message de client pour voir comment le bot réagit",
-        "Une mise à jour de l'app",
-        "Un vrai client fâché"
+        "Un vrai message de client que tu transmets au bot",
+        "Une question sur l'app que tu poses au bot"
       ],
       "bonne_reponse": 0,
-      "explication": "Un cas de test est un faux message : tu vois comment le bot réagit avant qu'un vrai client écrive. Au programme : calme, flou, piège, hors sujet, énervé."
+      "explication": "Un cas de test est un faux message : tu vois la réaction du bot avant qu'un vrai client écrive. Calme, flou, piège, hors sujet, énervé."
     },
     {
       "id": "q6",
       "question": "Un client écrit seulement « C'est combien ? ». Bonne réponse de Lumen ?",
       "choix": [
-        "« 15 € »",
-        "Une question : quelle bougie ?",
-        "Aucune réponse"
+        "« Nos bougies coûtent 15 €. »",
+        "« Avec plaisir ! Quelle bougie vous intéresse ? »",
+        "« Je vous envoie le catalogue tout de suite. »"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot ne devine pas et n'invente pas de prix."
+      "explication": "Le client est flou : le bot pose une question. « 15 € » est un prix inventé. Envoyer le catalogue est une promesse : Lumen n'envoie rien lui-même."
     },
     {
       "id": "q7",
       "question": "Quelle règle corrige vraiment un raté ?",
       "choix": [
-        "« Sois prudent. »",
+        "« Sois prudent avec les prix. »",
         "« Tu n'inventes jamais un prix. Si tu ne sais pas, tu poses une question. »",
-        "« Fais de ton mieux. »"
+        "« Fais attention à ne pas te tromper. »"
       ],
       "bonne_reponse": 1,
-      "explication": "Une bonne règle dit l'interdit et quoi faire à la place : le bot sait alors quoi écrire au lieu d'inventer."
+      "explication": "Une bonne règle dit l'interdit et quoi faire à la place. « Sois prudent » et « Fais attention » ne disent pas quoi écrire."
     },
     {
       "id": "q8",
       "question": "Description ou mémoire : « la bougie figue est en rupture » va où ?",
       "choix": [
-        "Dans la description",
-        "Dans la mémoire",
-        "Nulle part"
+        "Dans la description, pour qu'il ne l'oublie pas",
+        "Dans la mémoire, car c'est vrai aujourd'hui seulement",
+        "Dans chaque réponse, en première phrase"
       ],
       "bonne_reponse": 1,
-      "explication": "Vrai aujourd'hui, faux demain : c'est une info du moment."
+      "explication": "Une rupture de stock est une info du moment : elle va en mémoire. La description garde ce qui reste vrai, comme le métier."
     },
     {
       "id": "q9",
       "question": "Qu'est-ce qui fait une description top 1 % ?",
       "choix": [
-        "Des consignes vagues comme « sois poli »",
+        "Des consignes polies comme « sois aimable »",
         "Des chiffres et un exemple de bonne réponse",
-        "Plus d'emojis"
+        "Une description très longue et détaillée"
       ],
       "bonne_reponse": 1,
-      "explication": "« 3 phrases maximum » se vérifie. « Fais court », non."
+      "explication": "« 3 phrases maximum » se vérifie, « sois aimable » non. Une description longue n'est pas plus précise."
     },
     {
       "id": "q10",
       "question": "Qui poste ta capture du défi sur X ?",
       "choix": [
-        "Lumen",
-        "Toi",
-        "Personne"
+        "Lumen, quand tu lui donnes l'accord",
+        "Toi, depuis l'app X",
+        "Grok Bot, une fois le projet terminé"
       ],
       "bonne_reponse": 1,
-      "explication": "C'est toi qui postes : le bot ne poste jamais à ta place."
+      "explication": "C'est toi qui postes, depuis l'app X. Aucun bot ne poste à ta place, même avec ton accord."
     }
   ]
 }

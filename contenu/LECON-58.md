@@ -57,10 +57,14 @@ Critique : « Accueil : emoji + promesse vague. Dis où, pour qui, quand. »
 Accueil, après : « Une nuit sous tente chez l'habitant, sur la véloroute du Val-Test. Réservée ce soir. »
 </div>
 
-<div class="box attention" markdown="1">
-**Défi X final.** Capture avant / après de l'accueil, et le lien de ta plateforme.  
-Phrase type : « J'ai lancé une vraie plateforme de camping chez l'habitant, tenue par 6 bots. Avant la revue anti-slop, après. Voici le lien. »  
-C'est toi qui postes. Le bot ne poste jamais à ta place.
+<div class="box info" markdown="1">
+**Défi X (facultatif).** Poste une capture avant / après de l'accueil, et le lien de ta plateforme.
+
+Phrase type, à copier :
+
+> J'ai lancé une vraie plateforme de camping chez l'habitant, tenue par 6 bots. Avant la revue anti-slop, après. Voici le lien.
+
+C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">

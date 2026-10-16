@@ -34,7 +34,9 @@ Ton premier bot va l'aider. Il s'appellera **Lumen**.
 **À toi :**
 1. Dans l'app, touche le **+** en haut à droite. C'est le bouton qui crée un bot.
 2. Quand l'app te demande un nom, écris : `Lumen`
-3. Pas de champ pour le nom ? Alors écris-le au bot dans la conversation, à la place : `Tu t'appelles Lumen.`
+3. Pas de champ pour le nom ? Copie ce bloc et envoie-le au bot, à la place :
+
+> Tu t'appelles Lumen.
 
 C'est réussi si une conversation avec ton nouveau bot est ouverte.
 </div>

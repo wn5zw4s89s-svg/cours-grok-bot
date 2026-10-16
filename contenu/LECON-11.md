@@ -21,7 +21,7 @@ C'est réussi si tu réponds « non ».
 <div class="box atoi" markdown="1">
 **À toi :** copie ce bloc et envoie-le à Lumen :
 
-> Crée une routine : à chaque email reçu, range-le dans sa pile (À moi, Prêt ou Bruit, vues en leçon 9), résume-le en une ligne, et s'il est Prêt, prépare un brouillon de réponse. Tu n'envoies rien.
+> Crée une routine : à chaque email reçu, range-le dans une pile : À moi (Léa doit décider), Prêt (tu peux préparer la réponse) ou Bruit (rien à faire). Résume-le en une ligne, et s'il est Prêt, prépare un brouillon de réponse. Tu n'envoies rien.
 
 C'est réussi si Lumen confirme la routine.
 </div>
@@ -33,7 +33,7 @@ C'est réussi si Lumen confirme la routine.
 ## Étape 3 · Déclenche-la (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** tu joues Nora, une cliente de Léa. Depuis l'app Mail, envoie cet email à Lumen :
+**À toi :** tu joues Nora, une cliente de Léa. Depuis l'app Mail, envoie cet email à l'adresse de Lumen, réservée en leçon 7 (du type `nom@mail.grokbot.com`). Tu l'as oubliée ? Demande-la à Lumen. Objet libre. Message :
 
 > Bonjour, vous livrez en Belgique ? Nora
 
@@ -45,6 +45,8 @@ C'est réussi si l'email est parti et que tu n'as rien demandé à Lumen.
 ## Étape 4 · Vérifie le résultat (1 min)
 
 <div class="box atoi" markdown="1">
+Une **carte brouillon**, c'est un email que Lumen prépare dans une carte : tu le relis, et c'est toi qui appuies sur envoyer.
+
 **À toi :** ouvre la conversation avec Lumen.
 
 C'est réussi si tu y trouves le résumé de l'email de Nora et une carte brouillon, sans l'avoir demandé.

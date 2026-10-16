@@ -23,7 +23,7 @@ C'est réussi si tu réponds « 3 phrases maximum ».
 <div class="box atoi" markdown="1">
 **À toi :** Lucas, un client de Léa, a écrit. Copie ce bloc en entier et envoie-le à Lumen :
 
-> Ne change pas ta description. Réponds deux fois à ce client. Version A : comme si ta description disait seulement « Tu aides Léa avec ses clients. Sois poli. ». Version B : avec ta vraie description.
+> Ne change pas ta description. Réponds deux fois à ce client. Version A : comme si ta description disait seulement « Tu aides Léa avec ses clients. Sois poli. » Version B : avec ta vraie description.
 >
 > Client : « Bonjour, ma bougie est arrivée sans couvercle. Lucas »
 
@@ -56,7 +56,7 @@ C'est réussi si Lumen confirme l'ajout.
 **Exemple de réponse :** « C'est ajouté à la fin de ma description. »
 </div>
 
-## Étape 4 · Le test final (2 min)
+## Étape 4 · Fais le test final (2 min)
 
 <div class="box atoi" markdown="1">
 **À toi :** Nadia, une cliente de Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :
@@ -74,7 +74,7 @@ C'est réussi si la réponse fait 3 phrases maximum, vouvoie, est signée Léa e
 2) « Bonjour Nadia, je suis désolée pour cette attente. Je regarde votre commande et je reviens vers vous. Léa »
 </div>
 
-## Étape 5 · Montre-le sur X (2 min)
+## Étape 5 · Montre-le sur X (facultatif, 2 min)
 
 <div class="box atoi" markdown="1">
 **À toi :** fais une capture d'écran des réponses A et B de l'étape 2.
@@ -82,10 +82,14 @@ C'est réussi si la réponse fait 3 phrases maximum, vouvoie, est signée Léa e
 C'est réussi si les 2 réponses sont lisibles sur ta capture.
 </div>
 
-<div class="box attention" markdown="1">
-**Défi X.** Poste ta capture A / B sur X, depuis l'app X.  
-Phrase type : « Mon premier bot. Même client, deux descriptions. A : moyenne. B : top 1 %. »  
-C'est toi qui postes. Le bot ne poste jamais à ta place.
+<div class="box info" markdown="1">
+**Défi X (facultatif).** Poste ta capture A / B sur X.
+
+Phrase type, à copier :
+
+> Mon premier bot. Même client, deux descriptions. A : moyenne. B : top 1 %.
+
+C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 Projet 1 terminé. Badge : **Premier bot**.

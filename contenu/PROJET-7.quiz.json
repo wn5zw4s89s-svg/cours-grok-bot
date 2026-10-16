@@ -1,17 +1,17 @@
 {
   "id": "PROJET-7",
-  "titre": "Projet 7 : Ta boîte en 3 jours, 100 % bots (tentacule 7)",
+  "titre": "Projet 7 : Ta boîte en 3 jours, 100 % bots",
   "questions": [
     {
       "id": "q1",
       "question": "Que fait le chef d'orchestre ?",
       "choix": [
-        "Tout le travail",
+        "Il fait le travail le plus important",
         "Il découpe et confie chaque étape à un seul spécialiste",
-        "Il poste sur X"
+        "Il relit tout à la fin"
       ],
       "bonne_reponse": 1,
-      "explication": "Le chef découpe. Il ne fait pas."
+      "explication": "Le chef découpe et confie. Il ne fait pas lui-même."
     },
     {
       "id": "q2",
@@ -19,21 +19,21 @@
       "choix": [
         "Je reçois de / Je rends à",
         "Prix / Délai",
-        "Couleur / Police"
+        "Ton / Longueur"
       ],
       "bonne_reponse": 0,
-      "explication": "Sinon chacun te répond à toi."
+      "explication": "Sans « Je reçois de / Je rends à », chacun te répond à toi au lieu de passer le relais."
     },
     {
       "id": "q3",
       "question": "Un bot écrit à un autre bot. Que se passe-t-il ?",
       "choix": [
-        "Rien, impossible",
+        "Rien : un bot ne lit pas un autre bot",
         "L'autre se réveille, fait la tâche, répond plus tard",
-        "Tu dois copier-coller"
+        "L'autre répond tout de suite, en direct"
       ],
       "bonne_reponse": 1,
-      "explication": "Les bots se passent le travail, et tu vois le relais."
+      "explication": "Les bots se passent le travail, et tu vois le relais. La réponse arrive plus tard, pas en direct."
     },
     {
       "id": "q4",
@@ -41,10 +41,10 @@
       "choix": [
         "+ puis New Group Chat",
         "Le rond à tes initiales",
-        "Impossible sur iPhone"
+        "Depuis la conversation d'un bot"
       ],
       "bonne_reponse": 0,
-      "explication": "De 2 à 6 bots."
+      "explication": "+ puis New Group Chat (libellé affiché en anglais, à vérifier sur ton écran). De 2 à 6 bots."
     },
     {
       "id": "q5",
@@ -52,29 +52,29 @@
       "choix": [
         "Dans le groupe",
         "Dans la conversation du bot, en tête-à-tête",
-        "Nulle part"
+        "Dans ton app Mail"
       ],
       "bonne_reponse": 1,
       "explication": "Brouillons et approbations ne s'affichent pas dans un groupe."
     },
     {
       "id": "q6",
-      "question": "Une bonne routine (un réflexe) d'équipe…",
+      "question": "Une bonne routine d'équipe…",
       "choix": [
-        "écoute tout",
+        "écoute tout, pour ne rien rater",
         "appartient à un seul bot, avec un but précis",
-        "tourne toutes les minutes"
+        "est partagée par tous les bots"
       ],
       "bonne_reponse": 1,
-      "explication": "Une routine trop large fait du bruit et consomme de l'usage."
+      "explication": "Une routine trop large fait du bruit et consomme de l'usage. Un seul bot, un seul but."
     },
     {
       "id": "q7",
-      "question": "Top 1 % (mode Kraken) : pourquoi une skill « goût maison » ?",
+      "question": "Top 1 % : pourquoi une skill « goût maison » ?",
       "choix": [
-        "Pour que chaque bot ait son style",
+        "Pour que chaque bot garde son style",
         "Pour un seul style, partagé par toute l'équipe",
-        "Pour poster plus vite"
+        "Pour que les bots écrivent plus vite"
       ],
       "bonne_reponse": 1,
       "explication": "Tu corriges une fois, toute l'équipe suit."

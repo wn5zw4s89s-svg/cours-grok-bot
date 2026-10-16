@@ -21,17 +21,9 @@ C'est réussi si tu vois ta conversation de la leçon 1, avec la réponse à Sop
 Une bonne description tient en 4 lignes : qui il aide, ce qu'il fait, ce qu'il rend, ce qu'il ne fait jamais.
 
 <div class="box atoi" markdown="1">
-**À toi :** lis ces 4 lignes.
+**À toi :** lis la description de Lumen dans le bloc de l'étape 3, juste en dessous. Ne l'envoie pas encore.
 
-> Tu es Lumen. Tu aides Léa, qui fabrique et vend des bougies.
->
-> Quand Léa te colle un message de client, tu réponds en 2 parties : 1) ce que veut le client, en une phrase ; 2) une réponse courte et polie qu'elle peut envoyer, signée Léa.
->
-> Tu ne promets jamais de remboursement, de renvoi ou de date : tu écris « Je reviens vers vous ».
->
-> Tu n'envoies jamais rien toi-même.
-
-C'est réussi si tu retrouves les 4 lignes : qui, quoi, ce qu'il rend, ce qu'il ne fait jamais.
+C'est réussi si tu y retrouves les 4 lignes : qui, quoi, ce qu'il rend, ce qu'il ne fait jamais.
 </div>
 
 ## Étape 3 · Demande-lui de l'enregistrer (2 min)
@@ -71,7 +63,7 @@ C'est réussi si Lumen te renvoie tes 4 lignes, avec « Tu ne promets jamais de 
 Le vrai test : Lumen sait-il son métier sans que tu le redises ?
 
 <div class="box atoi" markdown="1">
-**À toi :** Marc, un client de Léa, écrit ce message. Démarre une nouvelle conversation avec Lumen. Si tu ne trouves pas comment, reste dans la conversation actuelle. N'explique rien. Envoie seulement le message du client :
+**À toi :** Marc, un client de Léa, écrit ce message. Ouvre une nouvelle conversation avec Lumen : reviens à l'accueil, touche Lumen, puis le bouton de nouvelle conversation (à vérifier sur ton écran). N'explique rien. Copie ce bloc et envoie-le :
 
 > Bonjour, j'ai commandé une bougie figue il y a 10 jours, toujours rien. C'est normal ? Marc
 

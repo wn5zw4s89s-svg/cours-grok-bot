@@ -193,7 +193,29 @@ function peekDefiX(lines, start) {
     if (lines[i].trim()) buf.push(lines[i]);
     i++;
   }
-  return /\*\*D[ée]fi\s*X\.?\*\*/i.test(buf.join('\n')) || /^D[ée]fi\s*X\b/i.test(buf.join('\n').trim());
+  return /\*\*D[ée]fi\s*X\b/i.test(buf.join('\n')) || /^D[ée]fi\s*X\b/i.test(buf.join('\n').trim());
+}
+
+// Typographie française (affichage) : espace insécable avant % : ; ? ! » et après «, et dans « 18 h ».
+// Jamais dans <code>, <pre>, <blockquote> (texte copié), ni dans les attributs.
+const NNBSP = '\u202F', NBSP = '\u00A0';
+export function typoTexte(t) {
+  return String(t)
+    .replace(/[ \u00A0\u202F]+([;?!%])/g, `${NNBSP}$1`)
+    .replace(/[ \u00A0\u202F]+(:)(?=\s|$|<|[)»”])/g, `${NBSP}$1`)
+    .replace(/[ \u00A0\u202F]+»/g, `${NNBSP}»`)
+    .replace(/«[ \u00A0\u202F]+/g, `«${NNBSP}`)
+    .replace(/(\d)[ \u00A0\u202F]+(h|min)\b/g, `$1${NBSP}$2`)
+    .replace(/(\d)[ \u00A0\u202F]+(€|%)/g, `$1${NNBSP}$2`);
+}
+export function typoHtml(html) {
+  let prot = 0;
+  return html.split(/(<[^>]+>)/).map((tok) => {
+    const m = tok.match(/^<(\/?)(code|pre|blockquote|script|style)\b/i);
+    if (m) { prot += m[1] ? -1 : 1; if (prot < 0) prot = 0; return tok; }
+    if (tok.startsWith('<') || prot) return tok;
+    return typoTexte(tok);
+  }).join('');
 }
 
 function transformer(src, id) {
@@ -206,7 +228,7 @@ function transformer(src, id) {
   }
   const out = [];
   const stack = [];
-  let skip = 0;
+  let skip = 0, enDefi = 0, enAtoi = 0, aReponse = false;
   for (let li = 0; li < lines.length; li++) {
     const l = lines[li];
     const open = l.match(/^\s*<div([^>]*)>\s*$/);
@@ -220,29 +242,51 @@ function transformer(src, id) {
         stack.push('SKIP'); skip++;
       } else {
         // attention + Défi X -> box defi (défi partageable sur X)
-        if (cls.includes('attention') && peekDefiX(lines, li)) {
-          attrs = attrs.replace(/\battention\b/, 'defi');
+        if (cls.includes('box') && !cls.includes('atoi') && peekDefiX(lines, li)) {
+          // Défi X : une seule carte « defi », quelle que soit la classe d'origine (attention, info…)
+          attrs = attrs.replace(/class="[^"]*"/, 'class="box defi"');
+          enDefi = stack.length + 1;
         }
+        if (cls.includes('atoi')) { enAtoi = stack.length + 1; aReponse = false; }
         stack.push('</div>');
         out.push('', `<div${attrs}>`, '');
       }
       continue;
     }
     if (/^\s*<\/div>\s*$/.test(l) && stack.length) {
+      if (enDefi === stack.length) enDefi = 0;
+      if (enAtoi === stack.length) enAtoi = 0;
       const c = stack.pop();
       if (c === 'SKIP') { skip--; continue; }
       if (!skip) out.push('', c, '');
       continue;
     }
+    if (!skip && enDefi) {
+      // Défi X : la phrase type devient un message à copier (bouton COPIER) — texte inchangé.
+      const pm = l.match(/^(\s*Phrase type\s*:)\s*«\s*(.+?)\s*»\s*$/);
+      if (pm) { out.push(pm[1], '', `> ${pm[2]}`, ''); continue; }
+    }
+    if (!skip && enAtoi) {
+      // Exercice avec « Ma réponse → … » : la réponse attendue (C'est réussi si…) est cachée.
+      if (/^\s*Ma réponse\s*(→|->|:)/i.test(l)) { aReponse = true; out.push('', '<div class="ma-reponse" data-ma-reponse></div>', ''); continue; }
+      if (aReponse && /^\s*C'est réussi si\b/i.test(l)) {
+        // Si le contenu donne déjà son corrigé juste après l'exercice, on ne double pas.
+        let j = li + 1; while (j < lines.length && !/^\s*<\/div>\s*$/.test(lines[j])) j++;
+        j++; while (j < lines.length && !lines[j].trim()) j++;
+        if (/^\s*<details[^>]*class="[^"]*solution/.test(lines[j] || '')) continue;
+        out.push('', '<details class="solution"><summary>Voir la réponse</summary><div class="box corrige">', '', l, '', '</div></details>', '');
+        continue;
+      }
+    }
     if (!skip) out.push(l);
   }
-  let html = marked.parse(out.join('\n'));
+  let html = typoHtml(marked.parse(out.join('\n'))).replace(/\s*markdown="1"/g, '');
   const used = [...FICHIERS].filter((f) => html.includes(`fichiers/${f}`) || src.includes(f));
   if (used.length) {
     const lis = used.map((f) => `<a class="dl" href="${BASE}fichiers/${f}" download>${f}</a>`).join(' ');
     html = `<p class="telechargements">${lis}</p>` + html;
   }
-  return { title, html };
+  return { title: typoTexte(title), html };
 }
 
 const mapPathProjets = path.join(SRC, 'projets.json');
@@ -302,9 +346,10 @@ for (const f of files) {
   const rc = raw.match(/<!-- RECAP:\d+:([\s\S]*?) -->/);
   if (rc && rc[1]) recap = rc[1].trim();
   if (!recap && objm) recap = objm[1];
+  recap = typoTexte(recap);
   // Badge : lu sur le fichier brut (avant retouches), formats L6/L12/L18/L24…
   const bm = extraireBadge(fs.readFileSync(path.join(SRC, f), 'utf8'));
-  dispo.set(num, { id, num, title, court, html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap, objectif: objm ? objm[1] : '', disponible: true, _badge: bm });
+  dispo.set(num, { id, num, title, court: typoTexte(court), html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap, objectif: objm ? typoTexte(objm[1]) : '', disponible: true, _badge: bm });
 }
 
 let quizFiles = files
@@ -325,7 +370,8 @@ const quiz = quizFiles.sort().map((p) => {
     }
   });
   const n = parseInt(String(q.id).replace(/\D/g, ''), 10) || 0;
-  if (q.titre) q.titre = nettoyerTitre(q.titre);
+  if (q.titre) q.titre = typoTexte(nettoyerTitre(q.titre));
+  q.questions.forEach((x) => { x.question = typoTexte(x.question); x.choix = x.choix.map(typoTexte); if (x.explication) x.explication = typoTexte(x.explication); });
   return { ...q, slug: String(q.id).toLowerCase(), niveau: n, projet: n };
 });
 const quizParId = Object.fromEntries(quiz.map((q) => [q.niveau, q.id]));
@@ -347,8 +393,8 @@ const projets = Object.keys(mapRaw).map(Number).sort((a, b) => a - b).map((id) =
   if (!badge) badge = badgesReadme[id] || null;
   return {
     id,
-    nom: nom || `${labelUnite} ${id}`,
-    badge: badge || `Fin du ${labelUnite.toLowerCase()} ${id}`,
+    nom: typoTexte(nom || `${labelUnite} ${id}`),
+    badge: typoTexte(badge || `Fin du ${labelUnite.toLowerCase()} ${id}`),
     lecons,
     quizId: quizParId[id] || null,
     total: lecons.length,

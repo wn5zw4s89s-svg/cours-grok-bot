@@ -486,3 +486,30 @@ details.solution[open] .box.corrige{animation:none;transform:none}
 .dev-etapes{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
 .dev-etape{min-width:36px;min-height:36px;border-radius:8px;border:1px solid currentColor;background:transparent;color:inherit;opacity:.75;font:inherit;font-size:14px}
 .dev-note{text-align:center;font-size:12px;opacity:.55;margin:16px 0 24px}
+
+/* nuit8 */
+.conf.derriere{z-index:1}
+.quiz-page .q-fin{position:relative;z-index:2;background:var(--card,#0F2A30);border-radius:18px}
+.etoiles-legende{font-size:14px;line-height:1.4;color:var(--m);margin:4px 0 18px}
+.q-rates{text-align:left;margin:0 0 20px}
+.q-rates h2{font-size:18px;margin:0 0 8px}
+.q-rates ol{margin:0;padding-left:22px}
+.q-rates li{margin:0 0 12px}
+.q-rate-q{font-weight:700}
+.q-rate-r{color:var(--ok,#3DDC97)}
+.lien,.confirme .lien{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:10px 20px;font-size:17px;font-weight:700}
+.confirme .lien{display:flex}
+.lh{min-height:56px}
+.lh .retour{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;font-size:24px}
+.lh .bar{height:12px;border-radius:99px}
+.lh .bar>i{border-radius:99px}
+.etape-n{font-size:16px}
+.dev-etapes{gap:8px}
+.dev-etape{min-width:44px;min-height:44px;font-size:16px;font-weight:700;opacity:.9}
+.contenu table{font-size:17px;line-height:1.4}
+.contenu table th,.contenu table td{padding:10px 12px;min-width:9em}
+.box.defi blockquote.a-copier,.box.defi blockquote{margin:10px 0 0}
+.ma-reponse{margin-top:4px}
+.lh{flex-wrap:wrap}.lh .bar{min-width:120px}.lh .dev-etapes{flex-basis:100%;order:9;margin:4px 0 0}
+.conf.derriere{z-index:0}main,.quiz-page{position:relative;z-index:1}
+.box.defi blockquote{background:#dfe9e8!important;color:#111!important;border-left:4px solid var(--c,#FF6B5A)}.box.defi blockquote p{color:#111!important}

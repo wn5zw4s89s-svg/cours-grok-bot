@@ -1,14 +1,14 @@
 {
   "id": "PROJET-4",
-  "titre": "Projet 4 : Ta marque en un week-end (tentacule 4)",
+  "titre": "Projet 4 : Ta marque en un week-end",
   "questions": [
     {
       "id": "q1",
       "question": "Un nom libre sur X est-il libre partout ?",
       "choix": [
-        "Oui",
+        "Oui, s'il est libre sur X",
         "Non : vérifie aussi les marques déposées",
-        "Oui si le bot le dit"
+        "Oui, si le bot le confirme"
       ],
       "bonne_reponse": 1,
       "explication": "Le bot regarde X. Les marques déposées se vérifient à part."
@@ -19,7 +19,7 @@
       "choix": [
         "En grand, en plein écran",
         "En petit, comme une photo de profil",
-        "Au nombre de couleurs"
+        "Sur fond blanc uniquement"
       ],
       "bonne_reponse": 1,
       "explication": "Un logo vit en petit. S'il disparaît en petit, il est raté."
@@ -28,12 +28,12 @@
       "id": "q3",
       "question": "Qui fixe le prix de ton offre ?",
       "choix": [
-        "Le bot",
+        "Le bot, d'après les concurrents",
         "Toi",
-        "Personne"
+        "Le bot, avec ton accord"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot n'invente pas de prix."
+      "explication": "Le prix est ta décision. Le bot n'invente pas de prix, même pour t'aider."
     },
     {
       "id": "q4",
@@ -41,10 +41,10 @@
       "choix": [
         "Sur un écran d'ordinateur",
         "Sur la capture téléphone envoyée par le bot",
-        "Tu ne vérifies pas"
+        "Sur le résumé écrit du bot"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot construit sur son ordinateur et t'envoie une capture."
+      "explication": "Le bot construit sur son ordinateur et t'envoie une capture téléphone. Un résumé ne montre pas le rendu."
     },
     {
       "id": "q5",
@@ -52,7 +52,7 @@
       "choix": [
         "Une page de présentation",
         "Un site de vente en ligne",
-        "Un dépôt public"
+        "Une page avec ton email"
       ],
       "bonne_reponse": 1,
       "explication": "GitHub Pages interdit les sites de commerce. Ta page renvoie vers un email."
@@ -61,23 +61,23 @@
       "id": "q6",
       "question": "Un nom de domaine, c'est…",
       "choix": [
-        "Obligatoire",
+        "Obligatoire pour publier",
         "Optionnel, payant, ta décision",
-        "Acheté par le bot"
+        "Offert avec GitHub Pages"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot n'achète jamais rien."
+      "explication": "Un nom de domaine est optionnel et payant. Le bot n'achète jamais rien."
     },
     {
       "id": "q7",
-      "question": "Top 1 % (mode Kraken) : quelle consigne évite le design qui sent l'IA ?",
+      "question": "Top 1 % : quelle consigne évite le design qui sent l'IA ?",
       "choix": [
-        "« Fais moderne et élégant »",
+        "« Fais moderne, élégant et épuré »",
         "3 références précises et des interdits explicites",
-        "Plus d'emojis"
+        "Une couleur et une police imposées"
       ],
       "bonne_reponse": 1,
-      "explication": "Un bot comprend des références et des interdits, pas des adjectifs."
+      "explication": "Un bot comprend des références et des interdits, pas des adjectifs. Une couleur seule ne suffit pas."
     }
   ]
 }

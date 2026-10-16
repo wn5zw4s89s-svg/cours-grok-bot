@@ -53,10 +53,14 @@ Tour 1 : « Ta bougie ne sent rien ? » -> « Elle sent. Vraiment. »
 Tour 3 : 10 s -> 7 s.
 </div>
 
-<div class="box attention" markdown="1">
-**Défi X.** Les deux vidéos l'une après l'autre, ou une capture côte à côte.  
-Phrase type : « 1 photo -> 1 pub TikTok, faite par 3 bots. Avant : la première idée. Après : 10 idées, 1 gagnante, 3 retouches. »  
-C'est toi qui postes. Le bot ne poste jamais à ta place.
+<div class="box info" markdown="1">
+**Défi X (facultatif).** Poste les deux vidéos l'une après l'autre, ou une capture côte à côte.
+
+Phrase type, à copier :
+
+> 1 photo -> 1 pub TikTok, faite par 3 bots. Avant : la première idée. Après : 10 idées, 1 gagnante, 3 retouches.
+
+C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">

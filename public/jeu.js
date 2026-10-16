@@ -148,10 +148,10 @@
     return nouveaux;
   };
 
-  function confetti(n = 48, top = 40) {
+  function confetti(n = 48, top = 40, derriere = false) {
     if (RM) return;
     const c = document.createElement('div');
-    c.className = 'conf';
+    c.className = derriere ? 'conf derriere' : 'conf';
     document.body.appendChild(c);
     const cols = ['#FF6B5A', '#F2FBFA', '#3DDC97', '#FFD25A', '#6E9A9C'];
     let left = n;
@@ -480,7 +480,7 @@
       el.replaceChildren();
       return;
     }
-    const fin = (score) => {
+    const fin = (score, rates = []) => {
       let nouveaux = [];
       ecrire((d) => {
         const p = d.quiz[q.id];
@@ -494,13 +494,22 @@
         }
         nouveaux = syncBadges(d);
       });
-      confetti(score === N ? 64 : 36);
+      confetti(score === N ? 40 : 20, 8, true);
       const r = score / N, et = r === 1 ? 3 : r >= 0.6 ? 2 : r > 0 ? 1 : 0;
+      const seuil2 = Math.ceil(N * 0.6);
       const nextL = L.find((l) => l.niveau === niv + 1);
       const actions = [
         $('div', { class: 'etoiles' }, '★'.repeat(et) + '☆'.repeat(3 - et)),
         $('div', { class: 'gros-score' }, `${score}/${N}`),
+        $('p', { class: 'etoiles-legende' }, `★ = au moins 1 bonne réponse · ★★ = ${seuil2}/${N} ou plus · ★★★ = ${N}/${N}, sans faute`),
       ];
+      if (rates.length) {
+        actions.push($('div', { class: 'q-rates' },
+          $('h2', {}, rates.length > 1 ? `Tes ${rates.length} erreurs` : 'Ton erreur'),
+          $('ol', {}, ...rates.map((k) => { const x = q.questions[k]; return $('li', {},
+            $('div', { class: 'q-rate-q' }, `Question ${k + 1} · ${x.question}`),
+            $('div', { class: 'q-rate-r' }, `Bonne réponse : ${x.choix[x.bonne_reponse]}`)); }))));
+      }
       if (nouveaux.length) {
         const b = nouveaux[nouveaux.length - 1];
         actions.push($('a', {
@@ -512,7 +521,7 @@
       }
       actions.push(
         nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `Projet ${niv + 1} · Leçon ${nextL.num} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
-        $('p', {}, $('button', { class: 'lien', on: { click: () => jouer(0, 0) } }, 'Rejouer'))
+        $('p', {}, $('button', { class: 'lien', on: { click: () => jouer(0, 0, []) } }, 'Rejouer'))
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));
       octoMood(octos()[0], score / N >= 0.6 ? 'happy' : 'sad');
@@ -522,17 +531,24 @@
     // Compteur visible : même N que le score (questions réellement affichées)
     const qn = $('div', { class: 'etape-n', 'aria-live': 'polite' });
     document.querySelector('.quiz-page .lh')?.append(qn);
-    const jouer = (i, score) => {
-      if (i === N) { qn.hidden = true; document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', 1)); return fin(score); }
+    // Anti « tap fantôme » : un double tap sur « Suivante » ne doit pas répondre à la question suivante.
+    let pret = 0;
+    const jouer = (i, score, rates = []) => {
+      if (i === N) { qn.hidden = true; document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', 1)); return fin(score, rates); }
       const x = q.questions[i], fb = $('div');
+      pret = performance.now() + 450;
+      let fait = false;
       const btns = x.choix.map((c, j) => $('button', { type: 'button', on: { click: () => {
+        if (fait || performance.now() < pret) return;
+        fait = true;
         btns.forEach((b) => (b.disabled = true));
         const ok = j === x.bonne_reponse; btns[x.bonne_reponse].classList.add('bon'); if (!ok) btns[j].classList.add('faux');
-        const s = score + (ok ? 1 : 0);
+        const s = score + (ok ? 1 : 0), r2 = ok ? rates : [...rates, i];
+        let parti = false;
         fb.replaceChildren($('div', { class: 'q-fb' },
           $('div', { class: ok ? 'ok' : 'ko' }, ok ? 'Bien joué, boss ! 🐙' : 'Aïe… ton bot va paniquer.'),
           $('div', {}, x.explication || ''),
-          $('button', { class: 'btn', on: { click: () => jouer(i + 1, s) } }, i + 1 === N ? 'Voir mon score' : 'Suivante →')));
+          $('button', { class: 'btn', on: { click: () => { if (parti) return; parti = true; jouer(i + 1, s, r2); } } }, i + 1 === N ? 'Voir mon score' : 'Suivante →')));
         const o = octos()[0]; octoMood(o, ok ? 'happy' : 'sad'); if (!ok) setTimeout(() => octoMood(o), 1400);
         if (ok) confetti(16, 45);
         fb.firstChild.classList.add(ok ? 'good' : 'bad');
@@ -543,7 +559,7 @@
       el.replaceChildren($('div', { class: 'q-carte' },
         $('div', { class: 'q-texte' }, x.question), $('div', { class: 'q-choix' }, btns), fb));
     };
-    jouer(0, 0);
+    jouer(0, 0, []);
   });
 
   // Mascottes de la page
@@ -618,16 +634,26 @@
     if (ta.value.trim()) ok.textContent = 'Enregistré ✓';
     box.append($('label', { class: 'sr', for: id }, 'Ta phrase'), ta, ok);
   });
+  // « Ma réponse → … » : vrai champ d'écriture (la réponse attendue reste cachée derrière « Voir la réponse »)
+  document.querySelectorAll('.lecon [data-ma-reponse]').forEach((h, n) => {
+    const key = `gb2:ecrit:${h.closest('.lecon').dataset.lecon}:r${n}`, id = `ma-rep-${n}`;
+    const ta = $('textarea', { class: 'ecrit', id, rows: '2', placeholder: 'Ma réponse…', autocomplete: 'off' });
+    try { ta.value = localStorage.getItem(key) || ''; } catch {}
+    const ok = $('span', { class: 'ecrit-ok', 'aria-live': 'polite' }, ta.value.trim() ? 'Enregistré ✓' : '');
+    ta.addEventListener('input', () => { try { localStorage.setItem(key, ta.value); } catch {} ok.textContent = ta.value.trim() ? 'Enregistré ✓' : ''; });
+    h.append($('label', { class: 'sr', for: id }, 'Ma réponse'), ta, ok);
+  });
   // Bouton COPIER sur les messages à envoyer (citation dans un « À toi » qui dit copie/envoie)
   // Consigne seulement (avant le blockquote) : pas de COPIER sur « lis… » (L2 étape 2, L4 règle).
-  document.querySelectorAll('.lecon .box.atoi').forEach((box) => {
+  document.querySelectorAll('.lecon .box.atoi, .lecon .box.defi').forEach((box) => {
     const consigne = (box.innerHTML.split(/<blockquote/i)[0] || '').replace(/<[^>]+>/g, ' ');
-    if (!/copi|envoie|colle|ajoute/i.test(consigne) || /^\s*(À toi :)?\s*lis\b/i.test(consigne.trim())) return;
+    const defi = box.classList.contains('defi');
+    if (!defi && (!/copi|envoie|colle|ajoute/i.test(consigne) || /^\s*(À toi :)?\s*lis\b/i.test(consigne.trim()))) return;
     box.querySelectorAll('blockquote').forEach((bq) => {
       const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
       b.addEventListener('click', async () => {
         const ps = [...bq.querySelectorAll('p')];
-        const txt = (ps.length ? ps.map((x) => x.innerText.trim()).filter(Boolean).join('\n\n') : bq.innerText).trim();
+        const txt = (ps.length ? ps.map((x) => x.innerText.trim()).filter(Boolean).join('\n\n') : bq.innerText).trim().replace(/[\u00A0\u202F]/g, ' ');
         try { await navigator.clipboard.writeText(txt); }
         catch { const r = document.createRange(); r.selectNodeContents(bq); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); s.removeAllRanges(); }
         b.textContent = 'Copié ✓'; b.classList.add('ok');

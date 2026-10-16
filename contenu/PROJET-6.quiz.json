@@ -1,36 +1,36 @@
 {
   "id": "PROJET-6",
-  "titre": "Projet 6 : Ton premier euro gagné avec un bot (tentacule 6)",
+  "titre": "Projet 6 : Ton premier euro gagné avec un bot",
   "questions": [
     {
       "id": "q1",
       "question": "Un bon petit produit digital…",
       "choix": [
         "résout un seul problème",
-        "fait 200 pages",
-        "demande un stock"
+        "couvre tout un sujet",
+        "s'adresse à tout le monde"
       ],
       "bonne_reponse": 0,
-      "explication": "Un problème, un PDF, ton savoir."
+      "explication": "Un problème, un PDF, ton savoir. Trop large, il ne parle à personne."
     },
     {
       "id": "q2",
       "question": "En France, vendre en ligne régulièrement demande…",
       "choix": [
-        "rien sous 100 €",
+        "rien tant que tu vends peu",
         "de déclarer une activité, par exemple en micro-entreprise",
-        "l'accord de ton bot"
+        "seulement un compte de paiement"
       ],
       "bonne_reponse": 1,
-      "explication": "C'est une activité professionnelle. Source : Service Public Entreprendre."
+      "explication": "Vendre régulièrement est une activité professionnelle. Source : Service Public Entreprendre."
     },
     {
       "id": "q3",
       "question": "Qui crée le compte de paiement ?",
       "choix": [
-        "Le bot",
+        "Le bot, avec tes informations",
         "Toi, à ton nom",
-        "Personne"
+        "Le bot, après ton accord"
       ],
       "bonne_reponse": 1,
       "explication": "Le bot n'ouvre aucun compte et ne touche jamais à ton argent."
@@ -41,10 +41,10 @@
       "choix": [
         "1,5 % + 0,25 €",
         "10 % + 0,50 $",
-        "Abonnement mensuel"
+        "2,9 % + 0,30 €"
       ],
       "bonne_reponse": 0,
-      "explication": "Pas d'abonnement. 10 % + 0,50 $, c'est Gumroad."
+      "explication": "1,5 % + 0,25 €, sans abonnement. 10 % + 0,50 $, c'est Gumroad."
     },
     {
       "id": "q5",
@@ -52,29 +52,29 @@
       "choix": [
         "C'est trop lent",
         "GitHub Pages interdit les sites de vente",
-        "Ça ne marche pas sur iPhone"
+        "Le paiement y est payant"
       ],
       "bonne_reponse": 1,
-      "explication": "Le lien de paiement sert de page de vente."
+      "explication": "GitHub Pages interdit le commerce. Le lien de paiement sert de page de vente."
     },
     {
       "id": "q6",
       "question": "Un acheteur demande son PDF. Que fait le bot ?",
       "choix": [
-        "Il l'envoie tout seul",
+        "Il l'envoie dès que la vente apparaît",
         "Il prépare un brouillon avec le PDF, tu vérifies la vente et tu envoies",
-        "Il le rembourse"
+        "Il te demande ton accord, puis l'envoie"
       ],
       "bonne_reponse": 1,
-      "explication": "Chaque envoi passe par ton Send Email."
+      "explication": "Chaque envoi passe par ton Send Email. Le bot ne l'envoie jamais lui-même, même avec ton accord."
     },
     {
       "id": "q7",
-      "question": "Top 1 % (mode Kraken) : version A contre version B, combien de changements ?",
+      "question": "Top 1 % : version A contre version B, combien de changements ?",
       "choix": [
         "Un seul",
-        "Tous à la fois",
-        "Aucun"
+        "Deux, pour gagner du temps",
+        "Tous, pour un vrai contraste"
       ],
       "bonne_reponse": 0,
       "explication": "Un seul changement, sinon tu ne sais pas ce qui a marché."

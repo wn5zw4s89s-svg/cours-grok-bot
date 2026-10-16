@@ -51,10 +51,14 @@ Pièges : « RT pour gagner une bougie », « ma boutique de bougies ouvre », �
 Bot 3 sur 8 (tentacule 3 sur 8). « Je ne rate plus rien. »
 </div>
 
-<div class="box attention" markdown="1">
-**Défi X.** Capture côte à côte des 2 listes, pseudos floutés.  
-Phrase type : « Mon bot prospecte pendant que je dors. Mêmes posts, critères différents : 5 prospects moyens ou 3 vrais acheteurs. #OctoBoss »  
-C'est toi qui postes. Le bot ne poste jamais à ta place.
+<div class="box info" markdown="1">
+**Défi X (facultatif).** Poste une capture côte à côte des 2 listes, pseudos floutés.
+
+Phrase type, à copier :
+
+> Mon bot prospecte pendant que je dors. Mêmes posts, critères différents : 5 prospects moyens ou 3 vrais acheteurs.
+
+C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="fin" markdown="1">

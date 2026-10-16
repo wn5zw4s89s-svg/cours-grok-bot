@@ -65,10 +65,14 @@ Avant : dégradé violet, « ✨ Sublimez votre intérieur ✨ ».
 Après : fond crème, titre en typo machine, « Elles sentent dès la première minute. »
 </div>
 
-<div class="box attention" markdown="1">
-**Défi X.** Capture côte à côte : page avant, page après. Ajoute ton lien.  
-Phrase type : « Ma marque en un week-end, construite par un bot. À gauche, ce que fait l'IA seule. À droite, avec 3 références et 5 interdits. »  
-C'est toi qui postes. Le bot ne poste jamais à ta place.
+<div class="box info" markdown="1">
+**Défi X (facultatif).** Poste une capture côte à côte : page avant, page après. Ajoute ton lien.
+
+Phrase type, à copier :
+
+> Ma marque en un week-end, construite par un bot. À gauche, ce que fait l'IA seule. À droite, avec 3 références et 5 interdits.
+
+C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">

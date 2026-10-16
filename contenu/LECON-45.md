@@ -68,14 +68,20 @@ Skill Goût maison créée par Chef, visible par tous tes bots.
 Après : Plume « Figue sort jeudi. Elle sent dès la première minute. Léa » / Lumen « Je regarde votre commande et je vous donne le jour exact. Léa »
 </div>
 
-<div class="box attention" markdown="1">
-**Défi X : un fil « comment je l'ai fait ».** 5 posts, captures à l'appui :  
-1. « J'ai monté ma boîte en 3 jours avec 4 bots. Voici comment. »  
-2. Jour 1 : capture de l'équipe et des rôles.  
-3. Jour 2 : capture du groupe en action.  
-4. Jour 3 : capture du point du matin.  
-5. Le goût maison : avant / après.  
-Le bot peut rédiger le fil. C'est toi qui postes. Le bot ne poste jamais à ta place.
+<div class="box info" markdown="1">
+**Défi X (facultatif).** Poste un fil « comment je l'ai fait » : 5 posts, captures à l'appui.
+
+Phrase type, à copier :
+
+> J'ai monté ma boîte en 3 jours avec 4 bots. Voici comment.
+
+Puis 4 posts :
+1. Jour 1 : capture de l'équipe et des rôles.
+2. Jour 2 : capture du groupe en action.
+3. Jour 3 : capture du point du matin.
+4. Le goût maison : avant / après.
+
+Le bot peut rédiger le fil. C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
 </div>
 
 <div class="pieuvre" data-reaction="croissance" markdown="1">
