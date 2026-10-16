@@ -1,0 +1,116 @@
+{
+  "id": "PARCOURS-AGENTS",
+  "titre": "Parcours : Fais coder un bot",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Qui écrit le code dans ce parcours ?",
+      "choix": [
+        "Ton bot Grok Bot, dans la conversation",
+        "L'agent de code (agent cloud Cursor)",
+        "Toi, dans l'app Notes de l'iPhone"
+      ],
+      "bonne_reponse": 1,
+      "explication": "L'agent de code écrit le code sur une machine isolée. Ton bot Grok Bot lance et suit. Toi, tu décides et tu vérifies."
+    },
+    {
+      "id": "q2",
+      "question": "Ton iPhone doit-il rester ouvert pendant que l'agent code ?",
+      "choix": [
+        "Oui, sinon le travail s'arrête",
+        "Oui, pour voir chaque ligne de code",
+        "Non : l'agent a sa propre machine dans le cloud"
+      ],
+      "bonne_reponse": 2,
+      "explication": "Les Cloud Agents tournent dans des VM isolées. Ton téléphone peut être fermé."
+    },
+    {
+      "id": "q3",
+      "question": "Que doit contenir un bon brief ?",
+      "choix": [
+        "Le résultat voulu, les contraintes, et « c'est fini quand »",
+        "La liste exacte des lignes à modifier",
+        "Uniquement le nom du dépôt, sans objectif"
+      ],
+      "bonne_reponse": 0,
+      "explication": "On donne le problème et le critère de fin. On ne dicte pas chaque ligne : ça bride l'agent."
+    },
+    {
+      "id": "q4",
+      "question": "Comment Le Bâtisseur construit-il le site de ce cours ?",
+      "choix": [
+        "Il code sur le Mac de Joseph",
+        "Il demande à Léa d'écrire le HTML à la main",
+        "Il rédige un brief, lance un agent de code, vérifie, fait corriger"
+      ],
+      "bonne_reponse": 2,
+      "explication": "Méthode du Bâtisseur : brief, agent de code, vérifier, corriger. (Lot 8 : agent sur son ordinateur ; le parcours élève vise l'agent cloud, brief identique.)"
+    },
+    {
+      "id": "q5",
+      "question": "Un détail manque après le premier passage. Que fais-tu ?",
+      "choix": [
+        "Tu lances un second agent sur le même brief",
+        "Tu envoies un follow-up au même agent, via ton bot",
+        "Tu abandonnes et tu codes toi-même sur l'iPhone"
+      ],
+      "bonne_reponse": 1,
+      "explication": "Le skill code-changes : répondre au même agent pour garder branche et contexte. Launch = nouveau travail seulement."
+    },
+    {
+      "id": "q6",
+      "question": "Quelle erreur réelle a été corrigée sur le site du cours ?",
+      "choix": [
+        "Solution affichée en double (puis retirée)",
+        "Le site facturait 9 € par leçon",
+        "GitHub Pages a été remplacé par un serveur payant dès le jour 1"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Commit f8d00e8 : « Solution en double retirée ». Les deux autres sont fausses."
+    },
+    {
+      "id": "q7",
+      "question": "Pourquoi le commit Cobaye 2 ajoute-t-il un version.json ?",
+      "choix": [
+        "Pour vendre des abonnements",
+        "Pour renommer le dépôt en OctoBoss",
+        "Pour casser le cache navigateur qui montrait une ancienne version"
+      ],
+      "bonne_reponse": 2,
+      "explication": "Cache-Control: no-store sur version.json. Le Cobaye avait vu une vieille copie. Ce n'est ni de la vente ni un renommage."
+    },
+    {
+      "id": "q8",
+      "question": "GitHub Pages convient pour quelle page ?",
+      "choix": [
+        "Une vitrine gratuite sans vente",
+        "Une boutique avec panier et paiement",
+        "Uniquement des sites d'entreprise payants"
+      ],
+      "bonne_reponse": 0,
+      "explication": "Pages est gratuit pour une vitrine publique. La vente en ligne y est interdite (rappel leçons 23 et 49)."
+    },
+    {
+      "id": "q9",
+      "question": "D'où lances-tu l'agent dans ce parcours (iPhone) ?",
+      "choix": [
+        "En installant Xcode sur l'iPhone",
+        "Depuis l'app Grok Bot : tu parles à ton bot, il lance l'agent",
+        "En collant le code dans Messages"
+      ],
+      "bonne_reponse": 1,
+      "explication": "100 % faisable sur iPhone via Grok Bot. Pas d'Xcode. Pas de Messages."
+    },
+    {
+      "id": "q10",
+      "question": "Que décide Joseph avant que tu enchaînes les agents cloud ?",
+      "choix": [
+        "Rien : le cours paie à ta place",
+        "Le prénom du prochain bot de Léa seulement",
+        "Le plan / la limite de dépense Cursor, et le compte GitHub"
+      ],
+      "bonne_reponse": 2,
+      "explication": "Agents cloud = plan payant + limite de dépense. Aucun achat dans le cours. Joseph tranche."
+    }
+  ]
+}

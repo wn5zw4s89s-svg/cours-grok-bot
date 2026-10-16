@@ -82,6 +82,8 @@
   const L = M.lecons, idx = (id) => L.findIndex((l) => l.id === id);
   const UNITES = M.projets || M.niveaux || [];
   const labelU = M.labelUnite || (M.projets ? 'Projet' : 'Niveau');
+  const nomU = (u) => (u.label || `${labelU} ${u.id}`);
+  const uSuiv = (id) => UNITES[UNITES.findIndex((n) => n.id === id) + 1];
   const lecNiv = (n) => L.filter((l) => l.niveau === n);
   const nivFini = (d, n) => {
     const ls = lecNiv(n);
@@ -290,21 +292,21 @@
     const d = etat(), cur = nivCourant(d);
     majStats(d);
     const pill = document.querySelector('[data-niveau-pill], [data-niveau]:not(.quiz)');
-    if (pill) pill.textContent = cur ? `${labelU} ${cur.id} · ${cur.nom}` : 'Cours terminé 🏆';
+    if (pill) pill.textContent = cur ? `${nomU(cur)} · ${cur.nom}` : 'Cours terminé 🏆';
     const nbT = UNITES.filter((n) => nivFini(d, n.id)).length;
     octos().forEach((o) => { if (!o.closest('.gb-badge-pop')) octoGrow(o, nbT); });
     document.querySelectorAll('[data-hero-tag]').forEach((e) => {
       e.textContent = cur ? `Bot ${cur.id} sur ${UNITES.length} (tentacule ${cur.id} sur ${UNITES.length})` : `${UNITES.length} bots sur ${UNITES.length} 🐙`;
     });
-    document.querySelectorAll('[data-projet-nom]').forEach((e) => { e.textContent = cur ? `${labelU} ${cur.id} · ${cur.nom}` : 'Cours terminé'; });
+    document.querySelectorAll('[data-projet-nom]').forEach((e) => { e.textContent = cur ? `${nomU(cur)} · ${cur.nom}` : 'Cours terminé'; });
     document.querySelectorAll('[data-t]').forEach((e) => e.classList.toggle('on', nivFini(d, +e.dataset.t)));
     if (cur) {
       const ls = lecNiv(cur.id), f = ls.filter((l) => d.lecons[l.id]).length;
-      const suiv = UNITES.find((n) => n.id === cur.id + 1);
+      const suiv = uSuiv(cur.id);
       const nxt = ls.find((l) => !d.lecons[l.id]), debut = !L.some((l) => d.lecons[l.id]);
       document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `Projet ${cur.id} sur ${UNITES.length} (${cur.nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
       document.querySelectorAll('[data-next-kick]').forEach((e) => (e.textContent = debut ? 'Ta première leçon · 2\u00a0min par étape' : nxt ? 'Ta prochaine leçon' : 'Dernière étape'));
-      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · Projet ${cur.id}`));
+      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · ${nomU(cur)}`));
       document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
       document.querySelectorAll('[data-t-ligne]').forEach((e) => (e.textContent = `🐙 Bots créés : ${nbT} sur ${UNITES.length} (tentacules ${nbT} sur ${UNITES.length}). 1 projet terminé = 1 bot.`));
       document.querySelectorAll('[data-dire]').forEach((e) => (e.textContent = debut ? 'Salut boss ! Crée ton premier bot en 2\u00a0min.' : nxt ? `Bien joué boss ! ${f} leçon${f > 1 ? 's' : ''} faite${f > 1 ? 's' : ''}. On continue ?` : 'Tout est fait ! Passe le quiz pour gagner ton badge.'));
@@ -497,7 +499,7 @@
       confetti(score === N ? 40 : 20, 8, true);
       const r = score / N, et = r === 1 ? 3 : r >= 0.6 ? 2 : r > 0 ? 1 : 0;
       const seuil2 = Math.ceil(N * 0.6);
-      const nextL = L.find((l) => l.niveau === niv + 1);
+      const nU = uSuiv(niv), nextL = nU && L.find((l) => l.niveau === nU.id);
       const actions = [
         $('div', { class: 'etoiles' }, '★'.repeat(et) + '☆'.repeat(3 - et)),
         $('div', { class: 'gros-score' }, `${score}/${N}`),
@@ -520,7 +522,7 @@
         }, `${b[0]} Partager sur X`));
       }
       actions.push(
-        nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `Projet ${niv + 1} · Leçon ${nextL.num} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
+        nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `${nomU(nU)} · Leçon ${nextL.num} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
         $('p', {}, $('button', { type: 'button', class: 'remarque-lien lien-action', on: { click: () => jouer(0, 0, []) } }, 'Rejouer'))
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));

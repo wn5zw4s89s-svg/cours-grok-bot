@@ -17,14 +17,15 @@ Ouvre le lien que le bot t'a donné (préview, Pages, ou fichiers de la PR). Sur
 C'est réussi si tu as ouvert la page et noté ce qui manque (même si tout est là).
 </div>
 
-## Étape 2 · Vrai cycle : lancer -> vérifier -> corriger (2 min)
+## Étape 2 · Vrai cycle : vérifier -> faire corriger (2 min)
 
-Chez Le Bâtisseur, le site du cours a suivi ce cycle avec Le Cobaye (testeur à l'écran) :
+Exemple réel du Bâtisseur (lot 7, confettis) :
 
-1. **Cobaye 1** (commit `23e54de`) : confirmation avant reset, bouton COPIER, cible du menu à 44 px.
-2. **Cobaye 2** (commit `500d866`) : `version.json` pour casser le cache navigateur, menu à 48 px, solutions visibles.
+1. Brief : confettis **seulement** en fin de projet ou de quiz.
+2. L'agent a annoncé que c'était fait. En relisant, les confettis partaient encore à **chaque** bonne réponse (ils étaient seulement passés derrière le texte — commit `e25d819`).
+3. Correction : les deux lignes concernées, rebuild, publish (commit `36ca47b` : « Confettis seulement en fin de projet ou de quiz »), puis vérif en ligne.
 
-Erreur réelle corrigée plus tôt : « Solution en double retirée » (commit `f8d00e8`).
+Leçon du Bâtisseur : « l'agent dit que c'est fait » ne suffit pas. Tu vérifies point par point.
 
 Même logique pour toi : tu ne relances pas un nouvel agent. Tu **réponds** à celui qui a déjà le contexte.
 

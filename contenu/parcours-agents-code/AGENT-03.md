@@ -26,10 +26,10 @@ Le résultat voulu. L'agent trouve comment y arriver.
 
 ## Étape 2 · Comment Le Bâtisseur s'y prend (1 min)
 
-Le Bâtisseur construit le site de ce cours. Sa méthode, d'après sa fiche :
+Le Bâtisseur construit le site de ce cours. Sa méthode :
 
 1. Il rédige un brief clair.
-2. Il lance un agent cloud (outil CloudAgent).
+2. Il lance un **agent de code**.
 3. Il vérifie le résultat.
 4. Il fait corriger.
 
@@ -37,38 +37,49 @@ Il ne code pas sur les ordinateurs de Joseph.
 
 Exemple public : dépôt `wn5zw4s89s-svg/cours-grok-bot`, site https://wn5zw4s89s-svg.github.io/cours-grok-bot/
 
-<div class="box atoi" markdown="1">
-**À toi :** Le Bâtisseur code-t-il lui-même sur ton Mac, ou lance-t-il un agent cloud ?
+Dans ce parcours, tu lances un **agent cloud** Cursor (machine isolée dans le cloud). Le brief s'écrit pareil.
 
-C'est réussi si tu nommes une seule méthode.
+<div class="box atoi" markdown="1">
+**À toi :** dans la méthode du Bâtisseur, qui écrit le code : lui sur le Mac de Joseph, ou un agent de code ?
+
+C'est réussi si tu nommes une seule option.
 </div>
 
 <details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
 
-Il lance un agent cloud. Il rédige le brief, vérifie, fait corriger.
+Un agent de code. Le Bâtisseur rédige le brief, vérifie, fait corriger.
 
 </div></details>
 
 ## Étape 3 · Brief réel du Bâtisseur (2 min)
 
-<!-- PLACEHOLDER — ne pas inventer. Remplacer dès que Le Bâtisseur dépose le fichier. -->
+Vrai brief utilisé pour ce site (lot 8, 16/10/2026). Ici, l'agent tournait sur un ordinateur, pas en agent cloud Cursor. Le brief s'écrit exactement pareil pour un agent cloud : Cursor dit que les agents cloud utilisent les mêmes bases qu'un agent classique ; seul l'endroit change (VM dans le cloud).
 
-<div class="box attention" markdown="1">
-**Brief réel du Bâtisseur à insérer.**
+Extrait du texte exact envoyé (fidèle) :
 
-Le Bâtisseur doit fournir ici un vrai brief d'agent cloud, avec :
-- le texte exact envoyé à l'agent ;
-- ce qu'il a vérifié ensuite ;
-- ce qu'il a fait corriger.
+> Display-only changes (minimal, iPhone 390px):
+> 1) "Rejouer" button: same style exactly as "Une remarque ?" button…
+> 2) Menu quiz score shows the best score… Label it "meilleur score"…
+> 3) Shuffle quiz answer order at display time… check correctness by answer identity, not index…
+> …Build, test with Playwright WebKit iPhone 13… Commit, publish to main… Report commit, build id…
 
-Cherche d'abord un fichier brief sous `/workspace/grokbot-live/`. S'il n'y est pas encore, cette case reste en attente. N'invente rien.
+Ce qu'il a vérifié ensuite : déploiement OK (build `0e55ef77`), ordre des réponses qui change, Rejouer = style Remarque, meilleur score affiché, L3 OK.
+
+<div class="box info" markdown="1">
+Texte complet : fichier `brief-batisseur.md` à côté de cette leçon.
 </div>
 
 <div class="box atoi" markdown="1">
-**À toi :** quand le brief réel est collé ci-dessus, lis-le. Repère les 3 parties : quoi, contraintes, c'est fini quand.
+**À toi :** dans l'extrait, trouve une contrainte et un « c'est fini quand » (même s'il est dit autrement).
 
-C'est réussi si tu cites une phrase de chaque partie (ou tu notes « brief pas encore là »).
+C'est réussi si tu cites deux bouts du brief (ex. iPhone 390px, et le test / publish / report).
 </div>
+
+<details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
+
+Contrainte : « minimal, iPhone 390px ». Fini quand : build, test Playwright, commit, publish, report (commit, build id…).
+
+</div></details>
 
 ## Étape 4 · Ton brief pour la page d'accueil (3 min)
 
@@ -100,6 +111,6 @@ Ce brief suit la règle du skill code-changes : problème + contraintes + critè
 ## En résumé
 
 - Quoi, contraintes, c'est fini quand.
-- Le Bâtisseur : brief -> agent cloud -> vérifier -> corriger.
+- Le Bâtisseur : brief -> agent de code -> vérifier -> corriger (cloud ou ordinateur : même brief).
 - Ton brief Champ Libre est prêt pour le lancement.
 </div>

@@ -398,6 +398,34 @@ for (const f of files) {
   dispo.set(num, { id, num, title, court: typoTexte(court), html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap, objectif: objm ? typoTexte(objm[1]) : '', disponible: true, _badge: bm });
 }
 
+// Parcours (sous-dossiers de contenu/, déclarés dans parcours.json) : seuls XXX-NN.md
+// et PARCOURS-*.quiz.json sont importés (README, SOURCES, brief… ignorés).
+const PARCOURS_CFG = fs.existsSync(path.join(APP, 'parcours.json')) ? JSON.parse(fs.readFileSync(path.join(APP, 'parcours.json'), 'utf8')) : {};
+const parcoursUnites = [];
+const parcoursQuiz = [];
+for (const [dir, cfg] of Object.entries(PARCOURS_CFG)) {
+  const d = path.join(SRC, dir);
+  if (!fs.existsSync(d)) continue;
+  const fl = fs.readdirSync(d).sort();
+  const lecs = [];
+  for (const f of fl) {
+    const m = f.match(/^([A-Z]+)-(\d+)\.md$/);
+    if (!m) continue;
+    const n = parseInt(m[2], 10);
+    const num = `${cfg.prefixe || m[1][0]}${n}`;
+    const id = `${m[1].toLowerCase()}-${String(n).padStart(2, '0')}`;
+    const raw0 = retouches(fs.readFileSync(path.join(d, f), 'utf8'), num);
+    const { title, html } = transformer(raw0, id);
+    const objm = raw0.match(/<p class="objectif">([^<]+)<\/p>/);
+    let court = title.replace(/^[^·:]+\s*[:·]\s*/, '');
+    court = court.charAt(0).toUpperCase() + court.slice(1);
+    dispo.set(num, { id, num, title, court: typoTexte(court), html: html.replace(/<!-- RECAP:[\s\S]*?-->\s*/g, ''), recap: objm ? typoTexte(objm[1]) : '', objectif: objm ? typoTexte(objm[1]) : '', disponible: true, _badge: null });
+    lecs.push(num);
+  }
+  for (const f of fl.filter((f) => /^PARCOURS-.+\.quiz\.json$/i.test(f))) parcoursQuiz.push([path.join(d, f), cfg.id]);
+  parcoursUnites.push({ id: cfg.id, label: cfg.label || null, lecons: lecs });
+}
+
 let quizFiles = files
   .filter((f) => /^(PROJET|PARTIE)-\d+\.quiz\.json$/i.test(f))
   .map((f) => path.join(SRC, f));
@@ -407,7 +435,7 @@ if (!quizFiles.length) {
     quizFiles = fs.readdirSync(ex).filter((f) => f.endsWith('.quiz.json')).map((f) => path.join(ex, f));
   }
 }
-const quiz = quizFiles.sort().map((p) => {
+const quiz = [...quizFiles.sort(), ...parcoursQuiz.map(([pp]) => pp)].map((p) => {
   const q = JSON.parse(fs.readFileSync(p, 'utf8'));
   if (!q.id || !Array.isArray(q.questions)) throw new Error(`Quiz invalide : ${p}`);
   q.questions.forEach((x, i) => {
@@ -415,7 +443,8 @@ const quiz = quizFiles.sort().map((p) => {
       throw new Error(`Quiz ${q.id}, question ${i + 1} invalide`);
     }
   });
-  const n = parseInt(String(q.id).replace(/\D/g, ''), 10) || 0;
+  const pq = parcoursQuiz.find(([pp]) => pp === p);
+  const n = pq ? pq[1] : (parseInt(String(q.id).replace(/\D/g, ''), 10) || 0);
   if (q.titre) q.titre = typoTexte(nettoyerTitre(q.titre));
   q.questions.forEach((x) => { x.question = typoTexte(x.question); x.choix = x.choix.map(typoTexte); if (x.explication) x.explication = typoTexte(x.explication); });
   return { ...q, slug: String(q.id).toLowerCase(), niveau: n, projet: n };
@@ -431,17 +460,20 @@ function parseEntry(raw) {
   throw new Error('projets/niveaux.json : entrée invalide (attendu tableau ou {nom, badge?, lecons})');
 }
 
+for (const u of parcoursUnites) mapRaw[String(u.id)] = { lecons: u.lecons };
 const projets = Object.keys(mapRaw).map(Number).sort((a, b) => a - b).map((id) => {
   let { nom, badge, lecons } = parseEntry(mapRaw[String(id)]);
+  const pu = parcoursUnites.find((u) => u.id === id);
   const qz = quiz.find((q) => q.niveau === id);
-  if (!nom && qz?.titre) nom = String(qz.titre).replace(/^(Projet|Niveau)\s*\d+\s*[:—-]\s*/i, '');
+  if (!nom && qz?.titre) nom = String(qz.titre).replace(/^(Projet|Niveau)\s*\d+\s*[:—-]\s*/i, '').replace(/^Parcours\s*:\s*/i, '');
   if (!badge) badge = lecons.map((n) => dispo.get(n)?._badge).filter(Boolean).pop() || null;
   if (!badge) badge = badgesReadme[id] || null;
   return {
     id,
     nom: typoTexte(nom || `${labelUnite} ${id}`),
-    badge: typoTexte(badge || `Fin du ${labelUnite.toLowerCase()} ${id}`),
+    badge: typoTexte(badge || (pu ? 'Fin du parcours' : `Fin du ${labelUnite.toLowerCase()} ${id}`)),
     lecons,
+    label: pu ? (pu.label || null) : null,
     quizId: quizParId[id] || null,
     total: lecons.length,
   };
@@ -461,7 +493,7 @@ for (const proj of projets) {
         num,
         niveau: proj.id,
         projet: proj.id,
-        title: `Leçon ${num}`,
+        title: `Leçon ${num}`, // placeholder
         court: 'Bientôt',
         numLabel: `Leçon ${num}`,
         html: '',
@@ -470,7 +502,7 @@ for (const proj of projets) {
     }
   }
 }
-lecons.sort((a, b) => a.num - b.num);
+// Ordre = ordre des unités (parcours inséré avant son projet cible).
 
 const site = {
   projets,
