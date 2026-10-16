@@ -17,33 +17,33 @@
       "id": "q2",
       "question": "Quelles lignes ajoutes-tu à chaque fiche de spécialiste ?",
       "choix": [
-        "Je reçois de / Je rends à",
         "Prix / Délai",
-        "Ton / Longueur"
+        "Ton / Longueur",
+        "Je reçois de / Je rends à"
       ],
-      "bonne_reponse": 0,
+      "bonne_reponse": 2,
       "explication": "Sans « Je reçois de / Je rends à », chacun te répond à toi au lieu de passer le relais."
     },
     {
       "id": "q3",
       "question": "Un bot écrit à un autre bot. Que se passe-t-il ?",
       "choix": [
-        "Rien : un bot ne lit pas un autre bot",
         "L'autre se réveille, fait la tâche, répond plus tard",
+        "Rien : un bot ne lit pas un autre bot",
         "L'autre répond tout de suite, en direct"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Les bots se passent le travail, et tu vois le relais. La réponse arrive plus tard, pas en direct."
     },
     {
       "id": "q4",
       "question": "Sur iPhone, comment crées-tu un groupe ?",
       "choix": [
-        "+ puis New Group Chat",
         "Le rond à tes initiales",
-        "Depuis la conversation d'un bot"
+        "Depuis la conversation d'un bot",
+        "+ puis New Group Chat"
       ],
-      "bonne_reponse": 0,
+      "bonne_reponse": 2,
       "explication": "+ puis New Group Chat (libellé affiché en anglais, à vérifier sur ton écran). De 2 à 6 bots."
     },
     {
@@ -61,22 +61,22 @@
       "id": "q6",
       "question": "Une bonne routine d'équipe…",
       "choix": [
-        "écoute tout, pour ne rien rater",
         "appartient à un seul bot, avec un but précis",
+        "écoute tout, pour ne rien rater",
         "est partagée par tous les bots"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Une routine trop large fait du bruit et consomme de l'usage. Un seul bot, un seul but."
     },
     {
       "id": "q7",
       "question": "Top 1 % : pourquoi une skill « goût maison » ?",
       "choix": [
-        "Pour que chaque bot garde son style",
         "Pour un seul style, partagé par toute l'équipe",
+        "Pour que chaque bot garde son style",
         "Pour que les bots écrivent plus vite"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Tu corriges une fois, toute l'équipe suit."
     }
   ]

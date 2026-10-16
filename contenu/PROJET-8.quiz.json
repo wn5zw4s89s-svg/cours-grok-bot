@@ -7,21 +7,21 @@
       "question": "Comment battre Hipcamp et Campspace ?",
       "choix": [
         "Faire pareil, en plus petit",
-        "Un angle : niche, région, promesse",
-        "Plus d'annonces qu'eux"
+        "Plus d'annonces qu'eux",
+        "Un angle : niche, région, promesse"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Un angle qu'ils ne couvrent pas chez toi. Le volume, ils l'ont déjà."
     },
     {
       "id": "q2",
       "question": "Qui écrit aux hôtes ?",
       "choix": [
-        "Recruteur, avec ton accord",
         "Toi, avec les brouillons du bot",
+        "Recruteur, avec ton accord",
         "Chef, après relecture"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Aucun bot n'écrit à un hôte."
     },
     {
@@ -51,10 +51,10 @@
       "question": "Pas encore de statut légal. Quel mode de paiement ?",
       "choix": [
         "Stripe Connect en réel",
-        "Réservation par email ou test Stripe",
-        "Un lien de paiement Stripe réel"
+        "Un lien de paiement Stripe réel",
+        "Réservation par email ou test Stripe"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Le paiement réel demande un statut."
     },
     {
@@ -84,21 +84,21 @@
       "question": "Qui peut laisser un avis ?",
       "choix": [
         "Un hôte, sur sa propre annonce",
-        "Seulement un campeur qui a séjourné",
-        "Tout campeur inscrit"
+        "Tout campeur inscrit",
+        "Seulement un campeur qui a séjourné"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Aucun avis inventé ou non vérifié. Règles publiées."
     },
     {
       "id": "q9",
       "question": "Top 1 % : la revue anti-slop, c'est…",
       "choix": [
-        "Relire l'accueil soi-même une fois",
         "Un bot Critique, une grille, des captures avant / après",
+        "Relire l'accueil soi-même une fois",
         "Demander au bot de rendre le texte plus pro"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Une grille et des captures rendent la revue vérifiable. Accueil : où, pour qui, quand."
     }
   ]

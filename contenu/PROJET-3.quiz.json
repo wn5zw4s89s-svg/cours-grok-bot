@@ -6,11 +6,11 @@
       "id": "q1",
       "question": "Comment ton bot lit-il X ?",
       "choix": [
-        "Il faut connecter ton compte X",
         "Il cherche et lit les posts publics, sans connexion",
+        "Il faut connecter ton compte X",
         "Il lit seulement les posts de tes abonnés"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Le bot lit les posts publics de X sans connexion. Il ne voit pas tes abonnés et ne poste pas."
     },
     {
@@ -29,10 +29,10 @@
       "question": "Que doit contenir chaque prospect du rapport ?",
       "choix": [
         "Un pseudo et une note sur 10",
-        "Lien, résumé, raison",
-        "Un résumé et une capture"
+        "Un résumé et une capture",
+        "Lien, résumé, raison"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Sans lien, tu ne peux pas vérifier ni répondre. La raison dit pourquoi c'est un prospect."
     },
     {
@@ -50,11 +50,11 @@
       "id": "q5",
       "question": "La recherche X échoue pendant la nuit. Que doit faire le bot ?",
       "choix": [
-        "Garder les prospects de la veille",
         "Dire que ça a échoué",
+        "Garder les prospects de la veille",
         "Réessayer jusqu'au matin sans rien dire"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "La demande prévoit le cas d'échec : le dire, ne rien inventer, ne rien recycler."
     },
     {
@@ -62,10 +62,10 @@
       "question": "« RT pour gagner une bougie » est…",
       "choix": [
         "Un bon prospect",
-        "Un cas piège",
-        "Un client à relancer"
+        "Un client à relancer",
+        "Un cas piège"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Un concours ressemble à un prospect. Ce n'en est pas un : personne n'y dit un problème."
     },
     {
@@ -73,10 +73,10 @@
       "question": "Qu'est-ce qui rend des critères de recherche top 1 % ?",
       "choix": [
         "Plus de mots-clés, pour plus de prospects",
-        "Qui, quand, exclusions, pièges, note",
-        "Une recherche lancée toutes les heures"
+        "Une recherche lancée toutes les heures",
+        "Qui, quand, exclusions, pièges, note"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Des critères précis donnent moins de prospects, mais tous vrais. Plus de mots-clés ou plus de recherches ramènent plus de bruit."
     },
     {

@@ -6,11 +6,11 @@
       "id": "q1",
       "question": "Qu'est-ce qu'un bot ?",
       "choix": [
-        "Un assistant à qui tu donnes un métier",
         "Une appli à installer en plus de Grok Bot",
+        "Un assistant à qui tu donnes un métier",
         "Un compte X qui publie tout seul"
       ],
-      "bonne_reponse": 0,
+      "bonne_reponse": 1,
       "explication": "Un bot, c'est un assistant à qui tu écris : tu lui donnes un métier, il le fait. Il vit dans l'app Grok Bot et ne publie rien sur X."
     },
     {
@@ -18,10 +18,10 @@
       "question": "Sur l'écran d'accueil de l'app, comment crées-tu un bot ?",
       "choix": [
         "Avec la loupe en haut de l'écran",
-        "Avec le + en haut à droite",
-        "Avec le rond à tes initiales"
+        "Avec le rond à tes initiales",
+        "Avec le + en haut à droite"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Le + crée un bot. La loupe sert à chercher. Le rond ouvre ton compte."
     },
     {
@@ -40,43 +40,43 @@
       "question": "Comment vérifies-tu ce que contient la description de Lumen ?",
       "choix": [
         "Tu relis toute la conversation depuis le début",
-        "Tu lui demandes : « Montre-moi ta description »",
-        "Tu ouvres les réglages de ton iPhone"
+        "Tu ouvres les réglages de ton iPhone",
+        "Tu lui demandes : « Montre-moi ta description »"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Demander est le plus sûr : il renvoie le texte enregistré. Relire la conversation montre des messages, pas la description. Les réglages de l'iPhone ne la contiennent pas."
     },
     {
       "id": "q5",
       "question": "Qu'est-ce qu'un cas de test ?",
       "choix": [
-        "Un faux message de client pour voir comment le bot réagit",
         "Un vrai message de client que tu transmets au bot",
+        "Un faux message de client pour voir comment le bot réagit",
         "Une question sur l'app que tu poses au bot"
       ],
-      "bonne_reponse": 0,
+      "bonne_reponse": 1,
       "explication": "Un cas de test est un faux message : tu vois la réaction du bot avant qu'un vrai client écrive. Calme, flou, piège, hors sujet, énervé."
     },
     {
       "id": "q6",
       "question": "Un client écrit seulement « C'est combien ? ». Bonne réponse de Lumen ?",
       "choix": [
-        "« Nos bougies coûtent 15 €. »",
         "« Avec plaisir ! Quelle bougie vous intéresse ? »",
+        "« Nos bougies coûtent 15 €. »",
         "« Je vous envoie le catalogue tout de suite. »"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Le client est flou : le bot pose une question. « 15 € » est un prix inventé. Envoyer le catalogue est une promesse : Lumen n'envoie rien lui-même."
     },
     {
       "id": "q7",
       "question": "Quelle règle corrige vraiment un raté ?",
       "choix": [
-        "« Sois prudent avec les prix. »",
         "« Tu n'inventes jamais un prix. Si tu ne sais pas, tu poses une question. »",
+        "« Sois prudent avec les prix. »",
         "« Fais attention à ne pas te tromper. »"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Une bonne règle dit l'interdit et quoi faire à la place. « Sois prudent » et « Fais attention » ne disent pas quoi écrire."
     },
     {
@@ -95,10 +95,10 @@
       "question": "Qu'est-ce qui fait une description top 1 % ?",
       "choix": [
         "Des consignes polies comme « sois aimable »",
-        "Des chiffres et un exemple de bonne réponse",
-        "Une description très longue et détaillée"
+        "Une description très longue et détaillée",
+        "Des chiffres et un exemple de bonne réponse"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "« 3 phrases maximum » se vérifie, « sois aimable » non. Une description longue n'est pas plus précise."
     },
     {

@@ -7,21 +7,21 @@
       "question": "Pourquoi 3 bots plutôt qu'un ?",
       "choix": [
         "Pour aller 3 fois plus vite",
-        "Un métier par bot : message, montage, contrôle",
-        "Un bot seul ne sait pas faire de vidéo"
+        "Un bot seul ne sait pas faire de vidéo",
+        "Un métier par bot : message, montage, contrôle"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Un bot qui fait tout fait tout moyennement. La vitesse n'est pas le but."
     },
     {
       "id": "q2",
       "question": "Une bonne accroche TikTok…",
       "choix": [
-        "commence par le nom de la marque",
         "dit un problème ou une surprise",
+        "commence par le nom de la marque",
         "montre le prix tout de suite"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Tu as trois secondes. Un problème ou une surprise arrête le pouce. La marque et le prix viennent après."
     },
     {
@@ -39,11 +39,11 @@
       "id": "q4",
       "question": "Pas de musique fournie. Que fait Monteur ?",
       "choix": [
-        "Il prend une musique tendance",
         "Il laisse le silence",
+        "Il prend une musique tendance",
         "Il te demande d'en choisir une sur TikTok"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Musique dont tu as le droit d'usage, ou silence."
     },
     {
@@ -51,10 +51,10 @@
       "question": "Juge trouve un texte trop bas. Qui corrige ?",
       "choix": [
         "Juge",
-        "Monteur",
-        "Toi"
+        "Toi",
+        "Monteur"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Juge juge. Monteur corrige. Toi, tu valides."
     },
     {

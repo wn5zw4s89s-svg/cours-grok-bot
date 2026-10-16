@@ -379,7 +379,7 @@
     document.querySelectorAll('[data-quiz-lien]').forEach((a) => {
       const n = +a.dataset.quizNiv, ok = DEV || nivFini(d, n), q = d.quiz[a.dataset.quizLien];
       a.classList.toggle('mute', !ok);
-      a.textContent = ok ? (q ? `Quiz ✓ ${q.meilleur}/${q.total}` : 'Quiz →') : 'Quiz 🔒';
+      a.textContent = ok ? (q ? `Quiz ✓ ${q.meilleur}/${q.total} · meilleur score` : 'Quiz →') : 'Quiz 🔒';
     });
   }
 
@@ -521,7 +521,7 @@
       }
       actions.push(
         nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `Projet ${niv + 1} · Leçon ${nextL.num} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
-        $('p', {}, $('button', { class: 'lien lien-action', on: { click: () => jouer(0, 0, []) } }, 'Rejouer'))
+        $('p', {}, $('button', { type: 'button', class: 'remarque-lien lien-action', on: { click: () => jouer(0, 0, []) } }, 'Rejouer'))
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));
       octoMood(octos()[0], score / N >= 0.6 ? 'happy' : 'sad');
@@ -533,16 +533,29 @@
     document.querySelector('.quiz-page .lh')?.append(qn);
     // Anti « tap fantôme » : un double tap sur « Suivante » ne doit pas répondre à la question suivante.
     let pret = 0;
+    const melanger = (arr) => {
+      const a = arr.slice();
+      for (let k = a.length - 1; k > 0; k--) {
+        const r = Math.floor(Math.random() * (k + 1));
+        const tmp = a[k]; a[k] = a[r]; a[r] = tmp;
+      }
+      return a;
+    };
     const jouer = (i, score, rates = []) => {
       if (i === N) { qn.hidden = true; document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', 1)); return fin(score, rates); }
       const x = q.questions[i], fb = $('div');
       pret = performance.now() + 450;
       let fait = false;
-      const btns = x.choix.map((c, j) => $('button', { type: 'button', on: { click: () => {
+      // Mélange l'ordre d'affichage ; la bonne réponse se juge à l'index d'origine, pas à la place à l'écran.
+      const ordre = melanger(x.choix.map((_, j) => j));
+      const btns = ordre.map((origJ) => $('button', { type: 'button', on: { click: () => {
         if (fait || performance.now() < pret) return;
         fait = true;
         btns.forEach((b) => (b.disabled = true));
-        const ok = j === x.bonne_reponse; btns[x.bonne_reponse].classList.add('bon'); if (!ok) btns[j].classList.add('faux');
+        const ok = origJ === x.bonne_reponse;
+        const idxBon = ordre.indexOf(x.bonne_reponse);
+        const idxClic = ordre.indexOf(origJ);
+        btns[idxBon].classList.add('bon'); if (!ok) btns[idxClic].classList.add('faux');
         const s = score + (ok ? 1 : 0), r2 = ok ? rates : [...rates, i];
         let parti = false;
         fb.replaceChildren($('div', { class: 'q-fb' },
@@ -553,7 +566,7 @@
         
         fb.firstChild.classList.add(ok ? 'good' : 'bad');
         document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', (i + 1) / N));
-      } } }, c));
+      } } }, x.choix[origJ]));
       document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', i / N));
       qn.textContent = `Question ${i + 1}/${N}`;
       el.replaceChildren($('div', { class: 'q-carte' },

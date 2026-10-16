@@ -6,14 +6,14 @@ Objectif : à la fin, tu sais où Lumen répond bien et où il se trompe.
 
 Un **cas de test**, c'est un faux message de client. Tu l'envoies pour voir comment ton bot réagit.
 
-Tu vas en envoyer 5, du plus simple au plus difficile. Ce sont des clients de Léa, qui vend des bougies. Reste dans la conversation avec Lumen.
+Tu vas en envoyer 5, du plus simple au plus difficile. Ce sont des clients de Léa, qui vend des bougies. Utilise la nouvelle conversation avec Lumen, ouverte à la fin de la leçon 2 (celle de la réponse à Marc). Lumen y relit sa description : pas besoin d'en ouvrir une autre.
 
 <div class="box atoi" markdown="1">
 **À toi :** Inès, une cliente de Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :
 
 > Bonjour, est-ce que vos bougies sont faites à la main ? Merci, Inès
 
-C'est réussi si la réponse a les 2 parties (ce que veut Inès, puis une réponse signée Léa).
+C'est réussi si la réponse a les 2 parties : 1) ce que veut Inès, en une phrase ; 2) une réponse courte et polie, signée Léa.
 </div>
 
 <div class="box corrige" markdown="1">

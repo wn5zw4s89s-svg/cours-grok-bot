@@ -18,21 +18,21 @@
       "question": "Comment juges-tu un logo ?",
       "choix": [
         "En grand, en plein écran",
-        "En petit, comme une photo de profil",
-        "Sur fond blanc uniquement"
+        "Sur fond blanc uniquement",
+        "En petit, comme une photo de profil"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Un logo vit en petit. S'il disparaît en petit, il est raté."
     },
     {
       "id": "q3",
       "question": "Qui fixe le prix de ton offre ?",
       "choix": [
-        "Le bot, d'après les concurrents",
         "Toi",
+        "Le bot, d'après les concurrents",
         "Le bot, avec ton accord"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Le prix est ta décision. Le bot n'invente pas de prix, même pour t'aider."
     },
     {
@@ -40,10 +40,10 @@
       "question": "Comment vérifies-tu la page avant publication ?",
       "choix": [
         "Sur un écran d'ordinateur",
-        "Sur la capture téléphone envoyée par le bot",
-        "Sur le résumé écrit du bot"
+        "Sur le résumé écrit du bot",
+        "Sur la capture téléphone envoyée par le bot"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Le bot construit sur son ordinateur et t'envoie une capture téléphone. Un résumé ne montre pas le rendu."
     },
     {
@@ -61,22 +61,22 @@
       "id": "q6",
       "question": "Un nom de domaine, c'est…",
       "choix": [
-        "Obligatoire pour publier",
         "Optionnel, payant, ta décision",
+        "Obligatoire pour publier",
         "Offert avec GitHub Pages"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Un nom de domaine est optionnel et payant. Le bot n'achète jamais rien."
     },
     {
       "id": "q7",
       "question": "Top 1 % : quelle consigne évite le design qui sent l'IA ?",
       "choix": [
-        "« Fais moderne, élégant et épuré »",
         "3 références précises et des interdits explicites",
+        "« Fais moderne, élégant et épuré »",
         "Une couleur et une police imposées"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "Un bot comprend des références et des interdits, pas des adjectifs. Une couleur seule ne suffit pas."
     }
   ]

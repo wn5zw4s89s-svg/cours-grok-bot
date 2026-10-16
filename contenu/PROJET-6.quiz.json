@@ -29,32 +29,32 @@
       "question": "Qui crée le compte de paiement ?",
       "choix": [
         "Le bot, avec tes informations",
-        "Toi, à ton nom",
-        "Le bot, après ton accord"
+        "Le bot, après ton accord",
+        "Toi, à ton nom"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Le bot n'ouvre aucun compte et ne touche jamais à ton argent."
     },
     {
       "id": "q4",
       "question": "Frais Stripe pour une carte standard de l'EEE (relevés le 15/10/2026) ?",
       "choix": [
-        "1,5 % + 0,25 €",
         "10 % + 0,50 $",
+        "1,5 % + 0,25 €",
         "2,9 % + 0,30 €"
       ],
-      "bonne_reponse": 0,
+      "bonne_reponse": 1,
       "explication": "1,5 % + 0,25 €, sans abonnement. 10 % + 0,50 $, c'est Gumroad."
     },
     {
       "id": "q5",
       "question": "Pourquoi pas la page de vente sur GitHub Pages ?",
       "choix": [
-        "C'est trop lent",
         "GitHub Pages interdit les sites de vente",
+        "C'est trop lent",
         "Le paiement y est payant"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 0,
       "explication": "GitHub Pages interdit le commerce. Le lien de paiement sert de page de vente."
     },
     {
@@ -62,21 +62,21 @@
       "question": "Un acheteur demande son PDF. Que fait le bot ?",
       "choix": [
         "Il l'envoie dès que la vente apparaît",
-        "Il prépare un brouillon avec le PDF, tu vérifies la vente et tu envoies",
-        "Il te demande ton accord, puis l'envoie"
+        "Il te demande ton accord, puis l'envoie",
+        "Il prépare un brouillon avec le PDF, tu vérifies la vente et tu envoies"
       ],
-      "bonne_reponse": 1,
+      "bonne_reponse": 2,
       "explication": "Chaque envoi passe par ton Send Email. Le bot ne l'envoie jamais lui-même, même avec ton accord."
     },
     {
       "id": "q7",
       "question": "Top 1 % : version A contre version B, combien de changements ?",
       "choix": [
-        "Un seul",
         "Deux, pour gagner du temps",
-        "Tous, pour un vrai contraste"
+        "Tous, pour un vrai contraste",
+        "Un seul"
       ],
-      "bonne_reponse": 0,
+      "bonne_reponse": 2,
       "explication": "Un seul changement, sinon tu ne sais pas ce qui a marché."
     }
   ]
