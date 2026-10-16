@@ -520,7 +520,14 @@ for (const proj of projets) {
 // Libellé « Projet X, leçon Y sur Z » (Y local au projet) — affichage seulement.
 for (const proj of projets) {
   const ls = lecons.filter((l) => l.niveau === proj.id);
-  ls.forEach((l, k) => { l.pos = k + 1; l.tot = ls.length; l.label = `${proj.label || `Projet ${proj.id}`}, leçon ${k + 1} sur ${ls.length}`; });
+  // Piste (parcours) : son nom (« Fais coder un bot ») au lieu du libellé générique.
+  const unite = proj.label ? proj.nom : `Projet ${proj.id}`;
+  ls.forEach((l, k) => {
+    l.pos = k + 1; l.tot = ls.length;
+    l.numLabel = `${unite}, leçon ${k + 1}`; // plus jamais de numéro global « Leçon N »
+    l.label = `${l.numLabel} sur ${ls.length}`;
+    if (!l.disponible) l.title = l.numLabel;
+  });
 }
 
 const site = {

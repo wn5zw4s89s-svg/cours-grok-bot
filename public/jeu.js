@@ -83,7 +83,7 @@
   const UNITES = M.projets || M.niveaux || [];
   const labelU = M.labelUnite || (M.projets ? 'Projet' : 'Niveau');
   const NP = UNITES.filter((n) => Number.isInteger(n.id)).length;
-  const lab = (l) => l.label || `Leçon ${l.num}`;
+  const lab = (l) => l.label || l.numLabel || '';
   const nomU = (u) => (u.label || `${labelU} ${u.id}`);
   const uSuiv = (id) => UNITES[UNITES.findIndex((n) => n.id === id) + 1];
   const lecNiv = (n) => L.filter((l) => l.niveau === n);
@@ -289,7 +289,7 @@
     const items = ls.map((l, i) => {
       const fait = !!d.lecons[l.id], actuelle = i === nextIdx, ok = debloquee(d, idx(l.id));
       const cls = `node${fait ? ' done' : actuelle ? ' cur' : ''}${!ok ? ' lock' : ''}`;
-      const t = l.clair || l.court || `Leçon ${l.num}`;
+      const t = l.clair || l.court || l.numLabel || '';
       return $('li', { class: `step${actuelle ? ' cur' : ''}${fait ? ' done' : ''}` }, $('span', { class: cls }, fait ? '✓' : String(l.pos || l.num)),
         ok ? $('a', { class: 'step-lien', href: `${M.base}lecon/${l.id}/` }, t) : $('span', { class: 'step-txt' }, t));
     });
@@ -479,7 +479,7 @@
             const recap = (art.dataset.recap || '').trim();
             const court = (L[i].clair || L[i].court || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
             if (L[i].num === 2 && !recap) {
-              return [$('h2', {}, 'Leçon 2 terminée : le métier de ton bot est dans sa description.')];
+              return [$('h2', {}, 'Projet 1, leçon 2 terminée : le métier de ton bot est dans sa description.')];
             }
             // Titre de fin = titre du menu (court). L1 : « Crée ton premier bot ».
             const titreFin = court ? `Leçon terminée : ${court}` : 'Leçon terminée';
