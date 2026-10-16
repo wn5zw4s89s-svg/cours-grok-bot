@@ -6,7 +6,7 @@ const { q } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const nb = site.lecons.filter((l) => l.niveau === q.niveau).length;
 ---
-<Base title={q.titre} page="quiz">
+<Base title={`Quiz · ${q.titre.replace(/\s*:\s*/, " · ")}`} page="quiz">
   <article class="quiz-page">
     <div class="lh"><a class="retour" href={base} aria-label="Fermer">✕</a><div class="bar"><i data-barre-quiz></i></div></div>
     <div class="verrou" data-quiz-verrou hidden>

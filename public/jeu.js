@@ -118,8 +118,13 @@
     d.streak.last = today;
   };
 
+  const BADGES_LECON = [
+    ['lecon-01', '🐙', 'Première leçon', 'Tu as terminé ta première leçon.'],
+    ['lecon-02', '🧬', 'Deuxième leçon', 'Le métier de ton bot est dans sa description.'],
+  ];
   const BADGES = [
-    ['🐙', 'Première leçon', (d) => !!d.lecons['lecon-01']],
+    // Badges de leçon : config (id leçon -> emoji, nom, texte). Ajouter une ligne suffit.
+    ...BADGES_LECON.map(([id, e, nom]) => [e, nom, (d) => !!d.lecons[id], undefined, id]),
     ...UNITES.map((n) => [TENT(n.id).emoji, (n.badge && !/^Fin du /.test(n.badge)) ? n.badge : TENT(n.id).nom, (d) => nivFini(d, n.id), n.id]),
     ['🎯', 'Sans fausse note', (d) => Object.values(d.quiz).some((q) => q.meilleur === q.total && q.total > 0)],
   ];
@@ -207,7 +212,8 @@
 
   function badgeTexte(b) {
     const [, nom, , projId] = b;
-    if (nom === 'Première leçon') return 'Tu as terminé ta première leçon.';
+    const bl = BADGES_LECON.find((x) => x[2] === nom);
+    if (bl) return bl[3];
     if (nom === 'Sans fausse note') return 'Tu as eu un quiz sans aucune erreur.';
     if (projId) {
       const p = UNITES.find((n) => n.id === projId);
@@ -293,7 +299,7 @@
       const nxt = ls.find((l) => !d.lecons[l.id]), debut = !L.some((l) => d.lecons[l.id]);
       document.querySelectorAll('[data-progres]').forEach((e) => (e.textContent = `Projet ${cur.id} sur ${UNITES.length} (${TENT(cur.id).nom}) · ${f} leçon${f > 1 ? 's' : ''} sur ${ls.length}`));
       document.querySelectorAll('[data-next-kick]').forEach((e) => (e.textContent = debut ? 'Ta première leçon · 2\u00a0min par étape' : nxt ? 'Ta prochaine leçon' : 'Dernière étape'));
-      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · gagne « ${TENT(cur.id).nom} »`));
+      document.querySelectorAll('[data-next-titre]').forEach((e) => (e.textContent = nxt ? `Leçon ${nxt.num} · ${(nxt.clair || nxt.court).replace(/\s*\([^)]*\)\s*$/, '')}` : `Quiz · Projet ${cur.id}`));
       document.querySelectorAll('[data-next-but]').forEach((e) => (e.textContent = nxt ? (nxt.but || '') : 'Un quiz rapide pour valider le projet.'));
       document.querySelectorAll('[data-t-ligne]').forEach((e) => (e.textContent = `🐙 Bots créés : ${nbT} sur ${UNITES.length} (tentacules ${nbT} sur ${UNITES.length}). 1 projet terminé = 1 bot.`));
       document.querySelectorAll('[data-dire]').forEach((e) => (e.textContent = debut ? 'Salut boss ! Crée ton premier bot en 2\u00a0min.' : nxt ? `Bien joué boss ! ${f} leçon${f > 1 ? 's' : ''} faite${f > 1 ? 's' : ''}. On continue ?` : 'Tout est fait ! Passe le quiz pour gagner ton badge.'));
@@ -344,7 +350,7 @@
         b.classList.toggle('verrouille', !ouvert && !fini);
       });
       document.querySelectorAll(`[data-niv-etat="${n.id}"]`).forEach((e) => {
-        e.textContent = fini ? '✓' : f > 0 ? `${f}/${ls.length}` : '';
+        e.textContent = fini ? '✓' : f > 0 ? `${f}/${ls.length} leçons` : '';
       });
     });
 
@@ -357,7 +363,7 @@
       const et = c.querySelector('[data-etat]');
       if (et) et.textContent = d.lecons[l.id] ? '✓' : String(l.num);
       let vt = c.querySelector('.verrou-txt');
-      if (!ok && !vt) { vt = $('span', { class: 'verrou-txt' }, 'Finis la leçon précédente'); c.querySelector('.titre')?.after(vt); }
+      if (!ok && !vt) { vt = $('span', { class: 'verrou-txt' }, i > 0 ? `Finis la leçon ${L[i - 1].num}` : ''); c.querySelector('.titre')?.after(vt); }
       if (ok && vt) vt.remove();
       const a = c.querySelector('a');
       if (a) {
@@ -489,7 +495,7 @@
         }, `${b[0]} Partager sur X`));
       }
       actions.push(
-        nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `${labelU} ${niv + 1} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
+        nextL ? $('a', { class: 'btn', href: `${M.base}lecon/${nextL.id}/` }, `Projet ${niv + 1} · Leçon ${nextL.num} →`) : $('a', { class: 'btn', href: M.base }, 'Accueil'),
         $('p', {}, $('button', { class: 'lien', on: { click: () => jouer(0, 0) } }, 'Rejouer'))
       );
       el.replaceChildren($('div', { class: 'q-carte q-fin' }, ...actions));
@@ -592,7 +598,8 @@
     box.querySelectorAll('blockquote').forEach((bq) => {
       const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
       b.addEventListener('click', async () => {
-        const txt = bq.innerText.trim();
+        const ps = [...bq.querySelectorAll('p')];
+        const txt = (ps.length ? ps.map((x) => x.innerText.trim()).filter(Boolean).join('\n\n') : bq.innerText).trim();
         try { await navigator.clipboard.writeText(txt); }
         catch { const r = document.createRange(); r.selectNodeContents(bq); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); s.removeAllRanges(); }
         b.textContent = 'Copié ✓'; b.classList.add('ok');

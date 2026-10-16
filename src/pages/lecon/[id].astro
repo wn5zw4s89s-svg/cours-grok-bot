@@ -10,7 +10,7 @@ export function getStaticPaths() {
     const q = quiz.find((x) => x.niveau === l.niveau);
     const dernierDuNiveau = !next || next.niveau !== l.niveau;
     let suite;
-    if (dernierDuNiveau && q) suite = { href: `quiz/${q.slug}/`, label: 'Passer le quiz' };
+    if (dernierDuNiveau && q) suite = { href: `quiz/${q.slug}/`, label: `Quiz · Projet ${l.niveau}` };
     else if (next) suite = { href: `lecon/${next.id}/`, label: `Leçon ${next.num} →` };
     else suite = { href: '', label: 'Accueil' };
     return { params: { id: l.id }, props: { l, prev: lecons[i - 1], suite } };
