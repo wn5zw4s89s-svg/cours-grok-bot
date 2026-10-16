@@ -11,7 +11,7 @@
         "Un compte X automatique"
       ],
       "bonne_reponse": 0,
-      "explication": "Un bot, c'est comme un employé à qui tu écris."
+      "explication": "Un bot, c'est comme un employé à qui tu écris : tu lui donnes un métier, il le fait."
     },
     {
       "id": "q2",
@@ -44,7 +44,7 @@
         "Tu supprimes le bot"
       ],
       "bonne_reponse": 1,
-      "explication": "Il te renvoie le texte enregistré."
+      "explication": "Le plus simple est de demander : il te renvoie le texte enregistré, et tu vois tout de suite s'il manque quelque chose."
     },
     {
       "id": "q5",
@@ -55,7 +55,7 @@
         "Un vrai client fâché"
       ],
       "bonne_reponse": 0,
-      "explication": "5 cas : calme, flou, piège, hors sujet, énervé."
+      "explication": "Un cas de test est un faux message : tu vois comment le bot réagit avant qu'un vrai client écrive. Au programme : calme, flou, piège, hors sujet, énervé."
     },
     {
       "id": "q6",
@@ -77,7 +77,7 @@
         "« Fais de ton mieux. »"
       ],
       "bonne_reponse": 1,
-      "explication": "Un interdit, et quoi faire à la place."
+      "explication": "Une bonne règle dit l'interdit et quoi faire à la place : le bot sait alors quoi écrire au lieu d'inventer."
     },
     {
       "id": "q8",
@@ -110,7 +110,7 @@
         "Personne"
       ],
       "bonne_reponse": 1,
-      "explication": "Le bot ne poste jamais à ta place."
+      "explication": "C'est toi qui postes : le bot ne poste jamais à ta place."
     }
   ]
 }

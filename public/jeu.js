@@ -132,10 +132,14 @@
   // Prochain badge = premier non gagné (y compris celui du projet en cours).
   const prochainBadge = (d) => BADGES.find((b) => !b[2](d));
   const badgesGagnes = (d) => BADGES.filter((b) => b[2](d));
-  const syncBadges = (d) => {
+  // Badge de projet : seulement en terminant la DERNIÈRE leçon du projet (ou au quiz),
+  // jamais sur une leçon intermédiaire (ex. L11 finie après L12 en accès libre).
+  const derniere = (n) => { const ls = lecNiv(n); return ls.length ? ls[ls.length - 1].id : null; };
+  const syncBadges = (d, opt = {}) => {
     const nouveaux = [];
     for (const b of BADGES) {
       const key = b[1];
+      if (b[3] != null && (opt.charge || (opt.lecon && opt.lecon !== derniere(b[3])))) continue;
       if (b[2](d) && !d.badges[key]) {
         d.badges[key] = { date: new Date().toISOString(), emoji: b[0] };
         nouveaux.push(b);
@@ -424,8 +428,8 @@
           d.xp = (d.xp || 0) + XP_LECON;
           toucherStreak(d);
         }
-        niveauComplete = niv != null && nivFini(d, niv);
-        nouveaux = syncBadges(d);
+        niveauComplete = niv != null && nivFini(d, niv) && id === derniere(niv);
+        nouveaux = syncBadges(d, { lecon: id });
       });
       pressFx(btn);
       const go = () => { location.href = btn.dataset.suite || M.base; };
@@ -515,8 +519,11 @@
       if (nouveaux.length) setTimeout(() => montrerBadge(nouveaux[nouveaux.length - 1]), 400);
       rafraichir();
     };
+    // Compteur visible : même N que le score (questions réellement affichées)
+    const qn = $('div', { class: 'etape-n', 'aria-live': 'polite' });
+    document.querySelector('.quiz-page .lh')?.append(qn);
     const jouer = (i, score) => {
-      if (i === N) return fin(score);
+      if (i === N) { qn.hidden = true; document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', 1)); return fin(score); }
       const x = q.questions[i], fb = $('div');
       const btns = x.choix.map((c, j) => $('button', { type: 'button', on: { click: () => {
         btns.forEach((b) => (b.disabled = true));
@@ -532,6 +539,7 @@
         document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', (i + 1) / N));
       } } }, c));
       document.querySelectorAll('[data-barre-quiz]').forEach((b) => b.style.setProperty('--p', i / N));
+      qn.textContent = `Question ${i + 1}/${N}`;
       el.replaceChildren($('div', { class: 'q-carte' },
         $('div', { class: 'q-texte' }, x.question), $('div', { class: 'q-choix' }, btns), fb));
     };
@@ -614,7 +622,7 @@
   // Consigne seulement (avant le blockquote) : pas de COPIER sur « lis… » (L2 étape 2, L4 règle).
   document.querySelectorAll('.lecon .box.atoi').forEach((box) => {
     const consigne = (box.innerHTML.split(/<blockquote/i)[0] || '').replace(/<[^>]+>/g, ' ');
-    if (!/copi|envoie/i.test(consigne)) return;
+    if (!/copi|envoie|colle|ajoute/i.test(consigne) || /^\s*(À toi :)?\s*lis\b/i.test(consigne.trim())) return;
     box.querySelectorAll('blockquote').forEach((bq) => {
       const b = $('button', { type: 'button', class: 'copier' }, 'Copier');
       b.addEventListener('click', async () => {
@@ -715,7 +723,7 @@
   })();
 
   // Sync badges déjà mérités (migration)
-  ecrire((d) => { syncBadges(d); });
+  ecrire((d) => { syncBadges(d, { charge: true }); });
   rafraichir();
   // Démo : ?badge=N affiche la carte du badge du projet N (sans rien enregistrer)
   const qb = new URLSearchParams(location.search).get('badge');

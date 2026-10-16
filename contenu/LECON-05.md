@@ -8,7 +8,7 @@ La **description**, c'est ce qui est toujours vrai : son métier, ses règles.
 
 La **mémoire**, c'est ce que le bot retient en route : une info du moment, qui peut changer.
 
-Exemple : « la bougie figue est en rupture de stock ». Vrai aujourd'hui, faux dans un mois.
+Exemple, chez Léa, qui vend des bougies : « la bougie figue est en rupture de stock ». Vrai aujourd'hui, faux dans un mois.
 
 <div class="box atoi" markdown="1">
 **À toi :** classe cette info : « Lumen signe toujours Léa ».
@@ -43,7 +43,7 @@ C'est réussi si Lumen redit : rupture de stock, pas de date de retour.
 ## Étape 4 · Teste avec un client (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc et envoie-le à Lumen :
+**À toi :** Emma, une cliente de Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :
 
 > Bonjour, je voudrais 2 bougies figue pour un cadeau. Vous les avez ? Emma
 

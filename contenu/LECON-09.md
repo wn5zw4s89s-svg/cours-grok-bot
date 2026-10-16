@@ -4,6 +4,8 @@ Objectif : à la fin, Lumen range chaque email dans la bonne pile.
 
 ## Étape 1 · Comprends les 3 piles (1 min)
 
+Une **pile**, c'est un groupe d'emails qui demandent la même suite. Léa, qui vend des bougies, en a 3 :
+
 - **À moi** : Léa doit décider (remboursement, plainte).
 - **Prêt** : question simple, Lumen peut préparer la réponse.
 - **Bruit** : pub, newsletter.
@@ -33,7 +35,7 @@ C'est réussi si Lumen confirme l'ajout.
 ## Étape 3 · Envoie 3 emails (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** depuis l'app Mail, envoie 3 emails séparés à Lumen. Copie chaque bloc dans un email différent.
+**À toi :** tu joues 3 expéditeurs : Julie et Hugo, des clients de Léa, puis une pub. Depuis l'app Mail, envoie 3 emails séparés à Lumen. Copie chaque bloc dans un email différent.
 
 Email 1 :
 

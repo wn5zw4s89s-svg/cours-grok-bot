@@ -13,7 +13,7 @@ La **description**, c'est la fiche de poste du bot. Il la relit à chaque fois.
 <div class="box atoi" markdown="1">
 **À toi :** ouvre Lumen dans l'app Grok Bot.
 
-C'est réussi si tu vois ta conversation de la leçon 1, avec la réponse sur Sophie.
+C'est réussi si tu vois ta conversation de la leçon 1, avec la réponse à Sophie (la cliente à la bougie cassée).
 </div>
 
 ## Étape 2 · Prépare la fiche (2 min)
@@ -71,7 +71,7 @@ C'est réussi si Lumen te renvoie tes 4 lignes, avec « Tu ne promets jamais de 
 Le vrai test : Lumen sait-il son métier sans que tu le redises ?
 
 <div class="box atoi" markdown="1">
-**À toi :** démarre une nouvelle conversation avec Lumen. Si tu ne trouves pas comment, reste dans la conversation actuelle. N'explique rien. Envoie seulement le message du client :
+**À toi :** Marc, un client de Léa, écrit ce message. Démarre une nouvelle conversation avec Lumen. Si tu ne trouves pas comment, reste dans la conversation actuelle. N'explique rien. Envoie seulement le message du client :
 
 > Bonjour, j'ai commandé une bougie figue il y a 10 jours, toujours rien. C'est normal ? Marc
 

@@ -15,7 +15,7 @@ C'est réussi si tu peux dire en une phrase ce qui ne va pas.
 </div>
 
 <div class="box corrige" markdown="1">
-**Exemple :** « Lumen a répondu "15 €" alors que Léa ne lui a jamais donné de prix. »
+**Exemple :** « Lumen a répondu "15 €" alors que Léa (qui vend des bougies) ne lui a jamais donné de prix. »
 </div>
 
 ## Étape 2 · Écris la règle (2 min)
@@ -61,7 +61,7 @@ C'est réussi si tu vois 5 lignes : les 4 de la leçon 2, puis la nouvelle règl
 ## Étape 5 · Retente le raté (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc et envoie-le à Lumen :
+**À toi :** Chloé, une cliente de Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :
 
 > Bonjour, la bougie figue, elle coûte combien ? Et vous l'envoyez en combien de jours ? Chloé
 

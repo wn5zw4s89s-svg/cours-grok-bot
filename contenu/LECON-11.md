@@ -21,7 +21,7 @@ C'est réussi si tu réponds « non ».
 <div class="box atoi" markdown="1">
 **À toi :** copie ce bloc et envoie-le à Lumen :
 
-> Crée une routine : à chaque email reçu, range-le dans sa pile, résume-le en une ligne, et s'il est Prêt, prépare un brouillon de réponse. Tu n'envoies rien.
+> Crée une routine : à chaque email reçu, range-le dans sa pile (À moi, Prêt ou Bruit, vues en leçon 9), résume-le en une ligne, et s'il est Prêt, prépare un brouillon de réponse. Tu n'envoies rien.
 
 C'est réussi si Lumen confirme la routine.
 </div>
@@ -33,7 +33,7 @@ C'est réussi si Lumen confirme la routine.
 ## Étape 3 · Déclenche-la (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** depuis l'app Mail, envoie cet email à Lumen :
+**À toi :** tu joues Nora, une cliente de Léa. Depuis l'app Mail, envoie cet email à Lumen :
 
 > Bonjour, vous livrez en Belgique ? Nora
 
@@ -67,7 +67,7 @@ C'est réussi si Lumen confirme la routine de 18 h et t'envoie tout de suite un 
 </div>
 
 <div class="box corrige" markdown="1">
-**Exemple de réponse :** « Routine créée : chaque jour à 18 h. Test : À moi : 1 (Julie). Prêt : 2 (Hugo, Nora). Bruit : 1. »
+**Exemple de réponse :** « Routine créée : chaque jour à 18 h. Test : À moi : 1 (Julie). Prêt : 2 (Hugo, Nora). Bruit : 1. » (Julie et Hugo : les clients de Léa de la leçon 9.)
 </div>
 
 <div class="box info" markdown="1">

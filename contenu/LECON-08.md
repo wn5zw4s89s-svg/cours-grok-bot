@@ -17,7 +17,7 @@ C'est réussi si tu as l'adresse sous les yeux.
 ## Étape 2 · Joue la cliente (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** ouvre l'app Mail de ton iPhone. Écris à l'adresse de Lumen. Objet : `Commande`. Copie ce bloc dans le message :
+**À toi :** tu joues Camille, une cliente de Léa, qui vend des bougies. Ouvre l'app Mail de ton iPhone. Écris à l'adresse de Lumen. Objet : `Commande`. Copie ce bloc dans le message :
 
 > Bonjour, je voudrais 3 bougies vanille pour samedi. C'est possible ? Camille
 

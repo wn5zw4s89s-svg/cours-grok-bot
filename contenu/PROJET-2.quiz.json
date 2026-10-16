@@ -6,12 +6,12 @@
       "id": "q1",
       "question": "Combien d'adresses email de bot par compte ?",
       "choix": [
-        "Une, partagée par tous tes bots",
+        "Une seule par compte",
         "Une par bot",
         "Autant que tu veux"
       ],
       "bonne_reponse": 0,
-      "explication": "Une seule adresse, du type nom@mail.grokbot.com."
+      "explication": "Une seule adresse par compte, du type nom@mail.grokbot.com : une deuxième réservation est refusée, même pour un autre bot."
     },
     {
       "id": "q2",
@@ -33,7 +33,7 @@
         "Oui, pour 24 h"
       ],
       "bonne_reponse": 1,
-      "explication": "Vérifier ne réserve rien."
+      "explication": "Vérifier ne réserve rien : seule la carte que tu approuves réserve le nom."
     },
     {
       "id": "q4",
@@ -55,7 +55,7 @@
         "Il supprime l'email"
       ],
       "bonne_reponse": 1,
-      "explication": "Seul toi donnes des ordres."
+      "explication": "Un email reçu n'est qu'un message à lire, pas un ordre : seul toi donnes des ordres à Lumen."
     },
     {
       "id": "q6",
@@ -73,11 +73,11 @@
       "question": "Qui envoie un email préparé par Lumen ?",
       "choix": [
         "Lumen, tout seul",
-        "Toi, en touchant Send Email sur la carte",
+        "Toi, en touchant Send Email (le bouton affiché en anglais à l'écran) sur la carte",
         "La routine, sans toi"
       ],
       "bonne_reponse": 1,
-      "explication": "Chaque envoi attend ton accord."
+      "explication": "Lumen prépare seulement un brouillon : l'email ne part que quand tu touches Send Email."
     },
     {
       "id": "q8",
@@ -88,7 +88,7 @@
         "Il t'appelle"
       ],
       "bonne_reponse": 1,
-      "explication": "Une routine, c'est une tâche qu'il fait seul."
+      "explication": "Sans routine, Lumen ne fait rien seul : il agit seulement quand tu lui écris. La routine sert justement à le faire agir à chaque email reçu."
     },
     {
       "id": "q9",
@@ -110,7 +110,7 @@
         "« Léa »"
       ],
       "bonne_reponse": 1,
-      "explication": "Formule creuse : à couper."
+      "explication": "« N'hésitez pas » est une formule toute faite qui n'apporte rien au client : c'est un tic à couper."
     }
   ]
 }

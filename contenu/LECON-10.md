@@ -6,7 +6,7 @@ Objectif : à la fin, Lumen a préparé une réponse email, et c'est toi qui as 
 
 Quand Lumen veut envoyer un email, il ne l'envoie pas. Il t'affiche un brouillon sous forme de carte.
 
-Sur iPhone, la carte a deux boutons : **Send Email** (envoyer) et **Discard** (jeter).
+Sur iPhone, la carte a deux boutons, affichés en anglais à l'écran : **Send Email** (envoyer) et **Discard** (jeter).
 
 <div class="box atoi" markdown="1">
 **À toi :** dis à voix haute qui envoie l'email : toi ou Lumen ?
@@ -17,7 +17,7 @@ C'est réussi si tu réponds « moi ».
 ## Étape 2 · Demande un brouillon (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc et envoie-le à Lumen :
+**À toi :** Hugo, c'est le client de Léa de la leçon 9 (il demande si la cire est végétale). Copie ce bloc et envoie-le à Lumen :
 
 > Prépare une réponse à l'email de Hugo, celui de la pile Prêt.
 
@@ -35,7 +35,7 @@ C'est réussi si une carte brouillon s'affiche dans la conversation.
 
 1. Le destinataire est-il le bon ?
 2. Le brouillon promet-il quelque chose (date, remboursement, prix) ?
-3. Le ton ressemble-t-il à Léa ?
+3. Le ton ressemble-t-il à Léa, qui vend des bougies ?
 
 C'est réussi si tu as une réponse aux 3 questions.
 </div>
@@ -43,7 +43,7 @@ C'est réussi si tu as une réponse aux 3 questions.
 ## Étape 4 · Décide (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** tout est bon ? Touche **Send Email**. Sinon, touche **Discard**.
+**À toi :** tout est bon ? Touche **Send Email** (le bouton affiché en anglais à l'écran). Sinon, touche **Discard** (le bouton affiché en anglais à l'écran).
 
 C'est réussi si la carte n'attend plus : envoyée ou jetée, par toi.
 </div>

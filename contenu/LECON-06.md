@@ -1,6 +1,6 @@
 # Leçon 6 · Top 1 % : la description qui change tout
 
-Objectif : à la fin, Lumen répond comme Léa répondrait, et tu as la preuve en capture.
+Objectif : à la fin, Lumen répond comme Léa (qui vend des bougies) répondrait, et tu as la preuve en capture.
 
 ## Étape 1 · Compare deux descriptions (1 min)
 
@@ -21,7 +21,7 @@ C'est réussi si tu réponds « 3 phrases maximum ».
 ## Étape 2 · Vois la différence (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+**À toi :** Lucas, un client de Léa, a écrit. Copie ce bloc en entier et envoie-le à Lumen :
 
 > Ne change pas ta description. Réponds deux fois à ce client. Version A : comme si ta description disait seulement « Tu aides Léa avec ses clients. Sois poli. ». Version B : avec ta vraie description.
 >
@@ -59,7 +59,7 @@ C'est réussi si Lumen confirme l'ajout.
 ## Étape 4 · Le test final (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc et envoie-le à Lumen :
+**À toi :** Nadia, une cliente de Léa, écrit ce message. Copie ce bloc et envoie-le à Lumen :
 
 > Ça fait deux semaines que j'attends ma commande. Franchement, c'est n'importe quoi. Nadia
 

@@ -8,12 +8,12 @@ Ton bot peut avoir une adresse email, du type `nom@mail.grokbot.com`.
 
 Trois choses à savoir avant de choisir :
 
-- **une seule** adresse par compte, partagée par tous tes bots ;
+- **une seule** adresse par compte : tu ne pourras pas en réserver une deuxième pour un autre bot ;
 - elle est **définitive** : tu ne pourras ni la changer ni la supprimer ;
 - aucun email ne part sans ton accord.
 
 <div class="box atoi" markdown="1">
-**À toi :** écris dans tes Notes 3 noms possibles pour l'adresse de Léa. Minuscules, chiffres, points ou tirets. Évite les mots comme support, admin, info.
+**À toi :** écris dans tes Notes 3 noms possibles pour l'adresse de Léa, qui vend des bougies. Minuscules, chiffres, points ou tirets. Évite les mots comme support, admin, info.
 
 C'est réussi si tu as 3 noms qui suivent ces règles.
 </div>
