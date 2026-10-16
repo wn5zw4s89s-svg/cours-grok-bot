@@ -6,19 +6,19 @@ Objectif : à la fin, Lumen connaît une info du moment et s'en sert pour répon
 
 La **description**, c'est ce qui est toujours vrai : son métier, ses règles.
 
-La **mémoire**, c'est ce que le bot retient en route : une info du moment, qui peut changer.
+Une **info du moment**, c'est ce qui peut changer. Tu la donnes au bot dans cette conversation, pas dans sa fiche.
 
 Exemple, chez Léa, qui vend des bougies : « la bougie figue est en rupture de stock ». Vrai aujourd'hui, faux dans un mois.
 
 <div class="box atoi" markdown="1">
 **À toi :** classe cette info : « Lumen signe toujours Léa ».
 
-C'est réussi si ta réponse nomme un seul endroit : description ou mémoire.
+C'est réussi si ta réponse nomme un seul endroit : la description, ou un message du moment.
 </div>
 
 <details class="solution"><summary>Voir la réponse</summary><div class="box corrige" markdown="1">
 
-Description : c'est toujours vrai.
+La description : c'est toujours vrai.
 
 </div></details>
 
@@ -27,7 +27,7 @@ Description : c'est toujours vrai.
 <div class="box atoi" markdown="1">
 **À toi :** copie ce bloc et envoie-le à Lumen :
 
-> Retiens ce fait dans ta mémoire : la bougie figue est en rupture de stock. Léa ne sait pas encore quand elle revient.
+> Retiens ce fait, dans cette conversation : la bougie figue est en rupture de stock. Léa ne sait pas encore quand elle revient.
 
 C'est réussi si Lumen confirme qu'il l'a retenu.
 </div>
@@ -71,7 +71,7 @@ Un fait change ? Tu le dis au bot.
 <div class="box atoi" markdown="1">
 **À toi :** copie ce bloc et envoie-le à Lumen :
 
-> Mets ta mémoire à jour : la bougie figue est de nouveau en stock. Oublie l'ancienne info. Qu'est-ce que tu sais maintenant sur la bougie figue ?
+> Mise à jour : la bougie figue est de nouveau en stock. Oublie l'ancienne info. Qu'est-ce que tu sais maintenant sur la bougie figue ?
 
 C'est réussi si Lumen dit que la figue est en stock, et ne parle plus de rupture.
 </div>
@@ -80,4 +80,4 @@ C'est réussi si Lumen dit que la figue est en stock, et ne parle plus de ruptur
 **Exemple de réponse :** « C'est mis à jour : la bougie figue est de nouveau en stock. »
 </div>
 
-<div class="pieuvre" data-reaction="reussite" markdown="1">La description pour toujours, la mémoire pour le moment.</div>
+<div class="pieuvre" data-reaction="reussite" markdown="1">La fiche pour toujours, le message pour le moment.</div>

@@ -47,20 +47,26 @@ B : « Bonjour Lucas, désolée pour le couvercle manquant. Pouvez-vous m'envoye
 ## Étape 3 · Passe Lumen en top 1 % (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+**À toi :**
+1. Copie ces lignes :
 
-> Ajoute ces lignes à la fin de ta description, sans rien changer d'autre :
->
 > Ta réponse au client fait 3 phrases maximum. Tu vouvoies. Tu signes Léa.
 >
 > Exemple de bonne réponse : « Bonjour Sophie, désolée pour la bougie cassée. Pouvez-vous m'envoyer une photo ? Je reviens vers vous. Léa »
 
-C'est réussi si Lumen confirme l'ajout.
+2. Touche le nom de Lumen -> la roue dentée -> le champ **Description** (à vérifier sur ton écran).
+3. Colle-les à la fin du texte. Ne change rien d'autre.
+
+C'est réussi si, en rouvrant la fiche, tu vois « 3 phrases maximum » et l'exemple à la fin de la description.
 </div>
 
-<div class="box corrige" markdown="1">
-**Exemple de réponse :** « C'est ajouté à la fin de ma description. »
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
+
+**Ce que tu dois voir :** tes 5 lignes (leçons 2 et 4), puis « Ta réponse au client fait 3 phrases maximum… » et l'exemple.
+
+**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute ces lignes à la fin de ta description, sans rien changer d'autre : » suivi des lignes. Puis rouvre la fiche pour vérifier.
+
+</div></details>
 
 ## Étape 4 · Fais le test final (2 min)
 
@@ -95,7 +101,7 @@ Phrase type, à copier :
 
 > Mon premier bot. Même client, deux descriptions. A : moyenne. B : top 1 %.
 
-C'est toi qui postes, depuis l'app X. Le bot ne poste jamais à ta place.
+C'est toi qui postes, depuis l'app X. Dans ce cours, aucun bot ne poste à ta place.
 </div>
 
 Projet 1 terminé. Badge : **Premier bot**.

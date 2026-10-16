@@ -32,30 +32,34 @@ Une bonne règle dit ce qui est interdit, et quoi faire à la place.
 C'est réussi si tu trouves dans la règle l'interdit et ce qu'il faut faire à la place.
 </div>
 
-## Étape 3 · Ajoute-la à la description (2 min)
+## Étape 3 · Ajoute-la à la fiche (2 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc en entier et envoie-le à Lumen :
+**À toi :**
+1. Copie cette ligne :
 
-> Ajoute cette ligne à la fin de ta description, sans rien changer d'autre :
->
 > Tu n'inventes jamais un prix, un délai ou un stock. Si tu ne sais pas, ta réponse pose une question au client ou dit « Je reviens vers vous ».
 
-C'est réussi si Lumen confirme l'ajout.
+2. Touche le nom de Lumen en haut de la conversation -> la roue dentée -> le champ **Description** (à vérifier sur ton écran).
+3. Va à la fin du texte, saute une ligne, colle la règle. Ne change rien d'autre.
+
+C'est réussi si la règle est la dernière ligne du champ Description.
 </div>
 
-<div class="box corrige" markdown="1">
-**Exemple de réponse :** « C'est ajouté à la fin de ma description. »
-</div>
+<details class="solution"><summary>Voir la solution</summary><div class="box corrige" markdown="1">
 
-## Étape 4 · Vérifie la description (1 min)
+**Ce que tu dois voir :** tes 4 lignes de la leçon 2, puis « Tu n'inventes jamais un prix… » en dernier.
+
+**Si ça rate :** pas de champ Description ? Envoie à Lumen : « Ajoute cette ligne à la fin de ta description, sans rien changer d'autre : » suivi de la règle. Puis vérifie à l'étape 4.
+
+</div></details>
+
+## Étape 4 · Vérifie la fiche (1 min)
 
 <div class="box atoi" markdown="1">
-**À toi :** copie ce bloc et envoie-le à Lumen :
+**À toi :** ferme la fiche. Rouvre-la : nom de Lumen -> roue dentée (à vérifier sur ton écran).
 
-> Montre-moi ta description, telle qu'elle est enregistrée.
-
-C'est réussi si tu vois 5 lignes : les 4 de la leçon 2, puis la nouvelle règle.
+C'est réussi si le champ Description montre 5 lignes : les 4 de la leçon 2, puis la nouvelle règle.
 </div>
 
 ## Étape 5 · Retente le raté (2 min)

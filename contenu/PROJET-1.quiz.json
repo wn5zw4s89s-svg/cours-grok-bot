@@ -15,14 +15,14 @@
     },
     {
       "id": "q2",
-      "question": "Sur l'écran d'accueil de l'app, comment crées-tu un bot ?",
+      "question": "Où se règle la description de Lumen ?",
       "choix": [
-        "Avec la loupe en haut de l'écran",
-        "Avec le rond à tes initiales",
-        "Avec le + en haut à droite"
+        "Dans sa fiche",
+        "Réglages de ton iPhone",
+        "Dans le site du cours"
       ],
-      "bonne_reponse": 2,
-      "explication": "Le + crée un bot. La loupe sert à chercher. Le rond ouvre ton compte."
+      "bonne_reponse": 0,
+      "explication": "La description se règle dans la fiche du bot. Les réglages de l'iPhone et le site du cours ne la contiennent pas."
     },
     {
       "id": "q3",
@@ -30,10 +30,10 @@
       "choix": [
         "Un message se perd, la description reste",
         "Un message coûte plus cher qu'une description",
-        "Le bot ne relit jamais ses anciens messages"
+        "Le bot ne lit jamais ses anciens messages"
       ],
       "bonne_reponse": 0,
-      "explication": "La description, c'est la fiche de poste : le bot la relit à chaque fois. Un message finit noyé dans la conversation. Le coût n'a rien à voir."
+      "explication": "La description, c'est la fiche de poste : elle s'applique à chaque conversation. Un message finit noyé dans la conversation. Le coût n'a rien à voir."
     },
     {
       "id": "q4",
@@ -41,10 +41,10 @@
       "choix": [
         "Tu relis toute la conversation depuis le début",
         "Tu ouvres les réglages de ton iPhone",
-        "Tu lui demandes : « Montre-moi ta description »"
+        "Tu rouvres sa fiche"
       ],
       "bonne_reponse": 2,
-      "explication": "Demander est le plus sûr : il renvoie le texte enregistré. Relire la conversation montre des messages, pas la description. Les réglages de l'iPhone ne la contiennent pas."
+      "explication": "Rouvrir la fiche est le plus sûr : tu lis le texte enregistré de tes yeux. Relire la conversation montre des messages, pas la description. Les réglages de l'iPhone ne la contiennent pas."
     },
     {
       "id": "q5",
@@ -81,14 +81,14 @@
     },
     {
       "id": "q8",
-      "question": "Description ou mémoire : « la bougie figue est en rupture » va où ?",
+      "question": "Fiche ou message : « la bougie figue est en rupture » va où ?",
       "choix": [
         "Dans la description, pour qu'il ne l'oublie pas",
-        "Dans la mémoire, car c'est vrai aujourd'hui seulement",
+        "Dans un message, car c'est vrai aujourd'hui seulement",
         "Dans chaque réponse, en première phrase"
       ],
       "bonne_reponse": 1,
-      "explication": "Une rupture de stock est une info du moment : elle va en mémoire. La description garde ce qui reste vrai, comme le métier."
+      "explication": "Une rupture de stock est une info du moment : tu la donnes dans un message. La description garde ce qui reste vrai, comme le métier."
     },
     {
       "id": "q9",
@@ -110,7 +110,7 @@
         "Grok Bot, une fois le projet terminé"
       ],
       "bonne_reponse": 1,
-      "explication": "C'est toi qui postes, depuis l'app X. Aucun bot ne poste à ta place, même avec ton accord."
+      "explication": "C'est toi qui postes, depuis l'app X. Dans ce cours, aucun bot ne poste à ta place."
     }
   ]
 }
